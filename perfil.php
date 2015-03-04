@@ -29,7 +29,7 @@
 				    Cosas sobre ti.
 				  </div>
 	    	</div>
-	    	<a href="#" class="btn btn-info">EDITAR PERFIL</a>	
+	    	<a href="#" class="btn btn-info" id="editarperfil">EDITAR PERFIL</a>	
 	    </aside>
 	    <div class="col-md-1"></div>
 	    <section class="col-md-8">
