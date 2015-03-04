@@ -37,10 +37,18 @@ h3#Tlogin{
 	font-size: 2em;
 }
 input#pass, input#usuario{
-	width: 230px;
-	margin-left: 15px;
+	width: 90%;
+	margin-left: 25px;
 }
 
+a#recuperar ,a#registro{
+	font-size: 1em;
+	
+}
 button#btnlogin{
 
+	margin-left: 150px;
+}
+div#contenedorlogin{
+	width: 95%;
 }
