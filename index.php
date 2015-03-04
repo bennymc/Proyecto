@@ -85,7 +85,7 @@
 
 					</div>	
 					<a href="#" class="btn btn-link" id="recuperar">Recuperar contraseña</a>
-					<a href="./includes/registro.html" class="btn btn-link" id="registro">Registro</a>
+					<a href="registro.php" class="btn btn-link" id="registro">Registro</a>
 				</form>
 			</div>			
 		</div>
