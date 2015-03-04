@@ -52,3 +52,36 @@ button#btnlogin{
 div#contenedorlogin{
 	width: 95%;
 }
+
+
+ul
+{
+  width: 30em;  /* room for 3 columns */
+}
+ul li
+{
+  float: left;
+  width: 13em;  /* accommodate the widest item */
+}
+/* stop the floating after the list */
+br
+{
+  clear: left;
+}
+/* separate the list from what follows it */
+div.wrapper
+{
+  margin-bottom: 1em;
+}
+/* anchor styling */
+ul li a
+{
+  display: block;
+  width: 7em;
+  text-decoration: none;
+}
+ul li a:hover
+{
+  color: #FFF; 
+  background-color: #C0B435; 
+}

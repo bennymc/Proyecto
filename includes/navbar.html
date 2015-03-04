@@ -1,0 +1,55 @@
+<html lang="es">
+<head>
+   <meta charset="UTF-8"/> 
+   <title>BOOKS</title>
+
+   	<link href="./css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="./css/estilos.css" rel="stylesheet" media="screen">
+	<script src="http://code.jquery.com/jquery.js"></script>
+    <script src="./js/bootstrap.min.js" width></script>
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button> 	 	 	 
+	      <a class="navbar-brand" href="index.php">PRINCIPAL</a>
+	    </div>
+
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+	      <ul class="nav navbar-nav" id="menu">
+	        <li><a href="perfil.php">PERFIL <span class="sr-only">(current)</span></a></li>
+	        <li class="dropdown">
+	          <a href="libros.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-xpanded="false" >LIBROS<span class="caret"></span></a>
+	          <ul class="dropdown-menu" role="menu" >
+	          	<li class="divider"></li>
+	            <li><a href="#" id="peque1">CATALOGO POR GENEROS</a></li>
+	            <li class="divider"></li>
+	            <li ><a href="#" id="peque">ADOLECENTES</a></li>
+	            <li ><a href="#" id="peque">FANTASIA</a></li>	            
+	            <li ><a href="#" id="peque">ROMANCE</a></li>	            
+	            <li ><a href="#" id="peque">MISTERIO</a></li>
+	            <li ><a href="#" id="peque">CIENCIA FICCION</a></li>
+	            <li ><a href="#" id="peque">THRILLER</a></li>
+	          </ul>
+	        </li>
+
+	      </ul>
+	      <form class="navbar-form navbar-left" role="search">
+	        <div class="form-group" id="areabuscar">
+	          <input type="text" class="form-control" placeholder="Titulo / Autor / ISBN">
+	        </div>
+	        <button type="submit" class="btn btn-default"id="botonbuscar">BUSCAR</button>
+	      </form>
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="#">Inicia Sesion</a></li>
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
