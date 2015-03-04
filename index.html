@@ -27,7 +27,7 @@
 
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
 	      <ul class="nav navbar-nav" id="menu">
-	        <li><a href="#">PERFIL <span class="sr-only">(current)</span></a></li>
+	        <li><a href="perfil.html">PERFIL <span class="sr-only">(current)</span></a></li>
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-xpanded="false" >LIBROS<span class="caret"></span></a>
 	          <ul class="dropdown-menu" role="menu" >
@@ -51,7 +51,7 @@
 	        <button type="submit" class="btn btn-default"id="botonbuscar">BUSCAR</button>
 	      </form>
 	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="#">Link</a></li>
+	        <li><a href="#">Inicia Sesion</a></li>
 	      </ul>
 	    </div>
 	  </div>
@@ -60,25 +60,57 @@
 
 
 	<section class="col-md-7">
-		<p class="lead">Libros Populares.</p>	
-		<div class="panel panel-default">
-			<div class="panel-body">
-						
-			</div>
+		<div class="panel panel-success">
+  			<div class="panel-heading">
+    			<h3 class="panel-title" id="grande">Libros Populares.</h3>
+  			</div>
+  			<div class="panel-body">
+   				 Mostrara libros populares entre los  usuarios
+  			</div>
 		</div>
-		<p class="lead">Ultimas Reseñas.</p>	
-		<div class="panel panel-default">
-			<div class="panel-body">
-						
-			</div>
+		<div class="panel panel-success">
+  			<div class="panel-heading">
+   				 <h3 class="panel-title" id="grande">Ultimas Reseñas.</h3>
+  			</div>
+  			<div class="panel-body">
+   				 Mostrara ultimas reseñas realizadas por usuarios
+  			</div>
 		</div>
 		
+		
 		<div class="alert alert-dismissible alert-success">
-			<div class="form-group">
-			  <label class="control-label" for="focusedInput"><p class="lead">No encontraste tu libro? Sugierelo!</p></label>
-			  <input class="form-control" id="focusedInput" type="text" value="Escribe aqui el nombre del libro" width="100px">
-			  <a href="#" class="btn btn-default">Enviar</a>
-			</div>
+		<form class="form-horizontal">
+				<fieldset>
+					<legend>No encontraste un Libro? Sugierelo!</legend>
+					<div class="form-group">
+					  <label class="col-md-4 control-label" for="Email">Email</label>  
+					  <div class="col-md-5">
+					  <input id="Email" name="Email" type="text" placeholder="Email" class="form-control input-md" required="">    
+					  </div>
+					</div>
+					<div class="form-group">
+					  <label class="col-md-4 control-label" for="Titulo">Titulo:</label>  
+					  <div class="col-md-5">
+					  <input id="Titulo" name="Titulo" type="text" placeholder="Titulo" class="form-control input-md" required="">    
+					  </div>
+					</div>
+					<div class="form-group">
+					  <label class="col-md-4 control-label" for="Autor">Autor:</label>  
+					  <div class="col-md-5">
+					  <input id="Autor" name="Autor" type="text" placeholder="Autor" class="form-control input-md" required="">    
+					  </div>
+					</div>
+					<div class="form-group">
+					  <label class="col-md-4 control-label" for="comentarios">Comentarios:</label>
+					  <div class="col-md-4">                     
+					    <textarea class="form-control" id="comentarios" name="Comentarios"></textarea>
+					  </div>
+					</div>
+					
+					
+				</fieldset>
+			</form>
+			
 		</div>
 	</section>
 
@@ -111,7 +143,7 @@
 
 					</div>	
 					<a href="#" class="btn btn-link" id="recuperar">Recuperar contraseña</a>
-					<a href="#" class="btn btn-link" id="registro">Registro</a>
+					<a href="registro.html" class="btn btn-link" id="registro">Registro</a>
 				</form>
 			</div>			
 		</div>

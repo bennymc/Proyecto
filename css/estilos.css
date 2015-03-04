@@ -33,7 +33,7 @@ li a#peque1  {
 	width: 100px;
 }
 
-h3#Tlogin{
+h3#Tlogin ,h3#grande{
 	font-size: 2em;
 }
 input#pass, input#usuario{
