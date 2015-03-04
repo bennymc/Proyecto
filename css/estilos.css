@@ -1,0 +1,46 @@
+header {
+	background-color: #957C44;
+
+}
+
+
+.navbar .nav  li  a {
+	padding-left: 2em;
+	
+	font-size: 1.5em ;
+	/*border-left: solid #393A35 ;*/
+	
+	
+}
+
+li a#peque  {
+	font-style: italic;
+font-size: 1em;
+}
+li a#peque1  {
+	color: #457106;
+	line-height: .3em;
+	font-style: bold;
+	font-size: 1.1em;
+}
+
+
+
+
+#botonbuscar {
+	margin-left: 5px;
+	font-size: .9em;
+	width: 100px;
+}
+
+h3#Tlogin{
+	font-size: 2em;
+}
+input#pass, input#usuario{
+	width: 230px;
+	margin-left: 15px;
+}
+
+button#btnlogin{
+
+}
