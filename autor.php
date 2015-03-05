@@ -2,21 +2,30 @@
 			include "includes/navbar.html";
 ?>
 	<aside class="col-md-3">
-			<div class="panel panel-success">
+		<div class="panel panel-success">
 				  <div class="panel-heading">
-				    <h1 class="panel-title" id="titulo">Género1</h1>
+				    <h1 class="panel-title" id="nombredeperfil">AUTOR X</h1>
 				  </div>
-				  <div class="panel-body">
-				    <p>Descripción del género.</p>
+				  <div class="panel-body ">
+				    <a href="editar.php"><img class="center-block" id="fotodeperfil" src="http://placehold.it/200x200" alt="imagen de perfil"></a>
 				  </div>
 	    	</div>	
+			<div class="panel panel-success">
+				  <div class="panel-heading">
+				    <h1 class="panel-title" id="titulo">Acerca del Autor X</h1>
+				  </div>
+				  <div class="panel-body">
+				    <p>Descripción del autor.</p>
+				  </div>
+	    	</div>	
+
 	    	
 
 	</aside>
 	<section class="col-md-6">
 	    	<div class="panel panel-success">
 				  <div class="panel-heading">
-				    <h1 class="panel-title" id="librero">GENERO X</h1>
+				    <h1 class="panel-title" id="librero">AUTOR X</h1>
 				  </div>
 				  <div class="panel-body">
 				  
@@ -25,12 +34,12 @@
 				    	<label  for="ordenar">Ordenar Libros por:</label>
 					    <select id="ordenar" name="ordenar">
 					      <option value="titulo">Titulo</option>
-					      <option value="autor">Autor</option>
+					      
 					      <option value="editorial">Editorial</option>
 					      <option value="año">Año</option>
 					    </select>
 					</div>
-					 <p> LIBROS DEL GENERO X<br/><br/></p>
+					 <p> LIBROS DEL AUTOR X<br/><br/></p>
 					 <div id="enlibrero" >
 					 	
 					 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
