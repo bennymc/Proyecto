@@ -1,6 +1,7 @@
 <?php
 	include "includes/navbar.html";
 ?>
+<div id="contenedor">
 	    <section id="formulario" class="col-md-4 col-md-offset-4">
 			<div class="panel panel-success" id="contenedorlogin">
 			<div class="panel-heading">
@@ -31,6 +32,8 @@
 					<a href="registro.php" class="btn btn-link" id="registro">Registro</a>
 				</form>
 		</section>
+
+</div>		
 		<?php
 			include "includes/footer.html";
 		?>
