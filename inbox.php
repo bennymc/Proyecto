@@ -1,6 +1,7 @@
  	<?php
 				include "includes/navbar.html";
 	?>
+	<div id="contenedor">
 <div class="panel panel-success col-md-12" id="inbox">
 	  <div class="panel-heading">
 	    <h1 class="panel-title">Mensajes recibidos</h1>
@@ -39,6 +40,7 @@
 			    </div>
 			</div> 
 	  </div>
+</div>
 </div>
 		<?php
 			include "includes/footer.html";
