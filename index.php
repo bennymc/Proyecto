@@ -32,7 +32,7 @@
 					</div>
 					<noscript>Necesitas tener habilitado javascript para poder votar</noscript>
 					<div class="form-group">
-					  <h4 class="col-md-12">Usuario: Usuario1</h4>
+					  <a href="usuario.php"><h4 class="col-md-12">Usuario: Usuario1</h4></a>
 					  <a href="ejemplar.php"><h4 class="col-md-12">Título: Título1</h4></a>
 					  <div class="col-md-10">                     
 					    <textarea readonly class="form-control" id="reseña" name="reseña"></textarea>
@@ -49,7 +49,7 @@
 					</div>
 					<noscript>Necesitas tener habilitado javascript para poder votar</noscript>
 					<div class="form-group">
-					  <h4 class="col-md-12">Usuario: Usuario2</h4>
+					  <a href="usuario.php"><h4 class="col-md-12">Usuario: Usuario2</h4></a>
 					  <a href="ejemplar.php"><h4 class="col-md-12">Título: Título2</h4></a>
 					  <div class="col-md-10">                     
 					    <textarea readonly class="form-control" id="reseña" name="reseña"></textarea>
@@ -66,7 +66,7 @@
 					</div>
 					<noscript>Necesitas tener habilitado javascript para poder votar</noscript>
 					<div class="form-group">
-					  <h4 class="col-md-12">Usuario: Usuario3</h4>
+					   <a href="usuario.php"><h4 class="col-md-12">Usuario: Usuario3</h4></a>
 					  <a href="ejemplar.php"><h4 class="col-md-12">Título: Título3</h4></a>
 					  <div class="col-md-10">                     
 					    <textarea readonly class="form-control" id="reseña" name="reseña"></textarea>
@@ -105,6 +105,13 @@
 					    <textarea class="form-control" id="comentarios" name="Comentarios"></textarea>
 					  </div>
 					</div>
+
+					<div class="form-group">
+						<div class="col-lg-10 col-lg-offset-2">
+						<button type="submit" class="btn btn-default" id="btnSugerir">Enviar</button>
+						</div>
+
+					</div>	
 				</fieldset>
 			</form>
 			
