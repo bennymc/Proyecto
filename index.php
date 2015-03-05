@@ -101,7 +101,7 @@
 					</div>
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="comentarios">Comentarios:</label>
-					  <div class="col-md-4">                     
+					  <div class="col-md-5">                     
 					    <textarea class="form-control" id="comentarios" name="Comentarios"></textarea>
 					  </div>
 					</div>
