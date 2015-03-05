@@ -2,20 +2,14 @@
 			include "includes/navbar.html";
 ?>
 	<aside class="col-md-3">
-		<div class="panel panel-success">
-				  <div class="panel-heading">
-				    <h1 class="panel-title" id="nombredeperfil">AUTOR X</h1>
-				  </div>
-				  <div class="panel-body ">
-				    <a href="editar.php"><img class="center-block" id="fotodeperfil" src="http://placehold.it/200x200" alt="imagen de perfil"></a>
-				  </div>
-	    	</div>	
+		
+				  
 			<div class="panel panel-success">
 				  <div class="panel-heading">
-				    <h1 class="panel-title" id="titulo">Acerca del Autor X</h1>
+				    <h1 class="panel-title" id="titulo">EDITORIAL X</h1>
 				  </div>
 				  <div class="panel-body">
-				    <p>Descripción del autor.</p>
+				    <p>Descripción de la editorial.</p>
 				  </div>
 	    	</div>	
 
@@ -25,7 +19,7 @@
 	<section class="col-md-6">
 	    	<div class="panel panel-success">
 				  <div class="panel-heading">
-				    <h1 class="panel-title" id="librero">AUTOR X</h1>
+				    <h1 class="panel-title" id="librero">EDITORIAL X - GÉNERO X</h1>
 				  </div>
 				  <div class="panel-body">
 				  
@@ -34,12 +28,12 @@
 				    	<label  for="ordenar">Ordenar Libros por:</label>
 					    <select id="ordenar" name="ordenar">
 					      <option value="titulo">Titulo</option>
+					      <option value="autor">Autor</option>
 					      
-					      <option value="editorial">Editorial</option>
 					      <option value="año">Año</option>
 					    </select>
 					</div>
-					 <p> LIBROS DEL AUTOR X<br/><br/></p>
+					 <p> LIBROS DE LA EDITORIAL X<br/><br/></p>
 					 <div id="enlibrero" >
 					 	
 					 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
@@ -101,40 +95,40 @@
 			</div>
 			<div class="panel-body">
 				<ul>
-					<li><a href="autorGenero.php">Adultos Jóvenes</a></li>
-					<li><a href="autorGenero.php">Arte</a></li>
-					<li><a href="autorGenero.php">Auto Ayuda</a></li>
-					<li><a href="autorGenero.php">Biografía</a></li>
-					<li><a href="autorGenero.php">Ciencia</a></li>
-					<li><a href="autorGenero.php">Ciencia Ficción</a></li>
-					<li><a href="autorGenero.php">Cine</a></li>
-					<li><a href="autorGenero.php">Clásicos</a></li>
-					<li><a href="autorGenero.php">Comics</a></li>
-					<li><a href="autorGenero.php">Contemporaneo</a></li>
-					<li><a href="autorGenero.php">Cocina</a></li>					
-					<li><a href="autorGenero.php">Crimen</a></li>
-					<li><a href="autorGenero.php">Deportes</a></li>
-					<li><a href="autorGenero.php">Espiritualidad</a></li>
-					<li><a href="autorGenero.php">Fantasía</a></li>
-					<li><a href="autorGenero.php">Ficción</a></li>
-					<li><a href="autorGenero.php">Ficción Historica</a></li>
-					<li><a href="autorGenero.php">Filosofía</a></li>
-					<li><a href="autorGenero.php">Historia</a></li>
-					<li><a href="autorGenero.php">Humor</a></li>
-					<li><a href="autorGenero.php">Manga</a></li>
-					<li><a href="autorGenero.php">Música</a></li>
-					<li><a href="autorGenero.php">Misterio</a></li>
-					<li><a href="autorGenero.php">Negocios</a></li>
-					<li><a href="autorGenero.php">No Ficción</a></li>
-					<li><a href="autorGenero.php">Novelas Gráficas</a></li>
-					<li><a href="autorGenero.php">Paranormal</a></li>
-					<li><a href="autorGenero.php">Poesía</a></li>
-					<li><a href="autorGenero.php">Psicología</a></li>
-					<li><a href="autorGenero.php">Religión</a></li>
-					<li><a href="autorGenero.php">Romance</a></li>
-					<li><a href="autorGenero.php">Suspenso</a></li>
-					<li><a href="autorGenero.php">Thriller</a></li>
-					<li><a href="autorGenero.php">Viajes</a></li>
+					<li><a href="editorialGenero.php">Adultos Jóvenes</a></li>
+					<li><a href="editorialGenero.php">Arte</a></li>
+					<li><a href="editorialGenero.php">Auto Ayuda</a></li>
+					<li><a href="editorialGenero.php">Biografía</a></li>
+					<li><a href="editorialGenero.php">Ciencia</a></li>
+					<li><a href="editorialGenero.php">Ciencia Ficción</a></li>
+					<li><a href="editorialGenero.php">Cine</a></li>
+					<li><a href="editorialGenero.php">Clásicos</a></li>
+					<li><a href="editorialGenero.php">Comics</a></li>
+					<li><a href="editorialGenero.php">Contemporaneo</a></li>
+					<li><a href="editorialGenero.php">Cocina</a></li>					
+					<li><a href="editorialGenero.php">Crimen</a></li>
+					<li><a href="editorialGenero.php">Deportes</a></li>
+					<li><a href="editorialGenero.php">Espiritualidad</a></li>
+					<li><a href="editorialGenero.php">Fantasía</a></li>
+					<li><a href="editorialGenero.php">Ficción</a></li>
+					<li><a href="editorialGenero.php">Ficción Historica</a></li>
+					<li><a href="editorialGenero.php">Filosofía</a></li>
+					<li><a href="editorialGenero.php">Historia</a></li>
+					<li><a href="editorialGenero.php">Humor</a></li>
+					<li><a href="editorialGenero.php">Manga</a></li>
+					<li><a href="editorialGenero.php">Música</a></li>
+					<li><a href="editorialGenero.php">Misterio</a></li>
+					<li><a href="editorialGenero.php">Negocios</a></li>
+					<li><a href="editorialGenero.php">No Ficción</a></li>
+					<li><a href="editorialGenero.php">Novelas Gráficas</a></li>
+					<li><a href="editorialGenero.php">Paranormal</a></li>
+					<li><a href="editorialGenero.php">Poesía</a></li>
+					<li><a href="editorialGenero.php">Psicología</a></li>
+					<li><a href="editorialGenero.php">Religión</a></li>
+					<li><a href="editorialGenero.php">Romance</a></li>
+					<li><a href="editorialGenero.php">Suspenso</a></li>
+					<li><a href="editorialGenero.php">Thriller</a></li>
+					<li><a href="editorialGenero.php">Viajes</a></li>
 				</ul>
 			</div>			
 		</div>

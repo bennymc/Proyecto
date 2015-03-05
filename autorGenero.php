@@ -25,7 +25,7 @@
 	<section class="col-md-6">
 	    	<div class="panel panel-success">
 				  <div class="panel-heading">
-				    <h1 class="panel-title" id="librero">AUTOR X</h1>
+				    <h1 class="panel-title" id="librero">AUTOR X - GÉNERO X</h1>
 				  </div>
 				  <div class="panel-body">
 				  
@@ -101,40 +101,40 @@
 			</div>
 			<div class="panel-body">
 				<ul>
-					<li><a href="autorGenero.php">Adultos Jóvenes</a></li>
-					<li><a href="autorGenero.php">Arte</a></li>
-					<li><a href="autorGenero.php">Auto Ayuda</a></li>
-					<li><a href="autorGenero.php">Biografía</a></li>
-					<li><a href="autorGenero.php">Ciencia</a></li>
-					<li><a href="autorGenero.php">Ciencia Ficción</a></li>
-					<li><a href="autorGenero.php">Cine</a></li>
-					<li><a href="autorGenero.php">Clásicos</a></li>
-					<li><a href="autorGenero.php">Comics</a></li>
-					<li><a href="autorGenero.php">Contemporaneo</a></li>
-					<li><a href="autorGenero.php">Cocina</a></li>					
-					<li><a href="autorGenero.php">Crimen</a></li>
-					<li><a href="autorGenero.php">Deportes</a></li>
-					<li><a href="autorGenero.php">Espiritualidad</a></li>
-					<li><a href="autorGenero.php">Fantasía</a></li>
-					<li><a href="autorGenero.php">Ficción</a></li>
-					<li><a href="autorGenero.php">Ficción Historica</a></li>
-					<li><a href="autorGenero.php">Filosofía</a></li>
-					<li><a href="autorGenero.php">Historia</a></li>
-					<li><a href="autorGenero.php">Humor</a></li>
-					<li><a href="autorGenero.php">Manga</a></li>
-					<li><a href="autorGenero.php">Música</a></li>
-					<li><a href="autorGenero.php">Misterio</a></li>
-					<li><a href="autorGenero.php">Negocios</a></li>
-					<li><a href="autorGenero.php">No Ficción</a></li>
-					<li><a href="autorGenero.php">Novelas Gráficas</a></li>
-					<li><a href="autorGenero.php">Paranormal</a></li>
-					<li><a href="autorGenero.php">Poesía</a></li>
-					<li><a href="autorGenero.php">Psicología</a></li>
-					<li><a href="autorGenero.php">Religión</a></li>
-					<li><a href="autorGenero.php">Romance</a></li>
-					<li><a href="autorGenero.php">Suspenso</a></li>
-					<li><a href="autorGenero.php">Thriller</a></li>
-					<li><a href="autorGenero.php">Viajes</a></li>
+					<li><a href="genero.php">Adultos Jóvenes</a></li>
+					<li><a href="genero.php">Arte</a></li>
+					<li><a href="genero.php">Auto Ayuda</a></li>
+					<li><a href="genero.php">Biografía</a></li>
+					<li><a href="genero.php">Ciencia</a></li>
+					<li><a href="genero.php">Ciencia Ficción</a></li>
+					<li><a href="genero.php">Cine</a></li>
+					<li><a href="genero.php">Clásicos</a></li>
+					<li><a href="genero.php">Comics</a></li>
+					<li><a href="genero.php">Contemporaneo</a></li>
+					<li><a href="genero.php">Cocina</a></li>					
+					<li><a href="genero.php">Crimen</a></li>
+					<li><a href="genero.php">Deportes</a></li>
+					<li><a href="genero.php">Espiritualidad</a></li>
+					<li><a href="genero.php">Fantasía</a></li>
+					<li><a href="genero.php">Ficción</a></li>
+					<li><a href="genero.php">Ficción Historica</a></li>
+					<li><a href="genero.php">Filosofía</a></li>
+					<li><a href="genero.php">Historia</a></li>
+					<li><a href="genero.php">Humor</a></li>
+					<li><a href="genero.php">Manga</a></li>
+					<li><a href="genero.php">Música</a></li>
+					<li><a href="genero.php">Misterio</a></li>
+					<li><a href="genero.php">Negocios</a></li>
+					<li><a href="genero.php">No Ficción</a></li>
+					<li><a href="genero.php">Novelas Gráficas</a></li>
+					<li><a href="genero.php">Paranormal</a></li>
+					<li><a href="genero.php">Poesía</a></li>
+					<li><a href="genero.php">Psicología</a></li>
+					<li><a href="genero.php">Religión</a></li>
+					<li><a href="genero.php">Romance</a></li>
+					<li><a href="genero.php">Suspenso</a></li>
+					<li><a href="genero.php">Thriller</a></li>
+					<li><a href="genero.php">Viajes</a></li>
 				</ul>
 			</div>			
 		</div>
