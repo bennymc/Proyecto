@@ -138,6 +138,7 @@ input#inputrecuperapass{
 }
 
 footer{
+	position: relative; 
 	border-radius: 4px;
 	background-color: #93C54B;
 	height: 65px;
@@ -146,3 +147,9 @@ textarea{
 	resize: none;
 }
 
+#contenidofooter{
+	padding: 1em;
+	font-size: 1em;
+	float: right;
+	color: black;
+}
