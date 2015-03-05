@@ -8,7 +8,7 @@
 				    <h1 class="panel-title" id="nombredeperfil">USUARIO</h1>
 				  </div>
 				  <div class="panel-body ">
-				    <a href="editar.php"><img class="center-block" id="fotodeperfil" src="http://placehold.it/200x200" alt="imagen de perfil"></a>
+				    <img class="center-block" id="fotodeperfil" src="http://placehold.it/200x200" alt="imagen de perfil">
 				  </div>
 	    	</div>	
 	    	<div class="panel panel-success">
