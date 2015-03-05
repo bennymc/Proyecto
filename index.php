@@ -23,7 +23,7 @@
   			</div>
   			<div class="panel-body" id="ultimasreview">
    				<div class="panel-body col-md-4">
-				    <div class="ec-stars-wrapper col-md-5">
+				    <div class="ec-stars-wrapper col-md-12">
 						<a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
 						<a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
 						<a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
@@ -40,7 +40,7 @@
 					</div>
 	    		</div>
 	    		<div class="panel-body col-md-4">
-				    <div class="ec-stars-wrapper col-md-5">
+				    <div class="ec-stars-wrapper col-md-12">
 						<a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
 						<a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
 						<a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
@@ -57,7 +57,7 @@
 					</div>
 	    		</div>
 	    		<div class="panel-body col-md-4">
-				    <div class="ec-stars-wrapper col-md-5">
+				    <div class="ec-stars-wrapper col-md-12">
 						<a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
 						<a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
 						<a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>

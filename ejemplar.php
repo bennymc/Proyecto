@@ -71,7 +71,7 @@
 			    	<h1 class="panel-title">Reseñas</h1>
 			    </div>
 			    <div class="panel-body col-md-5">
-				    <div class="ec-stars-wrapper col-md-4">
+				    <div class="ec-stars-wrapper col-md-12">
 						<a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
 						<a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
 						<a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
@@ -90,7 +90,7 @@
 					</div>
 	    		</div>
 	    		<div class="panel-body col-md-7" id="userreview">
-				    <div class="ec-stars-wrapper col-md-4">
+				    <div class="ec-stars-wrapper col-md-12">
 						<a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
 						<a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
 						<a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
@@ -104,7 +104,7 @@
 					    <textarea readonly class="form-control" id="reseña" name="reseña"></textarea>
 					  </div>
 					</div>
-					<div class="ec-stars-wrapper col-md-4">
+					<div class="ec-stars-wrapper col-md-12">
 						<a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
 						<a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
 						<a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
@@ -118,7 +118,7 @@
 					    <textarea readonly class="form-control" id="reseña" name="reseña"></textarea>
 					  </div>
 					</div>
-					<div class="ec-stars-wrapper col-md-4">
+					<div class="ec-stars-wrapper col-md-12">
 						<a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
 						<a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
 						<a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
@@ -132,7 +132,7 @@
 					    <textarea readonly class="form-control" id="reseña" name="reseña"></textarea>
 					  </div>
 					</div>
-					<div class="ec-stars-wrapper col-md-4">
+					<div class="ec-stars-wrapper col-md-12">
 						<a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
 						<a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
 						<a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
@@ -146,7 +146,7 @@
 					    <textarea readonly class="form-control" id="reseña" name="reseña"></textarea>
 					  </div>
 					</div>
-					<div class="ec-stars-wrapper col-md-4">
+					<div class="ec-stars-wrapper col-md-12">
 						<a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
 						<a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
 						<a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
