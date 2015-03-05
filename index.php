@@ -99,6 +99,11 @@
 		</div>
 	</aside>
 
+<?php
+	include "includes/footer.html";
+?>
+
+
 </body>
 
 </html>

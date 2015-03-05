@@ -71,5 +71,10 @@
 				</fieldset>
 			</form>
 		</section>
+
+
+		<?php
+			include "includes/footer.html";
+		?>
     </body>
 </html>

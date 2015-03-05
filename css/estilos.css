@@ -113,3 +113,9 @@ button#btnrecupera{
 input#inputrecuperapass{
 	margin-bottom: 10px;
 }
+
+footer{
+	border-radius: 4px;
+	background-color: #93C54B;
+	height: 65px;
+}
