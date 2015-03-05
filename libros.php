@@ -7,7 +7,7 @@
     			<h3 class="panel-title" id="grande">Genero 1.</h3>
   			</div>
   			<div class="panel-body">
-	  			<img src="http://placehold.it/100x100">
+				<a href="ejemplar.php"><img   src="http://placehold.it/100x100" alt="Libro"></a>
 	  			<img src="http://placehold.it/100x100">
 	  			<img src="http://placehold.it/100x100">
 	  			<img src="http://placehold.it/100x100">

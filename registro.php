@@ -41,7 +41,7 @@
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="username">Nombre de usuario</label>
 					  <div class="col-md-5">
-					    <input id="username" name="username" placeholder="" class="form-control input-md" required="">
+					    <input id="username" name="username" type="text" placeholder="" class="form-control input-md" required="">
 					  </div>
 					</div>
 					<div class="form-group">

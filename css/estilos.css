@@ -56,7 +56,7 @@ div#contenedorlogin{
 h1#librero{
 	font-size: 3em;
 	color: black;
-	font-style: italic ;
+	/*font-style: italic ;*/
 }
 
 img#fotodeperfil{
@@ -74,8 +74,6 @@ h1#nombredeperfil{
 	text-align: center;
 }
 img#librodestacado{
-
-	
 	border-radius: 5%;
 	border: solid #66971F;
 	box-shadow:1px 1px 30px 4px rgba(0,0,0,0.4);
@@ -91,4 +89,40 @@ img#librodestacado{
 
 a#editarperfil{
 	margin-bottom: 50px;
+}
+#ficha{
+	float: left;
+}
+
+.ec-stars-wrapper {
+	font-size: 0;
+	display: inline-block;
+}
+.ec-stars-wrapper a {
+	text-decoration: none;
+	display: inline-block;
+	font-size: 32px;
+	font-size: 2rem;
+	
+	color: #888;
+}
+
+.ec-stars-wrapper:hover a {
+	color: rgb(39, 130, 228);
+}
+.ec-stars-wrapper > a:hover ~ a {
+	color: #888;
+}
+#userreview{
+	padding-left: 5em;
+	height: 28em;
+	overflow: scroll;
+	border-left: 2px solid #82B33A;
+}
+#ficha{
+	text-align: center;
+}
+.fichac{
+	border-left: 2px solid #82B33A;
+	border-right: 2px solid #82B33A;
 }

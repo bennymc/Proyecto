@@ -1,8 +1,6 @@
  	<?php
 				include "includes/navbar.html";
-			?>
-
-
+	?>
 
 	    <aside class="col-md-3">
 	    	<div class="panel panel-success">
@@ -52,7 +50,7 @@
 					 <p> Todos los libros que el usuario agrega.<br/><br/></p>
 					 <div id="enlibrero" >
 					 	<p>TITULO</p>
-					 	<img   src="http://placehold.it/100x150" alt="Libro"  	>
+					 	<a href="ejemplar.php"><img   src="http://placehold.it/100x150" alt="Libro"></a>
 					 	<p>STATUS</p>
 					 </div>
 					 <div id="enlibrero">
