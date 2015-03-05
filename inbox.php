@@ -20,7 +20,7 @@
 	   	 <h3>Cuerpo del mensaje</h3>
 		  <textarea readonly class="form-control" id="cuerpo" name="cuerpo"></textarea>
 		  <div>
-			    <a href="#respuesta" class="btn btn-lg btn-default" data-toggle="modal">Responder</a>					    
+			    <a id="btnresponder" href="#respuesta" class="btn btn-lg btn-default" data-toggle="modal">Responder</a>					    
 			    <div id="respuesta" class="modal fade">
 			        <div class="modal-dialog">
 			            <div class="modal-content">

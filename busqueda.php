@@ -1,7 +1,7 @@
  	<?php
 				include "includes/navbar.html";
 	?>
-
+		<div id="contenedor">
 	    <div class="col-md-1"></div>
 	    <section class="col-md-8">
 			<div class="panel panel-danger">
@@ -17,7 +17,7 @@
 		  		</form>
 			</div>
 	    </section>
-
+	    </div>
 		<?php
 			include "includes/footer.html";
 		?>
