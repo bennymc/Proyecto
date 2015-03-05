@@ -2,17 +2,11 @@ header {
 	background-color: #957C44;
 
 }
-
-
 .navbar .nav  li  a {
 	padding-left: 2em;
 	
-	font-size: 1.5em ;
-	/*border-left: solid #393A35 ;*/
-	
-	
+	font-size: 1.5em ;	
 }
-
 li a#peque  {
 	font-style: italic;
 font-size: 1em;
@@ -23,10 +17,6 @@ li a#peque1  {
 	font-style: bold;
 	font-size: 1.1em;
 }
-
-
-
-
 #botonbuscar {
 	margin-left: 5px;
 	font-size: .9em;
@@ -47,7 +37,7 @@ a#recuperar ,a#registro{
 }
 button#btnlogin{
 
-	margin-left: 150px;
+	margin-left: 70%;
 }
 div#contenedorlogin{
 	width: 95%;
@@ -126,3 +116,30 @@ a#editarperfil{
 	border-left: 2px solid #82B33A;
 	border-right: 2px solid #82B33A;
 }
+button#cambiar{
+	float: right;
+	margin-top: 20px;
+}
+
+div#destacados img{
+	margin: 1em;
+}
+
+h3#recuperarpass{
+	font-size: 2em;
+}
+
+button#btnrecupera{
+	margin-left: 70%;
+}
+
+input#inputrecuperapass{
+	margin-bottom: 10px;
+}
+
+footer{
+	border-radius: 4px;
+	background-color: #93C54B;
+	height: 65px;
+}
+
