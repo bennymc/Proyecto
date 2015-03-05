@@ -98,7 +98,7 @@
 					<div class="form-group">
 					  <label class="col-md-12 control-label" for="reseña">Reseña de el usuario Usuario1</label>
 					  <div class="col-md-10">                     
-					    <textarea class="form-control" id="reseña" name="reseña"></textarea>
+					    <textarea readonly class="form-control" id="reseña" name="reseña"></textarea>
 					  </div>
 					</div>
 					<div class="ec-stars-wrapper col-md-4">
@@ -112,7 +112,7 @@
 					<div class="form-group">
 					  <label class="col-md-12 control-label" for="reseña">Reseña de el usuario Usuario2</label>
 					  <div class="col-md-10">                     
-					    <textarea class="form-control" id="reseña" name="reseña"></textarea>
+					    <textarea readonly class="form-control" id="reseña" name="reseña"></textarea>
 					  </div>
 					</div>
 					<div class="ec-stars-wrapper col-md-4">
@@ -126,7 +126,7 @@
 					<div class="form-group">
 					  <label class="col-md-12 control-label" for="reseña">Reseña de el usuario Usuario3</label>
 					  <div class="col-md-10">                     
-					    <textarea class="form-control" id="reseña" name="reseña"></textarea>
+					    <textarea readonly class="form-control" id="reseña" name="reseña"></textarea>
 					  </div>
 					</div>
 					<div class="ec-stars-wrapper col-md-4">
@@ -140,7 +140,7 @@
 					<div class="form-group">
 					  <label class="col-md-12 control-label" for="reseña">Reseña de el usuario Usuario4</label>
 					  <div class="col-md-10">                     
-					    <textarea class="form-control" id="reseña" name="reseña"></textarea>
+					    <textarea readonly class="form-control" id="reseña" name="reseña"></textarea>
 					  </div>
 					</div>
 					<div class="ec-stars-wrapper col-md-4">
@@ -154,9 +154,12 @@
 					<div class="form-group">
 					  <label class="col-md-12 control-label" for="reseña">Reseña de el usuario Usuario5</label>
 					  <div class="col-md-10">                     
-					    <textarea class="form-control" id="reseña" name="reseña"></textarea>
+					    <textarea readonly class="form-control" id="reseña" name="reseña"></textarea>
 					  </div>
 					</div>
 					<a href="#" class="col-md-12">Ver más reseñas</a>
 	    		</div>
 	    	</div>
+		<?php
+			include "includes/footer.html";
+		?>

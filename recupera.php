@@ -2,10 +2,7 @@
 	include "includes/navbar.html";
 ?>
 
-
-	<aside  class="col-md-3 " ></aside>
-
-	<section class="col-md-6">
+	<section class="col-md-4 col-md-offset-4">
 		<div class="panel panel-danger">
 			<div class="panel-heading">
 	   			 <h3 id="recuperarpass" class="panel-title">Recuperar Contraseña</h3>
@@ -20,7 +17,7 @@
 					</div>
 	  		
 		  		<div class="form-group">
-					<div class="col-lg-10 col-lg-offset-2">
+					<div class="col-md-6 col-md-offset-1">
 					<button type="submit" class="btn btn-danger" id="btnrecupera">Enviar</button>
 					</div>
 
@@ -28,20 +25,9 @@
 	  		</div>	
 	  		</form>
 		</div>
-
 	</section>
-	<aside  class="col-md-4 " ></aside>
-
-	
-  
 		<?php
 			include "includes/footer.html";
 		?>
-
-
-
-</body> 
-</html>
-
 
 

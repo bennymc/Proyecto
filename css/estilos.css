@@ -143,6 +143,9 @@ footer{
 	background-color: #93C54B;
 	height: 65px;
 }
+textarea{
+	resize: none;
+}
 
 #contenidofooter{
 	padding: 1em;
