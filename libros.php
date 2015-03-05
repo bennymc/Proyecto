@@ -4,7 +4,7 @@
 	<section class="col-md-7">
 		<div class="panel panel-success">
   			<div class="panel-heading">
-    			<h3 class="panel-title" id="grande">Genero 1</h3>
+    			<a href="genero.php"><h3 class="panel-title" id="grande">Genero 1</h3></a>
   			</div>
   			<div class="panel-body">
 				<a href="ejemplar.php"><img src="http://placehold.it/100x100" alt="Libro"></a>
@@ -21,7 +21,7 @@
 		</div>
 		<div class="panel panel-success">
   			<div class="panel-heading">
-    			<h3 class="panel-title" id="grande">Genero 2</h3>
+    			<a href="genero.php"><h3 class="panel-title" id="grande">Genero 2</h3></a>
   			</div>
   			<div class="panel-body">
 				<a href="ejemplar.php"><img src="http://placehold.it/100x100" alt="Libro"></a>
@@ -38,7 +38,7 @@
 		</div>
 		<div class="panel panel-success">
   			<div class="panel-heading">
-    			<h3 class="panel-title" id="grande">Genero 3</h3>
+    			<a href="genero.php"><h3 class="panel-title" id="grande">Genero 3</h3></a>
   			</div>
   			<div class="panel-body">
 				<a href="ejemplar.php"><img src="http://placehold.it/100x100" alt="Libro"></a>
@@ -55,7 +55,7 @@
 		</div>
 		<div class="panel panel-success">
   			<div class="panel-heading">
-    			<h3 class="panel-title" id="grande">Genero 4</h3>
+    			<a href="genero.php"><h3 class="panel-title" id="grande">Genero 4</h3></a>
   			</div>
   			<div class="panel-body">
 				<a href="ejemplar.php"><img src="http://placehold.it/100x100" alt="Libro"></a>
@@ -72,7 +72,7 @@
 		</div>
 		<div class="panel panel-success">
   			<div class="panel-heading">
-    			<h3 class="panel-title" id="grande">Genero 5</h3>
+    			<a href="genero.php"><h3 class="panel-title" id="grande">Genero 5</h3></a>
   			</div>
   			<div class="panel-body">
 				<a href="ejemplar.php"><img src="http://placehold.it/100x100" alt="Libro"></a>

@@ -102,7 +102,7 @@
 					
 				 </div>
 			</div>
-			<a href="#">Atrás<span class="glyphicon glyphicon-chevron-left"></span></a>
+			<a href="#"><span class="glyphicon glyphicon-chevron-left"></span>Atrás</a>
 	    	<a href="#" class="col-md-offset-10">Siguiente<span class="glyphicon glyphicon-chevron-right"></span></a>
 	    </section>
 

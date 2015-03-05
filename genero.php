@@ -10,7 +10,7 @@
 				    <p>Descripción del género.</p>
 				  </div>
 	    	</div>	
-	    	<a href="#" class="col-md-6">Atrás<span class="glyphicon glyphicon-chevron-left"></span></a>
+	    	<a href="#" class="col-md-6"><span class="glyphicon glyphicon-chevron-left"></span>Atrás</a>
 	    	<a href="#" class="col-md-6">Siguiente<span class="glyphicon glyphicon-chevron-right"></span></a>
 
 	</aside>
