@@ -6,8 +6,16 @@
   			<div class="panel-heading">
     			<h3 class="panel-title" id="grande">Libros Populares.</h3>
   			</div>
-  			<div class="panel-body">
-   				 Mostrara libros populares entre los  usuarios
+  			<div id="destacados" class="panel-body">
+   				 <p>Mostrara libros populares entre los  usuarios<br/></p>
+				
+				<img   src="http://placehold.it/100x150" alt="Libro"  	>
+				<img   src="http://placehold.it/100x150" alt="Libro"  	>
+				<img   src="http://placehold.it/100x150" alt="Libro"  	>
+				<img   src="http://placehold.it/100x150" alt="Libro"  	>
+				<img   src="http://placehold.it/100x150" alt="Libro"  	>
+				
+					 	
   			</div>
 		</div>
 		<div class="panel panel-success">

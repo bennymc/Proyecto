@@ -92,3 +92,12 @@ img#librodestacado{
 a#editarperfil{
 	margin-bottom: 50px;
 }
+
+button#cambiar{
+	float: right;
+	margin-top: 20px;
+}
+
+div#destacados img{
+	margin: 1em;
+}
