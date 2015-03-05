@@ -2,7 +2,7 @@
 	include "includes/navbar.html";
 ?>
 
-		
+		<div id="contenedor">
 		<section class="col-md-6">
 			<form class="form-horizontal">
 				<fieldset>
@@ -82,12 +82,8 @@
 					</div>
 				</fieldset>
 			</form>
-
-			
-
-
 		</aside>
-
+		</div>
 		<?php
 			include "includes/footer.html";
 		?>

@@ -140,8 +140,8 @@
 						</div>			      
 					</div>
 
-					<div class="form-group">
-						<div class="col-lg-10 col-lg-offset-2">
+					<div class="form-group col-md-7">
+						<div>
 						<button type="submit" class="btn btn-default" id="btnlogin">Entrar</button>
 						</div>
 
