@@ -19,15 +19,15 @@
 					  	Ejemplar1.
 					  </p>
 					  <h3>Autor</h3>
-					  <p>
+					  <a href="autor.php"><p>
 					  	Autor1.
-					  </p>
+					  </p></a>
 				  </div>
 				   <div class="fichac panel-body col-md-4">
 				   	 <h3>Editorial</h3>
-					  <p>
+					  <a href="editorial.php"><p>
 					  	Editorial1.
-					  </p>
+					  </p></a>
 				  	 <h3>Año de edición</h3>
 					  <p>
 					  	AñodeEdición1.
@@ -42,9 +42,9 @@
 				  </div>
 				   <div class="panel-body col-md-4">
 						<h3>Género</h3>
-					  <p>
+					  <a href="genero.php"><p>
 					  	Género1.
-					  </p>
+					  </p></a>
 					  <h3>Título original</h3>
 					  <p>
 					  	TítuloOriginal1.
@@ -96,7 +96,7 @@
 					</div>
 					<noscript>Necesitas tener habilitado javascript para poder votar</noscript>
 					<div class="form-group">
-					  <label class="col-md-12 control-label" for="reseña">Reseña de el usuario Usuario1</label>
+					  <label class="col-md-12 control-label" for="reseña"><a href="usuario.php">Reseña de el usuario Usuario1</a></label>
 					  <div class="col-md-10">                     
 					    <textarea readonly class="form-control" id="reseña" name="reseña"></textarea>
 					  </div>
@@ -110,7 +110,7 @@
 					</div>
 					<noscript>Necesitas tener habilitado javascript para poder votar</noscript>
 					<div class="form-group">
-					  <label class="col-md-12 control-label" for="reseña">Reseña de el usuario Usuario2</label>
+					  <label class="col-md-12 control-label" for="reseña"><a href="usuario.php">Reseña de el usuario Usuario2</a></label>
 					  <div class="col-md-10">                     
 					    <textarea readonly class="form-control" id="reseña" name="reseña"></textarea>
 					  </div>
@@ -124,7 +124,7 @@
 					</div>
 					<noscript>Necesitas tener habilitado javascript para poder votar</noscript>
 					<div class="form-group">
-					  <label class="col-md-12 control-label" for="reseña">Reseña de el usuario Usuario3</label>
+					  <label class="col-md-12 control-label" for="reseña"><a href="usuario.php">Reseña de el usuario Usuario3</a></label>
 					  <div class="col-md-10">                     
 					    <textarea readonly class="form-control" id="reseña" name="reseña"></textarea>
 					  </div>
@@ -138,7 +138,7 @@
 					</div>
 					<noscript>Necesitas tener habilitado javascript para poder votar</noscript>
 					<div class="form-group">
-					  <label class="col-md-12 control-label" for="reseña">Reseña de el usuario Usuario4</label>
+					  <label class="col-md-12 control-label" for="reseña"><a href="usuario.php">Reseña de el usuario Usuario4</a></label>
 					  <div class="col-md-10">                     
 					    <textarea readonly class="form-control" id="reseña" name="reseña"></textarea>
 					  </div>
@@ -152,12 +152,12 @@
 					</div>
 					<noscript>Necesitas tener habilitado javascript para poder votar</noscript>
 					<div class="form-group">
-					  <label class="col-md-12 control-label" for="reseña">Reseña de el usuario Usuario5</label>
+					  <label class="col-md-12 control-label" for="reseña"><a href="usuario.php">Reseña de el usuario Usuario5</a></label>
 					  <div class="col-md-10">                     
 					    <textarea readonly class="form-control" id="reseña" name="reseña"></textarea>
 					  </div>
 					</div>
-					<a href="#" class="col-md-12">Ver más reseñas</a>
+					<a href="#" class="col-md-6">Siguiente<span class="glyphicon glyphicon-chevron-right"></span></a>
 	    		</div>
 	    	</div>
 		<?php

@@ -7,13 +7,12 @@
     			<h3 class="panel-title" id="grande">Libros Populares.</h3>
   			</div>
   			<div id="destacados" class="panel-body">
-   				 <p>Mostrara libros populares entre los  usuarios<br/></p>
-				
-					 	<a href="ejemplar.php"><img   src="http://placehold.it/100x150" alt="Libro"></a>
-				<img   src="http://placehold.it/100x150" alt="Libro" >
-				<img   src="http://placehold.it/100x150" alt="Libro" >
-				<img   src="http://placehold.it/100x150" alt="Libro" >
-				<img   src="http://placehold.it/100x150" alt="Libro" >
+   				<p>Mostrara libros populares entre los  usuarios<br/></p>
+				<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
+				<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
+				<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
+				<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
+				<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
 				
 					 	
   			</div>
@@ -34,7 +33,7 @@
 					<noscript>Necesitas tener habilitado javascript para poder votar</noscript>
 					<div class="form-group">
 					  <h4 class="col-md-12">Usuario: Usuario1</h4>
-					  <h4 class="col-md-12">Título: Título1</h4>
+					  <a href="ejemplar.php"><h4 class="col-md-12">Título: Título1</h4></a>
 					  <div class="col-md-10">                     
 					    <textarea readonly class="form-control" id="reseña" name="reseña"></textarea>
 					  </div>
@@ -51,7 +50,7 @@
 					<noscript>Necesitas tener habilitado javascript para poder votar</noscript>
 					<div class="form-group">
 					  <h4 class="col-md-12">Usuario: Usuario2</h4>
-					  <h4 class="col-md-12">Título: Título2</h4>
+					  <a href="ejemplar.php"><h4 class="col-md-12">Título: Título2</h4></a>
 					  <div class="col-md-10">                     
 					    <textarea readonly class="form-control" id="reseña" name="reseña"></textarea>
 					  </div>
@@ -68,7 +67,7 @@
 					<noscript>Necesitas tener habilitado javascript para poder votar</noscript>
 					<div class="form-group">
 					  <h4 class="col-md-12">Usuario: Usuario3</h4>
-					  <h4 class="col-md-12">Título: Título3</h4>
+					  <a href="ejemplar.php"><h4 class="col-md-12">Título: Título3</h4></a>
 					  <div class="col-md-10">                     
 					    <textarea readonly class="form-control" id="reseña" name="reseña"></textarea>
 					  </div>
