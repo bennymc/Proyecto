@@ -84,6 +84,9 @@
 					  <div class="col-md-10">                     
 					    <textarea class="form-control" id="reseña" name="reseña"></textarea>
 					  </div>
+					<div>
+					<button type="submit" class="btn btn-default" id="btnenviarreview">Enviar</button>
+					</div>
 					</div>
 	    		</div>
 	    		<div class="panel-body col-md-7" id="userreview">

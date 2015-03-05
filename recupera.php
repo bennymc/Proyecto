@@ -20,7 +20,6 @@
 					<div class="col-md-6 col-md-offset-1">
 					<button type="submit" class="btn btn-danger" id="btnrecupera">Enviar</button>
 					</div>
-
 				</div>	
 	  		</div>	
 	  		</form>
