@@ -108,9 +108,5 @@
 			include "includes/footer.html";
 		?>
 
-	</body> 
-</html>
-
-
 
 	

@@ -9,11 +9,11 @@
   			<div id="destacados" class="panel-body">
    				 <p>Mostrara libros populares entre los  usuarios<br/></p>
 				
-				<img   src="http://placehold.it/100x150" alt="Libro"  	>
-				<img   src="http://placehold.it/100x150" alt="Libro"  	>
-				<img   src="http://placehold.it/100x150" alt="Libro"  	>
-				<img   src="http://placehold.it/100x150" alt="Libro"  	>
-				<img   src="http://placehold.it/100x150" alt="Libro"  	>
+					 	<a href="ejemplar.php"><img   src="http://placehold.it/100x150" alt="Libro"></a>
+				<img   src="http://placehold.it/100x150" alt="Libro" >
+				<img   src="http://placehold.it/100x150" alt="Libro" >
+				<img   src="http://placehold.it/100x150" alt="Libro" >
+				<img   src="http://placehold.it/100x150" alt="Libro" >
 				
 					 	
   			</div>
@@ -22,8 +22,58 @@
   			<div class="panel-heading">
    				 <h3 class="panel-title" id="grande">Ultimas Reseñas.</h3>
   			</div>
-  			<div class="panel-body">
-   				 Mostrara ultimas reseñas realizadas por usuarios
+  			<div class="panel-body" id="ultimasreview">
+   				<div class="panel-body col-md-4">
+				    <div class="ec-stars-wrapper col-md-5">
+						<a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
+						<a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
+						<a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
+						<a href="#" data-value="4" title="Votar con 4 estrellas">&#9733;</a>
+						<a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a>
+					</div>
+					<noscript>Necesitas tener habilitado javascript para poder votar</noscript>
+					<div class="form-group">
+					  <h4 class="col-md-12">Usuario: Usuario1</h4>
+					  <h4 class="col-md-12">Título: Título1</h4>
+					  <div class="col-md-10">                     
+					    <textarea readonly class="form-control" id="reseña" name="reseña"></textarea>
+					  </div>
+					</div>
+	    		</div>
+	    		<div class="panel-body col-md-4">
+				    <div class="ec-stars-wrapper col-md-5">
+						<a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
+						<a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
+						<a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
+						<a href="#" data-value="4" title="Votar con 4 estrellas">&#9733;</a>
+						<a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a>
+					</div>
+					<noscript>Necesitas tener habilitado javascript para poder votar</noscript>
+					<div class="form-group">
+					  <h4 class="col-md-12">Usuario: Usuario2</h4>
+					  <h4 class="col-md-12">Título: Título2</h4>
+					  <div class="col-md-10">                     
+					    <textarea readonly class="form-control" id="reseña" name="reseña"></textarea>
+					  </div>
+					</div>
+	    		</div>
+	    		<div class="panel-body col-md-4">
+				    <div class="ec-stars-wrapper col-md-5">
+						<a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
+						<a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
+						<a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
+						<a href="#" data-value="4" title="Votar con 4 estrellas">&#9733;</a>
+						<a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a>
+					</div>
+					<noscript>Necesitas tener habilitado javascript para poder votar</noscript>
+					<div class="form-group">
+					  <h4 class="col-md-12">Usuario: Usuario3</h4>
+					  <h4 class="col-md-12">Título: Título3</h4>
+					  <div class="col-md-10">                     
+					    <textarea readonly class="form-control" id="reseña" name="reseña"></textarea>
+					  </div>
+					</div>
+	    		</div>
   			</div>
 		</div>
 		
@@ -31,7 +81,7 @@
 		<div class="alert alert-dismissible alert-success">
 		<form class="form-horizontal">
 				<fieldset>
-					<legend>No encontraste un Libro? Sugierelo!</legend>
+					<legend>¿No encontraste un Libro? ¡Sugiérelo!</legend>
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="Email">Email</label>  
 					  <div class="col-md-5">
@@ -56,8 +106,6 @@
 					    <textarea class="form-control" id="comentarios" name="Comentarios"></textarea>
 					  </div>
 					</div>
-					
-					
 				</fieldset>
 			</form>
 			
@@ -103,7 +151,3 @@
 	include "includes/footer.html";
 ?>
 
-
-</body>
-
-</html>

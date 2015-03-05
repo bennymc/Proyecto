@@ -134,5 +134,6 @@
 			</div>			
 		</div>
 	</aside>
-</body>
-</html>
+		<?php
+			include "includes/footer.html";
+		?>
