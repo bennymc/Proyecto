@@ -47,7 +47,7 @@ a#recuperar ,a#registro{
 }
 button#btnlogin{
 
-	margin-left: 150px;
+	margin-left: 70%;
 }
 div#contenedorlogin{
 	width: 95%;
@@ -100,4 +100,16 @@ button#cambiar{
 
 div#destacados img{
 	margin: 1em;
+}
+
+h3#recuperarpass{
+	font-size: 2em;
+}
+
+button#btnrecupera{
+	margin-left: 70%;
+}
+
+input#inputrecuperapass{
+	margin-bottom: 10px;
 }
