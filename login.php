@@ -8,7 +8,7 @@
 	    		<h3 class="panel-title" id="Tlogin"> Inicia Sesion:</h3>
 			</div>
 			<div class="panel-body">
-				<form class="form-horizontal">
+				<form action="index.php" method="post" class="form-horizontal">
 					<div class="form-group">
 						<label for="usuario" class="col-lg-2 control-label" id="usuario" >Usuario:</label>
 						<div class="col-lg-8">
@@ -24,9 +24,8 @@
 
 					<div class="form-group">
 						<div class="col-lg-10 col-lg-offset-2">
-						<button type="submit" class="btn btn-default" id="btnlogin">Entrar</button>
+							<button type="submit" class="btn btn-default" id="btnlogin">Entrar</button>
 						</div>
-
 					</div>	
 					<a href="recupera.php" class="btn btn-link" id="recuperar">Recuperar contraseña</a>
 					<a href="registro.php" class="btn btn-link" id="registro">Registro</a>

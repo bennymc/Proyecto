@@ -10,6 +10,31 @@
 				  <div class="panel-body ">
 				    <img class="center-block" id="fotodeperfil" src="http://placehold.it/200x200" alt="imagen de perfil">
 				  </div>
+				  <div>
+						<div class="bs-example">
+					    <!-- Button HTML (to Trigger Modal) -->
+					    <a href="#myModal" class="btn btn-lg btn-default" data-toggle="modal">Mensaje</a>
+					    
+					    <!-- Modal HTML -->
+					    <div id="myModal" class="modal fade">
+					        <div class="modal-dialog">
+					            <div class="modal-content">
+					                <div class="modal-header">
+					                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					                    <h4 class="modal-title">Escribe aquí tu mensaje para UsuarioX</h4>
+					                </div>
+					                <div class="modal-body">
+					                    <textarea class="form-control" id="mensaje" name="mensaje"></textarea>
+					                </div>
+					                <div class="modal-footer">
+					                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+					                    <button type="button" class="btn btn-primary">Enviar</button>
+					                </div>
+					            </div>
+					        </div>
+					    </div>
+					</div>  
+				  </div>
 	    	</div>	
 	    	<div class="panel panel-success">
 				  <div class="panel-heading">

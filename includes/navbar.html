@@ -2,7 +2,6 @@
 <head>
    <meta charset="UTF-8"/> 
    <title>Book²</title>
-
    	<link href="./css/bootstrap.min.css" rel="stylesheet" media="screen">
 	<link href="./css/estilos.css" rel="stylesheet" media="screen">
 	<script src="http://code.jquery.com/jquery.js"></script>
@@ -43,13 +42,54 @@
 	      </ul>
 	      <form action="busqueda.php" method="post" class="navbar-form navbar-left" role="search">
 	        <div class="form-group" id="areabuscar">
-	          <input type="text" class="form-control" placeholder="Titulo / Autor / ISBN">
+	          <input type="text" class="form-control" placeholder="Titulo / Autor / ISBN / Usuario">
 	        </div>
 	        <button type="submit" class="btn btn-default"id="botonbuscar">BUSCAR</button>
 	      </form>
 	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="./login.php">Inicia Sesion</a></li>
+	        <li><a href="#login" data-toggle="modal">Inicia Sesion</a></li>
 	      </ul>
-	    </div>
-	  </div>
-	</nav>
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="./inbox.php" data-toggle="modal">Mensajes recibidos</a></li>
+	      </ul>
+	      <div id="login" class="modal fade">
+	        <div class="modal-dialog">
+	            <div class="modal-content">
+	                <div class="modal-body">
+	                    <section id="formulario">
+						<div class="panel panel-success" id="contenedorlogin">
+						<div class="panel-heading">
+				    		<h3 class="panel-title" id="Tlogin"> Inicia Sesion:</h3>
+						</div>
+						<div class="panel-body">
+							<form action="index.php" method="post" class="form-horizontal">
+								<div class="form-group">
+									<label for="usuario" class="col-lg-2 control-label" id="usuario" >Usuario:</label>
+									<div class="col-lg-8">
+									<input type="text" class="form-control" id="usuario" placeholder="USUARIO">
+									</div>
+								</div>
+								<div class="form-group">
+								    <label for="pass" class="col-lg-2 control-label" id="pass">Contraseña:</label>
+								    <div class="col-lg-8">
+								    <input type="password" class="form-control" id="pass" placeholder="CONTRASEÑA">
+									</div>			      
+								</div>
+								<div class="form-group">
+									<div>
+										<button type="submit" class="btn btn-default" id="btnlogin">Entrar</button>
+									</div>
+								</div>	
+								<a href="recupera.php" class="btn btn-link" id="recuperar">Recuperar contraseña</a>
+								<a href="registro.php" class="btn btn-link" id="registro">Registro</a>
+							</form>
+						</div>
+						</div>
+						</section>
+	                </div>
+	            </div>
+	        </div>
+	      </div>
+      </div>
+    </div>
+</nav>
