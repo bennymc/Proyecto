@@ -132,12 +132,13 @@ div#destacados img{
 	margin: 1em;
 }
 
+/* ------------ Pagina Recuperar Contraseña -------------*/
 h3#recuperarpass{
 	font-size: 2em;
 }
 
-button#btnrecupera{
-	margin-left: 70%;
+#formrecuperapass{
+	margin-top: 8%;
 }
 
 input#inputrecuperapass{
