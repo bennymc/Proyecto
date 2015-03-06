@@ -6,6 +6,24 @@ header {
 	background-color: #957C44;
 
 }
+
+/* ------------CLASE PARA TITULOS GRANDES EN LOS PANELES -------------*/
+h3.TituloGrande{
+	font-size: 2em;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	line-height: 22px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+/* ------------LINKS EN INICIO DE SESION  -------------*/
+a#recuperar ,a#registro{
+	font-size: 1em;
+	padding: 0;	
+}
+
+/* ------------  -------------*/
 .navbar .nav  li  a {
 	padding-left: 2em;
 	
@@ -27,25 +45,7 @@ li a#peque1  {
 	width: 100px;
 }
 
-h3#Tlogin ,h3#grande{
-	font-size: 2em;
-}
-input#pass, input#usuario{
-	width: 90%;
-	margin-left: 25px;
-}
 
-a#recuperar ,a#registro{
-	font-size: 1em;
-	
-}
-button#btnlogin{
-
-	margin-left: 70%;
-}
-div#contenedorlogin{
-	width: 95%;
-}
 
 h1#librero{
 	font-size: 3em;
@@ -132,7 +132,7 @@ div#destacados img{
 	margin: 1em;
 }
 
-/* ------------ Pagina Recuperar Contraseña -------------*/
+/* ------------ PAGINA PARA RECUPERAR CONTRASEÑA -------------*/
 h3#recuperarpass{
 	font-size: 2em;
 }
@@ -145,11 +145,12 @@ input#inputrecuperapass{
 	margin-bottom: 10px;
 }
 
+/* ------------ ARREGLOS PARA EL FOOTER -------------*/
 #contenedor {
-min-height: 100%;
-height: auto !important;
-height: 100%;
-margin: 0 auto -65px;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -65px;
 }
 
 
@@ -160,20 +161,23 @@ footer{
 	height: 65px;
 }
 
-
-textarea{
-	resize: none;
-}
-
 #contenidofooter{
 	padding: 1em;
 	font-size: 1em;
 	float: right;
 	color: black;
 }
+/* ------------  -------------*/
+textarea{
+	resize: none;
+}
+
+/* ------------  -------------*/
 #btnresponder{
 	margin-top: 15px;
 }
+
+/* ------------  -------------*/
 #aboutus{
 	text-align: center;
 }

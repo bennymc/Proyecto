@@ -19,7 +19,7 @@
 			  		
 				  		<div class="form-group">
 							<div class="col-md-12 ">
-							<button type="submit" class="btn btn-danger pull-right" id="btnrecupera">Recuperar</button>
+								<button type="submit" class="btn btn-danger pull-right" id="btnrecupera">Recuperar</button>
 							</div>
 						</div>	
 			  		</div>	
