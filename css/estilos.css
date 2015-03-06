@@ -56,12 +56,15 @@ img#librodestacado{
 	box-shadow:1px 1px 30px 4px rgba(0,0,0,0.4);
 }
 
-.librosencontenedor{
-	margin: 2em;
-	float: left;
+div.librosencontenedor{
+	margin: 10px;
 }
 
 .librosencontenedor p{
+	text-align: center;
+}
+
+a.center-block{
 	text-align: center;
 }
 
