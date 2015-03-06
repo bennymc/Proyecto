@@ -2,14 +2,30 @@ html, body {
 height: 100%;
 }
 
-header {
-	background-color: #957C44;
-
-}
-
-/* ------------CLASE PARA TITULOS GRANDES EN LOS PANELES -------------*/
+/* ------------CLASES PARA TITULOS GRANDES EN LOS PANELES -------------*/
 h3.TituloGrande{
 	font-size: 2em;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	line-height: 22px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+h1.titulosenperfil{
+	color: black;
+	font-size: 2em;
+	text-align: center;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	line-height: 22px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+h1.Contenedoresdelibros{
+	font-size: 3em;
+	color: black;
 	margin-top: 0px;
 	margin-bottom: 0px;
 	line-height: 22px;
@@ -21,6 +37,41 @@ h3.TituloGrande{
 a#recuperar ,a#registro{
 	font-size: 1em;
 	padding: 0;	
+}
+
+/* ------------ ELEMENTOS EN PERFIL  -------------*/
+
+img#fotodeperfil{
+
+	width: 200px ;
+	height: 200px ;
+	border-radius: 50%;
+	border: solid #66971F;
+	box-shadow:1px 1px 30px 4px rgba(0,0,0,0.4);
+}
+
+img#librodestacado{
+	border-radius: 5%;
+	border: solid #66971F;
+	box-shadow:1px 1px 30px 4px rgba(0,0,0,0.4);
+}
+
+.librosencontenedor{
+	margin: 2em;
+	float: left;
+}
+
+.librosencontenedor p{
+	text-align: center;
+}
+
+button#editarperfil{
+	margin-bottom: 50px;
+}
+
+/* ------------ MARGEN PARA FLECHAS SIG Y ANT -------------*/
+div.flechas{
+	margin-bottom: 20px;
 }
 
 /* ------------  -------------*/
@@ -47,43 +98,7 @@ li a#peque1  {
 
 
 
-h1#librero{
-	font-size: 3em;
-	color: black;
-	/*font-style: italic ;*/
-}
 
-img#fotodeperfil{
-
-	width: 200px ;
-	height: 200px ;
-	border-radius: 50%;
-	border: solid #66971F;
-	box-shadow:1px 1px 30px 4px rgba(0,0,0,0.4);
-}
-
-h1#nombredeperfil{
-	color: black;
-	font-size: 2em;
-	text-align: center;
-}
-img#librodestacado{
-	border-radius: 5%;
-	border: solid #66971F;
-	box-shadow:1px 1px 30px 4px rgba(0,0,0,0.4);
-}
-
-#enlibrero{
-	margin: 2em;
-	float: left;
-}
-#enlibrero p{
-	text-align: center;
-}
-
-a#editarperfil{
-	margin-bottom: 50px;
-}
 #ficha{
 	float: left;
 }
@@ -179,5 +194,26 @@ textarea{
 
 /* ------------  -------------*/
 #aboutus{
+	text-align: center;
+}
+
+
+
+/* ------------ Esto se debe eliminar
+				porque se repiten id
+				ando convirtiendo a clases
+  -------------*/
+#enlibrero{
+	margin: 2em;
+	float: left;
+}
+h3#Tlogin ,h3#grande{
+	font-size: 2em;
+}
+h1#librero{
+	font-size: 3em;
+	color: black;}
+
+	#enlibrero p{
 	text-align: center;
 }
