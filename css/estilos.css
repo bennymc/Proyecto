@@ -77,28 +77,30 @@ div.flechas{
 	margin-bottom: 20px;
 }
 
-/* ------------  -------------*/
+/* ------------ MENU -------------*/
 .navbar .nav  li  a {
-	padding-left: 2em;
-	
+	padding-left: 2em;	
 	font-size: 1.5em ;	
 }
-li a#peque  {
+
+.navbar .nav li a.peque  {
 	font-style: italic;
-font-size: 1em;
+	font-size: 1em;
 }
-li a#peque1  {
+
+.navbar .nav li a.peque1  {
 	color: #457106;
 	line-height: .3em;
 	font-style: bold;
 	font-size: 1.1em;
 }
+
 #botonbuscar {
 	margin-left: 5px;
 	font-size: .9em;
 	width: 100px;
 }
-
+/* ------------  -------------*/
 
 
 
@@ -141,14 +143,6 @@ li a#peque1  {
 .inboxi{
 	border-right: 2px solid #82B33A;
 }
-button#cambiar{
-	float: right;
-	margin-top: 20px;
-}
-
-div#destacados img{
-	margin: 1em;
-}
 
 /* ------------ PAGINA PARA RECUPERAR CONTRASEÑA -------------*/
 h3#recuperarpass{
@@ -179,7 +173,7 @@ footer{
 	height: 65px;
 }
 
-#contenidofooter{
+.contenidofooter{
 	padding: 1em;
 	font-size: 1em;
 	float: right;
@@ -199,7 +193,14 @@ textarea{
 #aboutus{
 	text-align: center;
 }
+button#cambiar{
+	float: right;
+	margin-top: 20px;
+}
 
+div#destacados img{
+	margin: 1em;
+}
 
 
 /* ------------ Esto se debe eliminar
