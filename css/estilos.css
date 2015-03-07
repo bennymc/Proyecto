@@ -221,21 +221,3 @@ button#cambiar{
 
 
 
-/* ------------ Esto se debe eliminar
-				porque se repiten id
-				ando convirtiendo a clases
-  -------------*/
-#enlibrero{
-	margin: 2em;
-	float: left;
-}
-h3#Tlogin ,h3#grande{
-	font-size: 2em;
-}
-h1#librero{
-	font-size: 3em;
-	color: black;}
-
-	#enlibrero p{
-	text-align: center;
-}
