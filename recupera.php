@@ -1,7 +1,7 @@
 <?php
 	include "includes/navbar.html";
 ?>
-	
+<!-- ***************** FORMULARIO PARA RECUPERAR CONTRASEÑA **************** -->	
 	<div id="contenedor">
 		<section id="formrecuperapass" class="col-md-4 col-md-offset-4">
 			<div class="panel panel-danger">
@@ -15,8 +15,7 @@
 							  <div class="col-md-12">
 							    <input id="inputrecuperapass" name="inputrecuperapass" placeholder="" class="form-control input-md" required="">
 							  </div>
-						</div>
-			  		
+						</div>			  		
 				  		<div class="form-group">
 							<div class="col-md-12 ">
 								<button type="submit" class="btn btn-danger pull-right" id="btnrecupera">Recuperar</button>
@@ -27,7 +26,7 @@
 			</div>
 		</section>
 	</div>
-
+<!-- ***************** FIN DEL FORMULARIO  **************** -->	
 <?php
 	include "includes/footer.html";
 ?>

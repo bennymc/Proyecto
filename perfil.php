@@ -45,10 +45,10 @@
 			    <div class="col-md-12">
 			    	<label  for="ordenar">Ordenar Libros por:</label>
 				    <select id="ordenar" name="ordenar">
-				      <option value="titulo">Titulo</option>
-				      <option value="autor">Autor</option>
-				      <option value="editorial">Editorial</option>
-				      <option value="año">Año</option>
+				      	<option value="titulo">Titulo</option>
+				      	<option value="autor">Autor</option>
+				      	<option value="editorial">Editorial</option>
+				      	<option value="año">Año</option>
 				    </select>
 				</div>
 				<div class="col-md-12">
