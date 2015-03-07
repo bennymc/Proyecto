@@ -1,99 +1,117 @@
 <?php
 			include "includes/navbar.html";
 ?>
+<!-- ***************** AUTOR **************************** -->
+<!-- ***************** INICIA ASIDE IZQ **************************** -->
 	<aside class="col-md-3">
 		<div class="panel panel-success">
-				  <div class="panel-heading">
-				    <h1 class="panel-title" id="nombredeperfil">AUTOR X</h1>
-				  </div>
-				  <div class="panel-body ">
-				    <a href="editar.php"><img class="center-block" id="fotodeperfil" src="http://placehold.it/200x200" alt="imagen de perfil"></a>
-				  </div>
-	    	</div>	
-			<div class="panel panel-success">
-				  <div class="panel-heading">
-				    <h1 class="panel-title" id="titulo">Acerca del Autor X</h1>
-				  </div>
-				  <div class="panel-body">
-				    <p>Descripción del autor.</p>
-				  </div>
-	    	</div>	
-
-	    	
-
-	</aside>
-	<section class="col-md-6">
-	    	<div class="panel panel-success">
-				  <div class="panel-heading">
-				    <h1 class="panel-title" id="librero">AUTOR X - GÉNERO X</h1>
-				  </div>
-				  <div class="panel-body">
-				  
-
-				    <div class="col-md-4">
-				    	<label  for="ordenar">Ordenar Libros por:</label>
-					    <select id="ordenar" name="ordenar">
-					      <option value="titulo">Titulo</option>
-					      
-					      <option value="editorial">Editorial</option>
-					      <option value="año">Año</option>
-					    </select>
-					</div>
-					 <p> LIBROS DEL AUTOR X<br/><br/></p>
-					 <div id="enlibrero" >
-					 	
-					 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
-					 	<p>TITULO</p>
-					 </div>
-					 <div id="enlibrero">
-					 	
-					 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
-					 	<p>TITULO</p>
-					 </div>
-					 <div id="enlibrero">
-					 	
-					 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
-					 	<p>TITULO</p>
-					 </div>
-					 <div id="enlibrero">
-					 	
-					 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
-					 	<p>TITULO</p>
-					 </div>
-					 <div id="enlibrero">
-					 	
-					 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
-					 	<p>TITULO</p>
-					 </div>
-					 <div id="enlibrero">
-					 	
-					 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
-					 	<p>TITULO</p>
-					 </div>
-					 <div id="enlibrero">
-					 	
-					 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
-					 	<p>TITULO</p>
-					 </div>
-					 <div id="enlibrero">
-					 	
-					 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
-					 	<p>TITULO</p>
-					 </div>
-					 <div id="enlibrero">
-					 	
-					 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
-					 	<p>TITULO</p>
-					 </div>
-					
-					
-					
-				 </div>
+	<!-- ***************** NOMBRE Y FOTO DEL AUTOR **************************** -->
+			<div class="panel-heading">
+			    <h3 class="TituloGrande">AUTOR X</h3>
 			</div>
+			<div class="panel-body ">
+			    <a href="editar.php"><img class="center-block" id="fotodeperfil" src="http://placehold.it/200x200" alt="imagen de perfil"></a>
+			</div>
+		</div>
+	<!-- ***************** ACERCA DEL AUTOR **************************** -->		
+		<div class="panel panel-success">
+		  	<div class="panel-heading">
+		    	 <h3 class="TituloGrande">Acerca del AUTOR X</h3>
+		  	</div>
+		  	<div class="panel-body">
+		    	<p>Descripción del autor.</p>
+		  	</div>
+    	</div>	
+	</aside>
+	<!-- ***************** FIN ASIDE IZQ **************************** -->
+	<!-- ***************** INICIA SECTION **************************** -->	
+	<section class="col-md-6">
+    	<div class="panel panel-success">
+			<div class="panel-heading">
+		     	<h1 class="Contenedoresdelibros">AUTOR X - GENERO X</h1>
+			</div>
+			<div class="panel-body" id="contenedorgenero">
+			    <div class="col-md-12">
+			    	<label  for="ordenar">Ordenar Libros por:</label>
+				    <select id="ordenar" name="ordenar">
+				      	<option value="titulo">Titulo</option>
+				      	<option value="editorial">Editorial</option>
+				      	<option value="año">Año</option>
+				    </select>
+				</div>
+				<div class="col-md-3">				 	
+				 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
+				 	<a href="ejemplar.php" class="center-block">TITULO</a>
+				</div>
+				<div class="col-md-3">				 	
+				 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
+				 	<a href="ejemplar.php" class="center-block">TITULO</a>
+				</div>
+				<div class="col-md-3">				 	
+				 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
+				 	<a href="ejemplar.php" class="center-block">TITULO</a>
+				</div>
+				<div class="col-md-3">				 	
+				 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
+				 	<a href="ejemplar.php" class="center-block">TITULO</a>
+				</div>
+				<div class="col-md-3">				 	
+				 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
+				 	<a href="ejemplar.php" class="center-block">TITULO</a>
+				</div>
+				<div class="col-md-3">				 	
+				 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
+				 	<a href="ejemplar.php" class="center-block">TITULO</a>
+				</div>
+				<div class="col-md-3">				 	
+				 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
+				 	<a href="ejemplar.php" class="center-block">TITULO</a>
+				</div>
+				<div class="col-md-3">				 	
+				 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
+				 	<a href="ejemplar.php" class="center-block">TITULO</a>
+				</div>
+				<div class="col-md-3">				 	
+				 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
+				 	<a href="ejemplar.php" class="center-block">TITULO</a>
+				</div>
+				<div class="col-md-3">				 	
+				 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
+				 	<a href="ejemplar.php" class="center-block">TITULO</a>
+				</div>
+				<div class="col-md-3">				 	
+				 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
+				 	<a href="ejemplar.php" class="center-block">TITULO</a>
+				</div>
+				<div class="col-md-3">				 	
+				 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
+				 	<a href="ejemplar.php" class="center-block">TITULO</a>
+				</div>
+				<div class="col-md-3">				 	
+				 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
+				 	<a href="ejemplar.php" class="center-block">TITULO</a>
+				</div>
+				<div class="col-md-3">				 	
+				 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
+				 	<a href="ejemplar.php" class="center-block">TITULO</a>
+				</div>
+				<div class="col-md-3">				 	
+				 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
+				 	<a href="ejemplar.php" class="center-block">TITULO</a>
+				</div>
+				<div class="col-md-3">				 	
+				 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
+				 	<a href="ejemplar.php" class="center-block">TITULO</a>
+				</div>	
+			</div>
+		</div>
+		<div class="flechas">
 			<a href="#"><span class="glyphicon glyphicon-chevron-left"></span>Atrás</a>
-	    	<a href="#" class="col-md-offset-8">Siguiente<span class="glyphicon glyphicon-chevron-right"></span></a>
-	    </section>
-
+	    	<a href="#" class="pull-right">Siguiente<span class="glyphicon glyphicon-chevron-right"></span></a>
+	    </div>
+	</section>
+<!-- ***************** FIN SECTION **************************** -->
+<!-- ***************** INICIA ASIDE DER **************************** -->
 	<aside class="col-md-3 " >
 		<div class="panel panel-success">
 			<div class="panel-heading">
@@ -139,6 +157,7 @@
 			</div>			
 		</div>
 	</aside>
+<!-- ***************** FIN ASIDE DER **************************** -->		
 <?php
 	include "includes/footer.html";
 ?>
