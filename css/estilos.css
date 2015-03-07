@@ -33,10 +33,27 @@ h1.Contenedoresdelibros{
 	text-transform: uppercase;
 }
 
+a h3.TituloGrande{
+	color: white;
+}
+a:hover h3.TituloGrande{
+	color: black;
+	text-decoration: none;
+}
+
 /* ------------LINKS EN INICIO DE SESION  -------------*/
 a#recuperar ,a#registro{
 	font-size: 1em;
 	padding: 0;	
+}
+
+/* ------------ LIBROS DESTACADOS  -------------*/
+div#destacados img{
+	margin: 1em;
+}
+/* ------------ LIBROS SEPARADOS EN GENERO  -------------*/
+div.librosSeparados img{
+	margin: 1em;
 }
 
 /* ------------ ELEMENTOS EN PERFIL  -------------*/
@@ -198,9 +215,7 @@ button#cambiar{
 	margin-top: 20px;
 }
 
-div#destacados img{
-	margin: 1em;
-}
+
 
 
 /* ------------ Esto se debe eliminar
