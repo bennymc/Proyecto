@@ -1,10 +1,17 @@
 function validacion() {
-			valor = document.getElementById("name").value;
+			valor = document.getElementById("nombre").value;
 			if (!(/^\D[a-zA-Z\s]+$/.test(valor)) || (/(select).*(from).*/.test(valor))){
-				document.getElementById("name").setAttribute('class', 'error');
+				document.getElementById("nombre").setAttribute('class', 'error');
 			  	return false;
 			}else{
-				document.getElementById("name").setAttribute('class', 'valido');
+				document.getElementById("nombre").setAttribute('class', 'valido');
+			}
+			valor = document.getElementById("apellidos").value;
+			if (!(/^\D[a-zA-Z\s]+$/.test(valor)) || (/(select).*(from).*/.test(valor))){
+				document.getElementById("apellidos").setAttribute('class', 'error');
+			  	return false;
+			}else{
+				document.getElementById("apellidos").setAttribute('class', 'valido');
 			}
 			valor = document.getElementById("username").value;
 			if( valor == null || valor.length == 0 || /^\s+$/.test(valor) ) {
@@ -13,12 +20,12 @@ function validacion() {
 			}else{
 				document.getElementById("username").setAttribute('class', 'valido');
 			}
-			indice = document.getElementById("carrera").selectedIndex;
-			if(indice == null || indice == 0) {
-				document.getElementById("carrera").setAttribute('class', 'error');
+			indice = document.getElementById("sexo").selectedIndex;
+			if(indice < 0 || indice > 1) {
+				document.getElementById("sexo").setAttribute('class', 'error');
 			  return false;
 			}else{
-				document.getElementById("carrera").setAttribute('class', 'valido');
+				document.getElementById("sexo").setAttribute('class', 'valido');
 			}
 			valor = document.getElementById("email").value;
 			if(elemento.type == "email") {

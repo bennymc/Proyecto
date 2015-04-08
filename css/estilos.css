@@ -222,7 +222,12 @@ button#cambiar{
 	float: right;
 	margin-top: 20px;
 }
-
+.error{
+	border: 3px solid red;
+}
+.valido{
+	border: 3px solid green;
+}
 
 
 

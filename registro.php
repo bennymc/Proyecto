@@ -2,7 +2,7 @@
 	include "includes/navbar.html";
 ?>
 	    <section id="formulario" class="col-md-4 col-md-offset-4">
-			<form class="form-horizontal">
+			<form class="form-horizontal" method="post" onsubmit="return validacion()">
 				<fieldset>
 					<legend>Registro de nuevo usuario</legend>
 					<div class="form-group">
@@ -20,7 +20,7 @@
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="Email">Email</label>  
 					  <div class="col-md-6">
-					  <input id="Email" name="Email" type="text" placeholder="" class="form-control input-md" required="">    
+					  <input id="email" name="email" type="text" placeholder="" class="form-control input-md" required="">    
 					  </div>
 					</div>
 					<div class="form-group">
