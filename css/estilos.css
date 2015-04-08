@@ -128,6 +128,11 @@ button#agregar{
 	margin-bottom: 10px;
 }
 
+button#btnenviarreview{
+	margin-top: 10px;	
+	margin-bottom: 10px;
+}
+
 .ec-stars-wrapper {
 	font-size: 0;
 	display: inline-block;
