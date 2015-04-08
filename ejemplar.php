@@ -16,10 +16,10 @@
 	<section class="col-md-8" id="ficha">
 		<div class="panel panel-success">
 			<div class="panel-heading">
-		    	<h1 class="titulosenperfil">Ficha bibliográfica</h1>
+			    <h1 class="titulosenperfil">Ficha bibliográfica</h1>
 			</div>
 			<div class="panel-body ">
-				<div class="col-md-4">
+			  	<div class="col-md-4">
 					<h3>Título del libro</h3>
 					<p>
 					  	Ejemplar1.
@@ -49,18 +49,20 @@
 		  		</div>
 			</div>
 		</div>
-	</section>
+	</section>	
+
+
 <!-- ************************************* BOTON AGREGAR ************************************* -->		
-	<div class="form-group">
+	
 		<div class="col-md-4 col-md-offset-3">
 			<button id="agregar" name="agregar" class="btn btn-default">Agregar a mi librero</button>
 		</div>
-	</div>	
+	
 <!-- ************************************* SINOPSIS ************************************* -->					
 	<section class="col-md-12">
 		<div class="panel panel-success">
 			<div class="panel-heading">
-			    <h3 class="TituloGrande" id="sinopsis">Sinopsis</h1>
+			    <h3 class="TituloGrande" id="sinopsis">Sinopsis</h3>
 			</div>
 			<div class="panel-body ">
 			  	<p>
@@ -73,7 +75,7 @@
 	<section class="col-md-12">
 		<div class="panel panel-success">
 		    <div class="panel-heading">
-		    	<h3 class="TituloGrande">Reseñas</h1>
+		    	<h3 class="TituloGrande">Reseñas</h3>
 		    </div>
 		    <div class="panel-body">
 	<!-- ************************************* MI RESEÑA ************************************* -->	    	
