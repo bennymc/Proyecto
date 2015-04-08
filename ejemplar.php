@@ -8,7 +8,7 @@
 			    <h1 class="titulosenperfil">Título del Libro</h1>
 			</div>
 			<div class="panel-body ">
-			    <a href="ejemplar.php"><img class="center-block" id="librodestacado" src="http://placehold.it/200x300" alt="Libro Destacado"></a>
+			    <a href="ejemplar.php"><img class="center-block img-responsive" id="librodestacado" src="http://placehold.it/200x300" alt="Libro Destacado"></a>
 			</div>
     	</div>	
 	</aside>	
@@ -90,12 +90,11 @@
 					<noscript>Necesitas tener habilitado javascript para poder votar</noscript>
 					<div class="form-group">
 					  	<label class="col-md-12 control-label" for="reseña">Mi reseña</label>
-					  	<div class="col-md-10">                     
+					  	<div class="col-md-12">                     
 					    	<textarea class="form-control" id="reseña" name="reseña"></textarea>
-					  	
-					
-						<button type="submit" class="btn btn-default" id="btnenviarreview">Enviar</button>
+							<button type="submit" class="btn btn-default" id="btnenviarreview">Enviar</button>
 					</div>
+
 					</div>
 				</div>
 	<!-- ************************************* RESEÑAS DE USUARIOS ************************************* -->		
