@@ -124,7 +124,9 @@ div.flechas{
 }
 
 /* ------------ -------------*/
-
+button#agregar{
+	margin-bottom: 10px;
+}
 
 .ec-stars-wrapper {
 	font-size: 0;
