@@ -88,9 +88,10 @@
 					<noscript>Necesitas tener habilitado javascript para poder votar</noscript>
 					<div class="form-group">
 					  	<label class="col-md-12 control-label" for="reseña">Mi reseña</label>
-					  	<div class="col-md-10">                     
+					  	<div class="col-md-12">                     
 					    	<textarea class="form-control" id="reseña" name="reseña"></textarea>
 					  	</div>
+						<div>
 							<button type="submit" class="btn btn-default center-block" id="btnenviarreview">Enviar</button>
 						</div>
 					</div>
