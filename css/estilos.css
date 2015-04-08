@@ -124,8 +124,8 @@ div.flechas{
 }
 
 /* ------------ -------------*/
-#ficha{
-	float: left;
+button#agregar{
+	margin-bottom: 10px;
 }
 
 .ec-stars-wrapper {
