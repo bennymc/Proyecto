@@ -16,9 +16,20 @@ function cambiaGenero(genero){
 					$('h1#tituloLibrero').text(json.Generos[i].TituloLibrero);
 					$('p#descripcion').text(json.Generos[i].Descripcion);
 				}
+			}
+			var j = 0;
+			for(i in json.Libros){
+				console.log(json.Libros[i]);
+				var listaLibros = document.getElementById("contenedorgenero");
+				var titulo = json.Libros[i].Titulo;
+				console.log(titulo);
+				if(genero == json.Libros[i].Genero)
+				{
+					listaLibros.getElementsByClassName("center-block tituloLibro")[j].textContent = titulo;
+					j++:
+				}
 			}			
 		}
 	}
-
 	miajax.send(null);
 }
