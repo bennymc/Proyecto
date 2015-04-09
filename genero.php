@@ -6,10 +6,10 @@
 	<aside class="col-md-3">
 		<div class="panel panel-success">
 			<div class="panel-heading">
-			    <h3 class="TituloGrande">Genero X</h3>
+			    <h3 class="TituloGrande" id="titulo">Genero X</h3>
 			</div>
 			<div class="panel-body">
-			    <p>Descripción del género.</p>
+			    <p id="descripcion">Descripción del género.</p>
 			</div>
     	</div>
 	</aside>
@@ -18,7 +18,7 @@
 	<section class="col-md-6">
     	<div class="panel panel-success">
 			<div class="panel-heading">
-		     	<h1 class="Contenedoresdelibros">GENERO X</h1>
+		     	<h1 class="Contenedoresdelibros" id="tituloLibrero">GENERO X</h1>
 			</div>
 			<div class="panel-body" id="contenedorgenero">
 			    <div class="col-md-12">
@@ -110,40 +110,40 @@
 			</div>
 			<div class="panel-body">
 				<ul>
-					<li><a href="genero.php">Adultos Jóvenes</a></li>
-					<li><a href="genero.php">Arte</a></li>
-					<li><a href="genero.php">Auto Ayuda</a></li>
-					<li><a href="genero.php">Biografía</a></li>
-					<li><a href="genero.php">Ciencia</a></li>
-					<li><a href="genero.php">Ciencia Ficción</a></li>
-					<li><a href="genero.php">Cine</a></li>
-					<li><a href="genero.php">Clásicos</a></li>
-					<li><a href="genero.php">Comics</a></li>
-					<li><a href="genero.php">Contemporaneo</a></li>
-					<li><a href="genero.php">Cocina</a></li>					
-					<li><a href="genero.php">Crimen</a></li>
-					<li><a href="genero.php">Deportes</a></li>
-					<li><a href="genero.php">Espiritualidad</a></li>
-					<li><a href="genero.php">Fantasía</a></li>
-					<li><a href="genero.php">Ficción</a></li>
-					<li><a href="genero.php">Ficción Historica</a></li>
-					<li><a href="genero.php">Filosofía</a></li>
-					<li><a href="genero.php">Historia</a></li>
-					<li><a href="genero.php">Humor</a></li>
-					<li><a href="genero.php">Manga</a></li>
-					<li><a href="genero.php">Música</a></li>
-					<li><a href="genero.php">Misterio</a></li>
-					<li><a href="genero.php">Negocios</a></li>
-					<li><a href="genero.php">No Ficción</a></li>
-					<li><a href="genero.php">Novelas Gráficas</a></li>
-					<li><a href="genero.php">Paranormal</a></li>
-					<li><a href="genero.php">Poesía</a></li>
-					<li><a href="genero.php">Psicología</a></li>
-					<li><a href="genero.php">Religión</a></li>
-					<li><a href="genero.php">Romance</a></li>
-					<li><a href="genero.php">Suspenso</a></li>
-					<li><a href="genero.php">Thriller</a></li>
-					<li><a href="genero.php">Viajes</a></li>
+					<li><a href="#" onclick='cambiaGenero("Adultos Jóvenes")'>Adultos Jóvenes</a></li>
+					<li><a href="#" onclick='cambiaGenero("Arte")'>Arte</a></li>
+					<li><a href="#" onclick='cambiaGenero("Auto Ayuda")'>Auto Ayuda</a></li>
+					<li><a href="#" onclick='cambiaGenero("Biografía")'>Biografía</a></li>
+					<li><a href="#" onclick='cambiaGenero("Ciencia")'>Ciencia</a></li>
+					<li><a href="#" onclick='cambiaGenero("Ciencia Ficción")'>Ciencia Ficción</a></li>
+					<li><a href="#" onclick='cambiaGenero("Cine")'>Cine</a></li>
+					<li><a href="#" onclick='cambiaGenero("Clásicos")'>Clásicos</a></li>
+					<li><a href="#" onclick='cambiaGenero("Comics")'>Comics</a></li>
+					<li><a href="#" onclick='cambiaGenero("Contemporaneo")'>Contemporaneo</a></li>
+					<li><a href="#" onclick='cambiaGenero("Cocina")'>Cocina</a></li>					
+					<li><a href="#" onclick='cambiaGenero("Crimen")'>Crimen</a></li>
+					<li><a href="#" onclick='cambiaGenero("Deportes")'>Deportes</a></li>
+					<li><a href="#" onclick='cambiaGenero("Espiritualidad")'>Espiritualidad</a></li>
+					<li><a href="#" onclick='cambiaGenero("Fantasía")'>Fantasía</a></li>
+					<li><a href="#" onclick='cambiaGenero("Ficción")'>Ficción</a></li>
+					<li><a href="#" onclick='cambiaGenero("Ficción Historica")'>Ficción Historica</a></li>
+					<li><a href="#" onclick='cambiaGenero("Filosofía")'>Filosofía</a></li>
+					<li><a href="#" onclick='cambiaGenero("Historia")'>Historia</a></li>
+					<li><a href="#" onclick='cambiaGenero("Humor")'>Humor</a></li>
+					<li><a href="#" onclick='cambiaGenero("Manga")'>Manga</a></li>
+					<li><a href="#" onclick='cambiaGenero("Música")'>Música</a></li>
+					<li><a href="#" onclick='cambiaGenero("Misterio")'>Misterio</a></li>
+					<li><a href="#" onclick='cambiaGenero("Negocios")'>Negocios</a></li>
+					<li><a href="#" onclick='cambiaGenero("No Ficción")'>No Ficción</a></li>
+					<li><a href="#" onclick='cambiaGenero("Novelas Gráficas")'>Novelas Gráficas</a></li>
+					<li><a href="#" onclick='cambiaGenero("Paranormal")'>Paranormal</a></li>
+					<li><a href="#" onclick='cambiaGenero("Poesía")'>Poesía</a></li>
+					<li><a href="#" onclick='cambiaGenero("Psicología")'>Psicología</a></li>
+					<li><a href="#" onclick='cambiaGenero("Religión")'>Religión</a></li>
+					<li><a href="#" onclick='cambiaGenero("Romance")'>Romance</a></li>
+					<li><a href="#" onclick='cambiaGenero("Suspenso")'>Suspenso</a></li>
+					<li><a href="#" onclick='cambiaGenero("Thriller")'>Thriller</a></li>
+					<li><a href="#" onclick='cambiaGenero("Viajes")'>Viajes</a></li>
 				</ul>
 			</div>			
 		</div>

@@ -1,0 +1,175 @@
+{
+  "Generos": [
+    {
+      "TituloLibrero": "Adultos Jóvenes",
+      "CabeceraLibrero": "Libros del género Adultos jovenes",
+      "Descripcion": "Libros para adultos jóvenes."
+    },
+    {
+      "TituloLibrero": "Arte",
+      "CabeceraLibrero": "Libros del género Arte",
+      "Descripcion": "Libros de arte."
+    },
+    {
+      "TituloLibrero": "Auto Ayuda",
+      "CabeceraLibrero": "Libros del género Auto ayuda",
+      "Descripcion": "Libros de auto ayuda y superación personal."
+    },
+    {
+      "TituloLibrero": "Biografía",
+      "CabeceraLibrero": "Libros del género Biografía",
+      "Descripcion": "Biografías de gente famosa."
+    },
+    {
+      "TituloLibrero": "Ciencia",
+      "CabeceraLibrero": "Libros del género Ciencia",
+      "Descripcion": ""
+    },
+    {
+      "TituloLibrero": "Ciencia Ficción",
+      "CabeceraLibrero": "Libros del género Ciencia Ficción",
+      "Descripcion": ""
+    },
+    {
+      "TituloLibrero": "Cine",
+      "CabeceraLibrero": "Libros del género Cine",
+      "Descripcion": ""
+    },
+    {
+      "TituloLibrero": "Clásicos",
+      "CabeceraLibrero": "Libros del género Clásicos",
+      "Descripcion": ""
+    },
+    {
+      "TituloLibrero": "Comics",
+      "CabeceraLibrero": "Libros del género Comics",
+      "Descripcion": ""
+    },
+    {
+      "TituloLibrero": "Contemporaneo",
+      "CabeceraLibrero": "Libros del género Contemporaneo",
+      "Descripcion": ""
+    },
+    {
+      "TituloLibrero": "Cocina",
+      "CabeceraLibrero": "Libros del género Cocina",
+      "Descripcion": ""
+    },
+    {
+      "TituloLibrero": "Crimen",
+      "CabeceraLibrero": "Libros del género Crimen",
+      "Descripcion": ""
+    },
+    {
+      "TituloLibrero": "Deportes",
+      "CabeceraLibrero": "Libros del género Deportes",
+      "Descripcion": ""
+    },
+    {
+      "TituloLibrero": "Espiritualidad",
+      "CabeceraLibrero": "Libros del género Espiritualidad",
+      "Descripcion": ""
+    },
+    {
+      "TituloLibrero": "Fantasía",
+      "CabeceraLibrero": "Libros del género Fantasía",
+      "Descripcion": ""
+    },
+    {
+      "TituloLibrero": "Ficción",
+      "CabeceraLibrero": "Libros del género Ficción",
+      "Descripcion": ""
+    },
+    {
+      "TituloLibrero": "Ficción Historica",
+      "CabeceraLibrero": "Libros del género Ficción Historica",
+      "Descripcion": ""
+    },
+    {
+      "TituloLibrero": "Filosofía",
+      "CabeceraLibrero": "Libros del género Filosofía",
+      "Descripcion": ""
+    },
+    {
+      "TituloLibrero": "Historia",
+      "CabeceraLibrero": "Libros del género Historia",
+      "Descripcion": ""
+    },
+    {
+      "TituloLibrero": "Humor",
+      "CabeceraLibrero": "Libros del género Humor",
+      "Descripcion": ""
+    },
+    {
+      "TituloLibrero": "Manga",
+      "CabeceraLibrero": "Libros del género Manga",
+      "Descripcion": ""
+    },
+    {
+      "TituloLibrero": "Música",
+      "CabeceraLibrero": "Libros del género Música",
+      "Descripcion": ""
+    },
+    {
+      "TituloLibrero": "Misterio",
+      "CabeceraLibrero": "Libros del género Misterio",
+      "Descripcion": ""
+    },
+    {
+      "TituloLibrero": "Negocios",
+      "CabeceraLibrero": "Libros del género Negocios",
+      "Descripcion": ""
+    },
+    {
+      "TituloLibrero": "No Ficción",
+      "CabeceraLibrero": "Libros del género No Ficción",
+      "Descripcion": ""
+    },
+    {
+      "TituloLibrero": "Novelas Gráficas",
+      "CabeceraLibrero": "Libros del género Novelas Gráficas",
+      "Descripcion": ""
+    },
+    {
+      "TituloLibrero": "Paranormal",
+      "CabeceraLibrero": "Libros del género Paranormal",
+      "Descripcion": ""
+    },
+    {
+      "TituloLibrero": "Poesía",
+      "CabeceraLibrero": "Libros del género Poesía",
+      "Descripcion": ""
+    },
+    {
+      "TituloLibrero": "Psicología",
+      "CabeceraLibrero": "Libros del género Psicología",
+      "Descripcion": ""
+    },
+    {
+      "TituloLibrero": "Religión",
+      "CabeceraLibrero": "Libros del género Religión",
+      "Descripcion": ""
+    },
+    {
+      "TituloLibrero": "Romance",
+      "CabeceraLibrero": "Libros del género Romance",
+      "Descripcion": ""
+    },
+    {
+      "TituloLibrero": "Suspenso",
+      "CabeceraLibrero": "Libros del género Suspenso",
+      "Descripcion": ""
+    },
+    {
+      "TituloLibrero": "Thriller",
+      "CabeceraLibrero": "Libros del género Thriller",
+      "Descripcion": ""
+    },
+    {
+      "TituloLibrero": "Viajes",
+      "CabeceraLibrero": "Libros del género Viajes",
+      "Descripcion": ""
+    }
+  ]
+}
+
