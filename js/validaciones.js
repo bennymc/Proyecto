@@ -28,13 +28,11 @@ function validacion() {
 				document.getElementById("sexo").setAttribute('class', 'valido');
 			}
 			valor = document.getElementById("email").value;
-			if(elemento.type == "email") {
-			    if( !(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(valor))){
-					document.getElementById("email").setAttribute('class', 'error');
-				    return false;
-				}else{
-					document.getElementById("email").setAttribute('class', 'valido');
-				}
+		    if( !(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(valor))){
+				document.getElementById("email").setAttribute('class', 'error');
+			    return false;
+			}else{
+				document.getElementById("email").setAttribute('class', 'valido');
 			}
 			var today = new Date();
 	     	var inputDate = new Date(document.getElementById("bday").value);

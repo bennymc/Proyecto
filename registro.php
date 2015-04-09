@@ -53,7 +53,7 @@
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="bday">Fecha de nacimiento</label>
 					  <div class="col-md-6">
-					    <input id="bday" name="bday" type="date" placeholder="" class="form-control input-md" required="">
+					    <input id="bday" name="bday" type="date" min="1925-01-01" max="2000-01-01" placeholder="" class="form-control input-md" required="">
 					  </div>
 					</div>
 					<div class="form-group">
