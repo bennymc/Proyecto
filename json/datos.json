@@ -170,6 +170,98 @@
       "CabeceraLibrero": "Libros del género Viajes",
       "Descripcion": ""
     }
+  ],
+  "Libros": [
+    {
+      "Titulo": "El Nombre del Viento",
+      "Autor": "Patrick Rothfuss",
+      "Editorial": "Plaza & Janés",
+      "Año": "2007",
+      "ISBN": "8401337208",
+      "Genero": "Fantasía",
+      "TOriginal": "The Name of The Wind"
+    },
+    {
+      "Titulo": "Juego de tronos",
+      "Autor": "George R. R. Martin",
+      "Editorial": "Ediciones Gigamesh",
+      "Año": "2002",
+      "ISBN": "0553103547",
+      "Genero": "Fantasía",
+      "TOriginal": "A Game of Thrones"
+    },
+    {
+      "Titulo": "Correr o morir",
+      "Autor": "James Dashner",
+      "Editorial": "V&R",
+      "Año": "2010",
+      "ISBN": "9788493801311",
+      "Genero": "Adultos Jóvenes",
+      "TOriginal": "Maze Runner"
+    },
+    {
+      "Titulo": "Choque de reyes",
+      "Autor": "George R. R. Martin",
+      "Editorial": "Ediciones Gigamesh",
+      "Año": "2008",
+      "ISBN": "9788496208643",
+      "Genero": "Fantasía",
+      "TOriginal": "A Clash of Kings"
+    },
+    {
+      "Titulo": "Tormenta de espadas",
+      "Autor": "George R. R. Martin",
+      "Editorial": "Ediciones Gigamesh",
+      "Año": "2012",
+      "ISBN": "9788496208216",
+      "Genero": "Fantasía",
+      "TOriginal": "A Storm of Swords"
+    },
+    {
+      "Titulo": "Tokio blues",
+      "Autor": "Haruki Murakami",
+      "Editorial": "Tusquets Editores",
+      "Año": "2009",
+      "ISBN": "9788483103074",
+      "Genero": "Romance",
+      "TOriginal": "ノルウェイの森"
+    },
+    {
+      "Titulo": "Festín de cuervos",
+      "Autor": "George R. R. Martin",
+      "Editorial": "Ediciones Gigamesh",
+      "Año": "2011",
+      "ISBN": "9788496208995",
+      "Genero": "Fantasía",
+      "TOriginal": "A Feast of Crows"
+    },
+    {
+      "Titulo": "Danza de dragones",
+      "Autor": "George R. R. Martin",
+      "Editorial": "Ediciones Gigamesh",
+      "Año": "2013",
+      "ISBN": "9788496208582",
+      "Genero": "Fantasía",
+      "TOriginal": "A Dance with Dragons"
+    },
+    {
+      "Titulo": "El silmarillion",
+      "Autor": "J.R.R. Tolkien",
+      "Editorial": "Ediciones Minotauro",
+      "Año": "2002",
+      "ISBN": "9788445073810",
+      "Genero": "Fantasía",
+      "TOriginal": "The silmarillion"
+    },
+    {
+      "Titulo": "Asylum",
+      "Autor": "Madeleine Roux",
+      "Editorial": "V&R",
+      "Año": "2013",
+      "ISBN": "9789876127783",
+      "Genero": "Adultos Jóvenes",
+      "TOriginal": "Asylum"
+    }
   ]
 }
 
