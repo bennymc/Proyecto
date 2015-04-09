@@ -46,7 +46,7 @@ function validacion() {
 				document.getElementById("bday").setAttribute('class', 'valido');
 			}
 			valor = document.getElementById("password").value;
-			if( valor == null || valor.length == 0 || /^\s+$/.test(valor) ) {
+			if( valor == null || valor.length < 8 || /^\s+$/.test(valor) ) {
 				document.getElementById("password").setAttribute('class', 'error');
 			  return false;
 			}else{
