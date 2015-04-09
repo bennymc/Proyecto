@@ -8,14 +8,14 @@
 				<div class="panel-heading">
 		   			 <h3 id="recuperarpass" class="panel-title">Recuperar Contraseña</h3>
 		  		</div>
-		  		<form>
+		  		<form method="post" onsubmit="return VCorreo()">
 			  		<div class="panel-body">
 			   			<div class="form-group">
-							  <label class="col-md-12 control-label" for="inputrecuperapass">Ingresa tu Usuario o Correo electronico:</label>
+							  <label class="col-md-12 control-label" for="Email">Ingresa tu Email</label>  
 							  <div class="col-md-12">
-							    <input id="inputrecuperapass" name="inputrecuperapass" placeholder="" class="form-control input-md" required="">
+							  <input id="email" name="email" type="email" placeholder="" class="form-control input-md" required="">    
 							  </div>
-						</div>			  		
+						</div>		  		
 				  		<div class="form-group">
 							<div class="col-md-12 ">
 								<button type="submit" class="btn btn-danger pull-right" id="btnrecupera">Recuperar</button>

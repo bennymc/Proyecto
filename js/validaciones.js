@@ -112,3 +112,14 @@ function CambioPass(){
 			}
 			return true;
 }
+
+function VCorreo(){
+			valor = document.getElementById("email").value;
+		    if( !(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(valor))){
+				document.getElementById("email").setAttribute('class', 'form-control input-md error');
+			    return false;
+			}else{
+				document.getElementById("email").setAttribute('class', 'form-control input-md');
+			}
+			return true;
+}
