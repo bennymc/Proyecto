@@ -230,3 +230,8 @@ button#cambiar{
 button#btnrecupera{
 	margin-top: 15px;
 }
+
+#contenedorgenero img{
+	width: 100px;
+	height: 150px;
+}
