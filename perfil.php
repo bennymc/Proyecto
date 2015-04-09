@@ -31,7 +31,7 @@
 			</div>
     	</div>
     <!-- ****************************** BOTON EDITAR PERFIL ****************************** -->
-    	<a href="editar.php"><button type="button" class="btn btn-info center-block" id="editarperfil">EDITAR PERFIL</button></a>	
+    	<a id="editarperfil" class="btn btn-info center-block" role="button" href="editar.php">EDITAR PERFIL</a>	
     </aside>
 <!-- ************************************* FIN ASIDE ************************************* -->
 <!-- ************************************* INICIO SECTION ******************************** -->
