@@ -179,7 +179,8 @@
       "Año": "2007",
       "ISBN": "8401337208",
       "Genero": "Fantasía",
-      "TOriginal": "The Name of The Wind"
+      "TOriginal": "The Name of The Wind",
+      "Imagen": "http://www.quelibroleo.com/images/libros/libro_1321929304.jpg"
     },
     {
       "Titulo": "Juego de tronos",
@@ -188,7 +189,8 @@
       "Año": "2002",
       "ISBN": "0553103547",
       "Genero": "Fantasía",
-      "TOriginal": "A Game of Thrones"
+      "TOriginal": "A Game of Thrones",
+      "Imagen": "http://www.juegodetronos.com.ar/wp-content/uploads/2013/04/553302_467007236706301_150024403_n.jpg"
     },
     {
       "Titulo": "Correr o morir",
@@ -197,7 +199,8 @@
       "Año": "2010",
       "ISBN": "9788493801311",
       "Genero": "Adultos Jóvenes",
-      "TOriginal": "Maze Runner"
+      "TOriginal": "Maze Runner",
+      "Imagen": "https://abiglezgz.files.wordpress.com/2014/02/9786077547327-copy.jpg"
     },
     {
       "Titulo": "Choque de reyes",
@@ -206,7 +209,8 @@
       "Año": "2008",
       "ISBN": "9788496208643",
       "Genero": "Fantasía",
-      "TOriginal": "A Clash of Kings"
+      "TOriginal": "A Clash of Kings",
+      "Imagen": "http://www.juegodetronos.com.ar/wp-content/uploads/2012/01/choquedereyes.jpg"
     },
     {
       "Titulo": "Tormenta de espadas",
@@ -215,7 +219,8 @@
       "Año": "2012",
       "ISBN": "9788496208216",
       "Genero": "Fantasía",
-      "TOriginal": "A Storm of Swords"
+      "TOriginal": "A Storm of Swords",
+      "Imagen": "http://img.emol.com/2012/07/17/tormentadeespadaspyj600_11171.jpg"
     },
     {
       "Titulo": "Tokio blues",
@@ -224,7 +229,8 @@
       "Año": "2009",
       "ISBN": "9788483103074",
       "Genero": "Romance",
-      "TOriginal": "ノルウェイの森"
+      "TOriginal": "ノルウェイの森",
+      "Imagen": "https://laflechanegra.files.wordpress.com/2013/04/haruki-murakami-tokio-blues.jpg"
     },
     {
       "Titulo": "Festín de cuervos",
@@ -233,7 +239,8 @@
       "Año": "2011",
       "ISBN": "9788496208995",
       "Genero": "Fantasía",
-      "TOriginal": "A Feast of Crows"
+      "TOriginal": "A Feast of Crows",
+      "Imagen": "http://www.porrua.mx/blog/wp-content/uploads/2012/06/a2.jpg"
     },
     {
       "Titulo": "Danza de dragones",
@@ -242,7 +249,8 @@
       "Año": "2013",
       "ISBN": "9788496208582",
       "Genero": "Fantasía",
-      "TOriginal": "A Dance with Dragons"
+      "TOriginal": "A Dance with Dragons",
+      "Imagen": "http://www.bibliotecaviva.cl/wp-content/uploads/2014/05/danza-de-dragones.jpg"
     },
     {
       "Titulo": "El silmarillion",
@@ -251,7 +259,8 @@
       "Año": "2002",
       "ISBN": "9788445073810",
       "Genero": "Fantasía",
-      "TOriginal": "The silmarillion"
+      "TOriginal": "The silmarillion",
+      "Imagen": "http://image.casadellibro.com/a/l/t0/35/9788445077535.jpg"
     },
     {
       "Titulo": "Asylum",
@@ -260,7 +269,8 @@
       "Año": "2013",
       "ISBN": "9789876127783",
       "Genero": "Adultos Jóvenes",
-      "TOriginal": "Asylum"
+      "TOriginal": "Asylum",
+      "Imagen": "https://d202m5krfqbpi5.cloudfront.net/books/1392418932l/20810694.jpg"
     }
   ]
 }

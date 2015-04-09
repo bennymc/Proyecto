@@ -20,15 +20,18 @@ function cambiaGenero(genero){
 			for(i in json.Libros){
 				var listaLibros = document.getElementById("contenedorgenero");
 				listaLibros.getElementsByClassName("center-block tituloLibro")[i].textContent = "TÍTULO";
+				listaLibros.getElementsByClassName("center-block imagenL")[i].src = "http://placehold.it/100x150";
 			}		
 			var j = 0;
 			for(i in json.Libros){
 				console.log(json.Libros[i]);
 				var listaLibros = document.getElementById("contenedorgenero");
 				var titulo = json.Libros[i].Titulo;
+				var img = json.Libros[i].Imagen;
 				if(genero == json.Libros[i].Genero)
 				{
 					listaLibros.getElementsByClassName("center-block tituloLibro")[j].textContent = titulo;
+					listaLibros.getElementsByClassName("center-block imagenL")[j].src = img;
 					j++;
 				}
 			}		
