@@ -17,18 +17,21 @@ function cambiaGenero(genero){
 					$('p#descripcion').text(json.Generos[i].Descripcion);
 				}
 			}
+			for(i in json.Libros){
+				var listaLibros = document.getElementById("contenedorgenero");
+				listaLibros.getElementsByClassName("center-block tituloLibro")[i].textContent = "TÍTULO";
+			}		
 			var j = 0;
 			for(i in json.Libros){
 				console.log(json.Libros[i]);
 				var listaLibros = document.getElementById("contenedorgenero");
 				var titulo = json.Libros[i].Titulo;
-				console.log(titulo);
 				if(genero == json.Libros[i].Genero)
 				{
 					listaLibros.getElementsByClassName("center-block tituloLibro")[j].textContent = titulo;
-					j++:
+					j++;
 				}
-			}			
+			}		
 		}
 	}
 	miajax.send(null);
