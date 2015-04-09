@@ -85,9 +85,10 @@ a.center-block{
 	text-align: center;
 }
 
-button#editarperfil{
+#editarperfil{
 	margin-bottom: 50px;
 }
+
 
 /* ------------ MARGEN PARA FLECHAS SIG Y ANT -------------*/
 div.flechas{
