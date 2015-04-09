@@ -4,7 +4,7 @@
 
 		<div id="contenedor">
 		<section class="col-md-6">
-			<form class="form-horizontal">
+			<form class="form-horizontal" method="post" onsubmit="return VEditar()">
 				<fieldset>
 					<legend>Editar Perfil</legend>
 					<div class="form-group">
@@ -21,7 +21,7 @@
 					</div>					
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="sexo">Sexo</label>
-					  <div class="col-md-4">
+					  <div class="col-md-5">
 					    <select id="sexo" name="sexo" class="form-control">
 					      <option value="m">Masculino</option>
 					      <option value="f">Femenino</option>
@@ -30,7 +30,7 @@
 					</div>
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="intereses">Intereses</label>
-					  <div class="col-md-4">                     
+					  <div class="col-md-5">                     
 					    <textarea class="form-control" id="intereses" name="intereses"></textarea>
 					  </div>
 					</div>					
@@ -62,7 +62,7 @@
 		</section>
 
 		<aside class="col-md-6">
-			<form class="form-horizontal" id="cambiarcontraseña">
+			<form class="form-horizontal" id="cambiarcontraseña" method="post" onsubmit="return CambioPass()">
 				<fieldset>
 					<legend>Cambiar contraseña</legend>
 					<div class="form-group">
