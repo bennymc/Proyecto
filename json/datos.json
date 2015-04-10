@@ -31,11 +31,6 @@
       "Descripcion": ""
     },
     {
-      "TituloLibrero": "Cine",
-      "CabeceraLibrero": "Libros del género Cine",
-      "Descripcion": ""
-    },
-    {
       "TituloLibrero": "Clásicos",
       "CabeceraLibrero": "Libros del género Clásicos",
       "Descripcion": ""
@@ -46,28 +41,8 @@
       "Descripcion": ""
     },
     {
-      "TituloLibrero": "Contemporaneo",
-      "CabeceraLibrero": "Libros del género Contemporaneo",
-      "Descripcion": ""
-    },
-    {
-      "TituloLibrero": "Cocina",
-      "CabeceraLibrero": "Libros del género Cocina",
-      "Descripcion": ""
-    },
-    {
       "TituloLibrero": "Crimen",
       "CabeceraLibrero": "Libros del género Crimen",
-      "Descripcion": ""
-    },
-    {
-      "TituloLibrero": "Deportes",
-      "CabeceraLibrero": "Libros del género Deportes",
-      "Descripcion": ""
-    },
-    {
-      "TituloLibrero": "Espiritualidad",
-      "CabeceraLibrero": "Libros del género Espiritualidad",
       "Descripcion": ""
     },
     {
@@ -81,16 +56,6 @@
       "Descripcion": ""
     },
     {
-      "TituloLibrero": "Ficción Historica",
-      "CabeceraLibrero": "Libros del género Ficción Historica",
-      "Descripcion": ""
-    },
-    {
-      "TituloLibrero": "Filosofía",
-      "CabeceraLibrero": "Libros del género Filosofía",
-      "Descripcion": ""
-    },
-    {
       "TituloLibrero": "Historia",
       "CabeceraLibrero": "Libros del género Historia",
       "Descripcion": ""
@@ -98,11 +63,6 @@
     {
       "TituloLibrero": "Humor",
       "CabeceraLibrero": "Libros del género Humor",
-      "Descripcion": ""
-    },
-    {
-      "TituloLibrero": "Manga",
-      "CabeceraLibrero": "Libros del género Manga",
       "Descripcion": ""
     },
     {
@@ -118,11 +78,6 @@
     {
       "TituloLibrero": "Negocios",
       "CabeceraLibrero": "Libros del género Negocios",
-      "Descripcion": ""
-    },
-    {
-      "TituloLibrero": "No Ficción",
-      "CabeceraLibrero": "Libros del género No Ficción",
       "Descripcion": ""
     },
     {
@@ -143,11 +98,6 @@
     {
       "TituloLibrero": "Psicología",
       "CabeceraLibrero": "Libros del género Psicología",
-      "Descripcion": ""
-    },
-    {
-      "TituloLibrero": "Religión",
-      "CabeceraLibrero": "Libros del género Religión",
       "Descripcion": ""
     },
     {
@@ -273,14 +223,14 @@
       "Imagen": "https://d.gr-assets.com/books/1414872308l/22608210.jpg"
     },
     {
-      "Titulo": "",
-      "Autor": "",
-      "Editorial": "",
-      "Año": "",
-      "ISBN": "",
+      "Titulo": "LO QUE TU LUZ DICE",
+      "Autor": "ANA MARIA OLIVIA",
+      "Editorial": "EDITORIAL SIRIO ",
+      "Año": "2013",
+      "ISBN": "9788478089871 ",
       "Genero": "Auto Ayuda",
-      "TOriginal": "",
-      "Imagen": ""
+      "TOriginal": "-",
+      "Imagen": "http://www.gonvill.com.mx/wcsstore/Gonvill//images/Books/160x160/9788478089871.jpg"
     },
     {
       "Titulo": "DESPUES DE USTED",
@@ -291,188 +241,116 @@
       "Genero": "Biografía",
       "TOriginal": "DESPUES DE USTED",
       "Imagen": "https://www.gandhi.com.mx/media/catalog/product/cache/1/image/350x500/9df78eab33525d08d6e5fb8d27136e95/i/m/image_1165_1_259231.jpg"
-    },{
-      "Titulo": "",
-      "Autor": "",
-      "Editorial": "",
-      "Año": "",
-      "ISBN": "",
-      "Genero": "Ciencia",
-      "TOriginal": "",
-      "Imagen": ""
-    },{
-      "Titulo": "",
-      "Autor": "",
-      "Editorial": "",
-      "Año": "",
-      "ISBN": "",
+    },
+    {
+      "Titulo": "20.000 Leguas de Viaje Submarino",
+      "Autor": "Julio Verne",
+      "Editorial": "EDITORES MEXICANOS UNIDOS",
+      "Año": "2013",
+      "ISBN": "9786071411242",
       "Genero": "Ciencia Ficción",
-      "TOriginal": "",
-      "Imagen": ""
-    },{
-      "Titulo": "",
-      "Autor": "",
-      "Editorial": "",
-      "Año": "",
-      "ISBN": "",
-      "Genero": "Cine",
-      "TOriginal": "",
-      "Imagen": ""
-    },{
-      "Titulo": "",
-      "Autor": "",
-      "Editorial": "",
-      "Año": "",
-      "ISBN": "",
+      "TOriginal": "Twenty Thousand Leagues Under the Sea",
+      "Imagen": "http://www.elresumen.com/libros/20000_leguas_de_viaje_submarino.jpg"
+    },
+    {
+      "Titulo": "64 COSAS QUE DEBES SABER SOBRE LA ERA DIGITAL",
+      "Autor": "BEN HAMMERSLEY",
+      "Editorial": "OCEANO DE MEXICO (ME)",
+      "Año": "2013",
+      "ISBN": "9786078303243",
+      "Genero": "Ciencia",
+      "TOriginal": "-",
+      "Imagen": "https://www.porrua.mx/images/codbarm/m9786078303243.jpg"
+    },
+    {
+      "Titulo": "Macbeth",
+      "Autor": "Gareth Hinds",
+      "Editorial": "Candlewick Press",
+      "Año": "2015",
+      "ISBN": "9780763669430",
       "Genero": "Clásicos",
-      "TOriginal": "",
-      "Imagen": ""
-    },{
-      "Titulo": "",
-      "Autor": "",
-      "Editorial": "",
-      "Año": "",
-      "ISBN": "",
+      "TOriginal": "Macbeth",
+      "Imagen": "https://d.gr-assets.com/books/1415586183l/22747819.jpg"
+    },
+    {
+      "Titulo": "Teen Titans Go! Vol. 1",
+      "Autor": "Sholly Fisch",
+      "Editorial": "DC Comics",
+      "Año": "2015",
+      "ISBN": "9781401252427",
       "Genero": "Comics",
-      "TOriginal": "",
-      "Imagen": ""
-    },{
-      "Titulo": "",
-      "Autor": "",
-      "Editorial": "",
-      "Año": "",
-      "ISBN": "",
-      "Genero": "Contemporaneo",
-      "TOriginal": "",
-      "Imagen": ""
-    },{
-      "Titulo": "",
-      "Autor": "",
-      "Editorial": "",
-      "Año": "",
-      "ISBN": "",
-      "Genero": "Cocina",
-      "TOriginal": "",
-      "Imagen": ""
-    },{
-      "Titulo": "",
-      "Autor": "",
-      "Editorial": "",
-      "Año": "",
-      "ISBN": "",
+      "TOriginal": "Teen Titans Go! Vol. 1",
+      "Imagen": "https://d.gr-assets.com/books/1410802404l/23012552.jpg"
+    },
+    {
+      "Titulo": "The Devil's Detective: A Novel",
+      "Autor": "Simon Kurt Unsworth",
+      "Editorial": "Doubleday",
+      "Año": "2015",
+      "ISBN": "9780385539340",
       "Genero": "Crimen",
-      "TOriginal": "",
-      "Imagen": ""
-    },{
-      "Titulo": "",
-      "Autor": "",
-      "Editorial": "",
-      "Año": "",
-      "ISBN": "",
-      "Genero": "Deportes",
-      "TOriginal": "",
-      "Imagen": ""
-    },{
-      "Titulo": "",
-      "Autor": "",
-      "Editorial": "",
-      "Año": "",
-      "ISBN": "",
-      "Genero": "Espiritualidad",
-      "TOriginal": "",
-      "Imagen": ""
-    },{
-      "Titulo": "",
-      "Autor": "",
-      "Editorial": "",
-      "Año": "",
-      "ISBN": "",
+      "TOriginal": "The Devil's Detective: A Novel",
+      "Imagen": "https://d.gr-assets.com/books/1408926122l/22543948.jpg"
+    },
+    {
+      "Titulo": "Rebel Queen",
+      "Autor": "Michelle Moran",
+      "Editorial": "Touchstone",
+      "Año": "2015",
+      "ISBN": "9781476716350",
       "Genero": "Ficción",
-      "TOriginal": "",
-      "Imagen": ""
-    },{
-      "Titulo": "",
-      "Autor": "",
-      "Editorial": "",
-      "Año": "",
-      "ISBN": "",
-      "Genero": "Ficción Historica",
-      "TOriginal": "",
-      "Imagen": ""
-    },{
-      "Titulo": "",
-      "Autor": "",
-      "Editorial": "",
-      "Año": "",
-      "ISBN": "",
-      "Genero": "Filosofía",
-      "TOriginal": "",
-      "Imagen": ""
-    },{
-      "Titulo": "",
-      "Autor": "",
-      "Editorial": "",
-      "Año": "",
-      "ISBN": "",
+      "TOriginal": "Rebel Queen",
+      "Imagen": "https://d.gr-assets.com/books/1419212676l/22609433.jpg"
+    },
+    {
+      "Titulo": "1915 MEXICO EN GUERRA: EL AÑO CLAVE DE LA REVOLUCION MEXICANA",
+      "Autor": "PEDRO SALMERON",
+      "Editorial": "PLANETA",
+      "Año": "2015",
+      "ISBN": "9786070726019",
       "Genero": "Historia",
-      "TOriginal": "",
-      "Imagen": ""
-    },{
-      "Titulo": "",
-      "Autor": "",
-      "Editorial": "",
-      "Año": "",
-      "ISBN": "",
+      "TOriginal": "1915 MEXICO EN GUERRA: EL AÑO CLAVE DE LA REVOLUCION MEXICANA",
+      "Imagen": "https://www.gandhi.com.mx/media/catalog/product/cache/1/image/350x500/9df78eab33525d08d6e5fb8d27136e95/i/m/image_1165_1_260872.jpg"
+    },
+    {
+      "Titulo": "El mundo ha vivido equivocado",
+      "Autor": "Roberto Fontanarrosa",
+      "Editorial": "Editorial Planeta",
+      "Año": "2012",
+      "ISBN": "9789504929987",
       "Genero": "Humor",
-      "TOriginal": "",
-      "Imagen": ""
-    },{
-      "Titulo": "",
-      "Autor": "",
-      "Editorial": "",
-      "Año": "",
-      "ISBN": "",
-      "Genero": "Manga",
-      "TOriginal": "",
-      "Imagen": ""
-    },{
-      "Titulo": "",
-      "Autor": "",
-      "Editorial": "",
-      "Año": "",
-      "ISBN": "",
+      "TOriginal": "El mundo ha vivido equivocado",
+      "Imagen": "http://www.elresumen.com/tapas_libros/el_mundo_ha_vivido_equivocado.jpg"
+    },
+    {
+      "Titulo": "Blackbird Fly",
+      "Autor": " Erin Entrada Kelly",
+      "Editorial": "Greenwillow Books",
+      "Año": "2015",
+      "ISBN": "9780062238610",
       "Genero": "Música",
-      "TOriginal": "",
-      "Imagen": ""
-    },{
-      "Titulo": "",
-      "Autor": "",
-      "Editorial": "",
-      "Año": "",
-      "ISBN": "",
+      "TOriginal": "Blackbird Fly",
+      "Imagen": "https://d.gr-assets.com/books/1404496437l/22663352.jpg"
+    },
+    {
+      "Titulo": "The Cemetery Boys",
+      "Autor": " Heather Brewer ",
+      "Editorial": "Harper Collins",
+      "Año": "2015",
+      "ISBN": "9780062307880",
       "Genero": "Misterio",
-      "TOriginal": "",
-      "Imagen": ""
+      "TOriginal": "The Cemetery Boys",
+      "Imagen": "https://d.gr-assets.com/books/1403128926l/18484774.jpg"
     },
     {
-      "Titulo": "",
-      "Autor": "",
-      "Editorial": "",
-      "Año": "",
-      "ISBN": "",
+      "Titulo": "PADRE RICO PADRE POBRE",
+      "Autor": "ROBERT KIYOSAKI",
+      "Editorial": "AGUILAR",
+      "Año": "2013",
+      "ISBN": "9786071124302",
       "Genero": "Negocios",
-      "TOriginal": "",
-      "Imagen": ""
-    },
-    {
-      "Titulo": "",
-      "Autor": "",
-      "Editorial": "",
-      "Año": "",
-      "ISBN": "",
-      "Genero": "No Ficción",
-      "TOriginal": "",
-      "Imagen": ""
+      "TOriginal": "RICH DAD POOR DAD",
+      "Imagen": "https://www.gandhi.com.mx/media/catalog/product/cache/1/image/350x500/9df78eab33525d08d6e5fb8d27136e95/i/m/image_1165_1_63693.jpg"
     },
     {
       "Titulo": "COME PRIMA",
@@ -485,74 +363,64 @@
       "Imagen": "https://www.gandhi.com.mx/media/catalog/product/cache/1/image/350x500/9df78eab33525d08d6e5fb8d27136e95/i/m/image_1165_1_235695.jpg"
     },
     {
-      "Titulo": "",
-      "Autor": "",
-      "Editorial": "",
-      "Año": "",
-      "ISBN": "",
+      "Titulo": "The Wicked Will Rise",
+      "Autor": "Danielle Paige",
+      "Editorial": "HarperCollins",
+      "Año": "2015",
+      "ISBN": "9780062280701",
       "Genero": "Paranormal",
-      "TOriginal": "",
-      "Imagen": ""
+      "TOriginal": "The Wicked Will Rise",
+      "Imagen": "https://d.gr-assets.com/books/1423841142l/18602341.jpg"
     },
     {
-      "Titulo": "",
-      "Autor": "",
-      "Editorial": "",
-      "Año": "",
-      "ISBN": "",
+      "Titulo": "NOSTALGIA DE LA MUERTE",
+      "Autor": "XAVIER VILLAURRUTIA",
+      "Editorial": "FONDO DE CULTURA ECONOMICA",
+      "Año": "2014",
+      "ISBN": "9786071620187",
       "Genero": "Poesía",
-      "TOriginal": "",
-      "Imagen": ""
+      "TOriginal": "NOSTALGIA DE LA MUERTE",
+      "Imagen": "https://www.gandhi.com.mx/media/catalog/product/cache/1/image/350x500/9df78eab33525d08d6e5fb8d27136e95/9/7/9786071620187.jpg"
     },
     {
-      "Titulo": "",
-      "Autor": "",
-      "Editorial": "",
-      "Año": "",
-      "ISBN": "",
+      "Titulo": "The Pocket Wife",
+      "Autor": "Susan H. Crawford ",
+      "Editorial": "William Morrow ",
+      "Año": "2015",
+      "ISBN": "9780062362858",
       "Genero": "Psicología",
-      "TOriginal": "",
-      "Imagen": ""
+      "TOriginal": "The Pocket Wife",
+      "Imagen": "Thttps://d.gr-assets.com/books/1404531562l/22635867.jpg"
     },
     {
-      "Titulo": "",
-      "Autor": "",
-      "Editorial": "",
-      "Año": "",
-      "ISBN": "",
-      "Genero": "Religión",
-      "TOriginal": "",
-      "Imagen": ""
-    },
-    {
-      "Titulo": "",
-      "Autor": "",
-      "Editorial": "",
-      "Año": "",
-      "ISBN": "",
+      "Titulo": "Normal: A Novel",
+      "Autor": "Graeme Cameron",
+      "Editorial": "Mira",
+      "Año": "2015",
+      "ISBN": "9780778318507",
       "Genero": "Suspenso",
-      "TOriginal": "",
-      "Imagen": ""
+      "TOriginal": "Normal: A Novel",
+      "Imagen": "https://www.goodreads.com/book/photo/23214378-normal"
     },
     {
-      "Titulo": "",
-      "Autor": "",
-      "Editorial": "",
-      "Año": "",
-      "ISBN": "",
+      "Titulo": "Liars, Inc.",
+      "Autor": "Paula Stokes",
+      "Editorial": "HarperTeen",
+      "Año": "2015",
+      "ISBN": "9780062323286",
       "Genero": "Thriller",
-      "TOriginal": "",
-      "Imagen": ""
+      "TOriginal": "Liars, Inc.",
+      "Imagen": "https://d.gr-assets.com/books/1403739161l/18009950.jpg"
     },
     {
-      "Titulo": "",
-      "Autor": "",
-      "Editorial": "",
-      "Año": "",
-      "ISBN": "",
+      "Titulo": "Where Sea Meets Sky",
+      "Autor": "Karina Halle",
+      "Editorial": "Atria Books",
+      "Año": "2015",
+      "ISBN": "9781476796406",
       "Genero": "Viajes",
-      "TOriginal": "",
-      "Imagen": ""
+      "TOriginal": "Where Sea Meets Sky",
+      "Imagen": "https://d.gr-assets.com/books/1415756600l/22609201.jpg"
     },
     {
       "Titulo": "Asylum",

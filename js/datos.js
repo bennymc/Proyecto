@@ -68,7 +68,7 @@ function CargarGenerosRandom()
 			var VectorA = new Array(10); //creamos el vector 
 
 			for(var i=0; i<5; i++){ 
-				VectorA[i] = Math.round(Math.random()*33); 
+				VectorA[i] = Math.round(Math.random()*24); 
 			} //Selecciono 5 numeros random
 			var flag=true;
 			while(flag){
@@ -87,7 +87,7 @@ function CargarGenerosRandom()
 			var contG=1
 			for(var i=0; i<5; i++){ 
 				if(VectorA[i]>33){
-					VectorA[i]=VectorA[i]-34;
+					VectorA[i]=VectorA[i]-24;
 				}
 				console.log(VectorA[i]);
 				var genero = json.Generos[VectorA[i]].TituloLibrero; 
@@ -101,14 +101,14 @@ function CargarGenerosRandom()
 				var cont = 0;
 				for(x in json.Libros){
 					
-					var img = json.Libros[x].Imagen;
+					var imgg = json.Libros[x].Imagen;
 					if(genero == json.Libros[x].Genero)
 					{
 						cont++;
 						var nuevoLibro = LibroHijo.cloneNode(true);
 						nuevoLibro.setAttribute("id", "LibroG"+cont);
 						ContenedorPadre.appendChild(nuevoLibro); 
-						$('#LibroG'+cont).find('img').attr('src',img);
+						$('#LibroG'+cont).find('img').attr('src',imgg);
 						
 					}
 				}

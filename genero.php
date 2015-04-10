@@ -64,30 +64,20 @@
 					<li><a href="#" onclick='cambiaGenero("Biografía")'>Biografía</a></li>
 					<li><a href="#" onclick='cambiaGenero("Ciencia")'>Ciencia</a></li>
 					<li><a href="#" onclick='cambiaGenero("Ciencia Ficción")'>Ciencia Ficción</a></li>
-					<li><a href="#" onclick='cambiaGenero("Cine")'>Cine</a></li>
 					<li><a href="#" onclick='cambiaGenero("Clásicos")'>Clásicos</a></li>
 					<li><a href="#" onclick='cambiaGenero("Comics")'>Comics</a></li>
-					<li><a href="#" onclick='cambiaGenero("Contemporaneo")'>Contemporaneo</a></li>
-					<li><a href="#" onclick='cambiaGenero("Cocina")'>Cocina</a></li>					
 					<li><a href="#" onclick='cambiaGenero("Crimen")'>Crimen</a></li>
-					<li><a href="#" onclick='cambiaGenero("Deportes")'>Deportes</a></li>
-					<li><a href="#" onclick='cambiaGenero("Espiritualidad")'>Espiritualidad</a></li>
 					<li><a href="#" onclick='cambiaGenero("Fantasía")'>Fantasía</a></li>
 					<li><a href="#" onclick='cambiaGenero("Ficción")'>Ficción</a></li>
-					<li><a href="#" onclick='cambiaGenero("Ficción Historica")'>Ficción Historica</a></li>
-					<li><a href="#" onclick='cambiaGenero("Filosofía")'>Filosofía</a></li>
 					<li><a href="#" onclick='cambiaGenero("Historia")'>Historia</a></li>
 					<li><a href="#" onclick='cambiaGenero("Humor")'>Humor</a></li>
-					<li><a href="#" onclick='cambiaGenero("Manga")'>Manga</a></li>
 					<li><a href="#" onclick='cambiaGenero("Música")'>Música</a></li>
 					<li><a href="#" onclick='cambiaGenero("Misterio")'>Misterio</a></li>
 					<li><a href="#" onclick='cambiaGenero("Negocios")'>Negocios</a></li>
-					<li><a href="#" onclick='cambiaGenero("No Ficción")'>No Ficción</a></li>
 					<li><a href="#" onclick='cambiaGenero("Novelas Gráficas")'>Novelas Gráficas</a></li>
 					<li><a href="#" onclick='cambiaGenero("Paranormal")'>Paranormal</a></li>
 					<li><a href="#" onclick='cambiaGenero("Poesía")'>Poesía</a></li>
 					<li><a href="#" onclick='cambiaGenero("Psicología")'>Psicología</a></li>
-					<li><a href="#" onclick='cambiaGenero("Religión")'>Religión</a></li>
 					<li><a href="#" onclick='cambiaGenero("Romance")'>Romance</a></li>
 					<li><a href="#" onclick='cambiaGenero("Suspenso")'>Suspenso</a></li>
 					<li><a href="#" onclick='cambiaGenero("Thriller")'>Thriller</a></li>
