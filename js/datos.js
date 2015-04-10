@@ -51,6 +51,7 @@ function cambiaGenero(genero){
 
 function CargarGenerosRandom()
 {
+	
 	for(var y=1; y<6; y++)
 	{
 		$('#libroG'+y).show();
@@ -90,6 +91,7 @@ function CargarGenerosRandom()
 					VectorA[i]=VectorA[i]-24;
 				}
 				console.log(VectorA[i]);
+				console.log(json.Generos[VectorA[i]].TituloLibrero);
 				var genero = json.Generos[VectorA[i]].TituloLibrero; 
 				
 				$('#G'+contG).text(genero);
@@ -102,24 +104,23 @@ function CargarGenerosRandom()
 				for(x in json.Libros){
 					
 					var imgg = json.Libros[x].Imagen;
+					
 					if(genero == json.Libros[x].Genero)
 					{
+						console.log(imgg);
 						cont++;
 						var nuevoLibro = LibroHijo.cloneNode(true);
-						nuevoLibro.setAttribute("id", "LibroG"+cont);
+						nuevoLibro.setAttribute("id", "LibroG"+contG+"-"+cont);
 						ContenedorPadre.appendChild(nuevoLibro); 
-						$('#LibroG'+cont).find('img').attr('src',imgg);
+						$('#LibroG'+contG+'-'+cont).find('img').attr('src',imgg);
 						
 					}
 				}
+				$('#libroG'+contG).hide();
 				contG++;		
 			}
 				
-			for(var y=1; y<6; y++)
-			{
-				$('#libroG'+y).hide();
-				
-			}		
+					
 		
 		}
 	}
