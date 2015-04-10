@@ -4,19 +4,17 @@
 ?>
 <script type="text/javascript">
 		var genero = "<?php echo $genero; ?>";
-		$(document).ready(function(){
-    	cambiaGenero(genero);
-		});
+		cambiaGenero(genero);
 </script>
 <!-- ***************** GENERO **************************** -->
 <!-- ***************** INICIA ASIDE IZQ **************************** -->
 	<aside class="col-md-3">
 		<div class="panel panel-success">
 			<div class="panel-heading">
-			    <h3 class="TituloGrande" id="titulo">Genero X</h3>
+			    <h3 class="TituloGrande" id="titulo"></h3>
 			</div>
 			<div class="panel-body">
-			    <p id="descripcion">Descripción del género.</p>
+			    <p id="descripcion"></p>
 			</div>
     	</div>
 	</aside>
@@ -25,7 +23,7 @@
 	<section class="col-md-6">
     	<div class="panel panel-success">
 			<div class="panel-heading">
-		     	<h1 class="Contenedoresdelibros" id="tituloLibrero">GENERO X</h1>
+		     	<h1 class="Contenedoresdelibros" id="tituloLibrero"></h1>
 			</div>
 			<div class="panel-body" id="contenedorgenero">
 			    <div class="col-md-12">
