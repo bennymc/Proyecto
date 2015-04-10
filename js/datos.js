@@ -101,14 +101,14 @@ function CargarGenerosRandom()
 				var cont = 0;
 				for(x in json.Libros){
 					
-					var img = json.Libros[x].Imagen;
+					var imgg = json.Libros[x].Imagen;
 					if(genero == json.Libros[x].Genero)
 					{
 						cont++;
 						var nuevoLibro = LibroHijo.cloneNode(true);
 						nuevoLibro.setAttribute("id", "LibroG"+cont);
 						ContenedorPadre.appendChild(nuevoLibro); 
-						$('#LibroG'+cont).find('img').attr('src',img);
+						$('#LibroG'+cont).find('img').attr('src',imgg);
 						
 					}
 				}
