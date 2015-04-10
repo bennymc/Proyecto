@@ -1,6 +1,11 @@
 <?php
 	include "includes/navbar.html";
 ?>
+<script type="text/javascript">
+		$(document).ready(function(){
+    	CargarGenerosRandom();
+		});
+</script>
 <!-- ******************** CATALOGO DE LIBROS ************************** -->
 <!-- ******************** INICIA SECTION ************************** -->
 	<section class="col-md-7">
