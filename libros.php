@@ -11,12 +11,11 @@
 		<div class="panel panel-success">
   			<div class="panel-heading">
     			<a href="#" onclick="CargarGenerosRandom()"><h3 class="TituloGrande" id="G1"></h3></a>
+    			<a href="genero.php" ><h3 class="TituloGrande" id="G1"></h3></a>
   			</div>
   			<div class="panel-body librosSeparados" id="contenedorG1">
 				<a href="ejemplar.php" id="libroG1"><img src="http://placehold.it/100x150" class="imagenGenero img-responsive"alt="Libro"></a>
-				<div class="col-md-12" id="flechasG1">
-					<a href="genero.php" class="pull-right">Ver mas<span class="glyphicon glyphicon-chevron-right"></span></a>
-				</div>	
+				
   			</div>
 		</div>
 	<!-- ******************** GENERO 2 ************************** -->		
@@ -26,9 +25,7 @@
   			</div>
   			<div class="panel-body librosSeparados" id="contenedorG2">
 				<a href="ejemplar.php" id="libroG2"><img src="http://placehold.it/100x150" class="imagenGenero img-responsive" alt="Libro"></a>
-				<div class="col-md-12" id="flechasG2">
-					<a href="genero.php" class="pull-right">Ver mas<span class="glyphicon glyphicon-chevron-right"></span></a>
-				</div>	
+				
   			</div>
 		</div>
 	<!-- ******************** GENERO 3 ************************** -->		
@@ -38,9 +35,7 @@
   			</div>
   			<div class="panel-body librosSeparados" id="contenedorG3">
 				<a href="ejemplar.php" id="libroG3"><img src="http://placehold.it/100x150" class="imagenGenero img-responsive" alt="Libro"></a>
-				<div class="col-md-12" id="flechasG3">
-					<a href="genero.php" class="pull-right">Ver mas<span class="glyphicon glyphicon-chevron-right"></span></a>
-				</div>	
+					
   			</div>
 		</div>
 	<!-- ******************** GENERO 4 ************************** -->		
@@ -50,9 +45,7 @@
   			</div>
   			<div class="panel-body librosSeparados" id="contenedorG4">
 				<a href="ejemplar.php" id="libroG4"><img src="http://placehold.it/100x150" class="imagenGenero img-responsive" alt="Libro"></a>
-				<div class="col-md-12" id="flechasG4">
-					<a href="genero.php" class="pull-right">Ver mas<span class="glyphicon glyphicon-chevron-right"></span></a>
-				</div>				
+								
   			</div>
 		</div>
 	<!-- ******************** GENERO 5 ************************** -->		
@@ -62,9 +55,7 @@
   			</div>
   			<div class="panel-body librosSeparados" id="contenedorG5">
 				<a href="ejemplar.php" id="libroG5"><img src="http://placehold.it/100x150" class="imagenGenero img-responsive" alt="Libro"></a>
-				<div class="col-md-12" id="flechasG5">
-					<a href="genero.php" class="pull-right">Ver mas<span class="glyphicon glyphicon-chevron-right"></span></a>
-				</div>	
+				
   			</div>
 		</div>
 	</section>
