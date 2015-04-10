@@ -77,6 +77,8 @@ img#librodestacado{
 	border-radius: 5%;
 	border: solid #66971F;
 	box-shadow:1px 1px 30px 4px rgba(0,0,0,0.4);
+	width: 200px;
+	height: 300px;
 }
 
 div.librosencontenedor{
