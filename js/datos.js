@@ -33,7 +33,7 @@ function cambiaGenero(genero){
 				if(genero == json.Libros[i].Genero)
 				{
 					cont++;
-					console.log(img);
+					
 					var nuevoLibro = LibroHijo.cloneNode(true);
 					nuevoLibro.setAttribute("id", "Libro"+cont);
 					ContenedorPadre.appendChild(nuevoLibro); 
@@ -48,3 +48,84 @@ function cambiaGenero(genero){
 
 	miajax.send(null);
 }
+
+function CargarGenerosRandom()
+{
+	for(var y=1; y<6; y++)
+	{
+		$('#libroG'+y).show();
+		$('#contenedorG'+y).children().not('#libroG'+y).remove();
+	}
+	//Creamos el objeto AJAX
+	var miajax = nuevoAjax();
+	//Hago la petición a mi server
+	miajax.open('post','back.php',true);
+	//Función para cuando cambie el status
+	miajax.onreadystatechange = function(){
+		if(miajax.readyState == 4){
+			//Proceso el texto como JS
+			var json = JSON.parse(miajax.responseText);
+			var VectorA = new Array(10); //creamos el vector 
+
+			for(var i=0; i<5; i++){ 
+				VectorA[i] = Math.round(Math.random()*33); 
+			} //Selecciono 5 numeros random
+			var flag=true;
+			while(flag){
+				flag=false;
+				for(var i=0; i<5; i++){
+					for(var j=i+1; j<5; j++){
+						if(VectorA[i]==VectorA[j]){
+							flag=true;
+							VectorA[j]=	VectorA[i]+1;
+						}
+						
+					}
+				}
+			}//evitar randoms iguales
+
+			var contG=1
+			for(var i=0; i<5; i++){ 
+				if(VectorA[i]>33){
+					VectorA[i]=VectorA[i]-34;
+				}
+				console.log(VectorA[i]);
+				var genero = json.Generos[VectorA[i]].TituloLibrero; 
+				
+				$('#G'+contG).text(genero);
+				
+				var ContenedorPadre = document.getElementById("contenedorG"+contG);
+				var LibroHijo = document.getElementById("libroG"+contG);
+				
+				
+				var cont = 0;
+				for(x in json.Libros){
+					
+					var img = json.Libros[x].Imagen;
+					if(genero == json.Libros[x].Genero)
+					{
+						cont++;
+						var nuevoLibro = LibroHijo.cloneNode(true);
+						nuevoLibro.setAttribute("id", "LibroG"+cont);
+						ContenedorPadre.appendChild(nuevoLibro); 
+						$('#LibroG'+cont).find('img').attr('src',img);
+						
+					}
+				}
+				contG++;		
+			}
+				
+			for(var y=1; y<6; y++)
+			{
+				$('#libroG'+y).hide();
+				
+			}		
+		
+		}
+	}
+	miajax.send(null);	
+
+}
+
+
+

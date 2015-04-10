@@ -54,7 +54,9 @@ div#destacados img{
 /* ------------ LIBROS SEPARADOS EN GENERO  -------------*/
 div.librosSeparados img{
 	margin: 1em;
-}
+	width: 100px;
+	height: 150px;
+	float: left;
 
 /* ------------ ELEMENTOS EN PERFIL  -------------*/
 
@@ -235,3 +237,4 @@ button#btnrecupera{
 	width: 100px;
 	height: 150px;
 }
+
