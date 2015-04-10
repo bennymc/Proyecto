@@ -68,7 +68,7 @@ function CargarGenerosRandom()
 			var VectorA = new Array(10); //creamos el vector 
 
 			for(var i=0; i<5; i++){ 
-				VectorA[i] = Math.round(Math.random()*33); 
+				VectorA[i] = Math.round(Math.random()*24); 
 			} //Selecciono 5 numeros random
 			var flag=true;
 			while(flag){
@@ -87,7 +87,7 @@ function CargarGenerosRandom()
 			var contG=1
 			for(var i=0; i<5; i++){ 
 				if(VectorA[i]>33){
-					VectorA[i]=VectorA[i]-34;
+					VectorA[i]=VectorA[i]-24;
 				}
 				console.log(VectorA[i]);
 				var genero = json.Generos[VectorA[i]].TituloLibrero; 
