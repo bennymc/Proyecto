@@ -208,9 +208,38 @@ function CargarPerfil(){
 			$('#Ldestacado').text(json.Libros[librodestacado].Titulo)
 			var imgLdestacado = json.Libros[librodestacado].Imagen;
 			$('#librodestacado').attr('src',imgLdestacado);
+			var descripcion = json.Perfil[0].Intereses;
+			$('#Intereses').text(descripcion);
+
+			var librosagregados = json.Perfil[0].Libros;
+			var libros = librosagregados.split(',');
+			var librosStatus = json.Perfil[0].Status;
+			var Status = librosStatus.split(',');
 			var ContenedorPadre = document.getElementById("ContenedorPerfil");
 			var LibroHijo = document.getElementById("libroP");			
 			
+			var cont=1;
+			for(var x=0; x < libros.length; x++)
+			{
+				var n =libros[x];
+				var nuevoLibro = LibroHijo.cloneNode(true);
+				nuevoLibro.setAttribute("id", "Libro"+cont);
+				ContenedorPadre.appendChild(nuevoLibro); 
+				$('#Libro'+cont).find('img').attr('src',json.Libros[n].Imagen);
+				var titulo=json.Libros[n].Titulo.slice(0,10)+'...';
+				$('#Libro'+cont).find('a').eq(0).text(titulo);
+				if(Status[x]== 1){
+					$('#Libro'+cont).find('a').eq(2).text('Leído');
+				}
+				if(Status[x]== 2){
+					$('#Libro'+cont).find('a').eq(2).text('Leyendo');
+				}
+				if(Status[x]== 3){
+					$('#Libro'+cont).find('a').eq(2).text('Por leer');
+				}
+				
+				cont++;
+			}
 				
 				
 			

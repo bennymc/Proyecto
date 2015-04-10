@@ -30,7 +30,7 @@
 			    <h1 class="titulosenperfil">Descripcion</h1>
 			</div>
 			<div class="panel-body ">
-			    <p>Cosas sobre ti.</p>
+			    <p id="Intereses">Cosas sobre ti.</p>
 			</div>
     	</div>
     <!-- ****************************** BOTON EDITAR PERFIL ****************************** -->
