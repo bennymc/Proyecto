@@ -48,7 +48,7 @@
     {
       "TituloLibrero": "Fantasía",
       "CabeceraLibrero": "Libros del género Fantasía",
-      "Descripcion": ""
+      "Descripcion": "La literatura fantástica es un género de ficción fantástica cuyas obras se distinguen por referir hechos o fenómenos contrarios a las leyes naturales, reales o ficticias , es generalmente utilizado cuentos, novelas o relatos cortos que se caracteriza por utilizar esos sucesos que sobrepasan lo ordinario como elemento principal de la temática."
     },
     {
       "TituloLibrero": "Ficción",
@@ -432,6 +432,20 @@
       "TOriginal": "Asylum",
       "Imagen": "https://d202m5krfqbpi5.cloudfront.net/books/1392418932l/20810694.jpg"
     }
+  ],
+  "Reseñas": [
+    {
+      "Usuario": "Benny",
+      "Título": "Tormenta de espadas",
+      "Texto": "Te extraño Robb :'(",
+      "Calificación": "5"
+    },
+    {
+      "Usuario": "",
+      "Título": "",
+      "Texto": "",
+      "Calificación": ""
+    },
   ]
 }
 
