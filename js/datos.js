@@ -113,7 +113,8 @@ function CargarGenerosRandom()
 						nuevoLibro.setAttribute("id", "LibroG"+contG+"-"+cont);
 						ContenedorPadre.appendChild(nuevoLibro); 
 						$('#LibroG'+contG+'-'+cont).find('img').attr('src',imgg);
-						
+						if(cont==5)
+							break;
 					}
 				}
 				$('#libroG'+contG).hide();
