@@ -1,6 +1,13 @@
 <?php
 	include "includes/navbar.html";
+	$genero = $_GET["genero"];
 ?>
+<script type="text/javascript">
+		var genero = "<?php echo $genero; ?>";
+		$(document).ready(function(){
+    	cambiaGenero(genero);
+		});
+</script>
 <!-- ***************** GENERO **************************** -->
 <!-- ***************** INICIA ASIDE IZQ **************************** -->
 	<aside class="col-md-3">
