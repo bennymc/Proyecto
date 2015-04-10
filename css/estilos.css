@@ -44,12 +44,16 @@ a:hover h3.TituloGrande{
 /* ------------LINKS EN INICIO DE SESION  -------------*/
 a#recuperar ,a#registro{
 	font-size: 1em;
+
 	padding: 0;	
 }
 
 /* ------------ LIBROS DESTACADOS  -------------*/
 div#destacados img{
 	margin: 1em;
+	width: 100px;
+	height: 150px;
+	float: left;
 }
 /* ------------ LIBROS SEPARADOS EN GENERO  -------------*/
 div.librosSeparados img{

@@ -10,7 +10,7 @@
 	<!-- ******************** GENERO 1 ************************** -->	
 		<div class="panel panel-success">
   			<div class="panel-heading">
-    			<a href="#" onclick="CargarGenerosRandom()"><h3 class="TituloGrande" id="G1"></h3></a>
+    			<a href="genero.php" ><h3 class="TituloGrande" id="G1"></h3></a>
     			<a href="genero.php" ><h3 class="TituloGrande" id="G1"></h3></a>
   			</div>
   			<div class="panel-body librosSeparados" id="contenedorG1">

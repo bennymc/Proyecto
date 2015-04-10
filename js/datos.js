@@ -87,7 +87,7 @@ function CargarGenerosRandom()
 
 			var contG=1
 			for(var i=0; i<5; i++){ 
-				if(VectorA[i]>33){
+				if(VectorA[i]>24){
 					VectorA[i]=VectorA[i]-24;
 				}
 				console.log(VectorA[i]);
@@ -129,5 +129,61 @@ function CargarGenerosRandom()
 
 }
 
+function LibrosPopulares(){
+	
+		$('#libroD').show();
+		$('#destacados').children().not('#libroD').remove();
+	
+	//Creamos el objeto AJAX
+	var miajax = nuevoAjax();
+	//Hago la petición a mi server
+	miajax.open('post','back.php',true);
+	//Función para cuando cambie el status
+	miajax.onreadystatechange = function(){
+		if(miajax.readyState == 4){
+			//Proceso el texto como JS
+			var json = JSON.parse(miajax.responseText);
+			var VectorD = new Array(10); //creamos el vector 
+
+			for(var i=0; i<5; i++){ 
+				VectorD[i] = Math.round(Math.random()*31); 
+			} //Selecciono 5 numeros random
+			var flag=true;
+			while(flag){
+				flag=false;
+				for(var i=0; i<5; i++){
+					for(var j=i+1; j<5; j++){
+						if(VectorD[i]==VectorD[j]){
+							flag=true;
+							VectorD[j]=	VectorD[i]+1;
+						}
+						
+					}
+				}
+			}//evitar randoms iguales
+
+			var contD=1
+			for(var i=0; i<5; i++){ 
+				if(VectorD[i]>31){
+					VectorD[i]=VectorD[i]-31;
+				}
+									
+				var ContenedorPadre = document.getElementById("destacados");
+				var LibroHijo = document.getElementById("libroD");			
+				var imgd = json.Libros[VectorD[i]].Imagen;
+				var nuevoLibro = LibroHijo.cloneNode(true);
+				nuevoLibro.setAttribute("id", "LibroD"+contD);
+				ContenedorPadre.appendChild(nuevoLibro); 
+				$('#LibroD'+contD).find('img').attr('src',imgd);
+				
+				contD++;		
+			}
+			$('#libroD').hide();
+					
+		
+		}
+	}
+	miajax.send(null);
+}
 
 

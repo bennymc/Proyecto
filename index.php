@@ -1,6 +1,9 @@
 <?php
 	include "includes/navbar.html";
 ?>
+<script type="text/javascript">
+    	LibrosPopulares();
+</script>
 <!--  ***************************** INICIA SECTION ***************************** -->
 	<section class="col-md-7">
 	<!--  ***************************** LIBROS POPULARES ***************************** -->
@@ -8,13 +11,9 @@
   			<div class="panel-heading">
     			<h3 class="TituloGrande">Libros Populares.</h3>
   			</div>
-  			<div id="destacados" class="panel-body">
-   				<p>Mostrara libros populares entre los  usuarios<br/></p>
-				<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
-				<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
-				<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
-				<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
-				<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>	 	
+  			<div id="destacados" class="panel-body">   				
+				<a href="ejemplar.php" id="libroD"><img src="http://placehold.it/100x150" alt="Libro"></a>
+					 	
   			</div>
 		</div>
 	<!--  ***************************** ULTIMAS RESEÑAS ***************************** -->
