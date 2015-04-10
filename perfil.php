@@ -1,12 +1,15 @@
 <?php
 	include "includes/navbar.html";
 ?>
+<script type="text/javascript">
+    	CargarPerfil();
+</script>
 <!-- ****************************** INICIA ASIDE ***************************************** -->
     <aside class="col-md-3">
     <!-- ****************************** FOTO Y NOMBRE EN PERFIL ************************************* -->
     	<div class="panel panel-success">
 			<div class="panel-heading">
-			    <h1 class="titulosenperfil">Tu Nombre aqui</h1>
+			    <h1 class="titulosenperfil" id="Nombre">Tu Nombre aqui</h1>
 			</div>
 			<div class="panel-body ">
 			    <a href="editar.php"><img class="center-block" id="fotodeperfil" src="http://placehold.it/200x200" alt="imagen de perfil"></a>
@@ -15,7 +18,7 @@
     <!-- ****************************** LIBRO DESTACADO ************************************* -->
     	<div class="panel panel-success">
 			<div class="panel-heading">
-			    <h1 class="titulosenperfil">Libro Destacado</h1>
+			    <h1 class="titulosenperfil" id="Ldestacado">Libro Destacado</h1>
 			</div>
 			<div class="panel-body ">
 			    <a href="ejemplar.php"><img class="center-block" id="librodestacado" src="http://placehold.it/200x300" alt="Libro Destacado"></a>
@@ -51,83 +54,14 @@
 				      	<option value="año">Año</option>
 				    </select>
 				</div>
-				<div class="col-md-12">
-					<p> Todos los libros que el usuario agrega.<br><br></p>
-					<div class="col-md-2 librosencontenedor">						
+				<div class="col-md-12" id="ContenedorPerfil">
+					
+					<div class="col-md-2 librosencontenedor" id="libroP">						
 					 	<?php
 							include "includes/LibrosenPerfil.html";
 						?>
 					</div>
-					<div class="col-md-2 librosencontenedor">
-						<?php
-							include "includes/LibrosenPerfil.html";
-						?>
-					</div>
-					<div class="col-md-2 librosencontenedor">
-						<?php
-							include "includes/LibrosenPerfil.html";
-						?>
-					</div>
-					<div class="col-md-2 librosencontenedor">
-						<?php
-							include "includes/LibrosenPerfil.html";
-						?>
-					</div>
-					<div class="col-md-2 librosencontenedor">
-						<?php
-							include "includes/LibrosenPerfil.html";
-						?>
-					</div>
-					<div class="col-md-2 librosencontenedor">
-						<?php
-							include "includes/LibrosenPerfil.html";
-						?>
-					</div>
-					<div class="col-md-2 librosencontenedor">
-						<?php
-							include "includes/LibrosenPerfil.html";
-						?>
-					</div>
-					<div class="col-md-2 librosencontenedor">
-						<?php
-							include "includes/LibrosenPerfil.html";
-						?>
-					</div>
-					<div class="col-md-2 librosencontenedor">
-						<?php
-							include "includes/LibrosenPerfil.html";
-						?>
-					</div>
-					<div class="col-md-2 librosencontenedor">
-						<?php
-							include "includes/LibrosenPerfil.html";
-						?>
-					</div>
-					<div class="col-md-2 librosencontenedor">
-						<?php
-							include "includes/LibrosenPerfil.html";
-						?>
-					</div>
-					<div class="col-md-2 librosencontenedor">
-						<?php
-							include "includes/LibrosenPerfil.html";
-						?>
-					</div>
-					<div class="col-md-2 librosencontenedor">
-						<?php
-							include "includes/LibrosenPerfil.html";
-						?>
-					</div>
-					<div class="col-md-2 librosencontenedor">
-						<?php
-							include "includes/LibrosenPerfil.html";
-						?>
-					</div>
-					<div class="col-md-2 librosencontenedor">
-						<?php
-							include "includes/LibrosenPerfil.html";
-						?>
-					</div>
+					
 				</div>				
 			</div>
 		</div>

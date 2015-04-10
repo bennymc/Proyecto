@@ -187,3 +187,38 @@ function LibrosPopulares(){
 }
 
 
+function CargarPerfil(){
+	
+		$('#libroP').show();
+		$('#ContenedorPerfil').children().not('#libroP').remove();
+	
+	//Creamos el objeto AJAX
+	var miajax = nuevoAjax();
+	//Hago la petición a mi server
+	miajax.open('post','back.php',true);
+	//Función para cuando cambie el status
+	miajax.onreadystatechange = function(){
+		if(miajax.readyState == 4){
+			//Proceso el texto como JS
+			var json = JSON.parse(miajax.responseText);
+			
+			var nombre= json.Perfil[0].Nombre+" "+json.Perfil[0].Apellido;
+			$('#Nombre').text(nombre);
+			var librodestacado = json.Perfil[0].Destacado;
+			$('#Ldestacado').text(json.Libros[librodestacado].Titulo)
+			var imgLdestacado = json.Libros[librodestacado].Imagen;
+			$('#librodestacado').attr('src',imgLdestacado);
+			var ContenedorPadre = document.getElementById("ContenedorPerfil");
+			var LibroHijo = document.getElementById("libroP");			
+			
+				
+				
+			
+			$('#libroP').hide();
+					
+		
+		}
+	}
+	miajax.send(null);
+}
+
