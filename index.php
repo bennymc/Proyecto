@@ -43,10 +43,10 @@
   			</div>
 		</div>		
 	<!--  ***************************** SUGERENCIAS ***************************** -->		
-		<div class="alert alert-dismissible alert-success">
-			<form class="form-horizontal">
+		<div class="sugerencia">
+			<form class="form-horizontal" method="post" onsubmit="return ValidaSugerencia()">
 				<fieldset>
-					<legend>¿No encontraste un Libro? ¡Sugiérelo!</legend>
+					<legend id="sugerenciaL">¿No encontraste un Libro? ¡Sugiérelo!</legend>
 					<div class="form-group">
 					  	<label class="col-md-4 control-label" for="Email">Email</label>  
 					  	<div class="col-md-5">
@@ -73,7 +73,7 @@
 					</div>
 					<div class="form-group">
 						<div class="col-md-9">
-							<button type="submit" class="btn btn-default pull-right">Enviar</button>
+							<button type="submit" class="btn btn-default pull-right" >Enviar</button>
 						</div>
 					</div>	
 				</fieldset>

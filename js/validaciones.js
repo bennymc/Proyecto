@@ -123,3 +123,15 @@ function VCorreo(){
 			}
 			return true;
 }
+
+function ValidaSugerencia(){
+			var valor = document.getElementById("Email").value;
+			console.log(valor);
+		    if( !(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(valor))){
+				document.getElementById("Email").setAttribute('class', 'form-control input-md error');
+			    return false;
+			}else{
+				document.getElementById("Email").setAttribute('class', 'form-control input-md');
+			}
+			return true;
+}
