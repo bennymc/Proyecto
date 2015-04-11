@@ -67,8 +67,8 @@ p#Intereses{
 	font-size: 1.2em;
 }
 #ContenedorPerfil img{
-width: 100px;
-	height: 150px;
+	width: 100px;
+	height: 150px;c
 }
 
 img#fotodeperfil{
@@ -90,6 +90,7 @@ img#librodestacado{
 
 div.librosencontenedor{
 	margin: 10px;
+	float: left;
 }
 
 .librosencontenedor p{
@@ -135,9 +136,12 @@ div.flechas{
 }
 
 /* ------------ IMAGENES EN GENERO Y AUTOR -------------*/
+
 #contenedorgenero div.col-md-3{
 	margin: 20px 0;
+	float: left;
 }
+
 
 /* ------------ -------------*/
 button#agregar{
