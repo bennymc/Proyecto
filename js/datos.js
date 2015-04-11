@@ -262,6 +262,18 @@ function cargaTitulo(titulo){
 					$('#portadaEjemplar').attr('src',json.Libros[i].Imagen);
 				}
 				
+			}
+			for(i in json.Reseñas){
+				
+				var usuario = json.Reseñas[i].Usuario;
+				var titulorev = json.Reseñas[i].Título; 
+				var calificacion = json.Reseñas[i].Calificación;
+				var texto = json.Reseñas[i].Texto;
+				if(titulorev == titulo){
+					$('#userreview').find('a').eq(5).text("Reseña de el usuario " + usuario);
+					$('#userreview').find('a').eq(5).attr("href", "usuario.php?usuario=" + usuario);
+					$('#userreview').find('textarea').eq(0).text(texto);
+				}
 			}		
 		}
 	}
