@@ -1,7 +1,9 @@
 <?php
 	include "includes/navbar.html";
 ?>
-
+<script type="text/javascript">
+    	EditarPerfil();
+</script>
 		<div id="contenedor">
 		<section class="col-md-6">
 			<form class="form-horizontal" method="post" onsubmit="return VEditar()">

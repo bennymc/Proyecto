@@ -335,3 +335,33 @@ function CargarPerfil(){
 	miajax.send(null);
 }
 
+function EditarPerfil(){
+	
+	//Creamos el objeto AJAX
+	var miajax = nuevoAjax();
+	//Hago la petición a mi server
+	miajax.open('post','back.php',true);
+	//Función para cuando cambie el status
+	miajax.onreadystatechange = function(){
+		
+		if(miajax.readyState == 4){
+			//Proceso el texto como JS
+			var json = JSON.parse(miajax.responseText);
+			
+			
+			$('#nombre').val(json.Perfil[0].Nombre);
+			$('#apellidos').val(json.Perfil[0].Apellido);
+			var x= json.Perfil[0].Sexo;
+			if(x= "Femenino")
+				$('#sexo option').eq(1).attr('selected','selected'); 
+			else
+				$('#sexo option').eq(0).attr('selected','selected'); 
+			$('textarea#intereses').text(json.Perfil[0].Intereses);
+			$('input#bday').val(json.Perfil[0].FechaNacimiento);		
+			
+			
+		}
+	}
+
+	miajax.send(null);
+}
