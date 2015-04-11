@@ -39,6 +39,8 @@ function cambiaGenero(genero){
 					ContenedorPadre.appendChild(nuevoLibro); 
 					$('#Libro'+cont).find('img').attr('src',img);
 					$('#Libro'+cont).find('a').eq(1).text(titulo);
+					$('#Libro'+cont).find('a').eq(0).attr("href", "ejemplar.php?titulo=" + titulo);
+					$('#Libro'+cont).find('a').eq(1).attr("href", "ejemplar.php?titulo=" + titulo);
 					j++;
 				}
 			}
@@ -113,6 +115,7 @@ function CargarGenerosRandom()
 						nuevoLibro.setAttribute("id", "LibroG"+contG+"-"+cont);
 						ContenedorPadre.appendChild(nuevoLibro); 
 						$('#LibroG'+contG+'-'+cont).find('img').attr('src',imgg);
+						$('#LibroG'+contG+'-'+cont).attr("href", "ejemplar.php?titulo=" + json.Libros[x].Titulo);
 						if(cont==5)
 							break;
 					}
@@ -174,6 +177,7 @@ function LibrosPopulares(){
 				var nuevoLibro = LibroHijo.cloneNode(true);
 				nuevoLibro.setAttribute("id", "LibroD"+contD);
 				ContenedorPadre.appendChild(nuevoLibro); 
+				$('#LibroD'+contD).attr("href", "ejemplar.php?titulo=" + json.Libros[VectorD[i]].Titulo);
 				$('#LibroD'+contD).find('img').attr('src',imgd);
 				
 				contD++;		
@@ -215,12 +219,51 @@ function cargarReseñas(){
 				nuevaReseña.setAttribute("id", "Reseña"+cont);
 				ContenedorPadre.appendChild(nuevaReseña); 
 				$('#Reseña'+cont).find('h4').eq(0).text(usuario);
+				$('#Reseña'+cont).find('a').eq(5).attr("href", "usuario.php?usuario=" + usuario);
 				$('#Reseña'+cont).find('h4').eq(1).text(titulo);
+				$('#Reseña'+cont).find('a').eq(6).attr("href", "ejemplar.php?titulo=" + titulo);
 				$('#Reseña'+cont).find('textarea').text(texto);
 			}
 					$('#reseña').hide();
 		}
 		
+	}
+
+	miajax.send(null);
+}
+
+function cargaTitulo(titulo){
+	//Creamos el objeto AJAX
+	var miajax = nuevoAjax();
+	//Hago la petición a mi server
+	miajax.open('post','back.php',true);
+	//Función para cuando cambie el status
+	miajax.onreadystatechange = function(){
+		if(miajax.readyState == 4){
+			//Proceso el texto como JS
+			var json = JSON.parse(miajax.responseText);
+			for(i in json.Libros){
+				console.log(json.Libros[i]);
+				if(titulo == json.Libros[i].Titulo)
+				{
+					$('p#titulo').text(json.Libros[i].Titulo);
+					$('p#autor').text(json.Libros[i].Autor);
+					$('#ficha').find('a').eq(0).text(json.Libros[i].Autor);
+					$('#ficha').find('a').eq(0).attr("href", "autor.php?autor=" + json.Libros[i].Autor);
+					$('p#editorial').text(json.Libros[i].Editorial);
+					$('#ficha').find('a').eq(1).text(json.Libros[i].Editorial);
+					$('#ficha').find('a').eq(1).attr("href", "editorial.php?editorial=" + json.Libros[i].Editorial);
+					$('p#año').text(json.Libros[i].Año);
+					$('p#isbn').text(json.Libros[i].ISBN);
+					$('p#genero').text(json.Libros[i].Genero);
+					$('#ficha').find('a').eq(2).text(json.Libros[i].Genero);
+					$('#ficha').find('a').eq(2).attr("href", "genero.php?genero=" + json.Libros[i].Genero);
+					$('p#tOriginal').text(json.Libros[i].TOriginal);
+					$('#portadaEjemplar').attr('src',json.Libros[i].Imagen);
+				}
+				
+			}		
+		}
 	}
 
 	miajax.send(null);
@@ -247,6 +290,7 @@ function CargarPerfil(){
 			$('#Ldestacado').text(json.Libros[librodestacado].Titulo)
 			var imgLdestacado = json.Libros[librodestacado].Imagen;
 			$('#librodestacado').attr('src',imgLdestacado);
+			$('#LdestacadoTitulo').attr("href", "ejemplar.php?titulo=" + json.Libros[librodestacado].Titulo);
 			var descripcion = json.Perfil[0].Intereses;
 			$('#Intereses').text(descripcion);
 			$('#fotodeperfil').attr('src',json.Perfil[0].ImgPerfil);
@@ -267,6 +311,7 @@ function CargarPerfil(){
 				$('#Libro'+cont).find('img').attr('src',json.Libros[n].Imagen);
 				var titulo=json.Libros[n].Titulo.slice(0,10)+'...';
 				$('#Libro'+cont).find('a').eq(0).text(titulo);
+				$('#Libro'+cont).find('a').eq(1).attr("href", "ejemplar.php?titulo=" + json.Libros[n].Titulo);
 				if(Status[x]== 1){
 					$('#Libro'+cont).find('a').eq(2).text('Leído');
 				}

@@ -21,7 +21,7 @@
 			    <h1 class="titulosenperfil" id="Ldestacado">Libro Destacado</h1>
 			</div>
 			<div class="panel-body ">
-			    <a href="ejemplar.php"><img class="center-block" id="librodestacado" src="http://placehold.it/200x300" alt="Libro Destacado"></a>
+			    <a href="ejemplar.php" id="LdestacadoTitulo"><img class="center-block" id="librodestacado" src="http://placehold.it/200x300" alt="Libro Destacado"></a>
 			</div>
     	</div>	
     <!-- ****************************** DESCRIPCION ************************************* -->	

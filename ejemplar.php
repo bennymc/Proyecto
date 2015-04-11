@@ -1,14 +1,19 @@
 <?php
 	include "includes/navbar.html";
+	$titulo = $_GET["titulo"];
 ?>
+<script type="text/javascript">
+		var titulo = "<?php echo $titulo; ?>";
+		cargaTitulo(titulo);
+</script>
 <!-- ****************************** PORTADA DEL EJEMLAR ****************************** -->
 	<aside class="col-md-4">
 		<div class="panel panel-success">
 			<div class="panel-heading">
-			    <h1 class="titulosenperfil">Título del Libro</h1>
+			    <h1 class="titulosenperfil" id="tituloPerfil"></h1>
 			</div>
 			<div class="panel-body ">
-			    <a href="ejemplar.php"><img class="center-block img-responsive" id="librodestacado" src="http://placehold.it/200x300" alt="Libro Destacado"></a>
+			    <img class="center-block img-responsive" id="portadaEjemplar" src="http://placehold.it/200x300">
 			</div>
     	</div>	
 	</aside>	
@@ -18,33 +23,30 @@
 			<div class="panel-heading">
 			    <h1 class="titulosenperfil">Ficha bibliográfica</h1>
 			</div>
-			<div class="panel-body ">
+			<div class="panel-body " id="ficha">
 			  	<div class="col-md-4">
 					<h3>Título del libro</h3>
-					<p>
-					  	Ejemplar1.
+					<p id="titulo">
 					</p>
 					<h3>Autor</h3>
-					<a href="autor.php"><p>	Autor1.	</p></a>
+					<a href="autor.php"><p id="autor">
+					</p></a>
 		  		</div>
 		   		<div class="fichac  col-md-4">
 		   	 		<h3>Editorial</h3>
-			  		<a href="editorial.php"><p>Editorial1. </p></a>
+			  		<a href="editorial.php"><p id="editorial"></p></a>
 		  	 		<h3>Año de edición</h3>
-			  		<p>
-			  			AñodeEdición1.
+			  		<p id="año">
 			  		</p>
 			  		<h3>ISBN</h3>
-			  		<p>
-			  			ISBN1.
+			  		<p id="isbn">
 			  		</p>			  
 		  		</div>
 		   		<div class=" col-md-4">
 					<h3>Género</h3>
-			  		<a href="genero.php"><p>Género1. </p></a>
+			  		<a href="genero.php"><p id="genero"></p></a>
 			  		<h3>Título original</h3>
-			  		<p>
-			  			TítuloOriginal1.
+			  		<p id="tOriginal">
 			  		</p>
 		  		</div>
 			</div>
