@@ -53,11 +53,7 @@
 					  <div class="col-md-2">
 					    <button id="Guardar" name="Guardar" class="btn btn-default">Actualizar</button>
 					  </div>
-					  <div class="col-md-2">
-					   <a href="perfil.php">
-					    	<button id="Cancelar" name="Cancelar" class="btn btn-default">Cancelar</button>
-					   </a>
-					  </div>
+					  
 					</div>
 				</fieldset>
 			</form>
