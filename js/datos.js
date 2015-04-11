@@ -186,6 +186,44 @@ function LibrosPopulares(){
 	miajax.send(null);
 }
 
+function cargarReseñas(){
+	$('#reseña1').show();
+	$('#ultimasreview').children().not('#reseña1').remove();
+	//Creamos el objeto AJAX
+	var miajax = nuevoAjax();
+	//Hago la petición a mi server
+	miajax.open('post','back.php',true);
+	//Función para cuando cambie el status
+	miajax.onreadystatechange = function(){
+		if(miajax.readyState == 4){
+			//Proceso el texto como JS
+			var json = JSON.parse(miajax.responseText);
+			var ContenedorPadre = document.getElementById("ultimasreview");
+			var Hijo = document.getElementById("reseña1");
+			
+			var cont = 0;
+			for(i in json.Reseñas){
+				
+				var usuario = json.Reseñas[i].Usuario;
+				var titulo = json.Reseñas[i].Título; 
+				var calificacion = json.Reseñas[i].Calificación;
+				var texto = json.Reseñas[i].Texto;
+
+				cont++;
+				
+				var nuevaReseña = Hijo.cloneNode(true);
+				nuevaReseña.setAttribute("id", "Reseña"+cont);
+				ContenedorPadre.appendChild(nuevaReseña); 
+				$('#Reseña'+cont).find('h4').eq(0).text(usuario);
+				$('#Reseña'+cont).find('h4').eq(1).text(titulo);
+				$('#Reseña'+cont).find('textarea').text(texto);
+			}
+			$('#reseña1').hide();		
+		}
+	}
+
+	miajax.send(null);
+}
 
 function CargarPerfil(){
 	

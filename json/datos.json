@@ -441,10 +441,10 @@
       "Calificación": "5"
     },
     {
-      "Usuario": "",
-      "Título": "",
-      "Texto": "",
-      "Calificación": ""
+      "Usuario": "YuukoHL",
+      "Título": "Asylum",
+      "Texto": "Está bonito.",
+      "Calificación": "4"
     }
   ],
   "Perfil": [
@@ -459,6 +459,19 @@
       "Libros": "1,2,6,13,31,23,44,8,11,21",
       "Status": "1,2,1,1,1,2,3,3,1,1",
       "Password": "mipassword",
+      "User": "YuukoHL"
+    },
+    {
+      "Nombre": "Juan Bernardo",
+      "Apellido": "Morales Castañeda",
+      "Sexo": "Masculino",
+      "Intereses": "Libros, cine, videojuegos.",
+      "FechaNacimiento": "18/01/1993",
+      "ImgPerfil": "-",
+      "Destacado": "2",      
+      "Libros": "1,2,6,13,31,23,44,8,11,21",
+      "Status": "1,2,1,1,1,2,3,3,1,1",
+      "Password": "password",
       "User": "YuukoHL"
     }
   ]
