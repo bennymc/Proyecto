@@ -23,7 +23,7 @@
    				 <h3 class="TituloGrande">Ultimas Reseñas.</h3>
   			</div>
   			<div class="panel-body" id="ultimasreview">
-   				<div class="panel-body col-md-4" id="reseña1">
+   				<div class="col-md-4" id="reseña">
 				    <div class="ec-stars-wrapper col-md-12">
 						<a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
 						<a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>

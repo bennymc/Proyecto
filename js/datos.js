@@ -146,7 +146,7 @@ function LibrosPopulares(){
 			var VectorD = new Array(10); //creamos el vector 
 
 			for(var i=0; i<5; i++){ 
-				VectorD[i] = Math.round(Math.random()*31); 
+				VectorD[i] = Math.round(Math.random()*30); 
 			} //Selecciono 5 numeros random
 			var flag=true;
 			while(flag){
@@ -164,8 +164,8 @@ function LibrosPopulares(){
 
 			var contD=1
 			for(var i=0; i<5; i++){ 
-				if(VectorD[i]>31){
-					VectorD[i]=VectorD[i]-31;
+				if(VectorD[i]>30){
+					VectorD[i]=VectorD[i]-30;
 				}
 									
 				var ContenedorPadre = document.getElementById("destacados");
@@ -187,8 +187,8 @@ function LibrosPopulares(){
 }
 
 function cargarReseñas(){
-	$('#reseña1').show();
-	$('#ultimasreview').children().not('#reseña1').remove();
+	$('#reseña').show();
+	$('#ultimasreview').children().not('#reseña').remove();
 	//Creamos el objeto AJAX
 	var miajax = nuevoAjax();
 	//Hago la petición a mi server
@@ -199,7 +199,7 @@ function cargarReseñas(){
 			//Proceso el texto como JS
 			var json = JSON.parse(miajax.responseText);
 			var ContenedorPadre = document.getElementById("ultimasreview");
-			var Hijo = document.getElementById("reseña1");
+			var Hijo = document.getElementById("reseña");
 			
 			var cont = 0;
 			for(i in json.Reseñas){
@@ -218,8 +218,9 @@ function cargarReseñas(){
 				$('#Reseña'+cont).find('h4').eq(1).text(titulo);
 				$('#Reseña'+cont).find('textarea').text(texto);
 			}
-			$('#reseña1').hide();		
+					$('#reseña').hide();
 		}
+		
 	}
 
 	miajax.send(null);
@@ -248,7 +249,7 @@ function CargarPerfil(){
 			$('#librodestacado').attr('src',imgLdestacado);
 			var descripcion = json.Perfil[0].Intereses;
 			$('#Intereses').text(descripcion);
-
+			$('#fotodeperfil').attr('src',json.Perfil[0].ImgPerfil);
 			var librosagregados = json.Perfil[0].Libros;
 			var libros = librosagregados.split(',');
 			var librosStatus = json.Perfil[0].Status;
