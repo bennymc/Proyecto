@@ -89,7 +89,7 @@ function CargarGenerosRandom()
 
 			var contG=1
 			for(var i=0; i<5; i++){ 
-				if(VectorA[i]>24){
+				if(VectorA[i]>=24){
 					VectorA[i]=VectorA[i]-24;
 				}
 				console.log(VectorA[i]);
@@ -167,7 +167,7 @@ function LibrosPopulares(){
 
 			var contD=1
 			for(var i=0; i<5; i++){ 
-				if(VectorD[i]>30){
+				if(VectorD[i]>=30){
 					VectorD[i]=VectorD[i]-30;
 				}
 									
