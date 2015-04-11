@@ -63,6 +63,13 @@ div.librosSeparados img{
 	float: left;
 }
 /* ------------ ELEMENTOS EN PERFIL  -------------*/
+p#Intereses{
+	font-size: 1.2em;
+}
+#ContenedorPerfil img{
+width: 100px;
+	height: 150px;
+}
 
 img#fotodeperfil{
 
