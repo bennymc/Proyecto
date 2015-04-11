@@ -41,6 +41,16 @@ a:hover h3.TituloGrande{
 	text-decoration: none;
 }
 
+#login a:hover{
+	color: black;
+	text-decoration: none;
+}
+
+#faboutus a:hover
+{
+	color: white;
+	text-decoration: none;
+}
 /* ------------LINKS EN INICIO DE SESION  -------------*/
 a#recuperar ,a#registro{
 	font-size: 1em;
