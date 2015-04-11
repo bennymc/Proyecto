@@ -56,12 +56,15 @@
 				</div>
 				<div class="col-md-12" id="ContenedorPerfil">
 					
-					<div class="col-md-2 librosencontenedor" id="libroP">						
-					 	<?php
+					<div class="col-md-2 librosencontenedor" id="libroP">	
+					<a href="ejemplar.php" class="center-block">TITULO</a>
+					<a href="ejemplar.php" class="center-block"><img src="http://placehold.it/100x150" alt="Libro"></a>
+					<a href="#" data-toggle="modal" data-target="#smallModal" class="center-block">STATUS</a>					
+					 	
+					</div>
+					<?php
 							include "includes/LibrosenPerfil.html";
 						?>
-					</div>
-					
 				</div>				
 			</div>
 		</div>
