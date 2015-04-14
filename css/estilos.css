@@ -282,3 +282,12 @@ legend#sugerenciaL{
 	text-transform: uppercase;
 	color: white;
 }
+
+img#portadaEjemplar{
+	border-radius: 5%;
+	border: solid #66971F;
+	box-shadow:1px 1px 30px 4px rgba(0,0,0,0.4);
+	width: 310px;
+	height: 450px;
+
+}

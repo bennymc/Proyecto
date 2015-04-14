@@ -14,7 +14,8 @@
 		  	<div>
 				<div class="bs-example">
 				    <!-- Button HTML (to Trigger Modal) -->
-				    <a href="#myModal" class="btn btn-lg btn-default" data-toggle="modal">Mensaje</a>				    
+				    <a href="#myModal" class="center-block" data-toggle="modal"><span class=" btn btn-sm btn-default glyphicon glyphicon-envelope"> Mensaje</span></a>
+				    				    
 				    <!-- Modal HTML -->
 				    <div id="myModal" class="modal fade">
 				        <div class="modal-dialog">

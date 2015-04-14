@@ -43,6 +43,13 @@
 					  </div>
 					</div>
 					<div class="form-group">
+					  <label class="col-md-4 control-label" for="fav">Libro Favorito:</label>
+					  <div class="col-md-5">
+					    <select id="fav" name="fav" class="form-control">
+					    </select>
+					  </div>
+					</div>
+					<div class="form-group">
 					  <label class="col-md-4 control-label" for="imgperfil">Imagen de perfil</label>
 					  <div class="col-md-4">
 					    <input id="imgperfil" name="imgperfil" class="input-file" type="file">
@@ -81,6 +88,7 @@
 				</fieldset>
 			</form>
 		</aside>
+
 		</div>
 		<?php
 			include "includes/footer.html";

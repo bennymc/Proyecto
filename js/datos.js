@@ -321,9 +321,11 @@ function CargarPerfil(){
 				nuevoLibro.setAttribute("id", "Libro"+cont);
 				ContenedorPadre.appendChild(nuevoLibro); 
 				$('#Libro'+cont).find('img').attr('src',json.Libros[n].Imagen);
+
 				var titulo=json.Libros[n].Titulo.slice(0,10)+'...';
 				$('#Libro'+cont).find('a').eq(0).text(titulo);
 				$('#Libro'+cont).find('a').eq(0).attr("href", "ejemplar.php?titulo=" + json.Libros[n].Titulo);
+				$('#Libro'+cont).find('a').eq(1).attr("href", "ejemplar.php?titulo=" + json.Libros[n].Titulo);
 				if(Status[x]== 1){
 					$('#Libro'+cont).find('a').eq(2).text('Leído');
 				}
@@ -369,7 +371,20 @@ function EditarPerfil(){
 			else
 				$('#sexo option').eq(0).attr('selected','selected'); 
 			$('textarea#intereses').text(json.Perfil[0].Intereses);
-			$('input#bday').val(json.Perfil[0].FechaNacimiento);		
+			$('input#bday').val(json.Perfil[0].FechaNacimiento);	
+
+			var librosagregados = json.Perfil[0].Libros;
+			var libros = librosagregados.split(',');
+			var select = document.getElementById("fav");
+
+			for(var x=0; x < libros.length; x++){
+					var n =libros[x];
+					var texto = document.createTextNode(json.Libros[n].Titulo);
+					var option = document.createElement('option');
+					option.setAttribute('value',json.Libros[n].ISBN);
+					option.appendChild(texto);
+					select.appendChild(option);
+				}	
 			
 			
 		}

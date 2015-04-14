@@ -12,7 +12,7 @@
 			<div class="panel-heading">
 			    <h1 class="titulosenperfil" id="tituloPerfil"></h1>
 			</div>
-			<div class="panel-body ">
+			<div class="panel-body " >
 			    <img class="center-block img-responsive" id="portadaEjemplar" src="http://placehold.it/200x300">
 			</div>
     	</div>	
