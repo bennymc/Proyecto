@@ -45,8 +45,9 @@ function validacion() {
 	        }else{
 				document.getElementById("bday").setAttribute('class', 'form-control input-md');
 			}*/
+			var now = moment();
 			var dateEntered = $('#bday').val();
-			if (!moment(dateEntered,'YYYY/MM/DD').isValid() || !moment(dateEntered,'DD/MM/YYYY').isValid()) {
+			if (!moment(dateEntered,'YYYY/MM/DD').isValid() || !moment(dateEntered,'DD/MM/YYYY').isValid() || dateEntered>now) {
 			  document.getElementById("bday").setAttribute('class', 'form-control input-md error');
 	          return false;
 			} else {
