@@ -102,21 +102,14 @@ function VEditar(){
 			}
 
 			var dateEntered = $('#bday').val();
-			if (!moment(dateEntered,'YYYY/MM/DD').isValid()) {
+			var fecha=moment(dateEntered, ["DD-MM-YYYY", "YYYY-MM-DD"]);
+			if (!moment().isAfter(fecha)  || !fecha.isValid()) {
 			  document.getElementById("bday").setAttribute('class', 'form-control input-md error');
 	          return false;
 			} else {
 			  document.getElementById("bday").setAttribute('class', 'form-control input-md');
 			}
-			var now = moment();
-			var fechaEntrada =moment(dateEntered,'YYYY-MM-DD');
-			if(fechaEntrada>now){
-			  document.getElementById("bday").setAttribute('class', 'form-control input-md error');
-	          return false;
-			} else {
-			  document.getElementById("bday").setAttribute('class', 'form-control input-md');
-			}
-
+			
 			return true;
 }
 
