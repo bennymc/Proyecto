@@ -52,6 +52,15 @@ function validacion() {
 			} else {
 			  document.getElementById("bday").setAttribute('class', 'form-control input-md');
 			}
+			var now = moment();
+			var fechaEntrada =moment(dateEntered,'DD-MM-YYYY');
+			if(fechaEntrada>now){
+			  document.getElementById("bday").setAttribute('class', 'form-control input-md error');
+	          return false;
+			} else {
+			  document.getElementById("bday").setAttribute('class', 'form-control input-md');
+			}
+
 			valor = document.getElementById("password").value;
 			if( valor == null || valor.length < 8 || /^\s+$/.test(valor) ) {
 				document.getElementById("password").setAttribute('class', 'form-control input-md error');
