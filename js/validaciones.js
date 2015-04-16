@@ -47,10 +47,13 @@ function validacion() {
 			}*/
 			var now = moment();
 			var dateEntered = $('#bday').val();
-			if (!moment(dateEntered,'YYYY/MM/DD').isValid() || !moment(dateEntered,'DD/MM/YYYY').isValid() || dateEntered>now) {
+			if (!moment(dateEntered,'DD/MM/YYYY').isValid()) {
 			  document.getElementById("bday").setAttribute('class', 'form-control input-md error');
 	          return false;
-			} else {
+			} else if(dateEntered>now){
+			  document.getElementById("bday").setAttribute('class', 'form-control input-md error');
+	          return false;
+			}else{
 			  document.getElementById("bday").setAttribute('class', 'form-control input-md');
 			}
 			/*
