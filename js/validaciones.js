@@ -46,12 +46,13 @@ function validacion() {
 				document.getElementById("bday").setAttribute('class', 'form-control input-md');
 			}*/
 			var dateEntered = $('#bday').val();
-			if (!moment(dateEntered,'YYYY/MM/DD').isValid()) {
+			if (!moment(dateEntered,'YYYY/MM/DD').isValid() || !moment(dateEntered,'DD/MM/YYYY').isValid()) {
 			  document.getElementById("bday").setAttribute('class', 'form-control input-md error');
 	          return false;
 			} else {
 			  document.getElementById("bday").setAttribute('class', 'form-control input-md');
 			}
+			/*
 			var now = moment();
 			var fechaEntrada =moment(dateEntered,'DD-MM-YYYY');
 			if(fechaEntrada>now){
@@ -59,7 +60,7 @@ function validacion() {
 	          return false;
 			} else {
 			  document.getElementById("bday").setAttribute('class', 'form-control input-md');
-			}
+			}*/
 
 			valor = document.getElementById("password").value;
 			if( valor == null || valor.length < 8 || /^\s+$/.test(valor) ) {
