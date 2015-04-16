@@ -98,16 +98,20 @@ function VEditar(){
 				document.getElementById("sexo").setAttribute('class', 'form-control input-md');
 			}
 
-			var today = new Date();
-	     	var inputDate = new Date(document.getElementById("bday").value);
-	      	if(inputDate.value == " "){
-	      		document.getElementById("bday").setAttribute('class', 'form-control input-md error');
-	            return false;
-	        }else if (inputDate > today) {
-	        	document.getElementById("bday").setAttribute('class', 'form-control input-md error');
-	            return false;
-	        }else{
-				document.getElementById("bday").setAttribute('class', 'form-control input-md');
+			var dateEntered = $('#bday').val();
+			if (!moment(dateEntered,'YYYY/MM/DD').isValid()) {
+			  document.getElementById("bday").setAttribute('class', 'form-control input-md error');
+	          return false;
+			} else {
+			  document.getElementById("bday").setAttribute('class', 'form-control input-md');
+			}
+			var now = moment();
+			var fechaEntrada =moment(dateEntered,'YYYY-MM-DD');
+			if(fechaEntrada>now){
+			  document.getElementById("bday").setAttribute('class', 'form-control input-md error');
+	          return false;
+			} else {
+			  document.getElementById("bday").setAttribute('class', 'form-control input-md');
 			}
 
 			return true;
