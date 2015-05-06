@@ -1,0 +1,104 @@
+<html lang="es">
+<head>
+   <meta charset="UTF-8"/> 
+   <title>Book²</title>
+   	<link href="./css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="./css/estilos.css" rel="stylesheet" media="screen">
+	<script src="http://code.jquery.com/jquery.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/validaciones.js"></script>
+    <script src="./js/ajax.js"></script>
+    <script src="./js/datos.js"></script>
+    <script src="./js/moment.js"></script>
+    <script>
+      moment().format();
+    </script>
+</head>
+<body>
+<!-- ****************************** MENU ************************************* -->
+	<nav class="navbar navbar-inverse">
+	  	<div class="container-fluid">
+	<!-- ****************************** PRINCIPAL ************************************* -->
+		    <div class="navbar-header">
+		      	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+		      	</button> 	      	 	 	 
+		      	<a class="navbar-brand" href="index.php">Book²</a>
+		    </div>
+		<!-- ****************************** PERFIL ************************************* -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+		      	<ul class="nav navbar-nav" id="menu">
+		        	<li><a href="perfil.php">PERFIL <span class="sr-only">(current)</span></a></li>
+		<!-- ****************************** LIBROS ************************************* -->    	
+		        	<li class="dropdown">
+			          	<a href="libros.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-xpanded="false" >LIBROS<span class="caret"></span></a>
+			          	<ul class="dropdown-menu" role="menu" >
+				          	<li class="divider"></li>
+				            <li><a href="libros.php" class="peque1">CATALOGO POR GENEROS</a></li>
+				            <li class="divider"></li>
+				            <li ><a href="genero.php?genero=Adultos Jóvenes" class="peque">Adultos Jóvenes</a></li>
+				            <li ><a href="genero.php?genero=Fantasía" class="peque">Fantasía</a></li>	            
+				            <li ><a href="genero.php?genero=Romance" class="peque">Romance</a></li>	            
+				            <li ><a href="genero.php?genero=Misterio" class="peque">Misterio</a></li>
+				            <li ><a href="genero.php?genero=Ciencia Ficción" class="peque">Ciencia Ficción</a></li>
+				            <li ><a href="genero.php?genero=Thriller" class="peque">Thriller</a></li>
+			          	</ul>
+		        	</li>
+		      	</ul>
+		<!-- ****************************** BUSQUEDA ************************************* -->      	
+				<form action="busqueda.php" method="post" class="navbar-form navbar-left" role="search">
+					<div class="form-group" id="areabuscar">
+					  	<input type="text" class="form-control" placeholder="Titulo / Autor / ISBN / Usuario">
+					</div>
+					<button type="submit" class="btn btn-default"id="botonbuscar">BUSCAR</button>
+				</form>
+		<!-- ****************************** INICIA SESIÓN Y MENSAJES ************************************* -->			
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="./inbox.php" data-toggle="modal">Mensajes recibidos</a></li>
+					<li><a href="#login" data-toggle="modal">Inicia Sesión</a></li>
+				</ul>
+		<!-- ****************************** MODAL LOGIN ************************************* -->			
+				<div id="login" class="modal fade">
+					<div class="modal-dialog">
+				    	<div class="modal-content">
+				        	<div class="modal-body">
+				            	<section id="formulario">
+									<div class="panel panel-success" id="contenedorlogin">
+										<div class="panel-heading">
+					    					<h3 class="TituloGrande"> Inicia Sesión:</h3>
+										</div>
+										<div class="panel-body">
+											<form action="index.php" method="post" class="form-horizontal">
+												<div class="form-group">
+													<label for="usuario" class="col-lg-2 control-label" id="usuario" >Usuario:</label>
+													<div class="col-lg-8">
+														<input type="text" class="form-control" id="usuario" placeholder="USUARIO">
+													</div>
+												</div>
+												<div class="form-group">
+												    <label for="pass" class="col-lg-2 control-label" id="pass">Contraseña:</label>
+												    <div class="col-lg-8">
+												    	<input type="password" class="form-control" id="pass" placeholder="CONTRASEÑA">
+													</div>			      
+												</div>
+												<div class="form-group col-md-8">
+													<div>
+														<button type="submit" class="btn btn-default" id="btnlogin">Entrar</button>
+													</div>
+												</div>	
+												<a href="recupera.php" class="btn btn-link" id="recuperar">Recuperar contraseña</a>
+												<a href="registro.php" class="btn btn-link" id="registro">Registro</a>
+											</form>
+										</div>
+									</div>
+								</section>
+		                	</div>
+		            	</div>
+		        	</div>
+			    </div>
+	      	</div>
+	    </div>
+	</nav>
