@@ -1,27 +1,25 @@
 <?php
-	include "includes/navbar.html";
+	include "Vista/navbar.html";
 ?>
-<script type="text/javascript">
-    	CargarPerfil();
-</script>
+
 <!-- ****************************** INICIA ASIDE ***************************************** -->
     <aside class="col-md-3">
     <!-- ****************************** FOTO Y NOMBRE EN PERFIL ************************************* -->
     	<div class="panel panel-success">
 			<div class="panel-heading">
-			    <h1 class="titulosenperfil" id="Nombre">Tu Nombre aqui</h1>
+			    <h1 class="titulosenperfil" id="Nombre"><?php echo $this->mdl->nombre ?> </h1>
 			</div>
 			<div class="panel-body ">
-			    <a href="editar.php"><img class="center-block" id="fotodeperfil" src="http://placehold.it/200x200" alt="imagen de perfil"></a>
+			    <a href="editar.php"><img class="center-block" id="fotodeperfil" src=<?php echo $this->mdl->imgPerfil ?> alt="imagen de perfil"></a>
 			</div>
     	</div>	
     <!-- ****************************** LIBRO DESTACADO ************************************* -->
     	<div class="panel panel-success">
 			<div class="panel-heading">
-			    <h1 class="titulosenperfil" id="Ldestacado">Libro Destacado</h1>
+			    <h1 class="titulosenperfil" id="Ldestacado"><?php echo $this->mdl->librodestacado ?> </h1>
 			</div>
 			<div class="panel-body ">
-			    <a href="ejemplar.php" id="LdestacadoTitulo"><img class="center-block" id="librodestacado" src="http://placehold.it/200x300" alt="Libro Destacado"></a>
+			    <a href="ejemplar.php" id="LdestacadoTitulo"><img class="center-block" id="librodestacado" src=<?php echo $this->mdl->imgLdestacado ?> alt="Libro Destacado"></a>
 			</div>
     	</div>	
     <!-- ****************************** DESCRIPCION ************************************* -->	
@@ -30,7 +28,8 @@
 			    <h1 class="titulosenperfil">Descripcion</h1>
 			</div>
 			<div class="panel-body ">
-			    <p id="Intereses">Cosas sobre ti.</p>
+			    <p id="Intereses"><?php echo $this->mdl->descripcion ?></p>
+
 			</div>
     	</div>
     <!-- ****************************** BOTON EDITAR PERFIL ****************************** -->
@@ -63,7 +62,7 @@
 					 	
 					</div>
 					<?php
-							include "includes/LibrosenPerfil.html";
+							include "Vista/LibrosenPerfil.html";
 						?>
 				</div>				
 			</div>
@@ -75,7 +74,7 @@
     </section>
 <!-- ************************************* FIN SECTION ************************************* -->
 <?php
-	include "includes/footer.html";
+	include "Vista/footer.html";
 ?>
 
 
