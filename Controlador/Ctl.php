@@ -31,4 +31,16 @@ class InicioCtl{
 		echo $vista;
 	}
 }
+
+class aboutusCtl{
+	private $modelo;
+
+	public function ejecutar(){
+		$vista = file_get_contents("Vista/aboutus.php");
+		$header = file_get_contents("Vista/navbar.html");
+		$footer = file_get_contents("Vista/footer.html");
+		$vista = $header . $vista . $footer;
+		echo $vista;
+	}
+}
 ?>
