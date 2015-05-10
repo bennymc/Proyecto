@@ -15,6 +15,10 @@
 			require_once("Controlador/editorialCtl.php");
 			$ctl = new editorialCtl();
 			break;
+		case "editorialGenero":
+			require_once("Controlador/editorialGeneroCtl.php");
+			$ctl = new editorialCtl();
+			break;
 		case "inicio":
 			require_once("Controlador/inicioCtl.php");
 			$ctl = new InicioCtl();
