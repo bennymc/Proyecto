@@ -19,6 +19,14 @@
 			require_once("Controlador/Ctl.php");
 			$ctl = new aboutusCtl();
 			break;
+		case "registro":
+			require_once("Controlador/Ctl.php");
+			$ctl = new registroCtl();
+			break;
+		case "recupera":
+			require_once("Controlador/Ctl.php");
+			$ctl = new recuperaCtl();
+			break;
 		case "catalogo":
 			require_once("Controlador/catalogoCtl.php");
 			$ctl = new catalogoCtl();
