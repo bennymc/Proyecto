@@ -4,11 +4,11 @@
 		switch($_GET["ctl"]){
 
 		case "generos":
-			require_once("Controlador/Ctl.php");
+			require_once("Controlador/generosCtl.php");
 			$ctl = new GenerosCtl();
 			break;
 		case "inicio":
-			require_once("Controlador/Ctl.php");
+			require_once("Controlador/inicioCtl.php");
 			$ctl = new InicioCtl();
 			break;
 		case "perfil":
@@ -16,15 +16,15 @@
 			$ctl = new perfilCtl();		
 			break;
 		case "about":
-			require_once("Controlador/Ctl.php");
+			require_once("Controlador/inicioCtl.php");
 			$ctl = new aboutusCtl();
 			break;
 		case "registro":
-			require_once("Controlador/Ctl.php");
+			require_once("Controlador/inicioCtl.php");
 			$ctl = new registroCtl();
 			break;
 		case "recupera":
-			require_once("Controlador/Ctl.php");
+			require_once("Controlador/inicioCtl.php");
 			$ctl = new recuperaCtl();
 			break;
 		case "catalogo":
