@@ -7,6 +7,10 @@
 			require_once("Controlador/generosCtl.php");
 			$ctl = new GenerosCtl();
 			break;
+		case "ejemplar":
+			require_once("Controlador/ejemplarCtl.php");
+			$ctl = new ejemplarCtl();
+			break;
 		case "inicio":
 			require_once("Controlador/inicioCtl.php");
 			$ctl = new InicioCtl();
