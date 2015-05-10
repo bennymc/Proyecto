@@ -29,7 +29,7 @@
 					<p id="titulo">
 					</p>
 					<h3>Autor</h3>
-					<a href="autor.php"><p id="autor">
+					<a href="?ctl=autor"><p id="autor">
 					</p></a>
 		  		</div>
 		   		<div class="fichac  col-md-4">

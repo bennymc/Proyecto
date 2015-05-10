@@ -1,5 +1,5 @@
 <?php
-			include "includes/navbar.html";
+			include "Vista/navbar.html";
 ?>
 <!-- ***************** AUTOR **************************** -->
 <!-- ***************** INICIA ASIDE IZQ **************************** -->
@@ -120,35 +120,35 @@
 			</div>
 			<div class="panel-body">
 				<ul>
-					<li><a href="autorGenero.php">Adultos Jóvenes</a></li>
-					<li><a href="autorGenero.php">Arte</a></li>
-					<li><a href="autorGenero.php">Auto Ayuda</a></li>
-					<li><a href="autorGenero.php">Biografía</a></li>
-					<li><a href="autorGenero.php">Ciencia</a></li>
-					<li><a href="autorGenero.php">Ciencia Ficción</a></li>
-					<li><a href="autorGenero.php">Clásicos</a></li>
-					<li><a href="autorGenero.php">Comics</a></li>			
-					<li><a href="autorGenero.php">Crimen</a></li>
-					<li><a href="autorGenero.php">Fantasía</a></li>
-					<li><a href="autorGenero.php">Ficción</a></li>
-					<li><a href="autorGenero.php">Historia</a></li>
-					<li><a href="autorGenero.php">Humor</a></li>
-					<li><a href="autorGenero.php">Música</a></li>
-					<li><a href="autorGenero.php">Misterio</a></li>
-					<li><a href="autorGenero.php">Negocios</a></li>
-					<li><a href="autorGenero.php">Novelas Gráficas</a></li>
-					<li><a href="autorGenero.php">Paranormal</a></li>
-					<li><a href="autorGenero.php">Poesía</a></li>
-					<li><a href="autorGenero.php">Psicología</a></li>
-					<li><a href="autorGenero.php">Romance</a></li>
-					<li><a href="autorGenero.php">Suspenso</a></li>
-					<li><a href="autorGenero.php">Thriller</a></li>
-					<li><a href="autorGenero.php">Viajes</a></li>
+					<li><a href="?ctl=autorgenero">Adultos Jóvenes</a></li>
+					<li><a href="?ctl=autorgenero">Arte</a></li>
+					<li><a href="?ctl=autorgenero">Auto Ayuda</a></li>
+					<li><a href="?ctl=autorgenero">Biografía</a></li>
+					<li><a href="?ctl=autorgenero">Ciencia</a></li>
+					<li><a href="?ctl=autorgenero">Ciencia Ficción</a></li>
+					<li><a href="?ctl=autorgenero">Clásicos</a></li>
+					<li><a href="?ctl=autorgenero">Comics</a></li>			
+					<li><a href="?ctl=autorgenero">Crimen</a></li>
+					<li><a href="?ctl=autorgenero">Fantasía</a></li>
+					<li><a href="?ctl=autorgenero">Ficción</a></li>
+					<li><a href="?ctl=autorgenero">Historia</a></li>
+					<li><a href="?ctl=autorgenero">Humor</a></li>
+					<li><a href="?ctl=autorgenero">Música</a></li>
+					<li><a href="?ctl=autorgenero">Misterio</a></li>
+					<li><a href="?ctl=autorgenero">Negocios</a></li>
+					<li><a href="?ctl=autorgenero">Novelas Gráficas</a></li>
+					<li><a href="?ctl=autorgenero">Paranormal</a></li>
+					<li><a href="?ctl=autorgenero">Poesía</a></li>
+					<li><a href="?ctl=autorgenero">Psicología</a></li>
+					<li><a href="?ctl=autorgenero">Romance</a></li>
+					<li><a href="?ctl=autorgenero">Suspenso</a></li>
+					<li><a href="?ctl=autorgenero">Thriller</a></li>
+					<li><a href="?ctl=autorgenero">Viajes</a></li>
 				</ul>
 			</div>			
 		</div>
 	</aside>
 <!-- ***************** FIN ASIDE DER **************************** -->	
 <?php
-	include "includes/footer.html";
+	include "Vista/footer.html";
 ?>

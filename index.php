@@ -51,6 +51,14 @@
 			require_once("Controlador/editarCtl.php");
 			$ctl = new editarCtl();
 			break;
+		case "autor":
+			require_once("Controlador/autorCtl.php");
+			$ctl = new autorCtl();
+			break;
+		case "autorgenero":
+			require_once("Controlador/autorCtl.php");
+			$ctl = new autorgeneroCtl();
+			break;
 		default: 
 			http_response_code(404);
 			//header('HTTP/1.0 404 Not Found');
