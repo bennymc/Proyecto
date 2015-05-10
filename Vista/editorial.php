@@ -1,5 +1,5 @@
 <?php
-			include "includes/navbar.html";
+			include "Vista/navbar.html";
 ?>
 <!-- ***************** GENERO **************************** -->
 <!-- ***************** INICIA ASIDE IZQ **************************** -->
@@ -110,35 +110,35 @@
 			</div>
 			<div class="panel-body">
 				<ul>
-					<li><a href="editorialGenero.php">Adultos Jóvenes</a></li>
-					<li><a href="editorialGenero.php">Arte</a></li>
-					<li><a href="editorialGenero.php">Auto Ayuda</a></li>
-					<li><a href="editorialGenero.php">Biografía</a></li>
-					<li><a href="editorialGenero.php">Ciencia</a></li>
-					<li><a href="editorialGenero.php">Ciencia Ficción</a></li>
-					<li><a href="editorialGenero.php">Clásicos</a></li>
-					<li><a href="editorialGenero.php">Comics</a></li>				
-					<li><a href="editorialGenero.php">Crimen</a></li>
-					<li><a href="editorialGenero.php">Fantasía</a></li>
-					<li><a href="editorialGenero.php">Ficción</a></li>
-					<li><a href="editorialGenero.php">Historia</a></li>
-					<li><a href="editorialGenero.php">Humor</a></li>
-					<li><a href="editorialGenero.php">Música</a></li>
-					<li><a href="editorialGenero.php">Misterio</a></li>
-					<li><a href="editorialGenero.php">Negocios</a></li>
-					<li><a href="editorialGenero.php">Novelas Gráficas</a></li>
-					<li><a href="editorialGenero.php">Paranormal</a></li>
-					<li><a href="editorialGenero.php">Poesía</a></li>
-					<li><a href="editorialGenero.php">Psicología</a></li>
-					<li><a href="editorialGenero.php">Romance</a></li>
-					<li><a href="editorialGenero.php">Suspenso</a></li>
-					<li><a href="editorialGenero.php">Thriller</a></li>
-					<li><a href="editorialGenero.php">Viajes</a></li>
+					<li><a href="?ctl=editorialGenero">Adultos Jóvenes</a></li>
+					<li><a href="?ctl=editorialGenero">Arte</a></li>
+					<li><a href="?ctl=editorialGenero">Auto Ayuda</a></li>
+					<li><a href="?ctl=editorialGenero">Biografía</a></li>
+					<li><a href="?ctl=editorialGenero">Ciencia</a></li>
+					<li><a href="?ctl=editorialGenero">Ciencia Ficción</a></li>
+					<li><a href="?ctl=editorialGenero">Clásicos</a></li>
+					<li><a href="?ctl=editorialGenero">Comics</a></li>				
+					<li><a href="?ctl=editorialGenero">Crimen</a></li>
+					<li><a href="?ctl=editorialGenero">Fantasía</a></li>
+					<li><a href="?ctl=editorialGenero">Ficción</a></li>
+					<li><a href="?ctl=editorialGenero">Historia</a></li>
+					<li><a href="?ctl=editorialGenero">Humor</a></li>
+					<li><a href="?ctl=editorialGenero">Música</a></li>
+					<li><a href="?ctl=editorialGenero">Misterio</a></li>
+					<li><a href="?ctl=editorialGenero">Negocios</a></li>
+					<li><a href="?ctl=editorialGenero">Novelas Gráficas</a></li>
+					<li><a href="?ctl=editorialGenero">Paranormal</a></li>
+					<li><a href="?ctl=editorialGenero">Poesía</a></li>
+					<li><a href="?ctl=editorialGenero">Psicología</a></li>
+					<li><a href="?ctl=editorialGenero">Romance</a></li>
+					<li><a href="?ctl=editorialGenero">Suspenso</a></li>
+					<li><a href="?ctl=editorialGenero">Thriller</a></li>
+					<li><a href="?ctl=editorialGenero">Viajes</a></li>
 				</ul>
 			</div>			
 		</div>
 	</aside>
 <!-- ***************** FIN ASIDE DER **************************** -->		
 <?php
-	include "includes/footer.html";
+	include "Vista/footer.html";
 ?>
