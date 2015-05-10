@@ -51,30 +51,30 @@
 			</div>
 			<div class="panel-body">
 				<ul>
-					<li><a href="index.php?ctl=generos&id=1" onclick='cambiaGenero("Adultos Jóvenes")'>Adultos Jóvenes</a></li>
-					<li><a href="index.php?ctl=generos&id=2" onclick='cambiaGenero("Arte")'>Arte</a></li>
-					<li><a href="index.php?ctl=generos&id=3" onclick='cambiaGenero("Auto Ayuda")'>Auto Ayuda</a></li>
-					<li><a href="index.php?ctl=generos&id=4" onclick='cambiaGenero("Biografía")'>Biografía</a></li>
-					<li><a href="index.php?ctl=generos&id=5" onclick='cambiaGenero("Ciencia")'>Ciencia</a></li>
-					<li><a href="index.php?ctl=generos&id=6" onclick='cambiaGenero("Ciencia Ficción")'>Ciencia Ficción</a></li>
-					<li><a href="index.php?ctl=generos&id=7" onclick='cambiaGenero("Clásicos")'>Clásicos</a></li>
-					<li><a href="index.php?ctl=generos&id=8" onclick='cambiaGenero("Comics")'>Comics</a></li>
-					<li><a href="index.php?ctl=generos&id=9" onclick='cambiaGenero("Crimen")'>Crimen</a></li>
-					<li><a href="index.php?ctl=generos&id=10" onclick='cambiaGenero("Fantasía")'>Fantasía</a></li>
-					<li><a href="index.php?ctl=generos&id=11" onclick='cambiaGenero("Ficción")'>Ficción</a></li>
-					<li><a href="index.php?ctl=generos&id=12" onclick='cambiaGenero("Historia")'>Historia</a></li>
-					<li><a href="index.php?ctl=generos&id=13" onclick='cambiaGenero("Humor")'>Humor</a></li>
-					<li><a href="index.php?ctl=generos&id=14" onclick='cambiaGenero("Música")'>Música</a></li>
-					<li><a href="index.php?ctl=generos&id=15" onclick='cambiaGenero("Misterio")'>Misterio</a></li>
-					<li><a href="index.php?ctl=generos&id=16" onclick='cambiaGenero("Negocios")'>Negocios</a></li>
-					<li><a href="index.php?ctl=generos&id=17" onclick='cambiaGenero("Novelas Gráficas")'>Novelas Gráficas</a></li>
-					<li><a href="index.php?ctl=generos&id=18" onclick='cambiaGenero("Paranormal")'>Paranormal</a></li>
-					<li><a href="index.php?ctl=generos&id=19" onclick='cambiaGenero("Poesía")'>Poesía</a></li>
-					<li><a href="index.php?ctl=generos&id=20" onclick='cambiaGenero("Psicología")'>Psicología</a></li>
-					<li><a href="index.php?ctl=generos&id=21" onclick='cambiaGenero("Romance")'>Romance</a></li>
-					<li><a href="index.php?ctl=generos&id=22" onclick='cambiaGenero("Suspenso")'>Suspenso</a></li>
-					<li><a href="index.php?ctl=generos&id=23" onclick='cambiaGenero("Thriller")'>Thriller</a></li>
-					<li><a href="index.php?ctl=generos&id=24" onclick='cambiaGenero("Viajes")'>Viajes</a></li>
+					<li><a href="?ctl=generos&id=1" onclick='cambiaGenero("Adultos Jóvenes")'>Adultos Jóvenes</a></li>
+					<li><a href="?ctl=generos&id=2" onclick='cambiaGenero("Arte")'>Arte</a></li>
+					<li><a href="?ctl=generos&id=3" onclick='cambiaGenero("Auto Ayuda")'>Auto Ayuda</a></li>
+					<li><a href="?ctl=generos&id=4" onclick='cambiaGenero("Biografía")'>Biografía</a></li>
+					<li><a href="?ctl=generos&id=5" onclick='cambiaGenero("Ciencia")'>Ciencia</a></li>
+					<li><a href="?ctl=generos&id=6" onclick='cambiaGenero("Ciencia Ficción")'>Ciencia Ficción</a></li>
+					<li><a href="?ctl=generos&id=7" onclick='cambiaGenero("Clásicos")'>Clásicos</a></li>
+					<li><a href="?ctl=generos&id=8" onclick='cambiaGenero("Comics")'>Comics</a></li>
+					<li><a href="?ctl=generos&id=9" onclick='cambiaGenero("Crimen")'>Crimen</a></li>
+					<li><a href="?ctl=generos&id=10" onclick='cambiaGenero("Fantasía")'>Fantasía</a></li>
+					<li><a href="?ctl=generos&id=11" onclick='cambiaGenero("Ficción")'>Ficción</a></li>
+					<li><a href="?ctl=generos&id=12" onclick='cambiaGenero("Historia")'>Historia</a></li>
+					<li><a href="?ctl=generos&id=13" onclick='cambiaGenero("Humor")'>Humor</a></li>
+					<li><a href="?ctl=generos&id=14" onclick='cambiaGenero("Música")'>Música</a></li>
+					<li><a href="?ctl=generos&id=15" onclick='cambiaGenero("Misterio")'>Misterio</a></li>
+					<li><a href="?ctl=generos&id=16" onclick='cambiaGenero("Negocios")'>Negocios</a></li>
+					<li><a href="?ctl=generos&id=17" onclick='cambiaGenero("Novelas Gráficas")'>Novelas Gráficas</a></li>
+					<li><a href="?ctl=generos&id=18" onclick='cambiaGenero("Paranormal")'>Paranormal</a></li>
+					<li><a href="?ctl=generos&id=19" onclick='cambiaGenero("Poesía")'>Poesía</a></li>
+					<li><a href="?ctl=generos&id=20" onclick='cambiaGenero("Psicología")'>Psicología</a></li>
+					<li><a href="?ctl=generos&id=21" onclick='cambiaGenero("Romance")'>Romance</a></li>
+					<li><a href="?ctl=generos&id=22" onclick='cambiaGenero("Suspenso")'>Suspenso</a></li>
+					<li><a href="?ctl=generos&id=23" onclick='cambiaGenero("Thriller")'>Thriller</a></li>
+					<li><a href="?ctl=generos&id=24" onclick='cambiaGenero("Viajes")'>Viajes</a></li>
 				</ul>
 			</div>			
 		</div>

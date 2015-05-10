@@ -43,6 +43,10 @@
 			require_once("Controlador/catalogoCtl.php");
 			$ctl = new catalogoCtl();
 			break;
+		case "editar":
+			require_once("Controlador/editarCtl.php");
+			$ctl = new editarCtl();
+			break;
 		default: 
 			http_response_code(404);
 			//header('HTTP/1.0 404 Not Found');

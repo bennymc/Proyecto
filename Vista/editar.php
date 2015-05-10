@@ -1,5 +1,5 @@
 <?php
-	include "includes/navbar.html";
+	include "Vista/navbar.html";
 ?>
 <script type="text/javascript">
     	EditarPerfil();
@@ -91,5 +91,5 @@
 
 		</div>
 		<?php
-			include "includes/footer.html";
+			include "Vista/footer.html";
 		?>
