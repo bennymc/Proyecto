@@ -1,6 +1,6 @@
 <?php
-	include "includes/navbar.html";
-	$titulo = $_GET["titulo"];
+	include "Vista/navbar.html";
+	//$titulo = $_GET["titulo"];
 ?>
 <script type="text/javascript">
 		var titulo = "<?php echo $titulo; ?>";
@@ -177,5 +177,5 @@
 		</div>
 	</section>
 <?php
-	include "includes/footer.html";
+	include "Vista/footer.html";
 ?>

@@ -19,7 +19,7 @@
 			    <h1 class="titulosenperfil" id="Ldestacado"><?php echo $this->mdl->librodestacado ?> </h1>
 			</div>
 			<div class="panel-body ">
-			    <a href="ejemplar.php" id="LdestacadoTitulo"><img class="center-block" id="librodestacado" src=<?php echo $this->mdl->imgLdestacado ?> alt="Libro Destacado"></a>
+			    <a href="?ctl=ejemplar" id="LdestacadoTitulo"><img class="center-block" id="librodestacado" src=<?php echo $this->mdl->imgLdestacado ?> alt="Libro Destacado"></a>
 			</div>
     	</div>	
     <!-- ****************************** DESCRIPCION ************************************* -->	
@@ -56,8 +56,8 @@
 				<div class="col-md-12" id="ContenedorPerfil">
 					
 					<div class="col-md-2 librosencontenedor" id="libroP">	
-					<a href="ejemplar.php" class="center-block">TITULO</a>
-					<a href="ejemplar.php" class="center-block"><img src="http://placehold.it/100x150" alt="Libro"></a>
+					<a href="?ctl=ejemplar" class="center-block">TITULO</a>
+					<a href="?ctl=ejemplar" class="center-block"><img src="http://placehold.it/100x150" alt="Libro"></a>
 					<a href="#" data-toggle="modal" data-target="#smallModal" class="center-block">STATUS</a>					
 					 	
 					</div>

@@ -31,68 +31,68 @@
 				    </select>
 				</div>
 				<div class="col-md-3">				 	
-				 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
-				 	<a href="ejemplar.php" class="center-block">TITULO</a>
+				 	<a href="?ctl=ejemplar"><img src="http://placehold.it/100x150" alt="Libro"></a>
+				 	<a href="?ctl=ejemplar" class="center-block">TITULO</a>
 				</div>
 				<div class="col-md-3">				 	
-				 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
-				 	<a href="ejemplar.php" class="center-block">TITULO</a>
+				 	<a href="?ctl=ejemplar"><img src="http://placehold.it/100x150" alt="Libro"></a>
+				 	<a href="?ctl=ejemplar" class="center-block">TITULO</a>
 				</div>
 				<div class="col-md-3">				 	
-				 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
-				 	<a href="ejemplar.php" class="center-block">TITULO</a>
+				 	<a href="?ctl=ejemplar"><img src="http://placehold.it/100x150" alt="Libro"></a>
+				 	<a href="?ctl=ejemplar" class="center-block">TITULO</a>
 				</div>
 				<div class="col-md-3">				 	
-				 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
-				 	<a href="ejemplar.php" class="center-block">TITULO</a>
+				 	<a href="?ctl=ejemplar"><img src="http://placehold.it/100x150" alt="Libro"></a>
+				 	<a href="?ctl=ejemplar" class="center-block">TITULO</a>
 				</div>
 				<div class="col-md-3">				 	
-				 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
-				 	<a href="ejemplar.php" class="center-block">TITULO</a>
+				 	<a href="?ctl=ejemplar"><img src="http://placehold.it/100x150" alt="Libro"></a>
+				 	<a href="?ctl=ejemplar" class="center-block">TITULO</a>
 				</div>
 				<div class="col-md-3">				 	
-				 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
-				 	<a href="ejemplar.php" class="center-block">TITULO</a>
+				 	<a href="?ctl=ejemplar"><img src="http://placehold.it/100x150" alt="Libro"></a>
+				 	<a href="?ctl=ejemplar" class="center-block">TITULO</a>
 				</div>
 				<div class="col-md-3">				 	
-				 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
-				 	<a href="ejemplar.php" class="center-block">TITULO</a>
+				 	<a href="?ctl=ejemplar"><img src="http://placehold.it/100x150" alt="Libro"></a>
+				 	<a href="?ctl=ejemplar" class="center-block">TITULO</a>
 				</div>
 				<div class="col-md-3">				 	
-				 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
-				 	<a href="ejemplar.php" class="center-block">TITULO</a>
+				 	<a href="?ctl=ejemplar"><img src="http://placehold.it/100x150" alt="Libro"></a>
+				 	<a href="?ctl=ejemplar" class="center-block">TITULO</a>
 				</div>
 				<div class="col-md-3">				 	
-				 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
-				 	<a href="ejemplar.php" class="center-block">TITULO</a>
+				 	<a href="?ctl=ejemplar"><img src="http://placehold.it/100x150" alt="Libro"></a>
+				 	<a href="?ctl=ejemplar" class="center-block">TITULO</a>
 				</div>
 				<div class="col-md-3">				 	
-				 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
-				 	<a href="ejemplar.php" class="center-block">TITULO</a>
+				 	<a href="?ctl=ejemplar"><img src="http://placehold.it/100x150" alt="Libro"></a>
+				 	<a href="?ctl=ejemplar" class="center-block">TITULO</a>
 				</div>
 				<div class="col-md-3">				 	
-				 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
-				 	<a href="ejemplar.php" class="center-block">TITULO</a>
+				 	<a href="?ctl=ejemplar"><img src="http://placehold.it/100x150" alt="Libro"></a>
+				 	<a href="?ctl=ejemplar" class="center-block">TITULO</a>
 				</div>
 				<div class="col-md-3">				 	
-				 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
-				 	<a href="ejemplar.php" class="center-block">TITULO</a>
+				 	<a href="?ctl=ejemplar"><img src="http://placehold.it/100x150" alt="Libro"></a>
+				 	<a href="?ctl=ejemplar" class="center-block">TITULO</a>
 				</div>
 				<div class="col-md-3">				 	
-				 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
-				 	<a href="ejemplar.php" class="center-block">TITULO</a>
+				 	<a href="?ctl=ejemplar"><img src="http://placehold.it/100x150" alt="Libro"></a>
+				 	<a href="?ctl=ejemplar" class="center-block">TITULO</a>
 				</div>
 				<div class="col-md-3">				 	
-				 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
-				 	<a href="ejemplar.php" class="center-block">TITULO</a>
+				 	<a href="?ctl=ejemplar"><img src="http://placehold.it/100x150" alt="Libro"></a>
+				 	<a href="?ctl=ejemplar" class="center-block">TITULO</a>
 				</div>
 				<div class="col-md-3">				 	
-				 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
-				 	<a href="ejemplar.php" class="center-block">TITULO</a>
+				 	<a href="?ctl=ejemplar"><img src="http://placehold.it/100x150" alt="Libro"></a>
+				 	<a href="?ctl=ejemplar" class="center-block">TITULO</a>
 				</div>
 				<div class="col-md-3">				 	
-				 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" alt="Libro"></a>
-				 	<a href="ejemplar.php" class="center-block">TITULO</a>
+				 	<a href="?ctl=ejemplar"><img src="http://placehold.it/100x150" alt="Libro"></a>
+				 	<a href="?ctl=ejemplar" class="center-block">TITULO</a>
 				</div>	
 			</div>
 		</div>
