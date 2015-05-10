@@ -26,31 +26,31 @@
 			        <span class="icon-bar"></span>
 			        <span class="icon-bar"></span>
 		      	</button> 	      	 	 	 
-		      	<a class="navbar-brand" href="index.php?ctl=inicio">Book²</a>
+		      	<a class="navbar-brand" href="?ctl=inicio">Book²</a>
 		    </div>
 		<!-- ****************************** PERFIL ************************************* -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
 		      	<ul class="nav navbar-nav" id="menu">
 
-		        	<li><a href="index.php?ctl=perfil&id=1">PERFIL <span class="sr-only">(current)</span></a></li>
+		        	<li><a href="?ctl=perfil&id=1">PERFIL <span class="sr-only">(current)</span></a></li>
 		<!-- ****************************** LIBROS ************************************* -->    	
 		        	<li class="dropdown">
 			          	<a href="libros.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-xpanded="false" >LIBROS<span class="caret"></span></a>
 			          	<ul class="dropdown-menu" role="menu" >
 				          	<li class="divider"></li>
-				            <li><a href="index.php?ctl=catalogo" class="peque1">CATALOGO POR GENEROS</a></li>
+				            <li><a href="?ctl=catalogo" class="peque1">CATALOGO POR GENEROS</a></li>
 				            <li class="divider"></li>
-				            <li ><a href="index.php?ctl=generos&id=1" class="peque">Adultos Jóvenes</a></li>
-				            <li ><a href="index.php?ctl=generos&id=10" class="peque">Fantasía</a></li>	            
-				            <li ><a href="index.php?ctl=generos&id=21" class="peque">Romance</a></li>	            
-				            <li ><a href="index.php?ctl=generos&id=15" class="peque">Misterio</a></li>
-				            <li ><a href="index.php?ctl=generos&id=6" class="peque">Ciencia Ficción</a></li>
-				            <li ><a href="index.php?ctl=generos&id=23" class="peque">Thriller</a></li>
+				            <li ><a href="?ctl=generos&id=1" class="peque">Adultos Jóvenes</a></li>
+				            <li ><a href="?ctl=generos&id=10" class="peque">Fantasía</a></li>	            
+				            <li ><a href="?ctl=generos&id=21" class="peque">Romance</a></li>	            
+				            <li ><a href="?ctl=generos&id=15" class="peque">Misterio</a></li>
+				            <li ><a href="?ctl=generos&id=6" class="peque">Ciencia Ficción</a></li>
+				            <li ><a href="?ctl=generos&id=23" class="peque">Thriller</a></li>
 			          	</ul>
 		        	</li>
 		      	</ul>
 		<!-- ****************************** BUSQUEDA ************************************* -->      	
-				<form action="index.php?ctl=busqueda" method="post" class="navbar-form navbar-left" role="search">
+				<form action="?ctl=busqueda" method="post" class="navbar-form navbar-left" role="search">
 					<div class="form-group" id="areabuscar">
 					  	<input type="text" class="form-control" placeholder="Titulo / Autor / ISBN / Usuario">
 					</div>
@@ -58,7 +58,7 @@
 				</form>
 		<!-- ****************************** INICIA SESIÓN Y MENSAJES ************************************* -->			
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="index.php?ctl=inbox" data-toggle="modal">Mensajes recibidos</a></li>
+					<li><a href="?ctl=inbox" data-toggle="modal">Mensajes recibidos</a></li>
 					<li><a href="#login" data-toggle="modal">Inicia Sesión</a></li>
 				</ul>
 		<!-- ****************************** MODAL LOGIN ************************************* -->			
@@ -72,7 +72,7 @@
 					    					<h3 class="TituloGrande"> Inicia Sesión:</h3>
 										</div>
 										<div class="panel-body">
-											<form action="index.php?ctl=inicio" method="post" class="form-horizontal">
+											<form action="?ctl=inicio" method="post" class="form-horizontal">
 												<div class="form-group">
 													<label for="usuario" class="col-lg-2 control-label" id="usuario" >Usuario:</label>
 													<div class="col-lg-8">
@@ -90,8 +90,8 @@
 														<button type="submit" class="btn btn-default" id="btnlogin">Entrar</button>
 													</div>
 												</div>	
-												<a href="index.php?ctl=recupera" class="btn btn-link" id="recuperar">Recuperar contraseña</a>
-												<a href="index.php?ctl=registro" class="btn btn-link" id="registro">Registro</a>
+												<a href="?ctl=recupera" class="btn btn-link" id="recuperar">Recuperar contraseña</a>
+												<a href="?ctl=registro" class="btn btn-link" id="registro">Registro</a>
 											</form>
 										</div>
 									</div>
