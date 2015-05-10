@@ -140,7 +140,7 @@ function LibrosPopulares(){
 	//Creamos el objeto AJAX
 	var miajax = nuevoAjax();
 	//Hago la petición a mi server
-	miajax.open('post','back.php',true);
+	miajax.open('post','Modelo/back.php',true);
 	//Función para cuando cambie el status
 	miajax.onreadystatechange = function(){
 		if(miajax.readyState == 4){

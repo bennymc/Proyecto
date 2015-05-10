@@ -24,6 +24,18 @@ class aboutusCtl{
 	}
 }
 
+class busquedaCtl{
+	private $modelo;
+
+	public function ejecutar(){
+		$vista = file_get_contents("Vista/busqueda.php");
+		$header = file_get_contents("Vista/navbar.html");
+		$footer = file_get_contents("Vista/footer.html");
+		$vista = $header . $vista . $footer;
+		echo $vista;
+	}
+}
+
 class registroCtl{
 	private $modelo;
 
