@@ -24,6 +24,18 @@ class aboutusCtl{
 	}
 }
 
+class inboxCtl{
+	private $modelo;
+
+	public function ejecutar(){
+		$vista = file_get_contents("Vista/inbox.php");
+		$header = file_get_contents("Vista/navbar.html");
+		$footer = file_get_contents("Vista/footer.html");
+		$vista = $header . $vista . $footer;
+		echo $vista;
+	}
+}
+
 class busquedaCtl{
 	private $modelo;
 

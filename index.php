@@ -31,6 +31,10 @@
 			require_once("Controlador/inicioCtl.php");
 			$ctl = new busquedaCtl();
 			break;
+		case "inbox":
+			require_once("Controlador/inicioCtl.php");
+			$ctl = new inboxCtl();
+			break;
 		case "catalogo":
 			require_once("Controlador/catalogoCtl.php");
 			$ctl = new catalogoCtl();
