@@ -6,6 +6,9 @@ class perfilMdl{
 	public $imgLdestacado;
 	public $imgPerfil;
 	public $descripcion;
+	public $titulos;
+	public $portadas;
+	public $estado;
 
 	/**
 	*Obtiene los datos de un item en  especifico
@@ -14,23 +17,68 @@ class perfilMdl{
 	* @return
 	*/
 
-	function show($id){
+	
 
-		//Busca en la base de datos ese item
-		$response = file_get_contents('www/json/datos.json');
+function show($id){
 
-		//Convierto el json en un objeto
-		$response=json_decode($response);
+		$conexion = new mysqli('localhost', 'root', '', 'book2');
+		if($conexion -> connect_errno){
+			echo "Hubo un error";
+			echo "<br>$conexion->connect_errno";
+		}
 
+		$consulta = "SELECT *
+				 FROM usuario 
+				 WHERE idUsuario = '".$id."'";
+		//Ejecuto el QUERY para datos de usuario
+		$resultado = $conexion->query($consulta);
+		$resultado = $resultado->fetch_row();
 		
-		//Asigno los valores a mi modelo
 
-		$this->nombre = $response->Perfil[$id-1]->Nombre." ".$response->Perfil[$id-1]->Apellido;
-		$this->librodestacado = $response->Libros[$response->Perfil[$id-1]->Destacado]->Titulo;
-		$this->imgPerfil = "\"".$response->Perfil[$id-1]->ImgPerfil."\"";
-		$this->imgLdestacado= "\"".$response->Libros[$response->Perfil[$id-1]->Destacado]->Imagen."\"";
-		$this->descripcion = $response->Perfil[$id-1]->Intereses;
+		if($resultado!= NULL){
+			
+			$this->nombre = $resultado[3]." ".$resultado[4];
+			$this->imgPerfil = $resultado[9];		
+			$this->descripcion = $resultado[7];
+			
+
+			//Ejecuto el QUERY para libro destacado de usuario
+			$consultadestacado = "SELECT titulo , imagenPortada
+					 FROM libros 
+					 WHERE idLibros = '".$resultado[10]."'";
+
+			$resultadoD = $conexion->query($consultadestacado);
+			$resultadoD = $resultadoD->fetch_row();
+			//var_dump($resultadoD);
+			$this->librodestacado = $resultadoD[0];
+			$this->imgLdestacado = $resultadoD[1];
+
+			//Ejecuto el QUERY para Librero
+			$consultalibrero = "SELECT L.titulo , L.imagenPortada , UHL.status 
+								FROM usuario_has_libros UHL 
+								JOIN libros L on L.idLibros = UHL.idLibros
+								WHERE UHL.idUsuario = \"$id\" ";
+
+			$resultadoL = $conexion->query($consultalibrero);
+			
+					
+			while($fila=$resultadoL->fetch_assoc()){
+				//var_dump($fila);
+				$this->titulos[] = $fila["titulo"];
+				$this->portadas[] = $fila["imagenPortada"];
+				$this->estado[] = $fila["status"];
+			}			
+		}
+		
+
+		$conexion->close();
+		
 	}
+
+
+
+ 
+		
 }
 
 ?>

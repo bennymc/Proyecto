@@ -6,10 +6,12 @@
 **/
 class perfilCtl{
 	private $mdl;
+	
 	/**
 	* Contruye el modelo a utilizar
 	*/
 	function __construct(){
+
 		require_once("Modelo/perfilMdl.php");
 		$this->mdl=new perfilMdl();
 	}
@@ -35,14 +37,100 @@ class perfilCtl{
 
 		//valido variables y ejecuta el modelo para obtener la informacion
 		if(isset($_GET['id']) && $this->validateInteger($_GET['id'])){
-			
-			$this->mdl->show($_GET['id']);
+			session_start();
+			if(isset($_SESSION['usuario'])){
+				$this->mdl->show($_GET['id']);
 			
 			//Cargar  la vista
-			require_once("Vista/perfil.php");
-			
+			//require_once("Vista/perfil.php");
 
-		}
+			if($this->mdl->nombre != NULL){
+
+					$vista = file_get_contents("Vista/perfil.php");
+					$header = file_get_contents("Vista/navbar.html");
+					$footer = file_get_contents("Vista/footer.html");
+					$modalstatus=file_get_contents("Vista/LibrosenPerfil.html");
+					
+					$vista= $header.$vista;
+					session_start();
+	
+					//Reemplazo con un diccionario
+					$diccionario = array(
+										'{nombre}' => $this->mdl->nombre,
+										'{libroD}' => $this->mdl->librodestacado ,
+										'{descripcion}' => $this->mdl->descripcion,
+										'{foto}' => $this->mdl->imgPerfil,
+										'{imglibroD}'=> $this->mdl->imgLdestacado,
+										'{USER}' => $_SESSION['usuario'],
+										'{idUsuario}' => $_SESSION['idUsuario']
+									);
+					$vista= strtr($vista,$diccionario);
+
+
+
+					//Librero		
+					$i = strpos($vista,'{repite');
+					$f = strpos($vista, '}',$i);
+					$ff = strpos($vista, '{end repite}',$f);
+					$bloque = substr($vista, $i,$f-($ff+7));
+					//echo $bloque;
+					$repetir_cad = substr($vista, $f+2,$ff-($f+2));
+					$vista = str_replace($bloque,"",$vista);
+					
+					$librero="";
+
+					for($x=0; $x < count($this->mdl->titulos); $x++) {
+						
+						//acortar nombres de libros largos
+						$auxTitulo=$this->mdl->titulos[$x];	
+						if(strlen($auxTitulo)> 15 )
+						{
+							$auxTitulo= substr($auxTitulo, 0,13);
+							$auxTitulo=$auxTitulo."...";
+						}
+
+
+
+						$diccionariolibrero= array(
+											'{titulo}' => $auxTitulo,
+											'{imglibro}' => $this->mdl->portadas[$x],
+											'{status}'=> $this->mdl->estado[$x]
+												);
+						$aux = $repetir_cad;
+						$aux = strtr($aux,$diccionariolibrero);
+						$librero= $librero.$aux;
+					}
+					
+					
+					
+				    $vista = str_replace("{LIBRERO}",$librero,$vista);
+					$vista =  $vista. $modalstatus . $footer;
+					//Mostrar la vista
+					echo $vista;
+
+			}else
+				header('HTTP/1.0 404 Not Found');
+
+			}
+			else{
+					//cuando aun no hace login
+
+					$vista = file_get_contents("Vista/inicio.html");
+					$header = file_get_contents("Vista/navbar.html");
+					$footer = file_get_contents("Vista/footer.html");
+					$vista = $header . $vista . $footer;
+					//Reemplazo con un diccionario
+					$diccionario = array(
+										'{USER}' => "Inicia Sesion"
+										);
+					$vista= strtr($vista,$diccionario);
+
+
+					echo $vista;
+				}
+			
+				
+			}
 		else
 		{
 			//Llamar vista de error

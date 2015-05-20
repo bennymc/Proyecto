@@ -1,25 +1,22 @@
-<?php
-	include "Vista/navbar.html";
-?>
 
 <!-- ****************************** INICIA ASIDE ***************************************** -->
     <aside class="col-md-3">
     <!-- ****************************** FOTO Y NOMBRE EN PERFIL ************************************* -->
     	<div class="panel panel-success">
 			<div class="panel-heading">
-			    <h1 class="titulosenperfil" id="Nombre"><?php echo $this->mdl->nombre ?> </h1>
+			    <h1 class="titulosenperfil" id="Nombre"> {nombre} </h1>
 			</div>
 			<div class="panel-body ">
-			    <a href="editar.php"><img class="center-block" id="fotodeperfil" src=<?php echo $this->mdl->imgPerfil ?> alt="imagen de perfil"></a>
+			    <a href="editar.php"><img class="center-block" id="fotodeperfil" src= {foto}  alt="imagen de perfil"></a>
 			</div>
     	</div>	
     <!-- ****************************** LIBRO DESTACADO ************************************* -->
     	<div class="panel panel-success">
 			<div class="panel-heading">
-			    <h1 class="titulosenperfil" id="Ldestacado"><?php echo $this->mdl->librodestacado ?> </h1>
+			    <h1 class="titulosenperfil" id="Ldestacado"> {libroD} </h1>
 			</div>
 			<div class="panel-body ">
-			    <a href="?ctl=ejemplar" id="LdestacadoTitulo"><img class="center-block" id="librodestacado" src=<?php echo $this->mdl->imgLdestacado ?> alt="Libro Destacado"></a>
+			    <a href="ejemplar.php" id="LdestacadoTitulo"><img class="center-block" id="librodestacado" src= {imglibroD} alt="Libro Destacado"></a>
 			</div>
     	</div>	
     <!-- ****************************** DESCRIPCION ************************************* -->	
@@ -28,7 +25,7 @@
 			    <h1 class="titulosenperfil">Descripcion</h1>
 			</div>
 			<div class="panel-body ">
-			    <p id="Intereses"><?php echo $this->mdl->descripcion ?></p>
+			    <p id="Intereses"> {descripcion} </p>
 
 			</div>
     	</div>
@@ -54,16 +51,14 @@
 				    </select>
 				</div>
 				<div class="col-md-12" id="ContenedorPerfil">
-					
+					{LIBRERO}
+					{repite libro}
 					<div class="col-md-2 librosencontenedor" id="libroP">	
-					<a href="?ctl=ejemplar" class="center-block">TITULO</a>
-					<a href="?ctl=ejemplar" class="center-block"><img src="http://placehold.it/100x150" alt="Libro"></a>
-					<a href="#" data-toggle="modal" data-target="#smallModal" class="center-block">STATUS</a>					
-					 	
-					</div>
-					<?php
-							include "Vista/LibrosenPerfil.html";
-						?>
+					<a href="ejemplar.php" class="center-block">{titulo}</a>
+					<a href="ejemplar.php" class="center-block"><img src= {imglibro} alt="Libro"></a>
+					<a href="#" data-toggle="modal" data-target="#smallModal" class="center-block">{status}</a>					
+					</div>					
+					{end repite} 
 				</div>				
 			</div>
 		</div>
@@ -73,9 +68,3 @@
 	    </div>
     </section>
 <!-- ************************************* FIN SECTION ************************************* -->
-<?php
-	include "Vista/footer.html";
-?>
-
-
-	
