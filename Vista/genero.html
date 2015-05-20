@@ -1,0 +1,59 @@
+<!-- ***************** GENERO **************************** -->
+<!-- ***************** INICIA ASIDE IZQ **************************** -->
+	<aside class="col-md-3">
+		<div class="panel panel-success">
+			<div class="panel-heading">
+			    <h3 class="TituloGrande" id="titulo">{{TituloLibrero}}</h3>
+			</div>
+			<div class="panel-body">
+			    <p id="descripcion">{{Descripcion}}</p>
+			</div>
+    	</div>
+	</aside>
+<!-- ***************** FIN ASIDE IZQ **************************** -->
+<!-- ***************** INICIA SECTION **************************** -->	
+	<section class="col-md-6">
+    	<div class="panel panel-success">
+			<div class="panel-heading">
+		     	<h1 class="Contenedoresdelibros" id="tituloLibrero">{{CabeceraLibrero}}</h1>
+			</div>
+			<div class="panel-body" id="contenedorgenero">
+			    <div class="col-md-12">
+			    	<label  for="ordenar">Ordenar Libros por:</label>
+				    <select id="ordenar" name="ordenar">
+				      	<option value="titulo">Titulo</option>
+				      	<option value="autor">Autor</option>
+				      	<option value="editorial">Editorial</option>
+				      	<option value="año">Año</option>
+				    </select>
+				</div>
+				<div class="col-md-3" id="libro1">				 	
+				 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" class="center-block imagenL img-responsive" alt="Libro" ></a>
+				 	<a href="ejemplar.php" class="center-block tituloLibro">TITULO</a>
+				</div>
+					
+			</div>
+		</div>
+		<div class="flechas">
+			<a href="#"><span class="glyphicon glyphicon-chevron-left"></span>Atrás</a>
+	    	<a href="#" class="pull-right">Siguiente<span class="glyphicon glyphicon-chevron-right"></span></a>
+	    </div>
+	</section>
+<!-- ***************** FIN SECTION **************************** -->
+<!-- ***************** INICIA ASIDE DER **************************** -->
+	<aside class="col-md-3 " >
+		<div class="panel panel-success">
+			<div class="panel-heading">
+	    		<h3 class="panel-title" id="Tbrowse"> Más géneros</h3>
+			</div>
+			<div class="panel-body">
+				<ul>
+				{{GENEROS}}
+				{{repite}}
+					<li><a href="index.php?ctl=generos&id={{numero}}" onclick='cambiaGenero("{{genero}}")'>{{genero}}</a></li>
+					{{termina repite}}
+				</ul>
+			</div>			
+		</div>
+	</aside>
+<!-- ***************** FIN ASIDE DER **************************** -->	
