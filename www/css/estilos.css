@@ -52,7 +52,7 @@ a:hover h3.TituloGrande{
 	text-decoration: none;
 }
 /* ------------LINKS EN INICIO DE SESION  -------------*/
-a#recuperar ,a#registro{
+a#recuperar ,a#registro , a#mrecuperar, a#mregistro{
 	font-size: 1em;
 
 	padding: 0;	
@@ -253,10 +253,10 @@ button#cambiar{
 	margin-top: 20px;
 }
 .error{
-	border: 3px solid red;
+	border: 3px solid #d9534f;
 }
 
-button#btnrecupera{
+button#btnrecupera, button#btnrecupera{
 	margin-top: 15px;
 }
 

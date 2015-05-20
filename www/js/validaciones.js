@@ -52,6 +52,25 @@ function validacion() {
 		    return true;
 		}
 
+function validalogin(){
+		
+		valor = document.getElementById("usuario").value;
+			if( valor == null || valor.length == 0 || /^\s+$/.test(valor) ) {
+				document.getElementById("usuario").setAttribute('class', 'form-control input-md error');
+			  return false;
+			}else{
+				document.getElementById("usuario").setAttribute('class', 'form-control input-md');
+			}
+		valor = document.getElementById("pass").value;
+			if( valor == null || valor.length < 8 || /^\s+$/.test(valor) ) {
+				document.getElementById("pass").setAttribute('class', 'form-control input-md error');
+			  return false;
+			}else{
+				document.getElementById("pass").setAttribute('class', 'form-control input-md');
+			}
+}
+		
+
 function VEditar(){
 			valor = document.getElementById("nombre").value;
 			if (!(/^\D[a-zA-Z\s]+$/.test(valor)) || (/(select).*(from).*/.test(valor))){

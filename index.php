@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 	if(isset($_GET['ctl'])){
 
 		switch($_GET["ctl"]){
@@ -63,6 +63,10 @@
 			require_once("Controlador/autorCtl.php");
 			$ctl = new autorgeneroCtl();
 			break;
+		case "login":
+			require_once("Controlador/sesionCtl.php");
+			$ctl = new loginCtl();
+			break;
 		default: 
 			http_response_code(404);
 			//header('HTTP/1.0 404 Not Found');
@@ -70,7 +74,7 @@
 		}
 	}else
 	{
-		require_once("Controlador/Ctl.php");
+		require_once("Controlador/inicioCtl.php");
 		$ctl = new InicioCtl();
 
 	}	
