@@ -1,14 +1,18 @@
 <?php
 
 class InicioCtl{
-	private $modelo;
+	private $dicc;
 
 	public function ejecutar(){
-		$vista = file_get_contents("Vista/inicio.html");
-		$header = file_get_contents("Vista/navbar.html");
-		$footer = file_get_contents("Vista/footer.html");
-		$vista = $header . $vista . $footer;
-		echo $vista;
+		require_once("Controlador/diccionariomaestro.php");
+		$this->dicc = new diccionarioM(); 	
+		
+		
+
+		if(isset($_SESSION['usuario'] )){
+			$this->dicc->CargarInicioWSesion();
+		}
+		else $this->dicc->CargarInicio();
 	}
 }
 
