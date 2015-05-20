@@ -8,7 +8,7 @@ class InicioCtl{
 		$this->dicc = new diccionarioM(); 	
 		
 		
-
+		session_start();
 		if(isset($_SESSION['usuario'] )){
 			$this->dicc->CargarInicioWSesion();
 		}

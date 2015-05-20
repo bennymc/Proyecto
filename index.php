@@ -1,4 +1,4 @@
-<?php session_start();
+<?php 
 	if(isset($_GET['ctl'])){
 
 		switch($_GET["ctl"]){

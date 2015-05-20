@@ -33,7 +33,7 @@
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
 		      	<ul class="nav navbar-nav" id="menu">
 
-		        	<li><a href="?ctl=perfil&id=1">PERFIL <span class="sr-only">(current)</span></a></li>
+		        	<li><a href=" {LINKPERFIL} ">PERFIL <span class="sr-only">(current)</span></a></li>
 		<!-- ****************************** LIBROS ************************************* -->    	
 		        	<li class="dropdown">
 			          	<a href="?ctl=catalogo" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-xpanded="false" >LIBROS<span class="caret"></span></a>
@@ -73,7 +73,7 @@
 					    					<h3 class="TituloGrande"> INICIA SESIÓN: </h3>
 										</div>
 										<div class="panel-body">
-											<form action="?ctl=login" method="post" class="form-horizontal">
+											<form action="?ctl=login" method="post" class="form-horizontal" onsubmit="return validaloginmodal()">
 												<div class="form-group">
 													<label for="musuario" class="col-lg-3 control-label" >Usuario:</label>
 													<div class="col-lg-8">

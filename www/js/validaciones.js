@@ -69,6 +69,24 @@ function validalogin(){
 				document.getElementById("pass").setAttribute('class', 'form-control input-md');
 			}
 }
+
+function validaloginmodal(){
+		
+		valor = document.getElementById("musuario").value;
+			if( valor == null || valor.length == 0 || /^\s+$/.test(valor) ) {
+				document.getElementById("musuario").setAttribute('class', 'form-control input-md error');
+			  return false;
+			}else{
+				document.getElementById("musuario").setAttribute('class', 'form-control input-md');
+			}
+		valor = document.getElementById("mpass").value;
+			if( valor == null || valor.length < 8 || /^\s+$/.test(valor) ) {
+				document.getElementById("mpass").setAttribute('class', 'form-control input-md error');
+			  return false;
+			}else{
+				document.getElementById("mpass").setAttribute('class', 'form-control input-md');
+			}
+}
 		
 
 function VEditar(){
