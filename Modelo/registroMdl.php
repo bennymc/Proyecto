@@ -1,0 +1,65 @@
+<?php
+
+class registroMdl{
+		
+
+	function alta($nombre, $apellidos, $sexo, $correo, $intereses, $username, $password, $bday, $imgperfil){
+
+			require_once('config.inc');
+			$conexion = new mysqli($servidor,$usuario,$pass,$bd);
+			if($conexion -> connect_errno){
+				echo "Hubo un error";
+				echo "<br>$conexion->connect_errno";
+			}
+
+			$consulta = "SELECT MAX(idUsuario) AS id FROM Usuario";	
+			//Ejecuto el QUERY para datos de usuario
+			$resultado = $conexion->query($consulta);
+			$resultado = $resultado->fetch_row();
+			$id=$resultado[0]+1;
+			$L = 1;
+
+
+			
+			$query = 
+				"INSERT INTO usuario ( idUsuario, user, contrasena, nombre, apellidos, email, sexo, intereses, fechaNacimiento, imagenPerfil, destacadoidLibro) 
+				VALUES (
+					\"$id\",
+					\"$username\",
+					\"$password\",
+					\"$nombre\",
+					\"$apellidos\",
+					\"$correo\",
+					\"$sexo\",
+					\"$intereses\",
+					\"$bday\",
+					\"$imgperfil\",
+					\"$L\"	)";
+
+				
+				$resultado = $conexion->query($query);
+
+				//Reviso si se realizó la inserción
+				var_dump($resultado);
+
+				//Obtengo el último id autoincrementable
+				var_dump($conexion->insert_id);
+
+				//Cierro la conexión a la base de datos
+				$conexion->close();
+
+
+			
+			
+
+			
+			
+		}
+
+
+
+	 
+			
+	}
+
+?>

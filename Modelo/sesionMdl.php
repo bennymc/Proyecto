@@ -5,7 +5,12 @@
 
 	function valida($user,$pass){
 
-		$conexion = new mysqli('localhost', 'root', '', 'book2');
+		require_once('config.inc');
+		//Creando mi conexion
+		$conexion = new mysqli($servidor,$usuario,$pass,$bd);
+		
+
+		
 		if($conexion -> connect_errno){
 			echo "Hubo un error";
 			echo "<br>$conexion->connect_errno";

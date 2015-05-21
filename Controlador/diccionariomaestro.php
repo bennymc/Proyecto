@@ -29,7 +29,7 @@ class diccionarioM{
 					$vista  = $header . $vista . $footer;
 					//Reemplazo con un diccionario	
 					$link =     "?ctl=perfil&id=".$_SESSION['idUsuario'];
-					var_dump($link);
+					//var_dump($link);
 					$diccionario = array(
 										'{USER}' => $_SESSION['usuario'],
 										'{LINKPERFIL}' => $link

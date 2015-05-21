@@ -21,7 +21,8 @@ class perfilMdl{
 
 function show($id){
 
-		$conexion = new mysqli('localhost', 'root', '', 'book2');
+		require_once('config.inc');
+		$conexion = new mysqli($servidor,$usuario,$pass,$bd);
 		if($conexion -> connect_errno){
 			echo "Hubo un error";
 			echo "<br>$conexion->connect_errno";
