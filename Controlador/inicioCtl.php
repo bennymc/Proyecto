@@ -74,7 +74,7 @@ class registroCtl{
 
 				//echo "<br>debug: entro al caso alta del controlador alumno";
 				if(empty($_POST)){
-					$this->dicc->CargarInicio();
+					$this->dicc->CargarRegistro();
 				}
 				else{
 					//Obtener las variables para la alta
@@ -100,7 +100,7 @@ class registroCtl{
 								//Obtener la vista
 								session_start();
 								$_SESSION['usuario']   = $username;
-								$_SESSION['idUsuario'] = $this->mdl->id;
+								$_SESSION['idUsuario'] = $this->modelo->id;
 								
 								$this->dicc->CargarInicioWSesion();
 

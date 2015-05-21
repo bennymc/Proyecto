@@ -1,6 +1,4 @@
-<?php
-	include "includes/navbar.html";
-?>
+
 	    <section id="formulario" class="col-md-4 col-md-offset-4">
 			<form class="form-horizontal" method="post" onsubmit="return validacion()">
 				<fieldset>
@@ -72,6 +70,4 @@
 		</section>
 
 
-		<?php
-			include "includes/footer.html";
-		?>
+	

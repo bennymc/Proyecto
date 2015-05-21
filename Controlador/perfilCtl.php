@@ -53,7 +53,7 @@ class perfilCtl{
 					
 					$vista= $header.$vista;
 					session_start();
-	
+					$link =     "?ctl=perfil&id=".$_SESSION['idUsuario'];
 					//Reemplazo con un diccionario
 					$diccionario = array(
 										'{nombre}' => $this->mdl->nombre,
@@ -62,7 +62,7 @@ class perfilCtl{
 										'{foto}' => $this->mdl->imgPerfil,
 										'{imglibroD}'=> $this->mdl->imgLdestacado,
 										'{USER}' => $_SESSION['usuario'],
-										'{idUsuario}' => $_SESSION['idUsuario']
+										'{LINKPERFIL}' => $link
 									);
 					$vista= strtr($vista,$diccionario);
 
@@ -79,28 +79,29 @@ class perfilCtl{
 					
 					$librero="";
 
-					for($x=0; $x < count($this->mdl->titulos); $x++) {
-						
-						//acortar nombres de libros largos
-						$auxTitulo=$this->mdl->titulos[$x];	
-						if(strlen($auxTitulo)> 15 )
-						{
-							$auxTitulo= substr($auxTitulo, 0,13);
-							$auxTitulo=$auxTitulo."...";
-						}
+					if($this->mdl->titulos!=NULL){
+							for($x=0; $x < count($this->mdl->titulos); $x++) {
+								
+								//acortar nombres de libros largos
+								$auxTitulo=$this->mdl->titulos[$x];	
+								if(strlen($auxTitulo)> 15 )
+								{
+									$auxTitulo= substr($auxTitulo, 0,13);
+									$auxTitulo=$auxTitulo."...";
+								}
 
 
 
-						$diccionariolibrero= array(
-											'{titulo}' => $auxTitulo,
-											'{imglibro}' => $this->mdl->portadas[$x],
-											'{status}'=> $this->mdl->estado[$x]
-												);
-						$aux = $repetir_cad;
-						$aux = strtr($aux,$diccionariolibrero);
-						$librero= $librero.$aux;
+								$diccionariolibrero= array(
+													'{titulo}' => $auxTitulo,
+													'{imglibro}' => $this->mdl->portadas[$x],
+													'{status}'=> $this->mdl->estado[$x]
+														);
+								$aux = $repetir_cad;
+								$aux = strtr($aux,$diccionariolibrero);
+								$librero= $librero.$aux;
+							}
 					}
-					
 					
 					
 				    $vista = str_replace("{LIBRERO}",$librero,$vista);

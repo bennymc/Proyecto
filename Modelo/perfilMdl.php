@@ -44,31 +44,36 @@ function show($id){
 			
 
 			//Ejecuto el QUERY para libro destacado de usuario
-			$consultadestacado = "SELECT titulo , imagenPortada
+			$consultadestacado = "SELECT titulo , imagen_portada
 					 FROM libros 
 					 WHERE idLibros = '".$resultado[10]."'";
-
+					
 			$resultadoD = $conexion->query($consultadestacado);
 			$resultadoD = $resultadoD->fetch_row();
-			//var_dump($resultadoD);
-			$this->librodestacado = $resultadoD[0];
-			$this->imgLdestacado = $resultadoD[1];
 
-			//Ejecuto el QUERY para Librero
-			$consultalibrero = "SELECT L.titulo , L.imagenPortada , UHL.status 
-								FROM usuario_has_libros UHL 
-								JOIN libros L on L.idLibros = UHL.idLibros
-								WHERE UHL.idUsuario = \"$id\" ";
+			if($resultadoD!=NULL){
+				//var_dump($resultadoD);
+					$this->librodestacado = $resultadoD[0];
+					$this->imgLdestacado = $resultadoD[1];
 
-			$resultadoL = $conexion->query($consultalibrero);
-			
+					//Ejecuto el QUERY para Librero
+					$consultalibrero = "SELECT L.titulo , L.imagen_portada , UHL.status 
+										FROM usuario_has_libros UHL 
+										JOIN libros L on L.idLibros = UHL.idLibros
+										WHERE UHL.idUsuario = \"$id\" ";
+
+					$resultadoL = $conexion->query($consultalibrero);
 					
-			while($fila=$resultadoL->fetch_assoc()){
-				//var_dump($fila);
-				$this->titulos[] = $fila["titulo"];
-				$this->portadas[] = $fila["imagenPortada"];
-				$this->estado[] = $fila["status"];
-			}			
+							
+					while($fila=$resultadoL->fetch_assoc()){
+						//var_dump($fila);
+						$this->titulos[] = $fila["titulo"];
+						$this->portadas[] = $fila["imagenPortada"];
+						$this->estado[] = $fila["status"];
+					}			
+			}
+
+			
 		}
 		
 

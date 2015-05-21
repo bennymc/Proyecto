@@ -1,7 +1,7 @@
 <?php
 
 class registroMdl{
-		
+		public $id;
 
 	function alta($nombre, $apellidos, $sexo, $correo, $intereses, $username, $password, $bday, $imgperfil){
 
@@ -16,7 +16,7 @@ class registroMdl{
 			//Ejecuto el QUERY para datos de usuario
 			$resultado = $conexion->query($consulta);
 			$resultado = $resultado->fetch_row();
-			$id=$resultado[0]+1;
+			$this->id=$resultado[0]+1;
 			$L = 1;
 
 
@@ -24,7 +24,7 @@ class registroMdl{
 			$query = 
 				"INSERT INTO usuario ( idUsuario, user, contrasena, nombre, apellidos, email, sexo, intereses, fechaNacimiento, imagenPerfil, destacadoidLibro) 
 				VALUES (
-					\"$id\",
+					\"$this->id\",
 					\"$username\",
 					\"$password\",
 					\"$nombre\",

@@ -49,7 +49,17 @@ function validacion() {
 			}else{
 				document.getElementById("password").setAttribute('class', 'form-control input-md');
 			}
+		   
+		   valor = document.getElementById("imgperfil").value;
+		   
+			if( valor == null || valor.length<1 ) {
+				document.getElementById("imgperfil").setAttribute('class', 'form-control input-md error');
+			  return false;
+			}else{
+				document.getElementById("imgperfil").setAttribute('class', 'form-control input-md');
+			}
 		    return true;
+
 		}
 
 function validalogin(){

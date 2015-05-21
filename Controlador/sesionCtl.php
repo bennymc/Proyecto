@@ -28,7 +28,7 @@
 			}
 			else{
 				//Obtener las variables para la alta
-				
+				//var_dump($_POST["pass"]);
 
 				//y limpiarlas
 				$user	= $_POST["usuario"];
