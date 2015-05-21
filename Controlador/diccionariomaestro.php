@@ -9,13 +9,26 @@ class diccionarioM{
 		session_start();
 			if(isset($_SESSION['usuario'])){
 
+				$i = strpos($header,'{MODALLOGIN}');
+				$f = strpos($header, '}',$i);
+				$ff = strpos($header, '{ENDMODALLOGIN}',$f);					
+				$linkmsj = substr($header, $f+2,$ff-($f+2));
+				$header = str_replace($linkmsj,"",$header);
+
+
+
+
 				$link =     "?ctl=perfil&id=".$_SESSION['idUsuario'];
 				//var_dump($link);
 				$diccionario = array(
 									'{USER}' => $_SESSION['usuario'],
 									'{LINKPERFIL}' => $link,
 									'{MENSAJE}'=> "",
-									'{ENDMENSAJE}' => ""
+									'{ENDMENSAJE}' => "",
+									'{MODALLOGIN}' => "",
+									'{ENDMODALLOGIN}' => "",
+									'{DROPDOWNES}'=> "",
+									'{ENDDROPDOWNES}'=> ""
 									);
 				$header = strtr($header,$diccionario);
 
@@ -25,17 +38,26 @@ class diccionarioM{
 
 					$i = strpos($header,'{MENSAJE');
 					$f = strpos($header, '}',$i);
-					$ff = strpos($header, '{ENDMENSAJE}',$f);
-					
+					$ff = strpos($header, '{ENDMENSAJE}',$f);					
 					$linkmsj = substr($header, $f+2,$ff-($f+2));
-
 					$header = str_replace($linkmsj,"",$header);
+
+					$i = strpos($header,'{DROPDOWNES}');
+					$f = strpos($header, '}',$i);
+					$ff = strpos($header, '{ENDDROPDOWNES}',$f);					
+					$linkmsj = substr($header, $f+2,$ff-($f+2));
+					$header = str_replace($linkmsj,"",$header);
+
 
 					$diccionario = array(
 								'{USER}' => "Inicia Sesion",
 								'{LINKPERFIL}' => "?ctl=inicio",
 								'{MENSAJE}'=> "",
-								'{ENDMENSAJE}' => ""
+								'{ENDMENSAJE}' => "",
+								'{MODALLOGIN}' => "",
+								'{ENDMODALLOGIN}' => "",
+								'{DROPDOWNES}'=> "",
+								'{ENDDROPDOWNES}'=> ""
 								);
 					$header = strtr($header,$diccionario);
 				}
@@ -68,6 +90,7 @@ class diccionarioM{
 
 				echo $vista;
 	}
+
 	function CargarInicioWSesion(){
 		
 					$this->CargarHeader();

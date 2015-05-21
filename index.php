@@ -1,4 +1,4 @@
-<?php 
+<?php  session_start();
 	if(isset($_GET['ctl'])){
 
 		switch($_GET["ctl"]){
@@ -66,6 +66,10 @@
 		case "login":
 			require_once("Controlador/sesionCtl.php");
 			$ctl = new loginCtl();
+			break;
+		case "logout":
+			require_once("Controlador/sesionCtl.php");
+			$ctl = new logoutCtl();
 			break;
 		default: 
 			http_response_code(404);

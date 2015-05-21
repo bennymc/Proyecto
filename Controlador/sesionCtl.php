@@ -60,11 +60,17 @@
 
 	class logoutCtl{
 
-
-		function logout(){
+		private $dicc;
+		function ejecutar(){
+			
 			session_unset();
 			session_destroy();		
 			setcookie(session_name(), '', time()-3600);
+			require_once("Controlador/diccionariomaestro.php");
+			$this->dicc = new diccionarioM(); 
+
+			$this->dicc->CargarInicio();
+
 		}
 	}
 
