@@ -40,10 +40,10 @@ class registroMdl{
 				$resultado = $conexion->query($query);
 
 				//Reviso si se realizó la inserción
-				var_dump($resultado);
+				//var_dump($resultado);
 
 				//Obtengo el último id autoincrementable
-				var_dump($conexion->insert_id);
+				//var_dump($conexion->insert_id);
 
 				//Cierro la conexión a la base de datos
 				$conexion->close();

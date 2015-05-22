@@ -38,7 +38,7 @@
 
 				if($valido){
 					
-					session_start();
+					//session_start();
 					$_SESSION['usuario']   = $user;
 					$_SESSION['idUsuario'] = $this->mdl->idUsuario;
 					
