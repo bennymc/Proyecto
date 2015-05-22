@@ -1,0 +1,27 @@
+<!-- ***************** FORMULARIO PARA RECUPERAR CONTRASEÑA **************** -->	
+	<div id="contenedor">
+		<section id="formcambiapass" class="col-md-4 col-md-offset-4">
+			<div class="panel panel-danger">
+				<div class="panel-heading">
+		   			 <h3 id="cambiarpass" class="panel-title">Cambiar Contraseña</h3>
+		  		</div>
+		  		<form method="post" onsubmit="return VPass()" action="?ctl=cambiaPass&action=submit">
+			  		<div class="panel-body">
+			   			<div class="form-group">
+							  <label class="col-md-12 control-label" for="password">Ingresa tu contraseña nueva</label>  
+							  <div class="col-md-12">
+							  <input id="password" name="password" type="password" placeholder="" class="form-control input-md" required="">    
+							  </div>
+						</div>		  		
+				  		<div class="form-group">
+							<div class="col-md-12 ">
+								<button type="submit" class="btn btn-danger pull-right" id="btncambia">Cambiar</button>
+							</div>
+						</div>	
+			  		</div>	
+		  		</form>
+			</div>
+		</section>
+	</div>
+<!-- ***************** FIN DEL FORMULARIO  **************** -->	
+

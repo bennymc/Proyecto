@@ -159,47 +159,88 @@ class recuperaCtl{
 	private $modelo;
 
 	public function ejecutar(){
+		
 		require_once("Controlador/diccionariomaestro.php");
-			$this->dicc = new diccionarioM(); 
+		$this->dicc = new diccionarioM(); 
 		$vista = file_get_contents("Vista/recupera.html");
 		$this->dicc->CargarHeader();
 		$footer = file_get_contents("Vista/footer.html");
 		$vista = $this->dicc->headerfinal . $vista . $footer;
 		echo $vista;
+		if(isset($_GET['action'])){
+			require_once("Modelo/resetMdl.php");
+			$this->modelo = new resetMdl();
+
+			$key = uniqid(mt_rand(), true);
+			$token = md5($_POST['email'].$key);
+
+			$email 	= $_POST["email"];
+			
+			$resultado = $this->modelo->valida($email);
+
+			if($resultado!==FALSE){
+				$resultado = $this->modelo->alta($token);
+
+				$message = "El link para restablecer tu contraseña fue enviado a tu e-mail.";
+	            $to=$email;
+	            $subject="Recuperar contraseña";
+	            $from = 'support@book2book.tk';
+	            $body='Hola, <br><br>Click aquí para restablecer tu contraseña http://www.book2book.tk/?ctl=cambiaPass&token='.$token.'<br/><br/>';
+	            $headers = "From: " . strip_tags($from) . "\r\n";
+	            $headers .= "Reply-To: ". strip_tags($from) . "\r\n";
+	            $headers .= "MIME-Version: 1.0\r\n";
+	            $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+	 
+	            mail($to,$subject,$body,$headers);
+				$message = "Se te ha enviado un email con la liga para restablecer tu contraseña.";
+				echo "<script type='text/javascript'>alert('$message');</script>";
+			}else{
+				$message = "No hay cuentas con ese email registrado.";
+				echo "<script type='text/javascript'>alert('$message');</script>";
+			} 
+		}
 	}
 }
 
-class resetCtl{
+class cambiaPassCtl{
 	private $modelo;
+	private $idUsuario;
 
 	public function ejecutar(){
-		if(!isset($_GET['id'])){
-			require_once("Modelo/resetMdl.php");
+		require_once("Modelo/resetMdl.php");
 		$this->modelo = new resetMdl();
-		$key = uniqid(mt_rand(), true);
-		$token = md5($_POST['email'].$key);
 
-		$email 	= $_POST["email"];
-		
-		$resultado = $this->modelo->valida($email);
+		$token 	= $_GET["token"];
+		$resultado = $this->modelo->validaToken($token);
 
 		if($resultado!==FALSE){
-			$resultado = $this->modelo->alta($token);
+			require_once("Controlador/diccionariomaestro.php");
+			$this->dicc = new diccionarioM(); 	
+			$vista = file_get_contents("Vista/cambiaPass.html");
+			$this->dicc->CargarHeader();
+			$footer = file_get_contents("Vista/footer.html");
+			$vista = $this->dicc->headerfinal . $vista . $footer;
+			echo $vista;
+		}else{
+			$message = "El token utilizado es incorrecto o ya caduco.";
+			echo "<script type='text/javascript'>alert('$message');</script>";
+		} 
 
-			$message = "El link para restablecer tu contraseña fue enviada a tu e-mail.";
-            $to=$email;
-            $subject="Recuperar contraseña";
-            $from = 'support@book2book.tk';
-            $body='Hola, <br><br>Click aquí para restablecer tu contraseña http://www.book2book.tk/?ctl=reset&token='.$token.'<br/><br/>';
-            $headers = "From: " . strip_tags($from) . "\r\n";
-            $headers .= "Reply-To: ". strip_tags($from) . "\r\n";
-            $headers .= "MIME-Version: 1.0\r\n";
-            $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
- 
-            mail($to,$subject,$body,$headers);
-			echo "Se te ha enviado un correo con el enlace para restablecer tu contraseña.";
-		}else echo "Algo salio mal";
-			//require_once("Vista/Error.html");
+
+		if(isset($_GET['action'])){
+			require_once("Modelo/resetMdl.php");
+			$this->modelo = new resetMdl();
+
+			$email 	= $_POST["password"];
+			$resultado = $this->modelo->cambia($token);
+
+			if($resultado!==FALSE){
+				$message = "Contraseña restablecida con éxito.";
+				echo "<script type='text/javascript'>alert('$message');</script>";
+			}else{
+				$message = "Hubo un error al actualizar la contraseña.";
+				echo "<script type='text/javascript'>alert('$message');</script>";
+			} 
 		}
 
 	}

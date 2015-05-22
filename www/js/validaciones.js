@@ -154,6 +154,17 @@ function CambioPass(){
 			return true;
 }
 
+function VPass(){
+			valor = document.getElementById("password").value;
+			if( valor == null || valor.length < 8 || /^\s+$/.test(valor) ) {
+				document.getElementById("password").setAttribute('class', 'form-control input-md error');
+			  return false;
+			}else{
+				document.getElementById("password").setAttribute('class', 'form-control input-md');
+				alert("Tu contraseña ha sido cambiada con éxito.");
+			}
+}
+
 function VCorreo(){
 			valor = document.getElementById("email").value;
 		    if( !(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(valor))){
