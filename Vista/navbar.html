@@ -60,10 +60,22 @@
 		<!-- ****************************** INICIA SESIÓN Y MENSAJES ************************************* -->
 
 				<ul class="nav navbar-nav navbar-right">
-				{MENSAJE}	<li><a href="?ctl=inbox" data-toggle="modal">Mensajes recibidos</a></li> {ENDMENSAJE}
-					<li><a href="#login" data-toggle="modal">{USER}</a></li>
+				{MENSAJE}	<li><a href="?ctl=inbox" >Mensajes recibidos</a></li> {ENDMENSAJE}
+				{DROPDOWNES}	
+					<li class="dropdown open">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{USER} <span class="caret"></span></a>
+			          <ul class="dropdown-menu" role="menu">
+			            <li><a href="#" class="peque">Editar </a></li>
+			            <li class="divider"></li>
+			            <li><a href="?ctl=logout" class="peque">Salir</a></li>
+			          </ul>
+			        </li>
+			       </ul>
+			     {ENDDROPDOWNES}   
+				
+		<!-- ****************************** MODAL LOGIN ************************************* -->			{MODALLOGIN}
+				<li><a href="#login" data-toggle="modal">{USER}</a></li>
 				</ul>
-		<!-- ****************************** MODAL LOGIN ************************************* -->			
 				<div id="login" class="modal fade">
 					<div class="modal-dialog">
 				    	<div class="modal-content">
@@ -97,6 +109,7 @@
 											</form>
 										</div>
 									</div>
+								{ENDMODALLOGIN}	
 								</section>
 		                	</div>
 		            	</div>
