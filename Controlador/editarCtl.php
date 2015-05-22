@@ -1,22 +1,24 @@
 <?php
 
 class editarCtl{
-	private $modelo;
+	private $mdl;
+	private $dicc;
 	function __construct(){
-		// require_once("Modelo/editarMdl.php");
-		// $this->mdl=new editarMdl();
+		 require_once("Modelo/editarMdl.php");
+		 $this->mdl= new editarMdl();
+		 require_once("Controlador/diccionariomaestro.php");
+		$this->dicc = new diccionarioM();
 	}
+	
 	public function ejecutar(){
-		//if(isset($_GET['id']) && $this->validateInteger($_GET['id'])){
-		//	$this->mdl->show($_GET['id']);
-			require_once("Vista/editar.php");
-		//}else
-		//{
-		//	http_response_code(404);
-		//}
+		$vista = file_get_contents("Vista/editar.php");
+		$this->dicc->CargarHeader();
+		$footer = file_get_contents("Vista/footer.html");
+		$vista = $this->dicc->headerfinal . $vista . $footer;
+		echo $vista;
+
+		
 	}
-	function validateInteger($valor){
-		return is_int((int)$valor);
-	}
+	
 }
 ?>

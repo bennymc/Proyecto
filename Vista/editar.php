@@ -1,9 +1,4 @@
-<?php
-	include "Vista/navbar.html";
-?>
-<script type="text/javascript">
-    	EditarPerfil();
-</script>
+
 		<div id="contenedor">
 		<section class="col-md-6">
 			<form class="form-horizontal" method="post" onsubmit="return VEditar()">
@@ -12,34 +7,34 @@
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="nombre">Nombre</label>  
 					  <div class="col-md-5">
-					  <input id="nombre" name="nombre" type="text" class="form-control input-md" required="">    
+					  <input id="nombre" name="nombre" type="text" class="form-control input-md" required="" value="{NOMBRE}" >    
 					  </div>
 					</div>
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="apellidos">Apellidos</label>  
 					  <div class="col-md-5">
-					  <input id="apellidos" name="apellidos" type="text" class="form-control input-md" required="">    
+					  <input id="apellidos" name="apellidos" type="text" class="form-control input-md" required="" value="{APELLIDOS}" >    
 					  </div>
 					</div>					
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="sexo">Sexo</label>
 					  <div class="col-md-5">
-					    <select id="sexo" name="sexo" class="form-control">
-					      <option value="m">Masculino</option>
-					      <option value="f">Femenino</option>
+					    <select id="sexo" name="sexo" class="form-control" >
+					      <option value="Masculino" selected={SELECTM}>Masculino</option>
+					      <option value="Femenino" selected={SELECTF}>Femenino</option>
 					    </select>
 					  </div>
 					</div>
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="intereses">Intereses</label>
 					  <div class="col-md-5">                     
-					    <textarea class="form-control" id="intereses" name="intereses"></textarea>
+					    <textarea class="form-control" id="intereses" name="intereses" value="{INTERESES}"></textarea>
 					  </div>
 					</div>					
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="bday">Fecha de nacimiento</label>
 					  <div class="col-md-5">
-					    <input id="bday" name="bday" type="date" placeholder="" min="1925-01-01" max="2000-01-01" class="form-control input-md" required="">
+					    <input id="bday" name="bday" type="date" placeholder="" min="1925-01-01" max="2000-01-01" class="form-control input-md" required="" value="{NACIMIENTO}">
 					  </div>
 					</div>
 					<div class="form-group">
@@ -89,7 +84,3 @@
 			</form>
 		</aside>
 
-		</div>
-		<?php
-			include "Vista/footer.html";
-		?>
