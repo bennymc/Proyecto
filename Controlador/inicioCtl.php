@@ -189,7 +189,7 @@ class resetCtl{
 			$message = "El link para restablecer tu contraseña fue enviada a tu e-mail.";
             $to=$email;
             $subject="Recuperar contraseña";
-            $from = 'reset@book2.com';
+            $from = 'support@book2book.tk';
             $body='Hola, <br><br>Click aquí para restablecer tu contraseña http://www.book2book.tk/?ctl=reset&token='.$token.'<br/><br/>';
             $headers = "From: " . strip_tags($from) . "\r\n";
             $headers .= "Reply-To: ". strip_tags($from) . "\r\n";
