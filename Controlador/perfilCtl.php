@@ -14,6 +14,8 @@ class perfilCtl{
 
 		require_once("Modelo/perfilMdl.php");
 		$this->mdl=new perfilMdl();
+		require_once("Controlador/diccionariomaestro.php");
+			$this->dicc = new diccionarioM(); 
 	}
 
 	function ejecutar(){
@@ -47,11 +49,11 @@ class perfilCtl{
 			if($this->mdl->nombre != NULL){
 
 					$vista = file_get_contents("Vista/perfil.php");
-					$header = file_get_contents("Vista/navbar.html");
+					$this->dicc->CargarHeader();
 					$footer = file_get_contents("Vista/footer.html");
 					$modalstatus=file_get_contents("Vista/LibrosenPerfil.html");
 					
-					$vista= $header.$vista;
+					$vista= $this->dicc->headerfinal .$vista;
 		//			session_start();
 					$link =     "?ctl=perfil&id=".$_SESSION['idUsuario'];
 					//Reemplazo con un diccionario

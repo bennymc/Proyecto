@@ -74,9 +74,6 @@ class diccionarioM{
 				$footer = file_get_contents("Vista/footer.html");
 				$vista = $this->headerfinal  . $vista . $footer;
 				//Reemplazo con un diccionario
-				
-
-
 				echo $vista;
 	}
 	

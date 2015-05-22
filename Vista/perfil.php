@@ -7,7 +7,7 @@
 			    <h1 class="titulosenperfil" id="Nombre"> {nombre} </h1>
 			</div>
 			<div class="panel-body ">
-			    <a href="editar.php"><img class="center-block" id="fotodeperfil" src= {foto}  alt="imagen de perfil"></a>
+			    <a href="editar.php"><img class="center-block" id="fotodeperfil" src= "www/images/{foto}"  alt="imagen de perfil"></a>
 			</div>
     	</div>	
     <!-- ****************************** LIBRO DESTACADO ************************************* -->

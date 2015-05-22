@@ -1,6 +1,6 @@
 
 	    <section id="formulario" class="col-md-4 col-md-offset-4">
-			<form class="form-horizontal" method="post" onsubmit="return validacion()">
+			<form class="form-horizontal" method="post" onsubmit="return validacion()"  enctype="multipart/form-data">
 				<fieldset>
 					<legend>Registro de nuevo usuario</legend>
 					<div class="form-group">
@@ -57,7 +57,7 @@
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="imgperfil">Imagen de perfil</label>
 					  <div class="col-md-6">
-					    <input id="imgperfil" name="imgperfil" class="input-file" type="file" accept="image/*">
+					    <input id="imgperfil" name="imgperfil" class="input-file" type="file" accept="image/*" >
 					  </div>
 					</div>
 					<div class="form-group">
