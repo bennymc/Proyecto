@@ -142,36 +142,45 @@ class registroCtl{
 							}
 							else echo "algo salio mal";
 								//require_once("Vista/Error.html");
-		}
+			}
 
-
-
-
-
-
-
-		} 
-
-
-
-		
-
-		
+		} 	
 			
 	}
 }
-
-
 
 class recuperaCtl{
 	private $modelo;
 
 	public function ejecutar(){
-		$vista = file_get_contents("Vista/recupera.php");
+		$vista = file_get_contents("Vista/recupera.html");
 		$header = file_get_contents("Vista/navbar.html");
 		$footer = file_get_contents("Vista/footer.html");
 		$vista = $header . $vista . $footer;
 		echo $vista;
+	}
+}
+
+class resetCtl{
+	private $modelo;
+
+	public function ejecutar(){
+		require_once("Modelo/resetMdl.php");
+		$this->modelo = new resetMdl();
+		$key = uniqid(mt_rand(), true);
+		$token = md5($_POST['email'].$key);
+
+		$email 	= $_POST["email"];
+		
+		$resultado = $this->modelo->valida($email);
+	
+		//echo "<br>debug: Va a cargar la vista en base a lo devuelto por el modelo";
+		if($resultado!==FALSE){
+			$resultado = $this->modelo->alta($token);
+			echo "Se te ha enviado un correo con el enlace para restablecer tu contraseña.";
+		}else echo "Algo salio mal";
+			//require_once("Vista/Error.html");
+
 	}
 }
 ?>

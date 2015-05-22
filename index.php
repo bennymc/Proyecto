@@ -39,6 +39,10 @@
 			require_once("Controlador/inicioCtl.php");
 			$ctl = new recuperaCtl();
 			break;
+		case "reset":
+			require_once("Controlador/inicioCtl.php");
+			$ctl = new resetCtl();
+			break;
 		case "busqueda":
 			require_once("Controlador/inicioCtl.php");
 			$ctl = new busquedaCtl();
