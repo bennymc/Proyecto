@@ -72,6 +72,28 @@ class diccionarioM{
 				$this->CargarHeader();
 				$vista = file_get_contents("Vista/inicio.html");				
 				$footer = file_get_contents("Vista/footer.html");
+
+				if(isset($_SESSION['usuario'])){
+
+					$i = strpos($vista,'{FRMLOGIN');
+					$f = strpos($vista, '}',$i);
+					$ff = strpos($vista, '{ENDFRMLOGIN}',$f);					
+					$frm = substr($vista, $f+2,$ff-($f+2));
+					$vista  = str_replace($frm,"",$vista );
+
+					$diccionario = array(
+								'{FRMLOGIN}'=> "",
+								'{ENDFRMLOGIN}'=> ""
+								);
+					$vista = strtr($vista,$diccionario);
+				}else{
+					$diccionario = array(
+								'{FRMLOGIN}'=> "",
+								'{ENDFRMLOGIN}'=> ""
+								);
+					$vista = strtr($vista,$diccionario);
+				}
+				
 				$vista = $this->headerfinal  . $vista . $footer;
 				//Reemplazo con un diccionario
 				echo $vista;

@@ -15,7 +15,7 @@ class resetMdl{
 			$consulta = "SELECT idUsuario FROM usuario WHERE email = '".$email."'";	
 			//Ejecuto el QUERY para datos de usuario
 			$resultado = $conexion->query($consulta);
-			var_dump($consulta);
+			//var_dump($consulta);
 			$resultado = $resultado->fetch_row();
 
 			if($resultado!= NULL){
