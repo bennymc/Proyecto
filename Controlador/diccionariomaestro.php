@@ -88,15 +88,6 @@ class diccionarioM{
 				echo $vista;
 	}
 
-	function CargarInicioWSesion(){
-		
-					$this->CargarHeader();
-
-					$vista  = file_get_contents("Vista/inicio.html");					
-					$footer = file_get_contents("Vista/footer.html");
-					$vista = $this->headerfinal  . $vista . $footer;
-					echo $vista;
-	}
 
 
 

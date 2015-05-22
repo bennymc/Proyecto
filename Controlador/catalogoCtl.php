@@ -8,6 +8,8 @@ class catalogoCtl{
 	function __construct(){
 		require_once("Modelo/CatalogoMdl.php");
 		$this->mdl = new CatalogoMdl();
+		require_once("Controlador/diccionariomaestro.php");
+			$this->dicc = new diccionarioM(); 	
 	}
 
 	function ejecutar(){
@@ -19,7 +21,7 @@ class catalogoCtl{
 		//if(isset($_GET['id'])){			
 			$this->mdl->show();
 			$vista = file_get_contents("Vista/libros.html");
-			$header = file_get_contents("Vista/navbar.html");
+			$this->dicc->CargarHeader();	
 			$footer = file_get_contents("Vista/footer.html");
 
 			$i = strpos($vista,'{{repite');
@@ -44,7 +46,7 @@ class catalogoCtl{
 			}
 			
 		    $vista = str_replace("{{GENEROS}}",$generos,$vista);
-			$vista = $header . $vista. $footer;
+			$vista = $this->dicc->headerfinal . $vista. $footer;
 			//Mostrar la vista
 			echo $vista;
 			

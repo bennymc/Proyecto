@@ -42,7 +42,7 @@
 					$_SESSION['usuario']   = $user;
 					$_SESSION['idUsuario'] = $this->mdl->idUsuario;
 					
-					$this->dicc->CargarInicioWSesion();
+					$this->dicc->CargarInicio();
 
 
 				}else

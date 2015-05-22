@@ -10,7 +10,7 @@ class InicioCtl{
 		
 		//session_start();
 		if(isset($_SESSION['usuario'] )){
-			$this->dicc->CargarInicioWSesion();
+			$this->dicc->CargarInicio();
 		}
 		else $this->dicc->CargarInicio();
 	}
@@ -20,10 +20,12 @@ class aboutusCtl{
 	private $modelo;
 
 	public function ejecutar(){
+		require_once("Controlador/diccionariomaestro.php");
+			$this->dicc = new diccionarioM(); 	
 		$vista = file_get_contents("Vista/aboutus.php");
-		$header = file_get_contents("Vista/navbar.html");
+		$this->dicc->CargarHeader();
 		$footer = file_get_contents("Vista/footer.html");
-		$vista = $header . $vista . $footer;
+		$vista = $this->dicc->headerfinal . $vista . $footer;
 		echo $vista;
 	}
 }
@@ -32,10 +34,12 @@ class inboxCtl{
 	private $modelo;
 
 	public function ejecutar(){
+		require_once("Controlador/diccionariomaestro.php");
+			$this->dicc = new diccionarioM(); 	
 		$vista = file_get_contents("Vista/inbox.php");
-		$header = file_get_contents("Vista/navbar.html");
+		$this->dicc->CargarHeader();
 		$footer = file_get_contents("Vista/footer.html");
-		$vista = $header . $vista . $footer;
+		$vista = $this->dicc->headerfinal . $vista . $footer;
 		echo $vista;
 	}
 }
@@ -44,10 +48,12 @@ class busquedaCtl{
 	private $modelo;
 
 	public function ejecutar(){
+		require_once("Controlador/diccionariomaestro.php");
+			$this->dicc = new diccionarioM(); 	
 		$vista = file_get_contents("Vista/busqueda.php");
-		$header = file_get_contents("Vista/navbar.html");
+		$this->dicc->CargarHeader();
 		$footer = file_get_contents("Vista/footer.html");
-		$vista = $header . $vista . $footer;
+		$vista = $this->dicc->headerfinal . $vista . $footer;
 		echo $vista;
 	}
 }
@@ -66,7 +72,7 @@ class registroCtl{
 		
 		//session_start();
 		if(isset($_SESSION['usuario'] )){
-			$this->dicc->CargarInicioWSesion();
+			$this->dicc->CargarInicio();
 		}
 		else{
 				require_once("Modelo/registroMdl.php");
@@ -137,7 +143,7 @@ class registroCtl{
 								$_SESSION['usuario']   = $username;
 								$_SESSION['idUsuario'] = $this->modelo->id;
 								
-								$this->dicc->CargarInicioWSesion();
+								$this->dicc->CargarInicio();
 
 							}
 							else echo "algo salio mal";
@@ -153,10 +159,12 @@ class recuperaCtl{
 	private $modelo;
 
 	public function ejecutar(){
+		require_once("Controlador/diccionariomaestro.php");
+			$this->dicc = new diccionarioM(); 
 		$vista = file_get_contents("Vista/recupera.html");
-		$header = file_get_contents("Vista/navbar.html");
+		$this->dicc->CargarHeader();
 		$footer = file_get_contents("Vista/footer.html");
-		$vista = $header . $vista . $footer;
+		$vista = $this->dicc->headerfinal . $vista . $footer;
 		echo $vista;
 	}
 }

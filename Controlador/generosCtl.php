@@ -5,6 +5,8 @@ class GenerosCtl{
 	function __construct(){
 		require_once("Modelo/GenerosMdl.php");
 		$this->mdl=new GenerosMdl();
+		require_once("Controlador/diccionariomaestro.php");
+			$this->dicc = new diccionarioM(); 	
 	}
 	public function ejecutar(){
 		if(isset($_GET['id']) && $this->validateInteger($_GET['id'])){
@@ -15,7 +17,7 @@ class GenerosCtl{
 				'{{CabeceraLibrero}}' => $this->mdl->CabeceraLibrero);
 
 			$vista = file_get_contents("Vista/genero.html");
-			$header = file_get_contents("Vista/navbar.html");
+			$this->dicc->CargarHeader();			
 			$footer = file_get_contents("Vista/footer.html");
 			$vista = strtr($vista, $diccionario);
 
@@ -43,7 +45,7 @@ class GenerosCtl{
 			
 			
 		    $vista = str_replace("{{GENEROS}}",$generos,$vista);
-			$vista = $header . $vista. $footer;
+			$vista = $this->dicc->headerfinal . $vista. $footer;
 			//Mostrar la vista
 			echo $vista;
 		}else
