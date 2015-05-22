@@ -37,7 +37,7 @@ class perfilCtl{
 
 		//valido variables y ejecuta el modelo para obtener la informacion
 		if(isset($_GET['id']) && $this->validateInteger($_GET['id'])){
-			session_start();
+		//	session_start();
 			if(isset($_SESSION['usuario'])){
 				$this->mdl->show($_GET['id']);
 			
@@ -52,7 +52,7 @@ class perfilCtl{
 					$modalstatus=file_get_contents("Vista/LibrosenPerfil.html");
 					
 					$vista= $header.$vista;
-					session_start();
+		//			session_start();
 					$link =     "?ctl=perfil&id=".$_SESSION['idUsuario'];
 					//Reemplazo con un diccionario
 					$diccionario = array(

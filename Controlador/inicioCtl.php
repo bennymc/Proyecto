@@ -8,7 +8,7 @@ class InicioCtl{
 		$this->dicc = new diccionarioM(); 	
 		
 		
-		session_start();
+		//session_start();
 		if(isset($_SESSION['usuario'] )){
 			$this->dicc->CargarInicioWSesion();
 		}
@@ -64,7 +64,7 @@ class registroCtl{
 		$this->dicc = new diccionarioM(); 	
 		
 		
-		session_start();
+		//session_start();
 		if(isset($_SESSION['usuario'] )){
 			$this->dicc->CargarInicioWSesion();
 		}
@@ -98,7 +98,7 @@ class registroCtl{
 								//Procesar la vista
 
 								//Obtener la vista
-								session_start();
+								//session_start();
 								$_SESSION['usuario']   = $username;
 								$_SESSION['idUsuario'] = $this->modelo->id;
 								

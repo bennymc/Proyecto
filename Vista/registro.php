@@ -57,7 +57,7 @@
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="imgperfil">Imagen de perfil</label>
 					  <div class="col-md-6">
-					    <input id="imgperfil" name="imgperfil" class="input-file" type="file">
+					    <input id="imgperfil" name="imgperfil" class="input-file" type="file" accept="image/*">
 					  </div>
 					</div>
 					<div class="form-group">

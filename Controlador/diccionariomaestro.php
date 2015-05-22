@@ -6,7 +6,7 @@ class diccionarioM{
 
 	function CargarHeader(){
 		$header = file_get_contents("Vista/navbar.html");
-		session_start();
+		//session_start();
 			if(isset($_SESSION['usuario'])){
 
 				$i = strpos($header,'{MODALLOGIN}');
