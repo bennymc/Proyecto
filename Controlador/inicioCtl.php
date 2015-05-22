@@ -165,7 +165,8 @@ class resetCtl{
 	private $modelo;
 
 	public function ejecutar(){
-		require_once("Modelo/resetMdl.php");
+		if(!isset($_GET['id'])){
+			require_once("Modelo/resetMdl.php");
 		$this->modelo = new resetMdl();
 		$key = uniqid(mt_rand(), true);
 		$token = md5($_POST['email'].$key);
@@ -173,13 +174,25 @@ class resetCtl{
 		$email 	= $_POST["email"];
 		
 		$resultado = $this->modelo->valida($email);
-	
-		//echo "<br>debug: Va a cargar la vista en base a lo devuelto por el modelo";
+
 		if($resultado!==FALSE){
 			$resultado = $this->modelo->alta($token);
+
+			$message = "El link para restablecer tu contraseña fue enviada a tu e-mail.";
+            $to=$email;
+            $subject="Recuperar contraseña";
+            $from = 'reset@book2.com';
+            $body='Hola, <br><br>Click aquí para restablecer tu contraseña http://www.book2book.tk/?ctl=reset&token='.$token.'<br/><br/>';
+            $headers = "From: " . strip_tags($from) . "\r\n";
+            $headers .= "Reply-To: ". strip_tags($from) . "\r\n";
+            $headers .= "MIME-Version: 1.0\r\n";
+            $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+ 
+            mail($to,$subject,$body,$headers);
 			echo "Se te ha enviado un correo con el enlace para restablecer tu contraseña.";
 		}else echo "Algo salio mal";
 			//require_once("Vista/Error.html");
+		}
 
 	}
 }

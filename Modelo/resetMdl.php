@@ -5,7 +5,7 @@ class resetMdl{
 
 	function valida($email){
 
-			require_once('config.inc');
+			require('config.inc');
 			$conexion = new mysqli($servidor,$usuario,$pass,$bd);
 			if($conexion -> connect_errno){
 				echo "Hubo un error";
@@ -28,7 +28,7 @@ class resetMdl{
 
 	function alta($token){
 
-			require_once('config.inc');
+			require('config.inc');
 			$conexion = new mysqli($servidor,$usuario,$pass,$bd);
 			if($conexion -> connect_errno){
 				echo "Hubo un error";
