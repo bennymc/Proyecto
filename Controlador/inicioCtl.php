@@ -95,7 +95,7 @@ class registroCtl{
 				 
 				//Obtenemos la extensión del archivo
 				$extension = end(explode(".", $_FILES["imgperfil"]["name"]));
-				 var_dump($_FILES["imgperfil"]);
+				 //var_dump($_FILES["imgperfil"]);
 				//Validamos el tipo de archivo, el tamaño en bytes y que la extensión sea válida
 				if ((($_FILES["imgperfil"]["type"] == "image/gif")
 				      || ($_FILES["imgperfil"]["type"] == "image/jpeg")
@@ -104,19 +104,19 @@ class registroCtl{
 				      && in_array($extension, $extensionesPermitidas)){
 				              //Si no hubo un error al subir el archivo temporalmente
 				              if ($_FILES["imgperfil"]["error"] > 0){
-				                     echo "Return Code: " . $_FILES["imgperfil"]["error"] . "<br />";
+				                     //echo "Return Code: " . $_FILES["imgperfil"]["error"] . "<br />";
 				              }
 				              else{
 				                    //Si el archivo ya existe se muestra el mensaje de error
 				                    if (file_exists("www/images/" . $_FILES["imgperfil"]["name"])){
-				                           echo $_FILES["imgperfil"]["name"] . " already exists. ";
+				                          // echo $_FILES["imgperfil"]["name"] . " already exists. ";
 				                    }
 				                    else{
 				                           //Se mueve el archivo de su ruta temporal a una ruta establecida
 				                           move_uploaded_file($_FILES["imgperfil"]["tmp_name"],
 				                                   "www/images/" . $_FILES["imgperfil"]["name"]);
-				                           $imgperfil 	=  $_FILES["imgperfil"]["name"];
-				                           echo "Archivo almacenado en: " . "www/images/" . $_FILES["imgperfil"]["name"];
+				                           
+				                           //echo "Archivo almacenado en: " . "www/images/" . $_FILES["imgperfil"]["name"];
 				                    }
 				              }
 				}
@@ -124,7 +124,7 @@ class registroCtl{
 				     echo "Archivo inválido";
 				}
 
-
+					$imgperfil 	=  $_FILES["imgperfil"]["name"];
 					$resultado = $this->modelo->alta($nombre, $apellidos, $sexo, $correo, $intereses, $username, $password, $bday, $imgperfil);
 
 							

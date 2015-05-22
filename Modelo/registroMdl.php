@@ -15,8 +15,14 @@ class registroMdl{
 			$consulta = "SELECT MAX(idUsuario) AS id FROM Usuario";	
 			//Ejecuto el QUERY para datos de usuario
 			$resultado = $conexion->query($consulta);
-			$resultado = $resultado->fetch_row();
-			$this->id=$resultado[0]+1;
+			
+			if($resultado!=NULL){
+				$resultado = $resultado->fetch_row();
+				$this->id=$resultado[0]+1;				
+			}				
+			else
+				$this->id=0;
+
 			$L = 1;
 
 

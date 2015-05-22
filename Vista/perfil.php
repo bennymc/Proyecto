@@ -29,8 +29,8 @@
 
 			</div>
     	</div>
-    <!-- ****************************** BOTON EDITAR PERFIL ****************************** -->
-    	<a id="editarperfil" class="btn btn-info center-block" role="button" href="?ctl=editar">EDITAR PERFIL</a>	
+   
+    	
     </aside>
 <!-- ************************************* FIN ASIDE ************************************* -->
 <!-- ************************************* INICIO SECTION ******************************** -->
