@@ -13,6 +13,9 @@ class editarCtl{
 	public function ejecutar(){
 
 		if(isset($_SESSION['usuario'])){
+
+			$this->mdl->CargarDatos();
+			
 			$vista = file_get_contents("Vista/editar.php");
 			$this->dicc->CargarHeader();
 			$footer = file_get_contents("Vista/footer.html");
