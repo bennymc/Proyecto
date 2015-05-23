@@ -29,7 +29,7 @@ class editarCtl{
 			}
 
 			if($this->mdl->idsLibros == NULL){
-				$opciones= "<option value=\"32\">Aun no agregar libros</option>"
+				$opciones= "<option value=\"32\">Aun no agregar libros</option>";
 			}else
 			{
 				for($x=0; $x < count($this->mdl->idsLibros); $x++){

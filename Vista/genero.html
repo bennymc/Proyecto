@@ -27,10 +27,13 @@
 				      	<option value="año">Año</option>
 				    </select>
 				</div>
-				<div class="col-md-3" id="libro1">				 	
-				 	<a href="ejemplar.php"><img src="http://placehold.it/100x150" class="center-block imagenL img-responsive" alt="Libro" ></a>
-				 	<a href="ejemplar.php" class="center-block tituloLibro">TITULO</a>
+				{{LIBROS}}
+				{{repite libros}}
+				<div class="col-md-3">				 	
+				 	<a href="?ctl=ejemplar&id={{id}}"><img src="{{url}}" class="center-block imagenL img-responsive" alt="Libro" ></a>
+				 	<a href="?ctl=ejemplar&id={{id}}" class="center-block tituloLibro">{{titulo}}</a>
 				</div>
+				{{termina repite2}}
 					
 			</div>
 		</div>
@@ -49,9 +52,9 @@
 			<div class="panel-body">
 				<ul>
 				{{GENEROS}}
-				{{repite}}
-					<li><a href="?ctl=generos&id={{numero}}" onclick='cambiaGenero("{{genero}}")'>{{genero}}</a></li>
-					{{termina repite}}
+				{{repite generos}}
+					<li><a href="index.php?ctl=generos&id={{numero}}">{{genero}}</a></li>
+					{{termina repite1}}
 				</ul>
 			</div>			
 		</div>
