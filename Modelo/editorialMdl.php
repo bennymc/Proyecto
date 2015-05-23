@@ -1,17 +1,67 @@
 <?php
 
 class editorialMdl{
-	public $TituloLibrero;
-	public $CabeceraLibrero;
 	public $Descripcion;
+	public $Generos;
+	public $idLibros;
+	public $nombreLibros;
+	public $urlLibros;
+	public $Datos;
 
 	function show($id){
-		$response = file_get_contents('www/json/datos.json');
-		$response = json_decode($response);
+		require_once('config.inc');
+		$conexion = new mysqli($servidor,$usuario,$pass,$bd);
+		if($conexion -> connect_errno){
+			echo "Hubo un error";
+			echo "<br>$conexion->connect_errno";
+		}
 
-		$this->TituloLibrero = $response->Generos[$id-1]->TituloLibrero;
-		$this->CabeceraLibrero = $response->Generos[$id-1]->CabeceraLibrero;
-		$this->Descripcion = $response->Generos[$id-1]->Descripcion;
+		$consulta = "SELECT descripcion, nombre
+				 FROM editoriales 
+				 WHERE idEditoriales = '".$id."'";
+		$resultado = $conexion->query($consulta);
+		$this->Datos = $resultado->fetch_row();
+		$this->Descripcion = $this->Datos[0];
+		$this->Titulo = $this->Datos[1];
+
+		$consulta = "SELECT nombre
+				 FROM generos";
+		$resultado = $conexion->query($consulta);
+		if($conexion->errno){
+			die("Tu query tiene un error
+				<br>$conexion->error");
+		}
+		while($fila=$resultado->fetch_assoc()){
+			$this->Generos[]=$fila["nombre"];
+		}
+
+		$consulta = "SELECT idLibros
+				 FROM generos_has_libros
+				 WHERE idGeneros = '".$id."'";
+		$resultado = $conexion->query($consulta);
+		if($conexion->errno){
+			die("Tu query tiene un error
+				<br>$conexion->error");
+		}
+		while($fila=$resultado->fetch_assoc()){
+			$this->idLibros[]=$fila["idLibros"];
+		}
+
+		foreach ($this->idLibros as $id) {
+			$consulta = "SELECT titulo, imagen_portada
+			 FROM libros
+			 WHERE idLibros = '".$id."'";
+			$resultado = $conexion->query($consulta);
+			if($conexion->errno){
+				die("Tu query tiene un error
+					<br>$conexion->error");
+			}
+			while($fila=$resultado->fetch_assoc()){
+				$this->nombreLibros[]=$fila["titulo"];
+				$this->urlLibros[]=$fila["imagen_portada"];
+			}	
+		}
+		$conexion->close();	
 	}
 
 }
