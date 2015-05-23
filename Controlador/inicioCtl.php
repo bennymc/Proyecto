@@ -95,43 +95,8 @@ class registroCtl{
 					$bday 		= $_POST["bday"];
 					
 
-					//procesarimagen
-			//Tenemos una lista con las extensiones que aceptaremos
-				$extensionesPermitidas = array("jpg", "jpeg", "gif", "png");
-				 
-				//Obtenemos la extensión del archivo
-				$extension = end(explode(".", $_FILES["imgperfil"]["name"]));
-				 //var_dump($_FILES["imgperfil"]);
-				//Validamos el tipo de archivo, el tamaño en bytes y que la extensión sea válida
-				if ((($_FILES["imgperfil"]["type"] == "image/gif")
-				      || ($_FILES["imgperfil"]["type"] == "image/jpeg")
-				      || ($_FILES["imgperfil"]["type"] == "image/png")
-				      || ($_FILES["imgperfil"]["type"] == "image/pjpeg"))
-				      && in_array($extension, $extensionesPermitidas)){
-				              //Si no hubo un error al subir el archivo temporalmente
-				              if ($_FILES["imgperfil"]["error"] > 0){
-				                     //echo "Return Code: " . $_FILES["imgperfil"]["error"] . "<br />";
-				              }
-				              else{
-				                    //Si el archivo ya existe se muestra el mensaje de error
-				                    if (file_exists("www/images/Usuarios" . $_FILES["imgperfil"]["name"])){
-				                          // echo $_FILES["imgperfil"]["name"] . " already exists. ";
-				                    }
-				                    else{
-				                           //Se mueve el archivo de su ruta temporal a una ruta establecida
-				                           move_uploaded_file($_FILES["imgperfil"]["tmp_name"],
-				                                   "www/images/Usuarios" . $_FILES["imgperfil"]["name"]);
-				                           
-				                           //echo "Archivo almacenado en: " . "www/images/Usuarios" . $_FILES["imgperfil"]["name"];
-				                    }
-				              }
-				}
-				else{
-				     echo "Archivo inválido";
-				}
-
-					$imgperfil 	=  $_FILES["imgperfil"]["name"];
-					$resultado = $this->modelo->alta($nombre, $apellidos, $sexo, $correo, $intereses, $username, $password, $bday, $imgperfil);
+					
+					$resultado = $this->modelo->alta($nombre, $apellidos, $sexo, $correo, $intereses, $username, $password, $bday);
 
 							
 							//echo "<br>debug: Va a cargar la vista en base a lo devuelto por el modelo";

@@ -1,7 +1,7 @@
 
 	<div id="contenedor ">
 		<section class="col-md-6">
-			<form class="form-horizontal" method="post" onsubmit="return VEditar()">
+			<form class="form-horizontal" method="post" onsubmit="return VEditar()" enctype="multipart/form-data">
 				<fieldset>
 					<legend>Editar Perfil</legend>
 					<div class="form-group">
@@ -47,8 +47,8 @@
 					</div>
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="imgperfil">Imagen de perfil</label>
-					  <div class="col-md-4">
-					    <input id="imgperfil" name="imgperfil" class="input-file" type="file">
+					  <div class="col-md-6">
+					    <input id="imgperfil" name="imgperfil" class="input-file" type="file" accept="image/*" >
 					  </div>
 					</div>
 					<div class="form-group">
