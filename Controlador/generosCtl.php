@@ -35,7 +35,7 @@ class GenerosCtl{
 			for($x=0; $x < count($this->mdl->Generos); $x++) {
 				$diccionarioGeneros= array(
 									'{{genero}}' => $this->mdl->Generos[$x],
-									'{{numero}}' => $x
+									'{{numero}}' => $x+1
 										);
 				$aux = $repetir_cad;
 				$aux = strtr($aux,$diccionarioGeneros);

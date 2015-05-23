@@ -5,6 +5,7 @@ class GenerosMdl{
 	public $CabeceraLibrero;
 	public $Descripcion;
 	public $Generos;
+	public $Datos;
 
 	function show($id){
 		require_once('config.inc');
@@ -14,12 +15,14 @@ class GenerosMdl{
 			echo "<br>$conexion->connect_errno";
 		}
 
-		$consulta = "SELECT descripcion
+		$consulta = "SELECT descripcion, nombre
 				 FROM generos 
 				 WHERE idGeneros = '".$id."'";
 		$resultado = $conexion->query($consulta);
-		$this->Descripcion = $resultado->fetch_row();
-		$this->Descripcion = $this->Descripcion[0];
+		$this->Datos = $resultado->fetch_row();
+		$this->Descripcion = $this->Datos[0];
+		$this->TituloLibrero = $this->Datos[1];
+		$this->CabeceraLibrero = $this->Datos[1];
 
 		$consulta = "SELECT nombre
 				 FROM generos";
