@@ -161,7 +161,6 @@ function VPass(){
 			  return false;
 			}else{
 				document.getElementById("password").setAttribute('class', 'form-control input-md');
-				alert("Tu contraseña ha sido cambiada con éxito.");
 			}
 }
 

@@ -71,18 +71,18 @@ class resetMdl{
 			
 	}
 
-	function cambia($password){
+	function cambia($password, $id){
 		require('config.inc');
 		$conexion = new mysqli($servidor,$usuario,$pass,$bd);
 		if($conexion -> connect_errno){
 			echo "Hubo un error";
 			echo "<br>$conexion->connect_errno";
 		}
-		
+		var_dump($password, $id);
 		$query = 
 			"UPDATE usuario
 			SET contrasena = $password
-			WHERE idUsuario = $idUsuario";
+			WHERE idUsuario = $id";
 
 			
 		$resultado = $conexion->query($query);

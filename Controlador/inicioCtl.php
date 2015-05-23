@@ -204,35 +204,32 @@ class recuperaCtl{
 
 class cambiaPassCtl{
 	private $modelo;
-	private $idUsuario;
 
 	public function ejecutar(){
 		require_once("Modelo/resetMdl.php");
 		$this->modelo = new resetMdl();
+		if(!isset($_GET['action'])){
 
-		$token 	= $_GET["token"];
-		$resultado = $this->modelo->validaToken($token);
+			$token 	= $_GET["token"];
+			$resultado = $this->modelo->validaToken($token);
 
-		if($resultado!==FALSE){
-			require_once("Controlador/diccionariomaestro.php");
-			$this->dicc = new diccionarioM(); 	
-			$vista = file_get_contents("Vista/cambiaPass.html");
-			$this->dicc->CargarHeader();
-			$footer = file_get_contents("Vista/footer.html");
-			$vista = $this->dicc->headerfinal . $vista . $footer;
-			echo $vista;
+			if($resultado!==FALSE){
+				$idUsuario = $this->modelo->idUsuario;
+				require_once("Controlador/diccionariomaestro.php");
+				$this->dicc = new diccionarioM(); 	
+				$vista = file_get_contents("Vista/cambiaPass.html");
+				$this->dicc->CargarHeader();
+				$footer = file_get_contents("Vista/footer.html");
+				$vista = $this->dicc->headerfinal . $vista . $footer;
+				echo $vista;
+			}else{
+				$message = "El token utilizado es incorrecto o ya caduco.";
+				echo "<script type='text/javascript'>alert('$message');</script>";
+			} 
 		}else{
-			$message = "El token utilizado es incorrecto o ya caduco.";
-			echo "<script type='text/javascript'>alert('$message');</script>";
-		} 
 
-
-		if(isset($_GET['action'])){
-			require_once("Modelo/resetMdl.php");
-			$this->modelo = new resetMdl();
-
-			$email 	= $_POST["password"];
-			$resultado = $this->modelo->cambia($token);
+			$password = $_POST["password"];
+			$resultado = $this->modelo->cambia($password, $this->modelo->idUsuario);
 
 			if($resultado!==FALSE){
 				$message = "Contraseña restablecida con éxito.";
