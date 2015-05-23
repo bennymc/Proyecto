@@ -9,7 +9,7 @@
 				<h3 class="TituloGrande"> Inicia Sesion:</h3>
 			</div>
 			<div class="panel-body">
-				<form class="form-horizontal">
+				<form class="form-horizontal" method="POST" onsubmit="return validalogin()" action="?ctl=login">
 					<div class="form-group">
 						<label for="usuario" class="col-md-4 control-label" id="usuario" >Usuario:</label>
 						<div class="col-md-8">
@@ -29,8 +29,8 @@
 					</div>
 					<div class="form-group">
 						<div class="col-md-12">	
-							<a href="recupera.php" class="btn btn-link" id="recuperar">Recuperar contraseña</a>
-							<a href="registro.php" class="btn btn-link pull-right" id="registro">Registro</a>
+							<a href="?ctl=recupera" class="btn btn-link" id="recuperar">Recuperar contraseña</a>
+							<a href="?ctl=registro" class="btn btn-link pull-right" id="registro">Registro</a>
 						</div>
 					</div>
 				</form>

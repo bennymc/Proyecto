@@ -23,6 +23,7 @@ class resetMdl{
 			}
 			else
 				return false;
+			$conexion->close();		
 			
 	}
 
@@ -46,6 +47,7 @@ class resetMdl{
 			}
 			else
 				return false;
+			$conexion->close();		
 			
 	}			
 

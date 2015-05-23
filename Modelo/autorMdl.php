@@ -1,8 +1,7 @@
 <?php
 
-class GenerosMdl{
-	public $TituloLibrero;
-	public $CabeceraLibrero;
+class autorMdl{
+	public $Nombre;
 	public $Descripcion;
 	public $Generos;
 	public $idLibros;
@@ -18,14 +17,14 @@ class GenerosMdl{
 			echo "<br>$conexion->connect_errno";
 		}
 
-		$consulta = "SELECT descripcion, nombre
-				 FROM generos 
-				 WHERE idGeneros = '".$id."'";
+		$consulta = "SELECT descripcion, nombre, imagen_perfil
+				 FROM autores 
+				 WHERE idAutores = '".$id."'";
 		$resultado = $conexion->query($consulta);
 		$this->Datos = $resultado->fetch_row();
 		$this->Descripcion = $this->Datos[0];
-		$this->TituloLibrero = $this->Datos[1];
-		$this->CabeceraLibrero = $this->Datos[1];
+		$this->Nombre = $this->Datos[1];
+		$this->Foto = $this->Datos[2];
 
 		$consulta = "SELECT nombre
 				 FROM generos";
@@ -39,8 +38,8 @@ class GenerosMdl{
 		}
 
 		$consulta = "SELECT idLibros
-				 FROM generos_has_libros
-				 WHERE idGeneros = '".$id."'";
+				 FROM autores_has_libros
+				 WHERE idAutores = '".$id."'";
 		$resultado = $conexion->query($consulta);
 		if($conexion->errno){
 			die("Tu query tiene un error
@@ -66,4 +65,5 @@ class GenerosMdl{
 		}
 		$conexion->close();	
 	}
+
 }

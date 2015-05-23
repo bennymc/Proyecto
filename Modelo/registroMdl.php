@@ -23,7 +23,11 @@ class registroMdl{
 			else
 				$this->id=0;
 
+<<<<<<< HEAD
 			$L = 32;
+=======
+			$L = 0;
+>>>>>>> origin/master
 
 
 			
