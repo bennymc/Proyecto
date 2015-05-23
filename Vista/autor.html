@@ -1,29 +1,39 @@
-<!-- ***************** GENERO **************************** -->
+<!-- ***************** AUTOR **************************** -->
 <!-- ***************** INICIA ASIDE IZQ **************************** -->
 	<aside class="col-md-3">
 		<div class="panel panel-success">
+	<!-- ***************** NOMBRE Y FOTO DEL AUTOR **************************** -->
 			<div class="panel-heading">
-			    <h3 class="TituloGrande">{{Titulo}}</h3>
+			    <h3 class="TituloGrande">{{Nombre}}</h3>
 			</div>
-			<div class="panel-body">
-			    <p>Descripción de la editorial.</p>
+			<div class="panel-body ">
+			    <a href="#"><img class="center-block" id="fotodeperfil" src="{{Foto}}" alt="imagen de perfil"></a>
 			</div>
-    	</div>
+		</div>
+	<!-- ***************** ACERCA DEL AUTOR **************************** -->		
+		<div class="panel panel-success">
+		  	<div class="panel-heading">
+		    	 <h3 class="TituloGrande">Acerca de {{Nombre}}</h3>
+		  	</div>
+		  	<div class="panel-body">
+		    	<p>Descripción del autor.</p>
+		  	</div>
+    	</div>	
 	</aside>
-<!-- ***************** FIN ASIDE IZQ **************************** -->
-<!-- ***************** INICIA SECTION **************************** -->	
-<section class="col-md-6">
+	<!-- ***************** FIN ASIDE IZQ **************************** -->
+	<!-- ***************** INICIA SECTION **************************** -->	
+	<section class="col-md-6">
     	<div class="panel panel-success">
 			<div class="panel-heading">
-		     	<h1 class="Contenedoresdelibros">Libros de {{Titulo}}</h1>
+		     	<h1 class="Contenedoresdelibros">Libros de {{Nombre}}</h1>
 			</div>
 			<div class="panel-body" id="contenedorgenero">
 			    <div class="col-md-12">
 			    	<label  for="ordenar">Ordenar Libros por:</label>
 				    <select id="ordenar" name="ordenar">
 				      	<option value="titulo">Titulo</option>
-				      	<option value="autor">Autor</option>
-				      	<option value="genero">Genero</option>
+				      	<option value="Genero">Genero</option>
+				      	<option value="editorial">Editorial</option>
 				      	<option value="año">Año</option>
 				    </select>
 				</div>
@@ -52,10 +62,10 @@
 				<ul>
 					{{GENEROS}}
 				{{repite generos}}
-					<li><a href="index.php?ctl=editorialGenero&id={{numero}}">{{genero}}</a></li>
+					<li><a href="?ctl=autorgenero&id={{numero}}">{{genero}}</a></li>
 					{{termina repite1}}
 				</ul>
 			</div>			
 		</div>
 	</aside>
-<!-- ***************** FIN ASIDE DER **************************** -->		
+<!-- ***************** FIN ASIDE DER **************************** -->	

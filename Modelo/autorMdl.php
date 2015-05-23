@@ -1,6 +1,7 @@
 <?php
 
-class editorialMdl{
+class autorMdl{
+	public $Nombre;
 	public $Descripcion;
 	public $Generos;
 	public $idLibros;
@@ -16,13 +17,14 @@ class editorialMdl{
 			echo "<br>$conexion->connect_errno";
 		}
 
-		$consulta = "SELECT descripcion, nombre
-				 FROM editoriales 
-				 WHERE idEditoriales = '".$id."'";
+		$consulta = "SELECT descripcion, nombre, imagen_perfil
+				 FROM autores 
+				 WHERE idAutores = '".$id."'";
 		$resultado = $conexion->query($consulta);
 		$this->Datos = $resultado->fetch_row();
 		$this->Descripcion = $this->Datos[0];
-		$this->Titulo = $this->Datos[1];
+		$this->Nombre = $this->Datos[1];
+		$this->Foto = $this->Datos[2];
 
 		$consulta = "SELECT nombre
 				 FROM generos";
@@ -36,8 +38,8 @@ class editorialMdl{
 		}
 
 		$consulta = "SELECT idLibros
-				 FROM editoriales_has_libros
-				 WHERE idEditoriales = '".$id."'";
+				 FROM autores_has_libros
+				 WHERE idAutores = '".$id."'";
 		$resultado = $conexion->query($consulta);
 		if($conexion->errno){
 			die("Tu query tiene un error

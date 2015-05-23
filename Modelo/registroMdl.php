@@ -23,7 +23,7 @@ class registroMdl{
 			else
 				$this->id=0;
 
-			$L = 1;
+			$L = 0;
 
 
 			
