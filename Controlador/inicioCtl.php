@@ -212,9 +212,8 @@ class cambiaPassCtl{
 
 			$token 	= $_GET["token"];
 			$resultado = $this->modelo->validaToken($token);
-
 			if($resultado!==FALSE){
-				$idUsuario = $this->modelo->idUsuario;
+				$GLOBALS['id'] = $this->modelo->idUsuario;
 				require_once("Controlador/diccionariomaestro.php");
 				$this->dicc = new diccionarioM(); 	
 				$vista = file_get_contents("Vista/cambiaPass.html");
@@ -229,7 +228,7 @@ class cambiaPassCtl{
 		}else{
 
 			$password = $_POST["password"];
-			$resultado = $this->modelo->cambia($password, $this->modelo->idUsuario);
+			$resultado = $this->modelo->cambia($password, $id);
 
 			if($resultado!==FALSE){
 				$message = "Contraseña restablecida con éxito.";

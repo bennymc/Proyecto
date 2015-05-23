@@ -1,11 +1,3 @@
-<?php
-	include "Vista/navbar.html";
-	//$titulo = $_GET["titulo"];
-?>
-<script type="text/javascript">
-		var titulo = "<?php echo $titulo; ?>";
-		cargaTitulo(titulo);
-</script>
 <!-- ****************************** PORTADA DEL EJEMLAR ****************************** -->
 	<aside class="col-md-4">
 		<div class="panel panel-success">
@@ -13,7 +5,7 @@
 			    <h1 class="titulosenperfil" id="tituloPerfil"></h1>
 			</div>
 			<div class="panel-body " >
-			    <img class="center-block img-responsive" id="portadaEjemplar" src="http://placehold.it/200x300">
+			    <img class="center-block img-responsive" id="portadaEjemplar" src="{{Portada}}" width="200" height="300">
 			</div>
     	</div>	
 	</aside>	
@@ -27,26 +19,35 @@
 			  	<div class="col-md-4">
 					<h3>Título del libro</h3>
 					<p id="titulo">
+					{{Titulo}}
 					</p>
 					<h3>Autor</h3>
-					<a href="?ctl=autor"><p id="autor">
+					<a href="?ctl=autor&id={{idAutor}}"><p id="autor">
+					{{Autor}}
 					</p></a>
 		  		</div>
 		   		<div class="fichac  col-md-4">
 		   	 		<h3>Editorial</h3>
-			  		<a href="editorial.php"><p id="editorial"></p></a>
+			  		<a href="?ctl=editorial&id={{idEditorial}}"><p id="editorial">
+			  			{{Editorial}}
+			  		</p></a>
 		  	 		<h3>Año de edición</h3>
 			  		<p id="año">
+			  		{{Año}}
 			  		</p>
 			  		<h3>ISBN</h3>
 			  		<p id="isbn">
+			  		{{ISBN}}
 			  		</p>			  
 		  		</div>
 		   		<div class=" col-md-4">
 					<h3>Género</h3>
-			  		<a href="genero.php"><p id="genero"></p></a>
+			  		<a href="?ctl=generos&id={{idGenero}}"><p id="genero">
+			  			{{Genero}}
+			  		</p></a>
 			  		<h3>Título original</h3>
 			  		<p id="tOriginal">
+			  		{{TituloOriginal}}
 			  		</p>
 		  		</div>
 			</div>
@@ -176,6 +177,3 @@
 			</div>
 		</div>
 	</section>
-<?php
-	include "Vista/footer.html";
-?>
