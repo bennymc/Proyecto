@@ -28,12 +28,16 @@ class editarCtl{
 				$Fem="";
 			}
 
+			$opciones="";
 			if($this->mdl->idsLibros == NULL){
-				$opciones= "<option value=\"32\">Aun no agregar libros</option>";
+				$opciones= "<option value=\"0\">No tienes Libros</option>";
 			}else
 			{
 				for($x=0; $x < count($this->mdl->idsLibros); $x++){
-					//meter todas las opciones
+					if($this->mdl->idDestacado==$this->mdl->idsLibros[$x])
+						$opciones = $opciones . " <option selected=selected value=". $this->mdl->idsLibros[$x] . ">".$this->mdl->titulos[$x]."</option>";
+					else
+						$opciones = $opciones . " <option value=". $this->mdl->idsLibros[$x] . ">".$this->mdl->titulos[$x]."</option>";
 				}
 			}
 
@@ -48,6 +52,7 @@ class editarCtl{
 										'{NACIMIENTO}' => $this->mdl->nacimiento,											
 										'{USER}' => $_SESSION['usuario'],
 										'{LINKPERFIL}' => "?ctl=perfil",
+										'{OPCIONES}' => $opciones
 									);
 					$vista= strtr($vista,$diccionario);
 

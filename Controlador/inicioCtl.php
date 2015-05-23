@@ -113,17 +113,8 @@ class registroCtl{
 				                     //echo "Return Code: " . $_FILES["imgperfil"]["error"] . "<br />";
 				              }
 				              else{
-				                    //Si el archivo ya existe se muestra el mensaje de error
-				                    if (file_exists("www/images/Usuarios" . $_FILES["imgperfil"]["name"])){
-				                          // echo $_FILES["imgperfil"]["name"] . " already exists. ";
-				                    }
-				                    else{
-				                           //Se mueve el archivo de su ruta temporal a una ruta establecida
-				                           move_uploaded_file($_FILES["imgperfil"]["tmp_name"],
-				                                   "www/images/Usuarios" . $_FILES["imgperfil"]["name"]);
-				                           
-				                           //echo "Archivo almacenado en: " . "www/images/Usuarios" . $_FILES["imgperfil"]["name"];
-				                    }
+				                   move_uploaded_file($_FILES["imgperfil"]["tmp_name"],
+				                                   "www/images/Usuarios/" . $_FILES["imgperfil"]["name"]);
 				              }
 				}
 				else{
