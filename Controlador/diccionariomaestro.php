@@ -15,14 +15,9 @@ class diccionarioM{
 				$linkmsj = substr($header, $f+2,$ff-($f+2));
 				$header = str_replace($linkmsj,"",$header);
 
-
-
-
-				$link =     "?ctl=perfil&id=".$_SESSION['idUsuario'];
-				//var_dump($link);
 				$diccionario = array(
 									'{USER}' => $_SESSION['usuario'],
-									'{LINKPERFIL}' => $link,
+									'{LINKPERFIL}' => "?ctl=perfil",
 									'{MENSAJE}'=> "",
 									'{ENDMENSAJE}' => "",
 									'{MODALLOGIN}' => "",

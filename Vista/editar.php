@@ -28,13 +28,13 @@
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="intereses">Intereses</label>
 					  <div class="col-md-5">                     
-					    <textarea class="form-control" id="intereses" name="intereses" value="{INTERESES}"></textarea>
+					    <textarea class="form-control" id="intereses" name="intereses" >{INTERESES}</textarea>
 					  </div>
 					</div>					
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="bday">Fecha de nacimiento</label>
 					  <div class="col-md-5">
-					    <input id="bday" name="bday" type="date" placeholder="" min="1925-01-01" max="2000-01-01" class="form-control input-md" required="" value="{NACIMIENTO}">
+					    <input id="bday" name="bday" type="date" placeholder="" min="1925-01-01" max="2000-01-01" class="form-control input-md" required="" >
 					  </div>
 					</div>
 					<div class="form-group">
