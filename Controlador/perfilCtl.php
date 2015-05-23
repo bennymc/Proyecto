@@ -45,7 +45,7 @@ class perfilCtl{
 										'{imglibroD}'=> $this->mdl->imgLdestacado,
 										'{USER}' => $_SESSION['usuario'],
 										'{LINKPERFIL}' => $link,
-										'{{idDestacado}}' => $idDestacado
+										'{{idDestacado}}' => $this->mdl->idDestacado
 									);
 					$vista= strtr($vista,$diccionario);
 
@@ -55,7 +55,7 @@ class perfilCtl{
 					$i = strpos($vista,'{repite');
 					$f = strpos($vista, '}',$i);
 					$ff = strpos($vista, '{end repite}',$f);
-					$bloque = substr($vista, $i,$f-($ff+7));
+					$bloque = substr($vista, $i,$f-($ff+4));
 					//echo $bloque;
 					$repetir_cad = substr($vista, $f+2,$ff-($f+2));
 					$vista = str_replace($bloque,"",$vista);
@@ -78,7 +78,8 @@ class perfilCtl{
 								$diccionariolibrero= array(
 													'{titulo}' => $auxTitulo,
 													'{imglibro}' => $this->mdl->portadas[$x],
-													'{status}'=> $this->mdl->estado[$x]
+													'{status}'=> $this->mdl->estado[$x],
+													'{{id}}' => $this->mdl->id[$x]
 														);
 								$aux = $repetir_cad;
 								$aux = strtr($aux,$diccionariolibrero);
