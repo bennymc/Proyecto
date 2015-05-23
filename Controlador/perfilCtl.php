@@ -42,10 +42,9 @@ class perfilCtl{
 										'{foto}' => $this->mdl->imgPerfil,
 										'{imglibroD}'=> $this->mdl->imgLdestacado,
 										'{USER}' => $_SESSION['usuario'],
-
-										'{LINKPERFIL}' => "?ctl=perfil",
-										'{IDLIBROFAV}'  =>$this->mdl->idDestacado
-									);
+										'{{idDestacado}}' => $this->mdl->idDestacado,
+										'{LINKPERFIL}' => "?ctl=perfil"
+										);
 					$vista= strtr($vista,$diccionario);
 
 

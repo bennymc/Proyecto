@@ -11,7 +11,6 @@ class perfilMdl{
 	public $portadas;
 	public $estado;
 	public $idsLibros;
-	public $idDestacado;
 	public $id;
 
 
@@ -42,7 +41,6 @@ function show($id){
 		
 
 		if($resultado!= NULL){
-			
 			$this->nombre = $resultado[3]." ".$resultado[4];
 			$this->imgPerfil = $resultado[9];		
 			$this->descripcion = $resultado[7];
@@ -81,7 +79,9 @@ function show($id){
 						$this->estado[] = $fila["status"];
 						$this->id[] = $fila["idLibros"];
 					}			
+				}
 			}
+			
 		}
 		
 
@@ -89,10 +89,6 @@ function show($id){
 		
 	}
 
-
-
- 
-		
 }
 
 ?>
