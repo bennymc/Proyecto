@@ -11,11 +11,19 @@ class editarCtl{
 	}
 	
 	public function ejecutar(){
-		$vista = file_get_contents("Vista/editar.php");
-		$this->dicc->CargarHeader();
-		$footer = file_get_contents("Vista/footer.html");
-		$vista = $this->dicc->headerfinal . $vista . $footer;
-		echo $vista;
+
+		if(isset($_SESSION['usuario'])){
+			$vista = file_get_contents("Vista/editar.php");
+			$this->dicc->CargarHeader();
+			$footer = file_get_contents("Vista/footer.html");
+			$vista = $this->dicc->headerfinal . $vista . $footer;
+			echo $vista;
+		}else
+		{
+			$this->dicc->CargarInicio();
+		}
+
+		
 
 		
 	}

@@ -19,29 +19,9 @@ class perfilCtl{
 	}
 
 	function ejecutar(){
-		// Validar accesos y permisos
-
-		// Validar entradas
-
-		// En base a accion ejecutar un metodo
-		if(isset($_GET['id'])){
-			
-			$this->Cargar();
-			
-		}else
-		{
-			http_response_code(404);
-		}
-
-	}
-
-	function Cargar(){
-
-		//valido variables y ejecuta el modelo para obtener la informacion
-		if(isset($_GET['id']) && $this->validateInteger($_GET['id'])){
-		//	session_start();
-			if(isset($_SESSION['usuario'])){
-				$this->mdl->show($_GET['id']);
+		
+		if(isset($_SESSION['usuario'])){
+			$this->mdl->show($_SESSION['idUsuario']);
 			
 			//Cargar  la vista
 			//require_once("Vista/perfil.php");
@@ -112,35 +92,18 @@ class perfilCtl{
 					echo $vista;
 
 			}else
-				header('HTTP/1.0 404 Not Found');
+				$this->dicc->CargarInicio();
 
 			}
 			else{
 					//cuando aun no hace login
-
-					$vista = file_get_contents("Vista/inicio.html");
-					$header = file_get_contents("Vista/navbar.html");
-					$footer = file_get_contents("Vista/footer.html");
-					$vista = $header . $vista . $footer;
-					//Reemplazo con un diccionario
-					$diccionario = array(
-										'{USER}' => "Inicia Sesion"
-										);
-					$vista= strtr($vista,$diccionario);
-
-
-					echo $vista;
+					$this->dicc->CargarInicio();				
 				}
-			
-				
-			}
-		else
-		{
-			//Llamar vista de error
-			echo "no hay id";
-		}
+
 
 	}
+
+	
 
 	/**
 	*Valida que un valor dado sea un entero
