@@ -34,8 +34,6 @@ class perfilCtl{
 					$modalstatus=file_get_contents("Vista/LibrosenPerfil.html");
 					
 					$vista= $this->dicc->headerfinal .$vista;
-		//			session_start();
-					$link =     "?ctl=perfil&id=".$_SESSION['idUsuario'];
 					//Reemplazo con un diccionario
 					$diccionario = array(
 										'{nombre}' => $this->mdl->nombre,
@@ -44,7 +42,8 @@ class perfilCtl{
 										'{foto}' => $this->mdl->imgPerfil,
 										'{imglibroD}'=> $this->mdl->imgLdestacado,
 										'{USER}' => $_SESSION['usuario'],
-										'{LINKPERFIL}' => $link
+										'{LINKPERFIL}' => "?ctl=perfil",
+										'{IDLIBROFAV}'  =>$this->mdl->idDestacado
 									);
 					$vista= strtr($vista,$diccionario);
 
@@ -75,6 +74,7 @@ class perfilCtl{
 
 
 								$diccionariolibrero= array(
+													'{IDLIBRO}' => $this->mdl->idsLibros[$x],
 													'{titulo}' => $auxTitulo,
 													'{imglibro}' => $this->mdl->portadas[$x],
 													'{status}'=> $this->mdl->estado[$x]

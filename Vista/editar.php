@@ -1,5 +1,5 @@
 
-		<div id="contenedor">
+	<div id="contenedor ">
 		<section class="col-md-6">
 			<form class="form-horizontal" method="post" onsubmit="return VEditar()">
 				<fieldset>
@@ -20,8 +20,8 @@
 					  <label class="col-md-4 control-label" for="sexo">Sexo</label>
 					  <div class="col-md-5">
 					    <select id="sexo" name="sexo" class="form-control" >
-					      <option value="Masculino" selected={SELECTM}>Masculino</option>
-					      <option value="Femenino" selected={SELECTF}>Femenino</option>
+					      <option value="Masculino" {SELECTM}>Masculino</option>
+					      <option value="Femenino" {SELECTF}>Femenino</option>
 					    </select>
 					  </div>
 					</div>
@@ -34,13 +34,14 @@
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="bday">Fecha de nacimiento</label>
 					  <div class="col-md-5">
-					    <input id="bday" name="bday" type="date" placeholder="" min="1925-01-01" max="2000-01-01" class="form-control input-md" required="" >
+					    <input id="bday" name="bday" type="date" placeholder="" min="1925-01-01" max="2000-01-01" class="form-control input-md" required="" value="{NACIMIENTO}">
 					  </div>
 					</div>
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="fav">Libro Favorito:</label>
 					  <div class="col-md-5">
 					    <select id="fav" name="fav" class="form-control">
+					    	 {OPCIONES}
 					    </select>
 					  </div>
 					</div>
@@ -83,4 +84,4 @@
 				</fieldset>
 			</form>
 		</aside>
-
+	</div>

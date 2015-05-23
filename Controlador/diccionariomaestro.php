@@ -76,15 +76,28 @@ class diccionarioM{
 					$frm = substr($vista, $f+2,$ff-($f+2));
 					$vista  = str_replace($frm,"",$vista );
 
+					
+
 					$diccionario = array(
 								'{FRMLOGIN}'=> "",
-								'{ENDFRMLOGIN}'=> ""
+								'{ENDFRMLOGIN}'=> "",
+								'{LOGO}'=> "",
+								'{ENDLOGO}'=> ""
 								);
 					$vista = strtr($vista,$diccionario);
 				}else{
+
+					$i = strpos($vista,'{LOGO');
+					$f = strpos($vista, '}',$i);
+					$ff = strpos($vista, '{ENDLOGO}',$f);					
+					$frm = substr($vista, $f+2,$ff-($f+2));
+					$vista  = str_replace($frm,"",$vista );
+
 					$diccionario = array(
 								'{FRMLOGIN}'=> "",
-								'{ENDFRMLOGIN}'=> ""
+								'{ENDFRMLOGIN}'=> "",
+								'{LOGO}'=> "",
+								'{ENDLOGO}'=> ""
 								);
 					$vista = strtr($vista,$diccionario);
 				}

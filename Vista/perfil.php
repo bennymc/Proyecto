@@ -7,7 +7,7 @@
 			    <h1 class="titulosenperfil" id="Nombre"> {nombre} </h1>
 			</div>
 			<div class="panel-body ">
-			    <img class="center-block" id="fotodeperfil" src= "www/images/{foto}"  alt="imagen de perfil">
+			    <img class="center-block" id="fotodeperfil" src= "www/images/Usuarios/{foto}"  alt="imagen de perfil">
 			</div>
     	</div>	
     <!-- ****************************** LIBRO DESTACADO ************************************* -->
@@ -16,7 +16,7 @@
 			    <h1 class="titulosenperfil" id="Ldestacado"> {libroD} </h1>
 			</div>
 			<div class="panel-body ">
-			    <a href="ejemplar.php" id="LdestacadoTitulo"><img class="center-block" id="librodestacado" src= {imglibroD} alt="Libro Destacado"></a>
+			    <a href="?ctl=ejemplar&id={IDLIBROFAV}" id="LdestacadoTitulo"><img class="center-block" id="librodestacado" src="www/images/Book2/{imglibroD}" alt="Libro Destacado"></a>
 			</div>
     	</div>	
     <!-- ****************************** DESCRIPCION ************************************* -->	
@@ -54,8 +54,8 @@
 					{LIBRERO}
 					{repite libro}
 					<div class="col-md-2 librosencontenedor" id="libroP">	
-					<a href="ejemplar.php" class="center-block">{titulo}</a>
-					<a href="ejemplar.php" class="center-block"><img src= {imglibro} alt="Libro"></a>
+					<a href="?ctl=ejemplar&id={IDLIBRO}" class="center-block">{titulo}</a>
+					<a href="?ctl=ejemplar&id={IDLIBRO}" class="center-block"><img src= {imglibro} alt="Libro"></a>
 					<a href="#" data-toggle="modal" data-target="#smallModal" class="center-block">{status}</a>					
 					</div>					
 					{end repite} 

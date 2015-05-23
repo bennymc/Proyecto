@@ -9,6 +9,8 @@ class perfilMdl{
 	public $titulos;
 	public $portadas;
 	public $estado;
+	public $idsLibros;
+	public $idDestacado;
 
 	/**
 	*Obtiene los datos de un item en  especifico
@@ -44,7 +46,7 @@ function show($id){
 			
 
 			//Ejecuto el QUERY para libro destacado de usuario
-			$consultadestacado = "SELECT titulo , imagen_portada
+			$consultadestacado = "SELECT titulo , imagen_portada, idLibros
 					 FROM libros 
 					 WHERE idLibros = '".$resultado[10]."'";
 					
@@ -55,9 +57,16 @@ function show($id){
 				//var_dump($resultadoD);
 					$this->librodestacado = $resultadoD[0];
 					$this->imgLdestacado = $resultadoD[1];
+					$this->idDestacado = $resultadoD[2];
 
-					//Ejecuto el QUERY para Librero
-					$consultalibrero = "SELECT L.titulo , L.imagen_portada , UHL.status 
+							
+			}else{
+				$this->librodestacado = "Destaca un Libro";
+				$this->imgLdestacado = "defaultLibroBook2.png";
+			}
+
+			//Ejecuto el QUERY para Librero
+					$consultalibrero = "SELECT L.idLibros ,L.titulo , L.imagen_portada , UHL.status 
 										FROM usuario_has_libros UHL 
 										JOIN libros L on L.idLibros = UHL.idLibros
 										WHERE UHL.idUsuario = \"$id\" ";
@@ -65,13 +74,15 @@ function show($id){
 					$resultadoL = $conexion->query($consultalibrero);
 					
 							
-					while($fila=$resultadoL->fetch_assoc()){
+					if($resultadoL!=NULL){
+						while($fila=$resultadoL->fetch_assoc()){
 						//var_dump($fila);
 						$this->titulos[] = $fila["titulo"];
-						$this->portadas[] = $fila["imagenPortada"];
+						$this->portadas[] = $fila["imagen_portada"];
 						$this->estado[] = $fila["status"];
-					}			
-			}
+						$this->idsLibros[]= $fila["idLibros"];
+						}
+					}	
 
 			
 		}

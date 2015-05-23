@@ -19,6 +19,33 @@ class editarCtl{
 			$vista = file_get_contents("Vista/editar.php");
 			$this->dicc->CargarHeader();
 			$footer = file_get_contents("Vista/footer.html");
+			//selected=
+			if($this->mdl->sexo=="Femenino"){
+				$Fem= "selected=selected";
+				$Mas="";
+			}else{
+				$Mas= "selected=selected";
+				$Fem="";
+			}
+
+			if($this->mdl->idsLibros == NILL){
+				$opciones= "<option value=\"32\">Aun no agregar libros</option>"
+			}
+
+
+
+			$diccionario = array(
+										'{NOMBRE}' => $this->mdl->nombre,
+										'{APELLIDOS}' => $this->mdl->apellidos,
+										'{SELECTF}' => $Fem,
+										'{SELECTM}' => $Mas,
+										'{INTERESES}' => $this->mdl->descripcion,
+										'{NACIMIENTO}' => $this->mdl->nacimiento,											
+										'{USER}' => $_SESSION['usuario'],
+										'{LINKPERFIL}' => "?ctl=perfil",
+									);
+					$vista= strtr($vista,$diccionario);
+
 			$vista = $this->dicc->headerfinal . $vista . $footer;
 			echo $vista;
 		}else
