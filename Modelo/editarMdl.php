@@ -89,10 +89,6 @@ class editarMdl{
 			$id = $_SESSION['idUsuario'];
 
 		if($_FILES["imgperfil"]["name"] != NULL){
-			
-			
-			
-
 				//procesarimagen
 				//Tenemos una lista con las extensiones que aceptaremos
 				$extensionesPermitidas = array("jpg", "jpeg", "gif", "png" , "JPG" ,"JPEG" ,"PNG");
@@ -155,6 +151,38 @@ class editarMdl{
 		}
 		$conexion->close();
 		return true;
+	}
+
+
+	function cambiar($old,$new){
+		require_once('config.inc');
+			$conexion = new mysqli($servidor,$usuario,$pass,$bd);
+			if($conexion -> connect_errno){
+				echo "Hubo un error";
+				echo "<br>$conexion->connect_errno";
+			}
+			$id = $_SESSION['idUsuario'];
+
+			$consulta = "SELECT *
+				 FROM usuario 
+				 WHERE idUsuario = \"$id\"
+				 AND contrasena =  \"$old\"  ";
+			$resultado = $conexion->query($consulta);
+			$resultado = $resultado->fetch_row();
+			
+			if($resultado!=NULL){
+				$query = "	UPDATE 	 usuario  
+					 	SET 	
+								  contrasena = \"$new\"
+					 	WHERE 	idUsuario = '".$id."'";
+					//Ejecuto el QUERY para datos de usuario
+					$resultado = $conexion->query($query);
+					return true;
+			}
+			else return false;
+
+			$conexion->close();
+
 	}
 }
 

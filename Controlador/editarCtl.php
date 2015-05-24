@@ -12,6 +12,15 @@ class editarCtl{
 	
 	public function ejecutar(){
 
+		if(isset($_GET['edit'])){
+			echo '
+				<div class="alert alert-dismissible alert-danger" id="modalContent">
+				  <button type="button" class="close" data-dismiss="alert">×</button>
+				  <strong>ERROR!</strong><p>Contraseña incorrecta</p> 
+				</div>
+			';
+		}
+
 
 		if(empty($_POST)){
 
@@ -70,27 +79,47 @@ class editarCtl{
 		}
 		else{
 
-			//Obtener las variables para la alta
-					//y limpiarlas
-					$nombre 	= $_POST["nombre"];
-					$apellidos 	= $_POST["apellidos"];
-					$sexo		= $_POST["sexo"];
-					$intereses 	= $_POST["intereses"];
-					$destacado 	= $_POST["fav"];
-					$bday 		= $_POST["bday"];
-					$destacado  =  $_POST["fav"];
+					if( $_POST["passwordold"]==NULL){
+						//Obtener las variables para la alta
+						//y limpiarlas
+						$nombre 	= $_POST["nombre"];
+						$apellidos 	= $_POST["apellidos"];
+						$sexo		= $_POST["sexo"];
+						$intereses 	= $_POST["intereses"];
+						$destacado 	= $_POST["fav"];
+						$bday 		= $_POST["bday"];
+						$destacado  =  $_POST["fav"];
 
-					$resultado = $this->mdl->actualiza($nombre, $apellidos, $sexo,  $intereses,   $bday, $destacado);
+						$resultado = $this->mdl->actualiza($nombre, $apellidos, $sexo,  $intereses,   $bday, $destacado);
+						
+								
+								//echo "<br>debug: Va a cargar la vista en base a lo devuelto por el modelo";
+								if($resultado!==FALSE){
+									header('Location: ?ctl=perfil&edit=true');							
+									
+								}
+								else echo "algo salio mal";
+									//require_once("Vista/Error.html");
+					}else{
+
+						$old	= $_POST["passwordold"];
+						$new 	= $_POST["passwordnew"];
+
+						$resultado= $this->mdl->cambiar($old,$new);
+						//echo "<br>debug: Va a cargar la vista en base a lo devuelto por el modelo";
+								if($resultado!==FALSE){
+									header('Location: ?ctl=perfil&edit=truepass');							
+									
+								}
+								else {
+									$_POST = array();
+									header('Location: ?ctl=editar&edit=false');	
+									
+								}
+
+					}
+
 					
-							
-							//echo "<br>debug: Va a cargar la vista en base a lo devuelto por el modelo";
-							if($resultado!==FALSE){
-																
-								header('Location: ?ctl=perfil');
-
-							}
-							else echo "algo salio mal";
-								//require_once("Vista/Error.html");
 
 		}
 

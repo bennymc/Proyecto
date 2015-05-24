@@ -19,6 +19,27 @@ class perfilCtl{
 	}
 
 	function ejecutar(){
+
+		if(isset($_GET['edit'])){
+			if($_GET['edit']=="truepass"){
+				echo '
+				<div class="alert alert-dismissible alert-success" id="modalContent">
+				  <button type="button" class="close" data-dismiss="alert">×</button>
+				  <strong>Correcto!</strong><p>Tu Contraseña se actualizo correctamente</p> 
+				</div>
+			';
+				
+			}
+			else{
+				echo '
+				<div class="alert alert-dismissible alert-success" id="modalContent">
+				  <button type="button" class="close" data-dismiss="alert">×</button>
+				  <strong>Correcto!</strong><p>Tu Datos se actualizaron correctamente</p> 
+				</div>
+			';
+			}
+		}
+
 		
 		if(isset($_SESSION['usuario'])){
 			$this->mdl->show($_SESSION['idUsuario']);
