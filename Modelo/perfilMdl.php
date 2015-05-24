@@ -26,7 +26,7 @@ class perfilMdl{
 function show($id){
 
 		require_once('config.inc');
-		$conexion = new mysqli($servidor,$usuario,$pass,$bd);
+		$conexion = new mysqli('localhost','root', '' ,'book2');
 		if($conexion -> connect_errno){
 			echo "Hubo un error";
 			echo "<br>$conexion->connect_errno";
@@ -87,6 +87,28 @@ function show($id){
 
 		$conexion->close();
 		
+	}
+
+
+
+	function cambiastatus($idLibro ,$status){
+		require_once('config.inc');
+		$conexion = new mysqli('localhost','root', '' ,'book2');
+		if($conexion -> connect_errno){
+			echo "Hubo un error";
+			echo "<br>$conexion->connect_errno";
+		}
+		$id = $_SESSION['idUsuario'];
+
+		$query = "	UPDATE 	 usuario_has_libros  
+					 	SET 	
+								 status = \"$status\"
+					 	WHERE 	idUsuario = '".$id."'
+					 	AND idLibros = \"$idLibro\" ";
+			//Ejecuto el QUERY para datos de usuario
+			$resultado = $conexion->query($query);
+
+		$conexion->close();
 	}
 
 }

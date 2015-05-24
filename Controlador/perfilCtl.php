@@ -19,6 +19,11 @@ class perfilCtl{
 	}
 
 	function ejecutar(){
+		if (isset($_POST['bookId']) && isset($_POST['status'])) {
+			$this->mdl->cambiastatus($_POST['bookId'],$_POST['status']);
+		}
+
+
 
 		if(isset($_GET['edit'])){
 			if($_GET['edit']=="truepass"){

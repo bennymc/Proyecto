@@ -7,39 +7,39 @@
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         <h4 class="modal-title" id="myModalLabel">Selecciona el estatus del Libro</h4>
       </div>
-      <div class="modal-body">
-        <form class="form-horizontal">
-          <fieldset>
+      
+        <form class="form-horizontal" method="post">
+          <fieldset><div class="modal-body">
             <div class="form-group">
               <div class="col-lg-10">
                 <input type="text" name="bookId" value=""/ hidden=hidden>
                 <div class="radio">
                   <label>
-                    <input name="status" id="Leído" value="Leído" checked="" type="radio" >
+                    <input name="status" id="Leído" value="LEIDO" checked="" type="radio" >
                     Leido
                   </label>
                 </div>
                 <div class="radio">
                   <label>
-                    <input name="status" id="Leyendo" value="Leyendo" type="radio">
+                    <input name="status" id="Leyendo" value="LEYENDO" type="radio">
                     Leyendo
                   </label>
                 </div>
                 <div class="radio">
                   <label>
-                    <input name="status" id="Por leer" value="Por leer" type="radio">
+                    <input name="status" id="Por leer" value="POR LEER" type="radio">
                     Por leer
                   </label>
                 </div>
               </div>
             </div>
-          </fieldset>
-        </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-       <a href="?ctl=perfil&status=true" > <button type="button" class="btn  btn-success">Guardar</button> </a>
+       <a href="?ctl=perfil&status=true" > <button type="sumbit" class="btn  btn-success">Guardar</button> </a>
       </div>
+      </fieldset>
+      </form>
     </div>
   </div>
 </div> 
