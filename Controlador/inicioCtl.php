@@ -135,75 +135,42 @@ class recuperaCtl{
 		if(isset($_GET['action'])){
 			require_once("Modelo/resetMdl.php");
 			$this->modelo = new resetMdl();
-
 			$key = uniqid(mt_rand(), true);
 			$token = md5($_POST['email'].$key);
 
 			$email 	= $_POST["email"];
 			
 			$resultado = $this->modelo->valida($email);
-
+			
 			if($resultado!==FALSE){
-				$resultado = $this->modelo->alta($token);
+				$resultado = $this->modelo->cambia($token);
 
-				$message = "El link para restablecer tu contraseña fue enviado a tu e-mail.";
 	            $to=$email;
 	            $subject="Recuperar contraseña";
 	            $from = 'support@book2book.tk';
-	            $body='Hola, <br><br>Click aquí para restablecer tu contraseña http://www.book2book.tk/?ctl=cambiaPass&token='.$token.'<br/><br/>';
+	            $body='Hola, <br><br>Tu nueva contraseña es: '.$token.' <br><br> Una vez autentificad@ podrás cambiarla por una nueva. <br><br> Enlace al sitio http://www.book2book.tk/?ctl=inicio<br/><br/>';
 	            $headers = "From: " . strip_tags($from) . "\r\n";
 	            $headers .= "Reply-To: ". strip_tags($from) . "\r\n";
 	            $headers .= "MIME-Version: 1.0\r\n";
 	            $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 	 
 	            mail($to,$subject,$body,$headers);
-				$message = "Se te ha enviado un email con la liga para restablecer tu contraseña.";
-				echo "<script type='text/javascript'>alert('$message');</script>";
+				echo '
+				<div class="alert alert-dismissible alert-success" id="modalContent">
+				  <button type="button" class="close" data-dismiss="alert">×</button>
+				  <strong>Correcto!</strong><p>Se te ha enviado un email con tu nueva contraseña.</p> 
+				</div>
+			';
 			}else{
-				$message = "No hay cuentas con ese email registrado.";
-				echo "<script type='text/javascript'>alert('$message');</script>";
+				echo '
+				<div class="alert alert-dismissible alert-success" id="modalContent">
+				  <button type="button" class="close" data-dismiss="alert">×</button>
+				  <strong>Incorrecto!</strong><p>No hay cuentas con ese email registrado.</p> 
+				</div>
+			';
 			} 
 		}
 	}
 }
 
-class cambiaPassCtl{
-	private $modelo;
-
-	public function ejecutar(){
-		require_once("Modelo/resetMdl.php");
-		$this->modelo = new resetMdl();
-		if(!isset($_GET['action'])){
-
-			$token 	= $_GET["token"];
-			$resultado = $this->modelo->validaToken($token);
-			if($resultado!==FALSE){
-				$GLOBALS['id'] = $this->modelo->idUsuario;
-				require_once("Controlador/diccionariomaestro.php");
-				$this->dicc = new diccionarioM(); 	
-				$vista = file_get_contents("Vista/cambiaPass.html");
-				$this->dicc->CargarHeader();
-				$footer = file_get_contents("Vista/footer.html");
-				$vista = $this->dicc->headerfinal . $vista . $footer;
-				echo $vista;
-			}else{
-				$message = "El token utilizado es incorrecto o ya caduco.";
-				echo "<script type='text/javascript'>alert('$message');</script>";
-			} 
-		}else{
-
-			$password = $_POST["password"];
-			$resultado = $this->modelo->cambia($password, $id);
-
-			if($resultado!==FALSE){
-				$message = "Contraseña restablecida con éxito.";
-				echo "<script type='text/javascript'>alert('$message');</script>";
-			}else{
-				$message = "Hubo un error al actualizar la contraseña.";
-				echo "<script type='text/javascript'>alert('$message');</script>";
-			} 
-		}
-
-	}
-}
 ?>
