@@ -13,12 +13,7 @@ class catalogoCtl{
 	}
 
 	function ejecutar(){
-		// Validar accesos y permisos
-
-		// Validar entradas
-
-		// En base a accion ejecutar un metodo
-		//if(isset($_GET['id'])){			
+				
 			$this->mdl->show();
 			$vista = file_get_contents("Vista/libros.html");
 			$this->dicc->CargarHeader();	
@@ -46,27 +41,45 @@ class catalogoCtl{
 			}
 			
 		    $vista = str_replace("{{GENEROS}}",$generos,$vista);
+
+
+		    $this->mdl->GenerosRandom();
+
+		    	$i = strpos($vista,'{CONTGENERO');
+				$f = strpos($vista, '}',$i);
+				$ff = strpos($vista, '{ENDCONTGENERO}',$f);					
+				$frm = substr($vista, $f+2,$ff-($f+2));
+				
+				
+				$contenedor="";
+				for($x=0; $x < 5; $x++) {
+								$diccionariog= array(
+													'{{NOMBREGENERO}}' => $this->mdl->nombresR[$x],
+													'{{IDGENERO}}' =>  $this->mdl->idGenero[$x]
+														);
+								$aux = $frm;
+								$aux = strtr($aux,$diccionariog);
+								$contenedor= $contenedor.$aux;
+							}
+
+							$vista  = str_replace($frm,$contenedor,$vista );	
+
+				$diccionario = array(
+								'{CONTGENERO}'=> "",
+								'{ENDCONTGENERO}'=> ""
+								);
+					$vista = strtr($vista,$diccionario);
+
+
+
+
 			$vista = $this->dicc->headerfinal . $vista. $footer;
 			//Mostrar la vista
 			echo $vista;
-			
-		// }else
-		// {
-		// 	http_response_code(404);
-		// }
+		
 
 	}
 
-	/**
-	*Valida que un valor dado sea un entero
-	*@param mixed $valor
-	*@return boolean
-	*/
-
-	function validateInteger($valor){
-
-		return is_int((int)$valor);
-	}
 
 }
 
