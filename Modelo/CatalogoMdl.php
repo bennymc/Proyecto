@@ -4,6 +4,9 @@ class CatalogoMdl{
 	public $Generos;
 	public $nombresR;
 	public $random;
+	public $idlibrosGenero;
+	public $imglibrosGenero;
+
 
 	function show(){
 		require('config.inc');
@@ -69,6 +72,37 @@ class CatalogoMdl{
 		$conexion->close();	
 	}
 
+	function librosdegenero($idGenero){
+		unset($this->idlibrosGenero);
+		unset($this->imglibrosGenero);
+		require('config.inc');
+		$conexion = new mysqli($servidor,$usuario,$pass,$bd);
+		if($conexion -> connect_errno){
+			echo "Hubo un error";
+			echo "<br>$conexion->connect_errno";
+		}
+		$consulta = "SELECT L.idLibros , L.imagen_portada
+				 FROM generos_has_libros  GHL
+				 JOIN libros L ON GHL.idLibros =L.idLibros
+				 WHERE GHL.idGeneros = \"$idGenero\" LIMIT 5
+				";
+		$resultado = $conexion->query($consulta);
+		$resultado = $conexion->query($consulta);
+
+		if($conexion->errno){
+			die("Tu query tiene un error
+				<br>$conexion->error");
+		}
+		while($fila=$resultado->fetch_assoc()){
+			$this->idlibrosGenero[]=$fila["idLibros"];
+			$this->imglibrosGenero[]=$fila["imagen_portada"];
+		}
+		
+		$conexion->close();	
+
+
+
+	}
 
 
 }

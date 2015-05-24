@@ -50,23 +50,47 @@ class catalogoCtl{
 				$ff = strpos($vista, '{ENDCONTGENERO}',$f);					
 				$frm = substr($vista, $f+2,$ff-($f+2));
 				
+				$i = strpos($vista,'{LIBROGENERO');
+				$f = strpos($vista, '}',$i);
+				$ff = strpos($vista, '{ENDLIBROGENERO}',$f);					
+				$books = substr($vista, $f+2,$ff-($f+2));
 				
+				$allBooks="";
 				$contenedor="";
 				for($x=0; $x < 5; $x++) {
+					$this->mdl->librosdegenero($this->mdl->idGenero[$x]);
 								$diccionariog= array(
 													'{{NOMBREGENERO}}' => $this->mdl->nombresR[$x],
 													'{{IDGENERO}}' =>  $this->mdl->idGenero[$x]
 														);
 								$aux = $frm;
 								$aux = strtr($aux,$diccionariog);
+								$i=0;
+								$aux2="";
+								$allBooks="";
+								foreach ($this->mdl->idlibrosGenero as &$id) {
+									$diccionario2= array(
+													'{{IDLIBRO}}' => $id,
+													'{IMGLIBRO}' =>  $this->mdl->imglibrosGenero[$i]
+														);
+									$i++;
+									$aux2 = $books;
+									$aux2 = strtr($aux2,$diccionario2);
+									$allBooks = $allBooks.$aux2;
+									
+								}
+
+								$aux=str_replace($books,$allBooks,$aux );
 								$contenedor= $contenedor.$aux;
 							}
 
-							$vista  = str_replace($frm,$contenedor,$vista );	
+				$vista  = str_replace($frm,$contenedor,$vista );	
 
 				$diccionario = array(
 								'{CONTGENERO}'=> "",
-								'{ENDCONTGENERO}'=> ""
+								'{ENDCONTGENERO}'=> "",
+								'{LIBROGENERO}'=> "",
+								'{ENDLIBROGENERO}'=> ""
 								);
 					$vista = strtr($vista,$diccionario);
 
