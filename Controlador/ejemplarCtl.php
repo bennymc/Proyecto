@@ -10,6 +10,18 @@ class ejemplarCtl{
 	}
 	public function ejecutar(){
 
+		if(isset($_GET['add'])){
+			$add=$_GET['add'];
+			if($add=="true"){
+				$this->mdl->addLibro($_GET['id']);
+				echo '
+				<div class="alert alert-dismissible alert-success" id="modalContent">
+				  <button type="button" class="close" data-dismiss="alert">×</button>
+				  <strong>AGREGADO!</strong><p>Este libro ahora esta en tu librero.</p> 
+				</div>
+			';
+			}else header('Location: ?ctl=inicio');	
+		}
 
 		if(isset($_GET['id']) && $this->validateInteger($_GET['id'])){
 			$this->mdl->show($_GET['id']);
@@ -51,7 +63,8 @@ class ejemplarCtl{
 				'{{Genero}}' => $this->mdl->Genero,
 				'{{idGenero}}' => $this->mdl->idGenero,
 				'{ADD}'=> "",
-				'{ENDADD}'=> ""
+				'{ENDADD}'=> "",
+				'{IDLIBRO}'=>$_GET['id'],
 			);
 
 			
@@ -62,6 +75,8 @@ class ejemplarCtl{
 		{
 			header('Location: ?ctl=inicio');	
 		}
+
+
 
 	}
 	function validateInteger($valor){

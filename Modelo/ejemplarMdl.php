@@ -15,7 +15,7 @@ class ejemplarMdl{
 
 	function show($id){
 		require_once('config.inc');
-		$conexion = new mysqli($servidor,$usuario,$pass,$bd);
+		$conexion = new mysqli('localhost','root', '' ,'book2');
 		if($conexion -> connect_errno){
 			echo "Hubo un error";
 			echo "<br>$conexion->connect_errno";
@@ -100,6 +100,27 @@ class ejemplarMdl{
 
 		$conexion->close();
 
+	}
+
+
+	function addLibro($id){
+		require_once('config.inc');
+		$conexion = new mysqli('localhost','root', '' ,'book2');
+		if($conexion -> connect_errno){
+			echo "Hubo un error";
+			echo "<br>$conexion->connect_errno";
+		}
+		$idUser= $_SESSION['idUsuario'];
+		$status="LEIDO";
+		$consulta = "INSERT INTO usuario_has_libros (idUsuario , idLibros ,status)
+				 VALUES (
+				 	\"$idUser\",
+					\"$id\",
+					\"$status\"
+					)";
+		$resultado = $conexion->query($consulta);
+		//var_dump($resultado);
+		$conexion->close();
 	}
 
 }
