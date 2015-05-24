@@ -1,9 +1,3 @@
-$(document).ready(function (e) {
-  $('#modalstatus').on('show.bs.modal', function(e) {    
-     var id = $(e.relatedTarget).data().id;
-      $(e.currentTarget).find('#idlibrostatus').val(id);
-  });
-});
 
 
 function cambiaGenero(genero){

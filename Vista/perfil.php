@@ -56,7 +56,7 @@
 					<div class="col-md-2 librosencontenedor" id="libroP">	
 					<a href="?ctl=ejemplar&id={{id}}" class="center-block">{titulo}</a>
 					<a href="?ctl=ejemplar&id={{id}}" class="center-block"><img src= {imglibro} alt="Libro"></a>
-					<a href="#" data-toggle="modal" data-id="{{id}}" data-target="#smallModal" id="modalstatus" class="center-block">{status}</a>					
+					<a href="#" data-toggle="modal" data-book-id="{{id}}" data-target="#smallModal" id="modalstatus" class="center-block">{status}</a>					
 					</div>					
 					{end repite} 
 				</div>				
