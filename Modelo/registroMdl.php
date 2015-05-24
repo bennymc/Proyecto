@@ -27,7 +27,7 @@ class registroMdl{
 
 			//procesarimagen
 			//Tenemos una lista con las extensiones que aceptaremos
-				$extensionesPermitidas = array("jpg", "jpeg", "gif", "png" , "JPG" ,"JPEG" ,"PNG");
+				$extensionesPermitidas = array("jpg", "jpeg", "gif", "png" , "JPG" ,"JPEG" ,"PNG","GIF" );
 				 
 				//Obtenemos la extensión del archivo
 				$extension =  substr( $_FILES["imgperfil"]["type"] ,6);
