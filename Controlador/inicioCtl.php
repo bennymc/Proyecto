@@ -2,11 +2,10 @@
 
 class InicioCtl{
 	private $dicc;
-
+	private $mdl;
 	public function ejecutar(){
 		require_once("Controlador/diccionariomaestro.php");
 		$this->dicc = new diccionarioM(); 	
-		
 		
 		//session_start();
 		if(isset($_SESSION['usuario'] )){
