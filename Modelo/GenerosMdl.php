@@ -67,3 +67,5 @@ class GenerosMdl{
 		$conexion->close();	
 	}
 }
+
+?>
