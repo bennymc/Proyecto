@@ -12,7 +12,7 @@ class registroMdl{
 				echo "<br>$conexion->connect_errno";
 			}
 
-			$consulta = "SELECT MAX(idUsuario) AS id FROM Usuario";	
+			$consulta = "SELECT MAX(idUsuario) AS id FROM usuario";	
 			//Ejecuto el QUERY para datos de usuario
 			$resultado = $conexion->query($consulta);
 			
@@ -30,7 +30,7 @@ class registroMdl{
 				$extensionesPermitidas = array("jpg", "jpeg", "gif", "png" , "JPG" ,"JPEG" ,"PNG");
 				 
 				//Obtenemos la extensión del archivo
-				$extension = end(explode(".", $_FILES["imgperfil"]["name"]));
+				$extension =  substr( $_FILES["imgperfil"]["type"] ,6);
 				 //var_dump($_FILES["imgperfil"]);
 				//Validamos el tipo de archivo, el tamaño en bytes y que la extensión sea válida
 				if ((($_FILES["imgperfil"]["type"] == "image/gif")

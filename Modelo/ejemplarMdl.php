@@ -33,42 +33,42 @@ class ejemplarMdl{
 		$this->Portada = $this->Datos[6];
 
 		$consulta = "SELECT idAutores
-				 FROM Autores_has_libros 
+				 FROM autores_has_libros 
 				 WHERE idLibros = '".$id."'";
 		$resultado = $conexion->query($consulta);
 		$this->Datos = $resultado->fetch_row();
 		$this->idAutor = $this->Datos[0];
 
 		$consulta = "SELECT nombre
-				 FROM Autores 
+				 FROM autores 
 				 WHERE idAutores = '".$this->idAutor."'";
 		$resultado = $conexion->query($consulta);
 		$this->Datos = $resultado->fetch_row();
 		$this->Autor = $this->Datos[0];
 
 		$consulta = "SELECT idEditoriales
-				 FROM Editoriales_has_libros 
+				 FROM editoriales_has_libros 
 				 WHERE idLibros = '".$id."'";
 		$resultado = $conexion->query($consulta);
 		$this->Datos = $resultado->fetch_row();
 		$this->idEditorial = $this->Datos[0];
 
 		$consulta = "SELECT nombre
-				 FROM Editoriales 
+				 FROM editoriales 
 				 WHERE idEditoriales = '".$this->idEditorial."'";
 		$resultado = $conexion->query($consulta);
 		$this->Datos = $resultado->fetch_row();
 		$this->Editorial = $this->Datos[0];
 
 		$consulta = "SELECT idGeneros
-				 FROM Generos_has_libros 
+				 FROM generos_has_libros 
 				 WHERE idLibros = '".$id."'";
 		$resultado = $conexion->query($consulta);
 		$this->Datos = $resultado->fetch_row();
 		$this->idGenero = $this->Datos[0];
 
 		$consulta = "SELECT nombre
-				 FROM Generos 
+				 FROM generos 
 				 WHERE idGeneros = '".$this->idGenero."'";
 		$resultado = $conexion->query($consulta);
 		$this->Datos = $resultado->fetch_row();
