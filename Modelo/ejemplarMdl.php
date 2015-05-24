@@ -123,6 +123,30 @@ class ejemplarMdl{
 		$conexion->close();
 	}
 
+	function addReview($id, $review){
+		require('config.inc');
+		$conexion = new mysqli($servidor,$usuario,$pass,$bd);
+		if($conexion -> connect_errno){
+			echo "Hubo un error";
+			echo "<br>$conexion->connect_errno";
+		}
+		$idUser= $_SESSION['idUsuario'];
+		$calificacion="3";
+		$fecha=getdate();
+		$consulta = "INSERT INTO resena (idUsuario , idLibros , resena, calificacion, fecha)
+				 VALUES (
+				 	\"$idUser\",
+					\"$id\",
+					\"$review\",
+					\"$calificacion\",
+					\"$fecha\"
+					)";
+		$resultado = $conexion->query($consulta);
+		//var_dump($resultado);
+		$conexion->close();
+	}
+
+
 }
 
 ?>

@@ -25,8 +25,8 @@ class ejemplarCtl{
 
 		if(isset($_GET['review'])){
 			if($_GET['review']=="true"){
-				$review = $_POST('reseña');
-				var_dump($review);
+				$review = $_POST['resena'];
+				$this->mdl->addReview($_GET['id'], $review);
 				echo '
 				<div class="alert alert-dismissible alert-success" id="modalContent">
 				  <button type="button" class="close" data-dismiss="alert">×</button>

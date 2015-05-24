@@ -95,12 +95,10 @@
 					<noscript>Necesitas tener habilitado javascript para poder votar</noscript>
 					<div class="form-group">
 					  	<label class="col-md-12 control-label" for="reseña">Mi reseña</label>
-					  	<form method="post" class="col-md-12">                     
-					    	<textarea class="form-control" id="reseña" name="reseña"></textarea>
+					  	<form method="post" class="col-md-12" action="?ctl=ejemplar&id={IDLIBRO}&review=true">                     
+					    	<textarea class="form-control" id="resena" name="resena"></textarea>
 							<div class="col-md-4 col-md-offset-3">
-							<a href="?ctl=ejemplar&id={IDLIBRO}&review=true" >
-								<button name="btnreseña" id="btnenviarreview" class="btn btn-default">Enviar</button>
-							</a>
+								<button id="btnenviarreview" class="btn btn-default">Enviar</button>
 							</div>
 						</form>
 
