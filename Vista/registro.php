@@ -6,19 +6,19 @@
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="nombre">Nombre</label>  
 					  <div class="col-md-6">
-					  <input id="nombre" name="nombre" type="text" placeholder="Ej. Juan Bernardo" class="form-control input-md" required="">    
+					  <input id="nombre" name="nombre" type="text" class="form-control input-md" required="">    
 					  </div>
 					</div>
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="apellidos">Apellidos</label>  
 					  <div class="col-md-6">
-					  <input id="apellidos" name="apellidos" type="text" placeholder="Ej. Morales Castañeda" class="form-control input-md" required="">    
+					  <input id="apellidos" name="apellidos" type="text" class="form-control input-md" required="">    
 					  </div>
 					</div>
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="Email">Email</label>  
 					  <div class="col-md-6">
-					  <input id="email" name="email" type="email" placeholder="" class="form-control input-md" required="">    
+					  <input id="email" name="email" type="email" placeholder="email@mail.com" class="form-control input-md" required="">    
 					  </div>
 					</div>
 					<div class="form-group">
