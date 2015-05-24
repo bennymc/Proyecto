@@ -175,7 +175,29 @@ class ejemplarMdl{
 		$conexion->close();
 	}
 
+	function verificarResena($id){
+		require('config.inc');
+		$conexion = new mysqli($servidor,$usuario,$pass,$bd);
+		if($conexion -> connect_errno){
+			echo "Hubo un error";
+			echo "<br>$conexion->connect_errno";
+		}
 
+		$idUser= $_SESSION['idUsuario'];
+		$consulta = "SELECT *
+				 FROM resena
+				 WHERE idLibros = '".$id."'
+				 AND  idUsuario = '".$idUser."'   ";
+		$resultado = $conexion->query($consulta);
+		$resultado = $resultado->fetch_row();
+		if($resultado!=NULL){
+			return true;
+		}else return false;
+
+
+
+		
+	}
 }
 
 ?>
