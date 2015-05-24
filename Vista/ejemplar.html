@@ -83,7 +83,9 @@
 		    	<h3 class="TituloGrande">Reseñas</h3>
 		    </div>
 	<!-- ************************************* MI RESEÑA ************************************* -->	    	
-			<div class="panel-body">	    
+			
+			<div class="panel-body">
+			{ESCRIBIRRESEÑA}	    
 		    	<div class="col-md-5">
 				    <div class="ec-stars-wrapper col-md-12">
 						<a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
@@ -97,15 +99,16 @@
 					  	<label class="col-md-12 control-label" for="reseña">Mi reseña</label>
 					  	<form method="post" class="col-md-12" action="?ctl=ejemplar&id={IDLIBRO}&review=true">                     
 					    	<textarea class="form-control" id="resena" name="resena"></textarea>
-							<div class="col-md-4 col-md-offset-3">
+							<div >
 								<button id="btnenviarreview" class="btn btn-default">Enviar</button>
 							</div>
 						</form>
 
 					</div>
 				</div>
+				{ENDESCRIBIRRESEÑA}
 	<!-- ************************************* RESEÑAS DE USUARIOS ************************************* -->		
-				<div class="col-md-7" id="userreview">
+				<div class="col-md-{TAM}" id="userreview">
 				    <div class="ec-stars-wrapper col-md-12">
 						<a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
 						<a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
