@@ -105,7 +105,9 @@
 					</div>
 				</div>
 	<!-- ************************************* RESEÑAS DE USUARIOS ************************************* -->		
-				<div class="col-md-7" id="userreview">
+				<div class="col-md-7">
+				{{RESEÑA}}
+				{{repite reseñas}}
 				    <div class="ec-stars-wrapper col-md-12">
 						<a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
 						<a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
@@ -115,67 +117,12 @@
 					</div>
 					<noscript>Necesitas tener habilitado javascript para poder votar</noscript>
 					<div class="form-group">
-					  	<label class="col-md-12 control-label" for="reseña"><a href="usuario.php">Reseña de el usuario Usuario1</a></label>
+					  	<label class="col-md-12 control-label" for="reseña"><a href="?ctl=usuario&id={{id}}">Reseña de el usuario {{Nombre}}</a></label>
 					  	<div class="col-md-10">                     
-					    	<textarea readonly class="form-control" id="reseña" name="reseña"></textarea>
+					    	<textarea readonly class="form-control" id="reseña" name="reseña">{{Texto}}</textarea>
 					  	</div>
 					</div>
-					<div class="ec-stars-wrapper col-md-12">
-						<a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
-						<a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
-						<a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
-						<a href="#" data-value="4" title="Votar con 4 estrellas">&#9733;</a>
-						<a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a>
-					</div>
-					<noscript>Necesitas tener habilitado javascript para poder votar</noscript>
-					<div class="form-group">
-					  	<label class="col-md-12 control-label" for="reseña1"><a href="usuario.php">Reseña de el usuario Usuario2</a></label>
-					  	<div class="col-md-10">                     
-					    	<textarea readonly class="form-control" id="reseña1" name="reseña"></textarea>
-					  	</div>
-					</div>
-					<div class="ec-stars-wrapper col-md-12">
-						<a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
-						<a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
-						<a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
-						<a href="#" data-value="4" title="Votar con 4 estrellas">&#9733;</a>
-						<a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a>
-					</div>
-					<noscript>Necesitas tener habilitado javascript para poder votar</noscript>
-					<div class="form-group">
-					  	<label class="col-md-12 control-label" for="reseña2"><a href="usuario.php">Reseña de el usuario Usuario3</a></label>
-					  	<div class="col-md-10">                     
-					    	<textarea readonly class="form-control" id="reseña2" name="reseña"></textarea>
-					  	</div>
-					</div>
-					<div class="ec-stars-wrapper col-md-12">
-						<a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
-						<a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
-						<a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
-						<a href="#" data-value="4" title="Votar con 4 estrellas">&#9733;</a>
-						<a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a>
-					</div>
-					<noscript>Necesitas tener habilitado javascript para poder votar</noscript>
-					<div class="form-group">
-					  	<label class="col-md-12 control-label" for="reseña3"><a href="usuario.php">Reseña de el usuario Usuario4</a></label>
-					  	<div class="col-md-10">                     
-					    	<textarea readonly class="form-control" id="reseña3" name="reseña"></textarea>
-					  	</div>
-					</div>
-					<div class="ec-stars-wrapper col-md-12">
-						<a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
-						<a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
-						<a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
-						<a href="#" data-value="4" title="Votar con 4 estrellas">&#9733;</a>
-						<a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a>
-					</div>
-					<noscript>Necesitas tener habilitado javascript para poder votar</noscript>
-					<div class="form-group">
-					  	<label class="col-md-12 control-label" for="reseña4"><a href="usuario.php">Reseña de el usuario Usuario5</a></label>
-					  	<div class="col-md-10">                     
-					    	<textarea readonly class="form-control" id="reseña4" name="reseña"></textarea>
-					  	</div>
-					</div>
+					{{termina repite}}
 					<a href="#" class="col-md-6">Siguiente<span class="glyphicon glyphicon-chevron-right"></span></a>
 				</div>
 			</div>

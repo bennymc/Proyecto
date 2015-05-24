@@ -12,6 +12,10 @@ class ejemplarMdl{
 	public $idGenero;
 	public $TituloOriginal;
 	public $Portada;
+	public $idReviews;
+	public $idUsuarioReview;
+	public $nombreUsuarioReview;
+	public $textoReview;
 
 	function show($id){
 		require('config.inc');
@@ -31,6 +35,31 @@ class ejemplarMdl{
 		$this->AñoEdicion = $this->Datos[4];
 		$this->ISBN = $this->Datos[5];
 		$this->Portada = $this->Datos[6];
+
+		$consulta = "SELECT idResena
+				 FROM resena
+				 WHERE idLibros = '".$id."'";
+		$resultado = $conexion->query($consulta);
+		if($conexion->errno){
+			die("Tu query tiene un error
+				<br>$conexion->error");
+		}
+		while($fila=$resultado->fetch_assoc()){
+			$this->idReviews[]=$fila["idResena"];
+		}
+
+		foreach ($this->idReviews as $idReview) {
+			$consulta = "SELECT r.idUsuario, u.user, r.resena 
+					 FROM resena r
+					 JOIN usuario u on r.idUsuario=u.idUsuario  
+					 WHERE r.idResena = '".$idReview."'";
+			$resultado = $conexion->query($consulta);
+			while($fila=$resultado->fetch_assoc()){	
+				$this->idUsuarioReview[] = $fila['idUsuario'];
+				$this->nombreUsuarioReview[] = $fila['user'];
+				$this->textoReview[] = $fila['resena'];
+			}	
+		}
 
 		$consulta = "SELECT idAutores
 				 FROM autores_has_libros 

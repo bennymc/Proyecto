@@ -82,6 +82,35 @@ class ejemplarCtl{
 
 			
 			$vista = strtr($vista, $diccionario);
+
+			$i = strpos($vista,'{{repite reseñas');
+			$f = strpos($vista, '}}', $i);
+			$ff = strpos($vista, '{{termina repite}}', $f);
+			$bloque = substr($vista, $i,$ff-$i+18);
+			//var_dump($bloque);
+
+			$repetir_cad = substr($vista, $f+2, $ff-$f-2);
+			//echo $repetir_cad;
+			
+			$vista = str_replace($bloque,"",$vista);
+			
+			$reviews="";
+
+			for($x=0; $x < count($this->mdl->idReviews); $x++) {
+				$diccionarioResenas= array(
+									'{{Nombre}}' => $this->mdl->nombreUsuarioReview[$x],
+									'{{id}}' => $this->mdl->idUsuarioReview[$x],
+									'{{Texto}}' => $this->mdl->textoReview[$x]
+										);
+				$aux = $repetir_cad;
+				$aux = strtr($aux,$diccionarioResenas);
+				$reviews = $reviews.$aux;
+			}
+			
+		    $vista = str_replace("{{RESEÑA}}",$reviews,$vista);
+
+
+
 			$vista = $this->dicc->headerfinal . $vista. $footer;
 			echo $vista;
 		}else
