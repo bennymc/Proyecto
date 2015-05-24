@@ -67,6 +67,7 @@ class diccionarioM{
 				$this->CargarHeader();
 				$vista = file_get_contents("Vista/inicio.html");				
 				$footer = file_get_contents("Vista/footer.html");
+				
 
 				if(isset($_SESSION['usuario'])){
 
@@ -102,8 +103,37 @@ class diccionarioM{
 					$vista = strtr($vista,$diccionario);
 				}
 				
+				require_once("Modelo/InicioMdl.php");
+				$this->mdl=new popularesMdl();
+				$this->mdl->show();
+
+
+				$i = strpos($vista,'{POPUS');
+				$f = strpos($vista, '}',$i);
+				$ff = strpos($vista, '{ENDPOPUS}',$f);					
+				$frm = substr($vista, $f+2,$ff-($f+2));
+				
+				
+				$popus="";
+				for($x=0; $x < count($this->mdl->ids); $x++) {
+								$diccionariolibrero= array(
+													'{IDLIBRO}' => $this->mdl->ids[$x],
+													'{IMGLIBRO}' => $this->mdl->urlLibros[$x]
+														);
+								$aux = $frm;
+								$aux = strtr($aux,$diccionariolibrero);
+								$popus= $popus.$aux;
+							}
+
+							$vista  = str_replace($frm,$popus,$vista );	
+
+				$diccionario = array(
+								'{POPUS}'=> "",
+								'{ENDPOPUS}'=> ""
+								);
+					$vista = strtr($vista,$diccionario);
+
 				$vista = $this->headerfinal  . $vista . $footer;
-				//Reemplazo con un diccionario
 				echo $vista;
 	}
 	
