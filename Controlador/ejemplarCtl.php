@@ -52,7 +52,16 @@ class ejemplarCtl{
 					$frm = substr($vista, $f+2,$ff-($f+2));
 					$vista  = str_replace($frm,"",$vista );
 				}
-				$tam=7;
+				$resena=$this->mdl->verificarResena($_GET['id']);
+				if($resena){
+					$i = strpos($vista,'{ESCRIBIRRESEÑA');
+					$f = strpos($vista, '}',$i);
+					$ff = strpos($vista, '{ENDESCRIBIRRESEÑA}',$f);					
+					$frm = substr($vista, $f+2,$ff-($f+2));
+					$vista  = str_replace($frm,"",$vista );
+					$tam=12;
+				}
+				else $tam=7;;
 			}else{
 				$i = strpos($vista,'{ADD');
 				$f = strpos($vista, '}',$i);
