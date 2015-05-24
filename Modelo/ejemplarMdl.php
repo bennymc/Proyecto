@@ -73,6 +73,35 @@ class ejemplarMdl{
 		$resultado = $conexion->query($consulta);
 		$this->Datos = $resultado->fetch_row();
 		$this->Genero = $this->Datos[0];
+
+		$conexion->close();
+	}
+
+
+	function verificarLibrero($id){
+
+		require_once('config.inc');
+		$conexion = new mysqli('localhost','root', '' ,'book2');
+		if($conexion -> connect_errno){
+			echo "Hubo un error";
+			echo "<br>$conexion->connect_errno";
+		}
+
+		$idUser= $_SESSION['idUsuario'];
+		$consulta = "SELECT *
+				 FROM usuario_has_libros
+				 WHERE idLibros = '".$id."'
+				 AND  idUsuario = '".$idUser."'   ";
+		$resultado = $conexion->query($consulta);
+		$resultado = $resultado->fetch_row();
+		if($resultado!=NULL){
+			return true;
+		}else return false;
+
+		$conexion->close();
+
 	}
 
 }
+
+?>

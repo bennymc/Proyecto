@@ -9,8 +9,35 @@ class ejemplarCtl{
 			$this->dicc = new diccionarioM();
 	}
 	public function ejecutar(){
+
+
 		if(isset($_GET['id']) && $this->validateInteger($_GET['id'])){
 			$this->mdl->show($_GET['id']);
+			$vista = file_get_contents("Vista/ejemplar.html");
+			$this->dicc->CargarHeader();			
+			$footer = file_get_contents("Vista/footer.html");
+			
+
+			if(isset($_SESSION['usuario'])){
+				$agregado=$this->mdl->verificarLibrero($_GET['id']);
+				if($agregado){
+					$i = strpos($vista,'{ADD');
+					$f = strpos($vista, '}',$i);
+					$ff = strpos($vista, '{ENDADD}',$f);					
+					$frm = substr($vista, $f+2,$ff-($f+2));
+					$vista  = str_replace($frm,"",$vista );
+				}
+
+			}else{
+				$i = strpos($vista,'{ADD');
+				$f = strpos($vista, '}',$i);
+				$ff = strpos($vista, '{ENDADD}',$f);					
+				$frm = substr($vista, $f+2,$ff-($f+2));
+				$vista  = str_replace($frm,"",$vista );
+			}
+
+			
+
 			$diccionario = array(
 				'{{Portada}}' => $this->mdl->Portada,
 				'{{Titulo}}' => $this->mdl->Titulo,
@@ -22,18 +49,20 @@ class ejemplarCtl{
 				'{{Año}}' => $this->mdl->AñoEdicion,
 				'{{ISBN}}' => $this->mdl->ISBN,
 				'{{Genero}}' => $this->mdl->Genero,
-				'{{idGenero}}' => $this->mdl->idGenero);
+				'{{idGenero}}' => $this->mdl->idGenero,
+				'{ADD}'=> "",
+				'{ENDADD}'=> ""
+			);
 
-			$vista = file_get_contents("Vista/ejemplar.html");
-			$this->dicc->CargarHeader();			
-			$footer = file_get_contents("Vista/footer.html");
+			
 			$vista = strtr($vista, $diccionario);
 			$vista = $this->dicc->headerfinal . $vista. $footer;
 			echo $vista;
 		}else
 		{
-			http_response_code(404);
+			header('Location: ?ctl=inicio');	
 		}
+
 	}
 	function validateInteger($valor){
 		return is_int((int)$valor);
