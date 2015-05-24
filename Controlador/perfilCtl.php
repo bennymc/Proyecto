@@ -74,7 +74,7 @@ class perfilCtl{
 					$i = strpos($vista,'{repite');
 					$f = strpos($vista, '}',$i);
 					$ff = strpos($vista, '{end repite}',$f);
-					$bloque = substr($vista, $i,$f-($ff+4));
+					$bloque = substr($vista, $i,$f-($ff));
 					//echo $bloque;
 					$repetir_cad = substr($vista, $f+2,$ff-($f+2));
 					$vista = str_replace($bloque,"",$vista);
@@ -88,7 +88,7 @@ class perfilCtl{
 								$auxTitulo=$this->mdl->titulos[$x];	
 								if(strlen($auxTitulo)> 15 )
 								{
-									$auxTitulo= substr($auxTitulo, 0,13);
+									$auxTitulo= substr($auxTitulo, 0,10);
 									$auxTitulo=$auxTitulo."...";
 								}
 
@@ -99,7 +99,8 @@ class perfilCtl{
 													'{titulo}' => $auxTitulo,
 													'{imglibro}' => $this->mdl->portadas[$x],
 													'{status}'=> $this->mdl->estado[$x],
-													'{{id}}' => $this->mdl->id[$x]
+													'{{id}}' => $this->mdl->id[$x],
+
 														);
 								$aux = $repetir_cad;
 								$aux = strtr($aux,$diccionariolibrero);
@@ -107,7 +108,10 @@ class perfilCtl{
 							}
 					}
 					
-					
+					$diccionario = array(
+										'{end repite}'=>""
+										);
+					$vista= strtr($vista,$diccionario);
 				    $vista = str_replace("{LIBRERO}",$librero,$vista);
 					$vista =  $vista. $modalstatus . $footer;
 					//Mostrar la vista
