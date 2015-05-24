@@ -1,9 +1,9 @@
-<!-- ***************** GENERO **************************** -->
+<!-- ***************** EDITORIAL - GENERO **************************** -->
 <!-- ***************** INICIA ASIDE IZQ **************************** -->
 	<aside class="col-md-3">
 		<div class="panel panel-success">
 			<div class="panel-heading">
-			    <h3 class="TituloGrande">{{Titulo}}</h3>
+			    <h3 class="TituloGrande">{{Editorial}}</h3>
 			</div>
 			<div class="panel-body">
 			    <p>Descripción de la editorial.</p>
@@ -15,7 +15,7 @@
 <section class="col-md-6">
     	<div class="panel panel-success">
 			<div class="panel-heading">
-		     	<h1 class="Contenedoresdelibros">Libros de {{Titulo}}</h1>
+		     	<h1 class="Contenedoresdelibros">{{Editorial}} - {{Genero}}</h1>
 			</div>
 			<div class="panel-body" id="contenedorgenero">
 			    <div class="col-md-12">
@@ -23,7 +23,6 @@
 				    <select id="ordenar" name="ordenar">
 				      	<option value="titulo">Titulo</option>
 				      	<option value="autor">Autor</option>
-				      	<option value="genero">Genero</option>
 				      	<option value="año">Año</option>
 				    </select>
 				</div>
@@ -51,7 +50,7 @@
 			<div class="panel-body">
 				<ul>
 					{{GENEROS}}
-				{{repite generos}}
+					{{repite generos}}
 					<li><a href="?ctl=editorialGenero&idEditorial={{idEditorial}}&idGenero={{idGenero}}">{{genero}}</a></li>
 					{{termina repite1}}
 				</ul>
