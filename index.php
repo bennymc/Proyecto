@@ -1,4 +1,5 @@
 <?php  session_start();
+error_reporting(E_ALL);
 	if(isset($_GET['ctl'])){
 
 		switch($_GET["ctl"]){

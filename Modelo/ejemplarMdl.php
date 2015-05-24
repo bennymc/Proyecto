@@ -132,7 +132,7 @@ class ejemplarMdl{
 		}
 		$idUser= $_SESSION['idUsuario'];
 		$calificacion="3";
-		$fecha=getdate();
+		$fecha=date("d/m/Y");
 		$consulta = "INSERT INTO resena (idUsuario , idLibros , resena, calificacion, fecha)
 				 VALUES (
 				 	\"$idUser\",
