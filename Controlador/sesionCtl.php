@@ -48,6 +48,12 @@
 				}else
 				{
 					$this->dicc->CargarInicio();
+					echo  '
+					<div class="alert alert-dismissible alert-danger" id="modalContent">
+					  <button type="button" class="close" data-dismiss="alert">×</button>
+					  <strong>ERROR!</strong><p>Usuario o Contraseña incorrecta</p> 
+					</div>
+					';
 				}
 			
 				
