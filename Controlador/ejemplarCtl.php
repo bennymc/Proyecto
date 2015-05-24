@@ -23,6 +23,19 @@ class ejemplarCtl{
 			}else header('Location: ?ctl=inicio');	
 		}
 
+		if(isset($_GET['review'])){
+			if($_GET['review']=="true"){
+				$review = $_POST('reseña');
+				var_dump($review);
+				echo '
+				<div class="alert alert-dismissible alert-success" id="modalContent">
+				  <button type="button" class="close" data-dismiss="alert">×</button>
+				  <strong>EXITO!</strong><p>Tu reseña ha sido guardada.</p> 
+				</div>
+			';
+			}
+		}
+
 		if(isset($_GET['id']) && $this->validateInteger($_GET['id'])){
 			$this->mdl->show($_GET['id']);
 			$vista = file_get_contents("Vista/ejemplar.html");

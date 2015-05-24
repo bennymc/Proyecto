@@ -19,13 +19,10 @@ class popularesMdl{
 			die("Tu query tiene un error
 				<br>$conexion->error");
 		}else{
-			$x=0;
 			while($fila=$resultado->fetch_assoc()){
 				$this->ids[]=$fila["idLibros"];
-
 			}
 		}
-		
 		$this->CargaPopulares();
 		$conexion->close();	
 	}

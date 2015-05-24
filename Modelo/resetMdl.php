@@ -12,8 +12,6 @@ class resetMdl{
 				echo "<br>$conexion->connect_errno";
 			}
 
-			echo $emailusername;
-
 			$consulta = "SELECT idUsuario FROM usuario WHERE email = '".$email."'";	
 			//Ejecuto el QUERY para datos de usuario
 			$resultado = $conexion->query($consulta);
