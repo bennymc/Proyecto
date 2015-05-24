@@ -36,9 +36,9 @@ class resetMdl{
 		}
 		var_dump($password);
 		$query = 
-			"UPDATE usuarios
-			SET contrasena = $password
-			WHERE idUsuario = $this->$idUsuario";
+			"UPDATE usuario
+			SET contrasena = '".$password."'
+			WHERE idUsuario = '".$this->idUsuario."'";
 
 			
 		$resultado = $conexion->query($query);
