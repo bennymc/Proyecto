@@ -45,8 +45,8 @@ class CatalogoMdl{
 			}
 		}
 
-		$consulta = "SELECT nombre
-				 FROM generos
+		$consulta = "SELECT idGeneros , nombre
+				 FROM generos 
 				 WHERE idGeneros 
 				 IN (
 				 	\"$random[0]\",
@@ -63,6 +63,7 @@ class CatalogoMdl{
 		}
 		while($fila=$resultado->fetch_assoc()){
 			$this->nombresR[]=$fila["nombre"];
+			$this->idGenero[]=$fila["idGeneros"];
 		}
 		
 		$conexion->close();	

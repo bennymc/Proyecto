@@ -55,7 +55,7 @@ class catalogoCtl{
 				for($x=0; $x < 5; $x++) {
 								$diccionariog= array(
 													'{{NOMBREGENERO}}' => $this->mdl->nombresR[$x],
-													'{{IDGENERO}}' =>  $this->mdl->random[$x]
+													'{{IDGENERO}}' =>  $this->mdl->idGenero[$x]
 														);
 								$aux = $frm;
 								$aux = strtr($aux,$diccionariog);
