@@ -10,7 +10,7 @@ class editorialMdl{
 	public $Datos;
 
 	function show($id){
-		require_once('config.inc');
+		require('config.inc');
 		$conexion = new mysqli($servidor,$usuario,$pass,$bd);
 		if($conexion -> connect_errno){
 			echo "Hubo un error";
@@ -66,7 +66,7 @@ class editorialMdl{
 	}
 
 	function show2($idEditorial, $idGenero){
-		require_once('config.inc');
+		require('config.inc');
 		$conexion = new mysqli($servidor,$usuario,$pass,$bd);
 		if($conexion -> connect_errno){
 			echo "Hubo un error";

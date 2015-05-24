@@ -5,7 +5,7 @@ class registroMdl{
 
 	function alta($nombre, $apellidos, $sexo, $correo, $intereses, $username, $password, $bday){
 
-			require_once('config.inc');
+			require('config.inc');
 			$conexion = new mysqli($servidor,$usuario,$pass,$bd);
 			if($conexion -> connect_errno){
 				echo "Hubo un error";

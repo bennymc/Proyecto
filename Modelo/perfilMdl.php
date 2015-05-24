@@ -25,8 +25,8 @@ class perfilMdl{
 
 function show($id){
 
-		require_once('config.inc');
-		$conexion = new mysqli('localhost','root', '' ,'book2');
+		require('config.inc');
+		$conexion = new mysqli($servidor,$usuario,$pass,$bd);
 		if($conexion -> connect_errno){
 			echo "Hubo un error";
 			echo "<br>$conexion->connect_errno";
@@ -92,8 +92,8 @@ function show($id){
 
 
 	function cambiastatus($idLibro ,$status){
-		require_once('config.inc');
-		$conexion = new mysqli('localhost','root', '' ,'book2');
+		require('config.inc');
+		$conexion = new mysqli($servidor,$usuario,$pass,$bd);
 		if($conexion -> connect_errno){
 			echo "Hubo un error";
 			echo "<br>$conexion->connect_errno";

@@ -4,7 +4,7 @@ class CatalogoMdl{
 	public $Generos;
 
 	function show(){
-		require_once('config.inc');
+		require('config.inc');
 		$conexion = new mysqli($servidor,$usuario,$pass,$bd);
 		if($conexion -> connect_errno){
 			echo "Hubo un error";

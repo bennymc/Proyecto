@@ -14,7 +14,7 @@ class editarMdl{
 
 
 	function CargarDatos(){
-		require_once('config.inc');
+		require('config.inc');
 		$conexion = new mysqli($servidor,$usuario,$pass,$bd);
 		if($conexion -> connect_errno){
 			echo "Hubo un error";
@@ -80,7 +80,7 @@ class editarMdl{
 
 
 	function actualiza($nombre, $apellidos, $sexo,  $intereses,  $bday, $destacado){
-			require_once('config.inc');
+			require('config.inc');
 			$conexion = new mysqli($servidor,$usuario,$pass,$bd);
 			if($conexion -> connect_errno){
 				echo "Hubo un error";
@@ -155,7 +155,7 @@ class editarMdl{
 
 
 	function cambiar($old,$new){
-		require_once('config.inc');
+		require('config.inc');
 			$conexion = new mysqli($servidor,$usuario,$pass,$bd);
 			if($conexion -> connect_errno){
 				echo "Hubo un error";
