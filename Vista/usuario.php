@@ -1,15 +1,13 @@
-<?php
-	include "includes/navbar.html";
-?>
+
 <!-- ****************************** INICIA ASIDE ***************************************** -->
 	<aside class="col-md-3">
 	<!-- ****************************** FOTO Y NOMBRE EN PERFIL ************************************* -->	
 		<div class="panel panel-success">
 		  	<div class="panel-heading">
-				<h1 class="titulosenperfil">USUARIO</h1>
+				<h1 class="titulosenperfil">{nombre}</h1>
 			</div>
 			<div class="panel-body ">
-				<img class="center-block" id="fotodeperfil" src="http://placehold.it/200x200" alt="imagen de perfil">
+				<img class="center-block" id="fotodeperfil" src="www/images/Usuarios/{foto}" alt="imagen de perfil">
 			</div>
 		  	<div>
 				<div class="bs-example">
@@ -40,10 +38,10 @@
 	<!-- ****************************** LIBRO DESTACADO ************************************* -->
 		<div class="panel panel-success">
 			<div class="panel-heading">
-				<h1 class="titulosenperfil">Su Libro Destacado</h1>
+				<h1 class="titulosenperfil">{libroD}</h1>
 			</div>
 			<div class="panel-body ">
-				<a href="ejemplar.php"><img class="center-block" id="librodestacado" src="http://placehold.it/200x300" alt="Libro Destacado"></a>
+				<a href="?ctl=ejemplar&id={{idDestacado}}"><img class="center-block" id="librodestacado" src={imglibroD}  alt="Libro Destacado"></a>
 			</div>
 		</div>
 	<!-- ****************************** DESCRIPCION ************************************* -->		
@@ -52,7 +50,7 @@
 				<h1 class="titulosenperfil">Su Descripcion</h1>
 			</div>
 			<div class="panel-body ">
-			   <p>Cosas sobre el usuario.</p> 
+			   <p> {descripcion}</p> 
 			</div>
 		</div>		
 	</aside>
@@ -68,98 +66,27 @@
 			    <div class="col-md-12">
 			    	<label  for="ordenar">Ordenar Libros por:</label>
 				    <select id="ordenar" name="ordenar">
-				      <option value="titulo">Titulo</option>
-				      <option value="autor">Autor</option>
-				      <option value="editorial">Editorial</option>
-				      <option value="año">Año</option>
+				      	<option value="titulo">Titulo</option>
+				      	<option value="autor">Autor</option>
+				      	<option value="editorial">Editorial</option>
+				      	<option value="año">Año</option>
 				    </select>
 				</div>
-				<div class="col-md-12">
-					<p> Todos los libros que el usuario agrega.<br><br></p>
-					<div class="col-md-2 librosencontenedor">
-						<a href="ejemplar.php" class="center-block">TITULO</a>
-					 	<a href="ejemplar.php"><img class="center-block" src="http://placehold.it/100x150" alt="Libro"></a>
-					 	<p>STATUS</p>
-					</div>
-					<div class="col-md-2 librosencontenedor">
-						<a href="ejemplar.php" class="center-block">TITULO</a>
-					 	<a href="ejemplar.php"><img class="center-block" src="http://placehold.it/100x150" alt="Libro"></a>
-					 	<p>STATUS</p>
-					</div>
-					<div class="col-md-2 librosencontenedor">
-						<a href="ejemplar.php" class="center-block">TITULO</a>
-					 	<a href="ejemplar.php"><img class="center-block" src="http://placehold.it/100x150" alt="Libro"></a>
-					 	<p>STATUS</p>
-					</div>
-					<div class="col-md-2 librosencontenedor">
-						<a href="ejemplar.php" class="center-block">TITULO</a>
-					 	<a href="ejemplar.php"><img class="center-block" src="http://placehold.it/100x150" alt="Libro"></a>
-					 	<p>STATUS</p>
-					</div>
-					<div class="col-md-2 librosencontenedor">
-						<a href="ejemplar.php" class="center-block">TITULO</a>
-					 	<a href="ejemplar.php"><img class="center-block" src="http://placehold.it/100x150" alt="Libro"></a>
-					 	<p>STATUS</p>
-					</div>
-					<div class="col-md-2 librosencontenedor">
-						<a href="ejemplar.php" class="center-block">TITULO</a>
-					 	<a href="ejemplar.php"><img class="center-block" src="http://placehold.it/100x150" alt="Libro"></a>
-					 	<p>STATUS</p>
-					</div>
-					<div class="col-md-2 librosencontenedor">
-						<a href="ejemplar.php" class="center-block">TITULO</a>
-					 	<a href="ejemplar.php"><img class="center-block" src="http://placehold.it/100x150" alt="Libro"></a>
-					 	<p>STATUS</p>
-					</div>
-					<div class="col-md-2 librosencontenedor">
-						<a href="ejemplar.php" class="center-block">TITULO</a>
-					 	<a href="ejemplar.php"><img class="center-block" src="http://placehold.it/100x150" alt="Libro"></a>
-					 	<p>STATUS</p>
-					</div>
-					<div class="col-md-2 librosencontenedor">
-						<a href="ejemplar.php" class="center-block">TITULO</a>
-					 	<a href="ejemplar.php"><img class="center-block" src="http://placehold.it/100x150" alt="Libro"></a>
-					 	<p>STATUS</p>
-					</div>
-					<div class="col-md-2 librosencontenedor">
-						<a href="ejemplar.php" class="center-block">TITULO</a>
-					 	<a href="ejemplar.php"><img class="center-block" src="http://placehold.it/100x150" alt="Libro"></a>
-					 	<p>STATUS</p>
-					</div>
-					<div class="col-md-2 librosencontenedor">
-						<a href="ejemplar.php" class="center-block">TITULO</a>
-					 	<a href="ejemplar.php"><img class="center-block" src="http://placehold.it/100x150" alt="Libro"></a>
-					 	<p>STATUS</p>
-					</div>
-					<div class="col-md-2 librosencontenedor">
-						<a href="ejemplar.php" class="center-block">TITULO</a>
-					 	<a href="ejemplar.php"><img class="center-block" src="http://placehold.it/100x150" alt="Libro"></a>
-					 	<p>STATUS</p>
-					</div>
-					<div class="col-md-2 librosencontenedor">
-						<a href="ejemplar.php" class="center-block">TITULO</a>
-					 	<a href="ejemplar.php"><img class="center-block" src="http://placehold.it/100x150" alt="Libro"></a>
-					 	<p>STATUS</p>
-					</div>
-					<div class="col-md-2 librosencontenedor">
-						<a href="ejemplar.php" class="center-block">TITULO</a>
-					 	<a href="ejemplar.php"><img class="center-block" src="http://placehold.it/100x150" alt="Libro"></a>
-					 	<p>STATUS</p>
-					</div>
-					<div class="col-md-2 librosencontenedor">
-						<a href="ejemplar.php" class="center-block">TITULO</a>
-					 	<a href="ejemplar.php"><img class="center-block" src="http://placehold.it/100x150" alt="Libro"></a>
-					 	<p>STATUS</p>
-					</div>
+				<div class="col-md-12" id="ContenedorPerfil">
+					{LIBRERO}
+					{repite libro}
+					<div class="col-md-2 librosencontenedor" id="libroP">	
+					<a href="?ctl=ejemplar&id={{id}}" class="center-block">{titulo}</a>
+					<a href="?ctl=ejemplar&id={{id}}" class="center-block"><img src= {imglibro} alt="Libro"></a>
+					
+					</div>					
+					{end repite} 
 				</div>				
 			</div>
 		</div>
 		
     </section>
-<!-- ************************************* FIN SECTION ************************************* -->
-<?php
-	include "includes/footer.html";
-?>
+
 
 
 	

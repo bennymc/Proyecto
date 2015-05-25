@@ -76,6 +76,10 @@ error_reporting(E_ALL);
 			require_once("Controlador/sesionCtl.php");
 			$ctl = new logoutCtl();
 			break;
+		case "usuario":
+			require_once("Controlador/usuarioCtl.php");
+			$ctl = new usuarioCtl();
+			break;
 		default: 
 			http_response_code(404);
 			//header('HTTP/1.0 404 Not Found');
