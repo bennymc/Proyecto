@@ -69,6 +69,14 @@ class registroCtl{
 		require_once("Controlador/diccionariomaestro.php");
 		$this->dicc = new diccionarioM(); 	
 		
+		if(isset($_GET['newUser'])){
+			echo '
+				<div class="alert alert-dismissible alert-danger" id="modalContent">
+				  <button type="button" class="close" data-dismiss="alert">×</button>
+				  <strong>ERROR!</strong><p>Usuario o Correo ya registrado</p> 
+				</div>
+			';
+		}
 		
 		//session_start();
 		if(isset($_SESSION['usuario'] )){
@@ -100,19 +108,18 @@ class registroCtl{
 
 							
 							//echo "<br>debug: Va a cargar la vista en base a lo devuelto por el modelo";
-							if($resultado!==FALSE){
-								//Procesar la vista
+							if($resultado==false){
+								header('Location: ?ctl=registro&newUser=false');		
+								
 
-								//Obtener la vista
-								//session_start();
+							}
+							else{
 								$_SESSION['usuario']   = $username;
 								$_SESSION['idUsuario'] = $this->modelo->id;
 								
 								$this->dicc->CargarInicio();
-
+								
 							}
-							else echo "algo salio mal";
-								//require_once("Vista/Error.html");
 			}
 
 		} 	
