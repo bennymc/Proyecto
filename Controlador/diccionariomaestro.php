@@ -133,6 +133,38 @@ class diccionarioM{
 								);
 					$vista = strtr($vista,$diccionario);
 
+					//RESEÑAS
+				$this->mdl->Cargaresenas();
+				$i = strpos($vista,'{RESENAS');
+				$f = strpos($vista, '}',$i);
+				$ff = strpos($vista, '{ENDRESENAS}',$f);					
+				$frm = substr($vista, $f+2,$ff-($f+2));
+				
+				
+				$popus="";
+				for($x=0; $x < count($this->mdl->resena); $x++) {
+								$diccionariolibrero= array(
+													'{LIBRONAME}' => $this->mdl->libroname[$x],
+													'{USERNAME}' => $this->mdl->username[$x],
+													'{LIBROID}' => $this->mdl->idLibros[$x],
+													'{USERID}' => $this->mdl->idUsuarios[$x],
+													'{RESENA}' => $this->mdl->resena[$x]
+														);
+								$aux = $frm;
+								$aux = strtr($aux,$diccionariolibrero);
+								$popus= $popus.$aux;
+							}
+
+							$vista  = str_replace($frm,$popus,$vista );	
+
+				$diccionario = array(
+								'{RESENAS}'=> "",
+								'{ENDRESENAS}'=> ""
+								);
+					$vista = strtr($vista,$diccionario);
+
+
+
 				$vista = $this->headerfinal  . $vista . $footer;
 				echo $vista;
 	}
