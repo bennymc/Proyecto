@@ -62,12 +62,27 @@ class busquedaCtl{
 
 	public function ejecutar(){
 		require_once("Controlador/diccionariomaestro.php");
-			$this->dicc = new diccionarioM(); 	
-		$vista = file_get_contents("Vista/busqueda.php");
-		$this->dicc->CargarHeader();
-		$footer = file_get_contents("Vista/footer.html");
-		$vista = $this->dicc->headerfinal . $vista . $footer;
-		echo $vista;
+			$this->dicc = new diccionarioM();
+
+		require_once("Modelo/buscarMdl.php");
+			$this->modelo = new buscarMdl();
+		$this->modelo->buscar($_POST['buscar']);
+		$id = $this->modelo->idEncontrado;
+		if($this->modelo->bandera == 0){
+			$vista = file_get_contents("Vista/busqueda.html");
+			$this->dicc->CargarHeader();
+			$footer = file_get_contents("Vista/footer.html");
+			$vista = $this->dicc->headerfinal . $vista . $footer;
+			echo $vista;
+		}else if($this->modelo->bandera == 1){
+			header('Location: ?ctl=usuario&id='.$id);
+		}else if($this->modelo->bandera == 2){
+			header('Location: ?ctl=ejemplar&id='.$id);
+		}else if($this->modelo->bandera == 3){
+			header('Location: ?ctl=ejemplar&id='.$id);
+		}else if($this->modelo->bandera == 4){
+			header('Location: ?ctl=usuario&id='.$id);
+		}
 	}
 }
 

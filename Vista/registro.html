@@ -1,6 +1,6 @@
 
 	    <section id="formulario" class="col-md-4 col-md-offset-4">
-			<form class="form-horizontal" method="post" onsubmit="return validacion()"  enctype="multipart/form-data">
+			<form class="form-horizontal" method="post" onsubmit="return validacion() & cifrar()"  enctype="multipart/form-data">
 				<fieldset>
 					<legend>Registro de nuevo usuario</legend>
 					<div class="form-group">
@@ -68,6 +68,12 @@
 				</fieldset>
 			</form>
 		</section>
-
+<script src="www/js/sha1.js"></script>
+<script>
+		function cifrar(){
+			var input_pass = document.getElementById("password");
+			input_pass.value = sha1(input_pass.value);
+		}
+</script>
 
 	

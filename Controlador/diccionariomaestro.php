@@ -172,7 +172,7 @@ class diccionarioM{
 	function CargarRegistro(){
 
 				$this->CargarHeader();
-				$vista = file_get_contents("Vista/registro.php");
+				$vista = file_get_contents("Vista/registro.html");
 				$footer = file_get_contents("Vista/footer.html");
 				$vista = $this->headerfinal  . $vista . $footer;
 
