@@ -48,18 +48,21 @@ class ejemplarMdl{
 			$this->idReviews[]=$fila["idResena"];
 		}
 
-		foreach ($this->idReviews as $idReview) {
-			$consulta = "SELECT r.idUsuario, u.user, r.resena 
-					 FROM resena r
-					 JOIN usuario u on r.idUsuario=u.idUsuario  
-					 WHERE r.idResena = '".$idReview."'";
-			$resultado = $conexion->query($consulta);
-			while($fila=$resultado->fetch_assoc()){	
-				$this->idUsuarioReview[] = $fila['idUsuario'];
-				$this->nombreUsuarioReview[] = $fila['user'];
-				$this->textoReview[] = $fila['resena'];
-			}	
+		if(count($this->idReviews) > 0){
+			foreach ($this->idReviews as $idReview) {
+				$consulta = "SELECT r.idUsuario, u.user, r.resena 
+						 FROM resena r
+						 JOIN usuario u on r.idUsuario=u.idUsuario  
+						 WHERE r.idResena = '".$idReview."'";
+				$resultado = $conexion->query($consulta);
+				while($fila=$resultado->fetch_assoc()){	
+					$this->idUsuarioReview[] = $fila['idUsuario'];
+					$this->nombreUsuarioReview[] = $fila['user'];
+					$this->textoReview[] = $fila['resena'];
+				}	
+			}
 		}
+
 
 		$consulta = "SELECT idAutores
 				 FROM autores_has_libros 

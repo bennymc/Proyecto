@@ -144,14 +144,13 @@ class recuperaCtl{
 			$resultado = $this->modelo->valida($email);
 			
 			if($resultado!==FALSE){
-				$resultado = $this->modelo->cambia($token);
 
 				require("www/includes/class.phpmailer.php");
 
 				//instanciamos un objeto de la clase phpmailer al que llamamos 
 				//por ejemplo mail
 				$mail = new PHPMailer();
-
+				var_dump($mail->Host);
 				//Definimos las propiedades y llamamos a los métodos 
 				//correspondientes del objeto mail
 
@@ -165,14 +164,14 @@ class recuperaCtl{
 				$mail->Mailer = "smtp";
 
 				//Asignamos a Host el nombre de nuestro servidor smtp
-				$mail->Host = $this->modelo->emailhost;
+				$mail->Host = "mail.bincat.mx";
 
 				//Le indicamos que el servidor smtp requiere autenticación
 				$mail->SMTPAuth = true;
 
 				//Le decimos cual es nuestro nombre de usuario y password
-				$mail->Username = $this->modelo->emailusername;
-				$mail->Password = $this->modelo->emailpassword;
+				$mail->Username = "benny@bincat.mx";
+				$mail->Password = "benny2015";
 
 				//Indicamos cual es nuestra dirección de correo y el nombre que 
 				  //queremos que vea el usuario que lee nuestro correo
@@ -195,19 +194,6 @@ class recuperaCtl{
 				  //se envia el mensaje, si no ha habido problemas 
 				  //la variable $exito tendra el valor true
 				  $exito = $mail->Send();
-
-				  //Si el mensaje no ha podido ser enviado se realizaran 4 intentos mas como mucho 
-				  //para intentar enviar el mensaje, cada intento se hara 5 segundos despues 
-				  //del anterior, para ello se usa la funcion sleep	
-				  $intentos=1; 
-				  while ((!$exito) && ($intentos < 5)) {
-					sleep(5);
-				     	//echo $mail->ErrorInfo;
-				     	$exito = $mail->Send();
-				     	$intentos=$intentos+1;	
-					
-				   }
-				 
 						
 				   if(!$exito)
 				   {
@@ -221,6 +207,7 @@ class recuperaCtl{
 				   }
 				   else
 				   {
+				   	$resultado = $this->modelo->cambia($token);
 					echo '
 						<div class="alert alert-dismissible alert-success" id="modalContent">
 						  <button type="button" class="close" data-dismiss="alert">×</button>
