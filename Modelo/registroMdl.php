@@ -13,18 +13,18 @@ class registroMdl{
 			}
 			$consulta = "SELECT * FROM usuario WHERE user = \"$username\" OR  email = \"$correo\"";
 			$resultado = $conexion->query($consulta);
-			
+			$resultado = $resultado->fetch_row();
 			if($resultado!=NULL){
 				return false;
 			}else {
 			
 
-				$consulta = "SELECT MAX(idUsuario) AS id FROM usuario";	
+			$consulta = "SELECT MAX(idUsuario) AS id FROM usuario";	
 			//Ejecuto el QUERY para datos de usuario
 			$resultado = $conexion->query($consulta);
-			
+			$resultado = $resultado->fetch_row();
 			if($resultado!=NULL){
-				$resultado = $resultado->fetch_row();
+				
 				$this->id=$resultado[0]+1;				
 			}				
 			else
@@ -87,11 +87,10 @@ class registroMdl{
 				//Obtengo el último id autoincrementable
 				//var_dump($conexion->insert_id);
 
-				return true;
-
+				
 			}
 
-			
+			return true;
 
 				//Cierro la conexión a la base de datos
 				$conexion->close();
