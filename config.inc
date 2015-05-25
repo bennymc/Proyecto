@@ -7,6 +7,7 @@ $bd = 'book2';
 
 $emailhost = "mx1.hostinger.es";
 $emailusername = "support@book2book.tk"; 
-$emailpassword = "BI53ycglu7";
+$emailpassword = "lWL5VGdTZB";
+$emailpuerto = 2525;
 
 ?>
