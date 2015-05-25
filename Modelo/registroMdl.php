@@ -11,8 +11,15 @@ class registroMdl{
 				echo "Hubo un error";
 				echo "<br>$conexion->connect_errno";
 			}
+			$consulta = "SELECT * FROM usuario WHERE user = \"$username\" OR  email = \"$correo\"";
+			$resultado = $conexion->query($consulta);
+			
+			if($resultado!=NULL){
+				return false;
+			}else {
+			
 
-			$consulta = "SELECT MAX(idUsuario) AS id FROM usuario";	
+				$consulta = "SELECT MAX(idUsuario) AS id FROM usuario";	
 			//Ejecuto el QUERY para datos de usuario
 			$resultado = $conexion->query($consulta);
 			
@@ -79,6 +86,12 @@ class registroMdl{
 
 				//Obtengo el último id autoincrementable
 				//var_dump($conexion->insert_id);
+
+				return true;
+
+			}
+
+			
 
 				//Cierro la conexión a la base de datos
 				$conexion->close();

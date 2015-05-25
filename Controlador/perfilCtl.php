@@ -74,13 +74,11 @@ class perfilCtl{
 					$vista= strtr($vista,$diccionario);
 
 
-
-					//Librero		
 					$i = strpos($vista,'{repite');
 					$f = strpos($vista, '}',$i);
-					$ff = strpos($vista, '{end repite}',$f);
-					$bloque = substr($vista, $i,$f-($ff));
-					//echo $bloque;
+					$ff = strpos($vista, '{end repite}',$f);					
+					$bloque = substr($vista, $f+2,$ff-($f+2));
+				
 					$repetir_cad = substr($vista, $f+2,$ff-($f+2));
 					$vista = str_replace($bloque,"",$vista);
 					
@@ -114,7 +112,8 @@ class perfilCtl{
 					}
 					
 					$diccionario = array(
-										'{end repite}'=>""
+										'{end repite}'=>"",
+										'{repite libro}'=>""
 										);
 					$vista= strtr($vista,$diccionario);
 				    $vista = str_replace("{LIBRERO}",$librero,$vista);
