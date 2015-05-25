@@ -199,7 +199,17 @@ button#btnenviarreview{
 	border-right: 2px solid #82B33A;
 }
 .inboxi{
-	border-right: 2px solid #82B33A;
+	border-left: 2px solid #82B33A;
+
+}
+.inboxi textarea{
+	margin: 5%;
+	width: 80%;
+	height: auto;
+	min-height: 100px;
+}
+#btnmensaje{
+	margin-left: 5%;
 }
 
 /* ------------ PAGINA PARA RECUPERAR CONTRASEÑA -------------*/

@@ -1,3 +1,20 @@
+function validaMensaje(){
+	var mensaje= document.getElementById("mensaje").value;
+	var lol="ppss";
+	if(mensaje == ""){
+		document.getElementById("mensaje").setAttribute('class', 'form-control  error');
+		return false;
+	}		
+	else{
+		document.getElementById("mensaje").setAttribute('class', 'form-control');
+		return true;
+
+	}
+		
+	
+}
+
+
 function validacion() {
 			valor = document.getElementById("nombre").value;
 			if (!(/^\D[a-zA-Z\s]+$/.test(valor)) || (/(select).*(from).*/.test(valor))){

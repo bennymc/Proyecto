@@ -13,7 +13,7 @@
 		  		{MENSAJEBTN}
 				<div class="bs-example">
 				    <!-- Button HTML (to Trigger Modal) -->
-				    <a href="#myModal" class="center-block" data-toggle="modal"><span class=" btn btn-sm btn-default glyphicon glyphicon-envelope"> Mensaje</span></a>
+				    <a href="#myModal" class="center-block" data-id-user="{USERID}" data-toggle="modal"><span class=" btn btn-sm btn-default glyphicon glyphicon-envelope"> Mensaje</span></a>
 				    				    
 				    <!-- Modal HTML -->
 				    <div id="myModal" class="modal fade">
@@ -21,19 +21,30 @@
 				            <div class="modal-content">
 				                <div class="modal-header">
 				                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				                    <h4 class="modal-title">Escribe aquí tu mensaje para UsuarioX</h4>
+				                    <h4 class="modal-title">Escribe aquí tu mensaje para {USER}</h4>
 				                </div>
-				                <div class="modal-body">
+				                <form class="form-horizontal" method="post" onsubmit="return validaMensaje()" action="?ctl=usuario&id={USERID}&send=true">
+          							<fieldset>
+          						<div class="modal-body">
+				                	 <input type="text" name="userId" value="" hidden=hidden>
 				                    <textarea class="form-control" id="mensaje" name="mensaje"></textarea>
 				                </div>
 				                <div class="modal-footer">
 				                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-				                    <button type="button" class="btn btn-primary">Enviar</button>
+				                    <button type="sumbit" class="btn btn-primary">Enviar</button>
 				                </div>
+				                </fieldset>
+    						  </form>
 				            </div>
 				        </div>
 				    </div>
 				</div>
+				<script type="text/javascript"> 
+				    $('#myModal').on('show.bs.modal', function(e) {
+				    var bookId = $(e.relatedTarget).data('id-user');
+				    $(e.currentTarget).find('input[name="userId"]').val(bookId);
+				});
+				</script>
 				{ENDMENSAJEBTN}  
 			</div>
 		</div>	

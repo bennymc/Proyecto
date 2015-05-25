@@ -11,6 +11,15 @@ class usuarioCtl{
 	}
 
 	function ejecutar(){
+		if (isset($_POST['userId']) && isset($_POST['mensaje']) && isset($_SESSION['idUsuario'])) {
+			$this->mdl->EnviaMensaje($_POST['userId'],$_POST['mensaje']);
+			echo '
+				<div class="alert alert-dismissible alert-success" id="modalContent">
+				  <button type="button" class="close" data-dismiss="alert">×</button>
+				  <strong>Correcto!</strong><p>Mensaje Enviado</p> 
+				</div>
+			';
+		}
 
 		if(isset($_GET['id'])){
 			
@@ -39,7 +48,10 @@ class usuarioCtl{
 										'{imglibroD}'=> $this->mdl->imgLdestacado,
 										'{USER}' => $_GET['id'],
 										'{{idDestacado}}' => $this->mdl->idDestacado,
-										'{LINKPERFIL}' => "?ctl=perfil"
+										'{LINKPERFIL}' => "?ctl=perfil",
+										'{idUSUARIO}'=> $idUser,
+										'{USER}' => $this->mdl->user,
+										'{USERID}' => $this->mdl->userID
 										);
 					$vista= strtr($vista,$diccionario);
 

@@ -31,11 +31,18 @@ class aboutusCtl{
 }
 
 class inboxCtl{
-	private $modelo;
+	private $mdl;
 
 	public function ejecutar(){
 		require_once("Controlador/diccionariomaestro.php");
 			$this->dicc = new diccionarioM(); 	
+		require_once("Modelo/registroMdl.php");
+			$this->modelo = new registroMdl();
+
+
+
+
+
 		$vista = file_get_contents("Vista/inbox.php");
 		$this->dicc->CargarHeader();
 		$footer = file_get_contents("Vista/footer.html");
