@@ -12,6 +12,8 @@ class usuarioMdl{
 	public $estado;
 	public $idsLibros;
 	public $id;
+	public $user;
+	public $userID;
 
 
 	/**
@@ -21,7 +23,32 @@ class usuarioMdl{
 	* @return
 	*/
 
-	
+function EnviaMensaje($destino,$mensaje){
+	require('config.inc');
+		$conexion = new mysqli($servidor,$usuario,$pass,$bd);
+		if($conexion -> connect_errno){
+			echo "Hubo un error";
+			echo "<br>$conexion->connect_errno";
+		}
+		$remite= $_SESSION['idUsuario'];
+		$fecha= date("Y/m/d");
+		
+		$query = 
+				"INSERT INTO mensaje ( cuerpo, fecha, emisoridUsuario, receptoridUsuario1 ) 
+				VALUES (
+					\"$mensaje\",
+					\"$fecha\",
+					\"$remite\",
+					\"$destino\"
+					)";
+
+				
+				$resultado = $conexion->query($query);
+
+		$conexion->close();
+		
+
+}
 
 function show($id){
 
@@ -41,6 +68,8 @@ function show($id){
 		
 
 		if($resultado!= NULL){
+			$this->userID = $resultado[0];
+			$this->user = $resultado[1];
 			$this->nombre = $resultado[3]." ".$resultado[4];
 			$this->imgPerfil = $resultado[9];		
 			$this->descripcion = $resultado[7];
