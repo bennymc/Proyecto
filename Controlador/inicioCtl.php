@@ -131,10 +131,9 @@ class recuperaCtl{
 		$this->dicc->CargarHeader();
 		$footer = file_get_contents("Vista/footer.html");
 		$vista = $this->dicc->headerfinal . $vista . $footer;
-		echo $vista;
 		if(isset($_GET['action'])){
 			require("Modelo/resetMdl.php");
-
+			require("config.inc");
 			$this->modelo = new resetMdl();
 			$key = uniqid(mt_rand(), true);
 			$token = md5($_POST['email'].$key);
@@ -145,33 +144,25 @@ class recuperaCtl{
 			
 			if($resultado!==FALSE){
 
-				require("www/includes/class.phpmailer.php");
+				require("www/includes/PHPMailerAutoload.php");
 
 				//instanciamos un objeto de la clase phpmailer al que llamamos 
 				//por ejemplo mail
 				$mail = new PHPMailer();
-				var_dump($mail->Host);
-				//Definimos las propiedades y llamamos a los métodos 
-				//correspondientes del objeto mail
-
-				//Con PluginDir le indicamos a la clase phpmailer donde se 
-				//encuentra la clase smtp que como he comentado al principio de 
-				//este ejemplo va a estar en el subdirectorio includes
-				$mail->PluginDir = "www/includes/";
 
 				//Con la propiedad Mailer le indicamos que vamos a usar un 
 				//servidor smtp
-				$mail->Mailer = "smtp";
+				$mail->IsSMTP();
 
 				//Asignamos a Host el nombre de nuestro servidor smtp
-				$mail->Host = "mail.bincat.mx";
+				$mail->Host = $emailhost;
 
 				//Le indicamos que el servidor smtp requiere autenticación
 				$mail->SMTPAuth = true;
 
 				//Le decimos cual es nuestro nombre de usuario y password
-				$mail->Username = "benny@bincat.mx";
-				$mail->Password = "benny2015";
+				$mail->Username = $emailusername;
+				$mail->Password = $emailpassword;
 
 				//Indicamos cual es nuestra dirección de correo y el nombre que 
 				  //queremos que vea el usuario que lee nuestro correo
@@ -224,6 +215,7 @@ class recuperaCtl{
 			';
 			} 
 		}
+				echo $vista;
 	}
 }
 
