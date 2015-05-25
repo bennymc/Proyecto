@@ -36,10 +36,16 @@ class inboxCtl{
 	public function ejecutar(){
 		require_once("Controlador/diccionariomaestro.php");
 			$this->dicc = new diccionarioM(); 	
-		require_once("Modelo/registroMdl.php");
-			$this->modelo = new registroMdl();
+		require_once("Modelo/inboxMdl.php");
+			$this->mdl = new inboxMdl();
+		
+		$this->mdl->Cargar();
 
 
+		if(isset($_GET['show']) && isset($_SESSION['usuario'])){
+			$this->mdl->CargarMensajes($_GET['show']);
+
+		}
 
 
 
