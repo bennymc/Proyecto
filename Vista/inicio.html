@@ -18,6 +18,7 @@
    				 <h3 class="TituloGrande">Ultimas Reseñas.</h3>
   			</div>
   			<div class="panel-body" id="ultimasreview">
+  			{RESENAS}	
    				<div class="col-md-4" id="reseña">
 				    <div class="ec-stars-wrapper col-md-12">
 						<a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
@@ -28,13 +29,14 @@
 					</div>
 					<noscript>Necesitas tener habilitado javascript para poder votar</noscript>
 					<div class="form-group">
-					  <a href="usuario.php"><h4 class="col-md-12"></h4></a>
-					  <a href="?ctl=ejemplar"><h4 class="col-md-12"></h4></a>
+					  <a href="?ctl=usuario&id={USERID}"><h4 class="col-md-12">{USERNAME}</h4></a>
+					  <a href="?ctl=ejemplar&id={LIBROID}"><h4 class="col-md-12">{LIBRONAME}</h4></a>
 					  <div class="col-md-10">                     
-					    <textarea readonly class="form-control" name="texto1"></textarea>
+					    <textarea readonly class="form-control" name="texto1">{RESENA}</textarea>
 					  </div>
 					</div>
 	    		</div>
+	    		{ENDRESENAS}	
   			</div>
 		</div>		
 	<!--  ***************************** SUGERENCIAS ***************************** -->		

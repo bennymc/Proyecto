@@ -3,13 +3,12 @@
 class inboxMdl{
 
 	public $mensajesrecividos;
-	public $mensajesen
+	public $mensajesen;
 
 
 
 	
-	function CargarMensajes($user)
-	{
+	function CargarMensajes($user){
 		require('config.inc');
 		$conexion = new mysqli($servidor,$usuario,$pass,$bd);
 		if($conexion -> connect_errno){
@@ -17,17 +16,11 @@ class inboxMdl{
 			echo "<br>$conexion->connect_errno";
 		}
 		$id= $_SESSION['usuario'];
-		$consulta = "SELECT * FROM mensaje WHERE receptoridUsuario1 = '".$id."' ORDER By fecha , " ;
+		$consulta = "SELECT * FROM mensaje WHERE receptoridUsuario1 = '".$id."' ORDER By fecha  " ;
 		//Ejecuto el QUERY para datos de usuario
 		$resultado = $conexion->query($consulta);
 		$resultado = $resultado->fetch_row();
-		if($resultado!= NULL){
-				//Si tiene mensajes
-		}else{
-			if($resultado!= NULL){
-				//Si tiene mensajes
-			}
-		}
+		
 
 
 	}
