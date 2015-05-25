@@ -1,6 +1,4 @@
- 	<?php
-				include "includes/navbar.html";
-	?>
+
 	<div id="contenedor">
 		<div class="panel panel-success" id="inbox">
   			<div class="panel-heading">
@@ -10,8 +8,9 @@
    				<div class=" col-md-4">
 					  <h3>Mensajes</h3>
 					  <ol>
+					  		{MENSAJES}
 					  		{LISTAMENSAJES}
-					  	  <li><a href="?ctl=inbox&show={USERID}">Mensaje de {USERID}</a></li>
+					  	  <li><a href="?ctl=inbox&show={ID}">Mensaje de {USERNAME} - {FECHA}</a></li>
 					  	  	{ENDLISTAMENSAJES}
 					  </ol>
 				  </div>

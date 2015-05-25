@@ -42,18 +42,48 @@ class inboxCtl{
 		$this->mdl->Cargar();
 
 
-		if(isset($_GET['show']) && isset($_SESSION['usuario'])){
-			$this->mdl->CargarMensajes($_GET['show']);
+		if(isset($_SESSION['usuario'])){
+			$this->mdl->CargarMensajes();
+			$vista = file_get_contents("Vista/inbox.html");
+			$this->dicc->CargarHeader();
+			$footer = file_get_contents("Vista/footer.html");
+			
+			$i = strpos($vista,'{LISTAMENSAJES');
+			$f = strpos($vista, '}', $i);
+			$ff = strpos($vista, '{ENDLISTAMENSAJES}', $f);
+			$bloque = substr($vista, $i,$ff-$i+18);
+			//var_dump($bloque);
 
+			$repetir_cad = substr($vista, $f+2, $ff-$f-2);
+			//echo $repetir_cad;
+			
+			$vista = str_replace($bloque,"",$vista);
+			
+			$mensajes="";
+
+			for($x=0; $x < count($this->mdl->idMensajes); $x++) {
+				$diccionarioMensajes= array(
+									'{ID}' => $x,
+									'{USERNAME}' => $this->mdl->nombre[$x],
+									'{FECHA}' => $this->mdl->fecha[$x]
+										);
+				$aux = $repetir_cad;
+				$aux = strtr($aux,$diccionarioMensajes);
+				$mensajes = $mensajes.$aux;
+			}
+
+			if(isset($_GET['show'])){
+					$idMsg = $_GET['show'];
+				}else 
+					$idMsg = 0;
+			$vista = str_replace("{CUERPOMENSAJES}", $this->mdl->cuerpo[$idMsg], $vista);
+		    $vista = str_replace("{MENSAJES}",$mensajes,$vista);
+			$vista = $this->dicc->headerfinal . $vista. $footer;
+
+			
+
+			echo $vista;
 		}
-
-
-
-		$vista = file_get_contents("Vista/inbox.php");
-		$this->dicc->CargarHeader();
-		$footer = file_get_contents("Vista/footer.html");
-		$vista = $this->dicc->headerfinal . $vista . $footer;
-		echo $vista;
 	}
 }
 
