@@ -97,7 +97,7 @@
 					<noscript>Necesitas tener habilitado javascript para poder votar</noscript>
 					<div class="form-group">
 					  	<label class="col-md-12 control-label" for="reseña">Mi reseña</label>
-					  	<form method="post" class="col-md-12" action="?ctl=ejemplar&id={IDLIBRO}&review=true">                     
+					  	<form method="post" class="col-md-12" onsubmit="return validaReseña()" action="?ctl=ejemplar&id={IDLIBRO}&review=true">                     
 					    	<textarea class="form-control" id="resena" name="resena"></textarea>
 							<div >
 								<button id="btnenviarreview" class="btn btn-default">Enviar</button>

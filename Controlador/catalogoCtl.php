@@ -22,7 +22,7 @@ class catalogoCtl{
 			$i = strpos($vista,'{{repite');
 			$f = strpos($vista, '}}', $i);
 			$ff = strpos($vista, '{{termina repite}}', $f);
-			$bloque = substr($vista, $i,$f-($ff-4));
+			$bloque = substr($vista, $i,$f-($ff-6));
 			//echo $bloque;
 			$repetir_cad = substr($vista, $f+2, ($ff-16)-$f);
 			//echo $repetir_cad;

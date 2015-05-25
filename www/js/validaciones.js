@@ -1,12 +1,26 @@
 function validaMensaje(){
 	var mensaje= document.getElementById("mensaje").value;
-	var lol="ppss";
 	if(mensaje == ""){
 		document.getElementById("mensaje").setAttribute('class', 'form-control  error');
 		return false;
 	}		
 	else{
 		document.getElementById("mensaje").setAttribute('class', 'form-control');
+		return true;
+
+	}
+		
+	
+}
+
+function validaReseña(){
+	var mensaje= document.getElementById("resena").value;
+	if(mensaje == ""){
+		document.getElementById("resena").setAttribute('class', 'form-control  error');
+		return false;
+	}		
+	else{
+		document.getElementById("resena").setAttribute('class', 'form-control');
 		return true;
 
 	}
