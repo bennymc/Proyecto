@@ -11,6 +11,7 @@ class ejemplarCtl{
 	public function ejecutar(){
 
 		if(isset($_GET['add'])){
+			
 			$add=$_GET['add'];
 			if($add=="true"){
 				$this->mdl->addLibro($_GET['id']);
@@ -37,7 +38,9 @@ class ejemplarCtl{
 		}
 
 		if(isset($_GET['id']) && $this->validateInteger($_GET['id'])){
-			$this->mdl->show($_GET['id']);
+			if($_GET['id']!=0)
+			{
+				$this->mdl->show($_GET['id']);
 			$vista = file_get_contents("Vista/ejemplar.html");
 			$this->dicc->CargarHeader();			
 			$footer = file_get_contents("Vista/footer.html");
@@ -131,6 +134,8 @@ class ejemplarCtl{
 
 			$vista = $this->dicc->headerfinal . $vista. $footer;
 			echo $vista;
+		}else
+		{header('Location: ?ctl=inicio');	}
 		}else
 		{
 			header('Location: ?ctl=inicio');	
