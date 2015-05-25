@@ -62,9 +62,6 @@
 				</div>				
 			</div>
 		</div>
-		<div class="flechas">
-			<a href="#"><span class="glyphicon glyphicon-chevron-left"></span>Atrás</a>
-	    	<a href="#" class="pull-right">Siguiente<span class="glyphicon glyphicon-chevron-right"></span></a>
-	    </div>
+		
     </section>
 <!-- ************************************* FIN SECTION ************************************* -->
