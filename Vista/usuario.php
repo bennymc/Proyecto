@@ -10,6 +10,7 @@
 				<img class="center-block" id="fotodeperfil" src="www/images/Usuarios/{foto}" alt="imagen de perfil">
 			</div>
 		  	<div>
+		  		{MENSAJEBTN}
 				<div class="bs-example">
 				    <!-- Button HTML (to Trigger Modal) -->
 				    <a href="#myModal" class="center-block" data-toggle="modal"><span class=" btn btn-sm btn-default glyphicon glyphicon-envelope"> Mensaje</span></a>
@@ -32,7 +33,8 @@
 				            </div>
 				        </div>
 				    </div>
-				</div>  
+				</div>
+				{ENDMENSAJEBTN}  
 			</div>
 		</div>	
 	<!-- ****************************** LIBRO DESTACADO ************************************* -->

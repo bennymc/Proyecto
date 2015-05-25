@@ -22,7 +22,7 @@ class usuarioCtl{
 			  	$idUser=$_SESSION['idUsuario'];
 			  else
 			  	$idUser=NULL;
-			  
+
 				if($_GET['id'] != $idUser){
 					$vista = file_get_contents("Vista/usuario.php");
 					$this->dicc->CargarHeader();
@@ -88,6 +88,24 @@ class usuarioCtl{
 					$vista= strtr($vista,$diccionario);
 				    $vista = str_replace("{LIBRERO}",$librero,$vista);
 					$vista =  $vista.  $footer;
+
+					if(isset($_SESSION['idUsuario']))
+					{
+
+					}
+					else{
+							$i = strpos($vista,'{MENSAJEBTN');
+							$f = strpos($vista, '}',$i);
+							$ff = strpos($vista, '{ENDMENSAJEBTN}',$f);					
+							$frm = substr($vista, $f+2,$ff-($f+2));
+							$vista  = str_replace($frm,"",$vista );
+						}
+
+						$diccionario = array(
+										'{MENSAJEBTN}'=>"",
+										'{ENDMENSAJEBTN}'=>""
+										);
+					$vista= strtr($vista,$diccionario);
 					//Mostrar la vista
 					echo $vista;
 				}else
