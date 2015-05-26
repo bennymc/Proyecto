@@ -27,7 +27,8 @@ class ejemplarCtl{
 		if(isset($_GET['review'])){
 			if($_GET['review']=="true"){
 				$review = $_POST['resena'];
-				$this->mdl->addReview($_GET['id'], $review);
+				$cali = $_POST['cali'];
+				$this->mdl->addReview($_GET['id'], $review,$cali);
 				echo '
 				<div class="alert alert-dismissible alert-success" id="modalContent">
 				  <button type="button" class="close" data-dismiss="alert">×</button>
@@ -121,7 +122,8 @@ class ejemplarCtl{
 				$diccionarioResenas= array(
 									'{{Nombre}}' => $this->mdl->nombreUsuarioReview[$x],
 									'{{id}}' => $this->mdl->idUsuarioReview[$x],
-									'{{Texto}}' => $this->mdl->textoReview[$x]
+									'{{Texto}}' => $this->mdl->textoReview[$x],
+									'{CALIF}' => $this->mdl->calificaciones[$x]
 										);
 				$aux = $repetir_cad;
 				$aux = strtr($aux,$diccionarioResenas);

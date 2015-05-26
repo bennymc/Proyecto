@@ -16,6 +16,7 @@ class ejemplarMdl{
 	public $idUsuarioReview;
 	public $nombreUsuarioReview;
 	public $textoReview;
+	public $calificaciones;
 
 	function show($id){
 		require('config.inc');
@@ -50,7 +51,7 @@ class ejemplarMdl{
 
 		if(count($this->idReviews) > 0){
 			foreach ($this->idReviews as $idReview) {
-				$consulta = "SELECT r.idUsuario, u.user, r.resena 
+				$consulta = "SELECT r.idUsuario, u.user, r.resena , r.calificacion
 						 FROM resena r
 						 JOIN usuario u on r.idUsuario=u.idUsuario  
 						 WHERE r.idResena = '".$idReview."'";
@@ -59,6 +60,7 @@ class ejemplarMdl{
 					$this->idUsuarioReview[] = $fila['idUsuario'];
 					$this->nombreUsuarioReview[] = $fila['user'];
 					$this->textoReview[] = $fila['resena'];
+					$this->calificaciones[] = $fila['calificacion'];
 				}	
 			}
 		}
@@ -155,7 +157,7 @@ class ejemplarMdl{
 		$conexion->close();
 	}
 
-	function addReview($id, $review){
+	function addReview($id, $review,$cali){
 		require('config.inc');
 		$conexion = new mysqli($servidor,$usuario,$pass,$bd);
 		if($conexion -> connect_errno){
@@ -163,7 +165,7 @@ class ejemplarMdl{
 			echo "<br>$conexion->connect_errno";
 		}
 		$idUser= $_SESSION['idUsuario'];
-		$calificacion="3";
+		$calificacion=$cali;
 		$fecha=date("d/m/Y");
 		$consulta = "INSERT INTO resena (idUsuario , idLibros , resena, calificacion, fecha)
 				 VALUES (
