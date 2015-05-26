@@ -83,21 +83,22 @@
 		    	<h3 class="TituloGrande">Reseñas</h3>
 		    </div>
 	<!-- ************************************* MI RESEÑA ************************************* -->	    	
-			
+			<a name="resena" id="resena"></a>
 			<div class="panel-body">
 			{ESCRIBIRRESEÑA}	    
 		    	<div class="col-md-5">
 				    <div class="ec-stars-wrapper col-md-12">
-						<a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
-						<a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
-						<a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
-						<a href="#" data-value="4" title="Votar con 4 estrellas">&#9733;</a>
-						<a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a>
+						<a href="#resena" data-value="1" id="s1" onclick="califica(1)" title="Votar con 1 estrellas">&#9733;</a>
+						<a href="#resena" data-value="2" id="s2" onclick="califica(2)" title="Votar con 2 estrellas">&#9733;</a>
+						<a href="#resena" data-value="3" id="s3" onclick="califica(3)" title="Votar con 3 estrellas">&#9733;</a>
+						<a href="#resena" data-value="4" id="s4" onclick="califica(4)" title="Votar con 4 estrellas">&#9733;</a>
+						<a href="#resena" data-value="5" id="s5"onclick="califica(5)" title="Votar con 5 estrellas">&#9733;</a>
 					</div>
 					<noscript>Necesitas tener habilitado javascript para poder votar</noscript>
 					<div class="form-group">
 					  	<label class="col-md-12 control-label" for="reseña">Mi reseña</label>
-					  	<form method="post" class="col-md-12" onsubmit="return validaReseña()" action="?ctl=ejemplar&id={IDLIBRO}&review=true">                     
+					  	<form method="post" class="col-md-12" onsubmit="return validaReseña()" action="?ctl=ejemplar&id={IDLIBRO}&review=true">  
+					  		<input id="cali" name="cali" type="text"  hidden=hidden>                       
 					    	<textarea class="form-control" id="resena" name="resena"></textarea>
 							<div >
 								<button id="btnenviarreview" class="btn btn-default">Enviar</button>
