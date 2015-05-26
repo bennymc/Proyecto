@@ -148,7 +148,8 @@ class diccionarioM{
 													'{USERNAME}' => $this->mdl->username[$x],
 													'{LIBROID}' => $this->mdl->idLibros[$x],
 													'{USERID}' => $this->mdl->idUsuarios[$x],
-													'{RESENA}' => $this->mdl->resena[$x]
+													'{RESENA}' => $this->mdl->resena[$x],
+													'{CALIF}' => $this->mdl->calificacion[$x]
 														);
 								$aux = $frm;
 								$aux = strtr($aux,$diccionariolibrero);
