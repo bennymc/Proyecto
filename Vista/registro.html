@@ -1,6 +1,6 @@
 
 	    <section id="formulario" class="col-md-4 col-md-offset-4">
-			<form class="form-horizontal" method="post" onsubmit="return validacion() & cifrar()"  enctype="multipart/form-data">
+			<form class="form-horizontal" method="post" onsubmit="return validacion() "  enctype="multipart/form-data">
 				<fieldset>
 					<legend>Registro de nuevo usuario</legend>
 					<div class="form-group">
@@ -62,18 +62,19 @@
 					</div>
 					<div class="form-group">
 					  <div class="col-md-6 col-md-offset-4">
-					    <button id="enviar" name="enviar" class="btn btn-default">Enviar</button>
+					    <button id="enviar" type="submit" onclick="cifrar()">Enviar</button>
 					  </div>
 					</div>
 				</fieldset>
 			</form>
 		</section>
-<script src="www/js/sha1.js"></script>
-<script>
-		function cifrar(){
-			var input_pass = document.getElementById("password");
-			input_pass.value = sha1(input_pass.value);
-		}
-</script>
 
+<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/sha1.js"></script>
+<script>
+	function cifrar(){
+		var input_password = document.getElementById("password").value;
+    var hash = CryptoJS.SHA1(input_password);
+    document.getElementById("password").value = hash ;
+	}
+</script>
 	

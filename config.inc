@@ -1,6 +1,11 @@
 <?php
 
-$server = "localhost";
+if (!defined('SERVIDOR')) define('SERVIDOR', 'localhost');
+if (!defined('USUARIO')) define('USUARIO', 'root');
+if (!defined('PASS')) define('PASS', '');
+if (!defined('BD')) define('BD', 'book2');
+
+$servidor = "localhost";
 $usuario = "root";
 $pass = "";
 $bd = "book2";

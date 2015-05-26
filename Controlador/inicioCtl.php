@@ -93,11 +93,12 @@ class busquedaCtl{
 	public function ejecutar(){
 		require_once("Controlador/diccionariomaestro.php");
 			$this->dicc = new diccionarioM();
-
 		require_once("Modelo/buscarMdl.php");
 			$this->modelo = new buscarMdl();
-		$this->modelo->buscar($_POST['buscar']);
+		$this->modelo->Buscar($_POST['buscar']);
 		$id = $this->modelo->idEncontrado;
+		var_dump($id);
+		var_dump($this->modelo->bandera);
 		if($this->modelo->bandera == 0){
 			$vista = file_get_contents("Vista/busqueda.html");
 			$this->dicc->CargarHeader();

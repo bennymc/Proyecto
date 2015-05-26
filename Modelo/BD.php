@@ -1,18 +1,17 @@
 <?php
 	require('config.inc');
 	class BD {
-		private $conexion;
 		public static $instancia; 
-		private $servidor = $server;
-		private $usuario = $usuario;
-		private $contrasena = $pass;
-		private $base_datos = $bd;
+		private $servidor = SERVIDOR;
+		private $usuario = USUARIO;
+		private $contrasena = PASS;
+		private $base_datos = BD;
 		private $_query;
 		private $resultado = array();
 		private $contador = 0;
 		public static function obtenerInstancia() {
 			if(!self::$instancia) { 
-				self::$instancia = new BaseDatos();
+				self::$instancia = new BD();
 			}
 			return self::$instancia;
 		}
@@ -21,8 +20,8 @@
 		}
 		private function conectar() {
 			$this->conexion = new mysqli($this->servidor, $this->usuario, $this->contrasena, $this->base_datos);
-			if($this -> conexion -> connect_error) {
-				die($this -> conexion -> connect_error);
+			if($this->conexion->connect_error) {
+				die($this->conexion->connect_error);
 			}
 		}
 		private function desconectar() {
@@ -38,12 +37,12 @@
 			if($this->_query){
 				if(is_object($this->_query)) {
 					while($fila = $this->_query -> fetch_assoc()) {
-						$this -> resultado[] = $fila;
+						$this->resultado[] = $fila;
 					}
-					$this -> contador = $this->_query -> num_rows;
+					$this->contador = $this->_query ->num_rows;
 				}
 			} else {
-				die($this -> conexion -> error);
+				die($this->conexion->error);
 				return false;
 			}
 			/*
@@ -56,10 +55,10 @@
 			return $this;
 		}
 		public function obtenerResultado() {
-			return $this -> resultado;
+			return $this->resultado;
 		}
 		public function contar() {
-			return $this -> contador;
+			return $this->contador;
 		}
 		public function regresaID(){
 			return $this->conexion->insert_id;
