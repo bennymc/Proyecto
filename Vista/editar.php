@@ -78,10 +78,21 @@
 						    <input id="passwordnew" name="passwordnew" type="password" placeholder="" class="form-control input-md" required="">
 						  </div>
 						  <div class="col-md-9">
-					    <button id="cambiar" name="cambiar" class="btn btn-default">Cambiar</button>
+					    <button onclick="cifrar()" id="cambiar" name="cambiar" class="btn btn-default">Cambiar</button>
 					  </div>
 					</div>
 				</fieldset>
 			</form>
+			<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/sha1.js"></script>
+						<script>
+							function cifrar(){
+								var input_password = document.getElementById("passwordold").value;
+						    var hash = CryptoJS.SHA1(input_password);
+						    document.getElementById("passwordold").value = hash ;
+						    var input_password2 = document.getElementById("passwordnew").value;
+						    var hash = CryptoJS.SHA1(input_password2);
+						    document.getElementById("passwordnew").value = hash ;
+							}
+						</script>
 		</aside>
 	</div>
