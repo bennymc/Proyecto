@@ -12,7 +12,6 @@ class autorMdl{
 
 	function show($id){
 		require('config.inc');
-		require('Modelos/BD.php');
 		$conexion = new mysqli($servidor,$usuario,$pass,$bd);
 		if($conexion -> connect_errno){
 			echo "Hubo un error";
