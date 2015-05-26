@@ -20,20 +20,20 @@ class InicioCtl{
 	}
 
 	function enviasugerencia(){
-				//Se define la dirección a la que se enviará el correo
+		//Se define la dirección a la que se enviará el correo
 		$to= $_POST["Email"];
 		 
 		//Se define el asunto
-		$subject = 'Confirmación de Contacto';
+		$subject = 'Sugerencia Libro';
 		 
 		//Se escribe el mensaje
-		$mess = "Aquí puede poner todo el mensaje que quiera incluyendo variables y formatos con tags de html";
+		$mess = "Tu Sugerencia Sera Tomada En Cuenta";
 		 
 		//Se escribe la dirección desde la que se enviará el correo
 		$header = 'From: support@book2book.tk'.PHP_EOL;
 		 
 		//Se define la dirección que recibirá copia oculta
-		$header .= 'Bcc: correocopiaoculta@algo.com'."\r\n"; 
+		$header .= 'Bcc: support@book2book.tk'."\r\n"; 
 		 
 		//Se define tipo de contenido y codificación
 		$header .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
@@ -261,24 +261,27 @@ class recuperaCtl{
 
 				//instanciamos un objeto de la clase phpmailer al que llamamos 
 				//por ejemplo mail
-				$mail = new PHPMailer();
-				$mail->IsSendmail();
-				$mail->Mailer = "smtp";
-				$mail->IsSMTP();
-				$mail->SMTPDebug = 3;
-				$mail->Timeout=30;
-				$mail->Host = $emailhost;
-				$mail->SMTPAuth = true;
-				$mail->Username = $emailusername;
-				$mail->Password = $emailpassword;
-				$mail->Port = $emailpuerto;
-				$mail->SMTPSecure = '';
-				  $mail->From = "support@book2book.tk";
-				  $mail->FromName = "Support de Book2";
-				  $mail->AddAddress($email);
-				  $mail->Subject = "Recuperar contraseña";
-				  $mail->Body = 'Hola, <br><br>Tu nueva contraseña es: '.$token.' <br><br> Una vez autentificad@ podrás cambiarla por una nueva. <br><br> Enlace al sitio http://www.book2book.tk/?ctl=inicio<br/><br/>';
-				  $exito = $mail->Send();
+				//Se define la dirección a la que se enviará el correo
+				$to= $email;
+				 
+				//Se define el asunto
+				$subject = 'Recuperar Contraseña';
+				 
+				//Se escribe el mensaje
+				$mess = 'Hola, <br><br>Tu nueva contraseña es: '.$token.' <br><br> Una vez autentificad@ podrás cambiarla por una nueva. <br><br> Enlace al sitio http://www.book2book.tk/?ctl=inicio<br/><br/>';
+				 
+				//Se escribe la dirección desde la que se enviará el correo
+				$header = 'From: support@book2book.tk'.PHP_EOL;
+				 
+				//Se define la dirección que recibirá copia oculta
+				$header .= 'Bcc: support@book2book.tk'."\r\n"; 
+				 
+				//Se define tipo de contenido y codificación
+				$header .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
+				 
+				
+				  
+				  $exito = mail($to, $subject, $mess, $header);
 						
 				   if(!$exito)
 				   {

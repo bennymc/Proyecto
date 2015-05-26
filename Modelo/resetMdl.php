@@ -34,7 +34,7 @@ class resetMdl{
 			echo "Hubo un error";
 			echo "<br>$conexion->connect_errno";
 		}
-		var_dump($password);
+		//var_dump($password);
 		$query = 
 			"UPDATE usuario
 			SET contrasena = '".$password."'
