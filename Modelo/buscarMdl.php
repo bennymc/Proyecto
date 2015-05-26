@@ -34,7 +34,15 @@ class buscarMdl{
 					$this->bandera = 3;
 				}else{
 					$key = explode(" ", $key);
-					$consulta = "SELECT idUsuario FROM usuario WHERE nombre = '".$key[0]." ".$key[1]."' AND apellidos = '".$key[2]." ".$key[3]."'";
+					if(count($key) >= 4)
+						$consulta = "SELECT idUsuario FROM usuario WHERE nombre = '".$key[0]." ".$key[1]."' AND apellidos = '".$key[2]." ".$key[3]."'";
+					else  if(count($key) == 5 )
+						$consulta = "SELECT idUsuario FROM usuario WHERE nombre = '".$key[0]." ".$key[1]."' AND apellidos = '".$key[2]." ";
+					else if (count($key) == 2 ) 
+						$consulta = "SELECT idUsuario FROM usuario WHERE nombre = '".$key[0]." ".$key[1]."'";
+					else if (count($key) == 1 ) 
+						$consulta = "SELECT idUsuario FROM usuario WHERE nombre = '".$key[0]."' ";
+					
 					$resultado = $conexion->query($consulta);
 					$resultado = $resultado->fetch_row();
 					if($resultado!= NULL){
