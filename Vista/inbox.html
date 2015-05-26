@@ -17,8 +17,10 @@
 	    		<div class=" inboxi  col-md-8">
 				   	 <h3>Cuerpo del mensaje</h3>
 					 <textarea readonly class="form-control" id="cuerpo" name="cuerpo">{CUERPOMENSAJES}</textarea>
-					 <textarea  class="form-control" id="respuesta" name="respuesta"></textarea>
-					 <button id="btnmensaje" type="button" class="btn btn-default">Responder</button>
+					 <form class="form-horizontal" method="post" onsubmit="return validaMensaje()" action="?ctl=inbox&id={USERID}&send=true">
+						 <textarea  class="form-control" id="mensaje" name="mensaje"></textarea>
+						 <button type="submit" id="btnmensaje" type="button" class="btn btn-default">Responder</button>
+					 </form>
   				</div>
 
 			</div>		

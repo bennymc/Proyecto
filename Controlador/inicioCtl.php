@@ -41,6 +41,16 @@ class inboxCtl{
 		
 		$this->mdl->Cargar();
 
+		if (isset($_GET['id']) && isset($_POST['mensaje']) && isset($_SESSION['idUsuario'])) {
+			$this->mdl->EnviaMensaje($_GET['id'],$_POST['mensaje']);
+			echo '
+				<div class="alert alert-dismissible alert-success" id="modalContent">
+				  <button type="button" class="close" data-dismiss="alert">×</button>
+				  <strong>Correcto!</strong><p>Mensaje Enviado</p> 
+				</div>
+			';
+			//header('Location: ?ctl=inbox');
+		}
 
 		if(isset($_SESSION['usuario'])){
 			$this->mdl->CargarMensajes();
@@ -77,6 +87,7 @@ class inboxCtl{
 				}else 
 					$idMsg = 0;
 			$vista = str_replace("{CUERPOMENSAJES}", $this->mdl->cuerpo[$idMsg], $vista);
+			$vista = str_replace("{USERID}", $this->mdl->emisor[$idMsg], $vista);
 		    $vista = str_replace("{MENSAJES}",$mensajes,$vista);
 			$vista = $this->dicc->headerfinal . $vista. $footer;
 
@@ -97,8 +108,6 @@ class busquedaCtl{
 			$this->modelo = new buscarMdl();
 		$this->modelo->Buscar($_POST['buscar']);
 		$id = $this->modelo->idEncontrado;
-		var_dump($id);
-		var_dump($this->modelo->bandera);
 		if($this->modelo->bandera == 0){
 			$vista = file_get_contents("Vista/busqueda.html");
 			$this->dicc->CargarHeader();

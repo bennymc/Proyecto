@@ -10,7 +10,32 @@ class inboxMdl{
 	public $emisor;
 	public $nombre;
 
+	function EnviaMensaje($destino,$mensaje){
+	require('config.inc');
+		$conexion = new mysqli($servidor,$usuario,$pass,$bd);
+		if($conexion -> connect_errno){
+			echo "Hubo un error";
+			echo "<br>$conexion->connect_errno";
+		}
+		$remite= $_SESSION['idUsuario'];
+		$fecha= date("Y/m/d");
+		
+		$query = 
+				"INSERT INTO mensaje ( cuerpo, fecha, emisoridUsuario, receptoridUsuario1 ) 
+				VALUES (
+					\"$mensaje\",
+					\"$fecha\",
+					\"$remite\",
+					\"$destino\"
+					)";
 
+				
+				$resultado = $conexion->query($query);
+
+		$conexion->close();
+		
+
+}
 	
 	function CargarMensajes(){
 		require('config.inc');
@@ -32,25 +57,26 @@ class inboxMdl{
 		while($fila=$resultado->fetch_assoc()){
 			$this->idMensajes[]=$fila["idMensaje"];
 		}
-
-		foreach ($this->idMensajes as $idMsg) {
-			$consulta = "SELECT m.cuerpo, m.fecha, m.emisoridUsuario, u.user 
-			 FROM mensaje m
-			 JOIN usuario u ON u.idUsuario = m.emisoridUsuario
-			 WHERE idMensaje = '".$idMsg."'";
-			$resultado = $conexion->query($consulta);
-			if($conexion->errno){
-				die("Tu query tiene un error
-					<br>$conexion->error");
+		if(count($this->idMensajes)>0){
+			foreach ($this->idMensajes as $idMsg) {
+				$consulta = "SELECT m.cuerpo, m.fecha, m.emisoridUsuario, u.user 
+				 FROM mensaje m
+				 JOIN usuario u ON u.idUsuario = m.emisoridUsuario
+				 WHERE idMensaje = '".$idMsg."'
+				 ORDER BY fecha LIMIT 10";
+				$resultado = $conexion->query($consulta);
+				if($conexion->errno){
+					die("Tu query tiene un error
+						<br>$conexion->error");
+				}
+				while($fila=$resultado->fetch_assoc()){
+					$this->cuerpo[]=$fila["cuerpo"];
+					$this->fecha[]=$fila["fecha"];
+					$this->emisor[]=$fila["emisoridUsuario"];
+					$this->nombre[]=$fila["user"];
+				}	
 			}
-			while($fila=$resultado->fetch_assoc()){
-				$this->cuerpo[]=$fila["cuerpo"];
-				$this->fecha[]=$fila["fecha"];
-				$this->emisor[]=$fila["emisoridUsuario"];
-				$this->nombre[]=$fila["user"];
-			}	
 		}
-
 	}
 
 

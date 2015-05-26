@@ -45,13 +45,6 @@
 				die($this->conexion->error);
 				return false;
 			}
-			/*
-			if($this->_query = $this->conexion ->query($instruccion)) {
-				while($fila = $this->_query -> fetch_object()) {
-					$this -> resultado[] = $fila;
-				}
-				$this -> contador = $this->_query -> num_rows;
-			}*/
 			return $this;
 		}
 		public function obtenerResultado() {
@@ -63,10 +56,5 @@
 		public function regresaID(){
 			return $this->conexion->insert_id;
 		}
-/*
-		public function escapar($cadena) {
-			return $this->conexion->real_escape_string($cadena);
-		}
-*/
 	}
 ?>
