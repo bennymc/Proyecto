@@ -13,8 +13,40 @@ class InicioCtl{
 			$this->dicc->CargarInicio();
 		}
 		else $this->dicc->CargarInicio();
+
+
+		if(isset($_GET['sugerencia']))
+			$this->enviasugerencia();
 	}
+
+	function enviasugerencia(){
+				//Se define la dirección a la que se enviará el correo
+		$to= $_POST["Email"];
+		 
+		//Se define el asunto
+		$subject = 'Confirmación de Contacto';
+		 
+		//Se escribe el mensaje
+		$mess = "Aquí puede poner todo el mensaje que quiera incluyendo variables y formatos con tags de html";
+		 
+		//Se escribe la dirección desde la que se enviará el correo
+		$header = 'From: support@book2book.tk'.PHP_EOL;
+		 
+		//Se define la dirección que recibirá copia oculta
+		$header .= 'Bcc: correocopiaoculta@algo.com'."\r\n"; 
+		 
+		//Se define tipo de contenido y codificación
+		$header .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
+		 
+		//Se envia el correo
+		mail($to, $subject, $mess, $header);
+	}
+
+
 }
+
+
+
 
 class aboutusCtl{
 	private $modelo;

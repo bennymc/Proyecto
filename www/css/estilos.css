@@ -361,4 +361,26 @@ img#logoimg{ border-radius: 5%;
 }
 
 
+.ec-stars-wrapper a.estrellas{
+	color: #93c54b;
+}
 
+.ec-stars-wrapper a {
+	text-decoration: none;
+	display: inline-block;
+	/* Volver a dar tamaño al texto */
+	font-size: 32px;
+	font-size: 2rem;
+	
+	color: black;
+}
+
+.ec-stars-wrapper:hover a {
+	color: #93c54b;
+}
+/*
+ * El selector de hijo, es necesario para aumentar la especifidad
+ */
+.ec-stars-wrapper > a:hover ~ a {
+	color: #888;
+}

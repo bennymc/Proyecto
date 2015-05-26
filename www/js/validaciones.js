@@ -13,10 +13,22 @@ function validaMensaje(){
 	
 }
 
+function califica(valor){
+	document.getElementById("cali").value=valor;
+	for(x=1;x<=valor;x++){
+		var id= "s"+x;console.log(id);
+		document.getElementById(id).setAttribute('class', 'estrellas');
+	}
+	for(x=valor+1;x<=5;x++){
+		var id= "s"+x;console.log(id);
+		document.getElementById(id).setAttribute('class', '');
+	}
+}
+
 function validaReseña(){
 	var mensaje= document.getElementById("resena").value;
 	if(mensaje == ""){
-		document.getElementById("resena").setAttribute('class', 'form-control  error');
+		document.getElementById("resena").setAttribute('class', 'estrellas');
 		return false;
 	}		
 	else{
